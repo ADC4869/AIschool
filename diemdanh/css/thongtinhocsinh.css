@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(252, 216, 150);
+    display: flex;
+}
+
+.content-header {
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: -30px;
+}
+
+.icon-header {
+    margin-right: 10px;
+    margin-bottom: -5px;
+}
+
+.title-header h5 {
+    margin: 0;
+}
+
+/* THÔNG TIN GIÁO VIÊN */
+.content-info {
+    height: 130px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    background-color: var(--cream-color);
+    border-top: 2px solid rgb(197, 197, 252);
+    border-bottom: 2px solid rgb(197, 197, 252);
+}
+
+.student-photo {
+    flex: 0 0 auto;
+    margin-right: 15px;
+}
+
+.img-student {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.info-detail {
+    margin-left: 20px;
+
+}
+
+.info-detail h6 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info-detail p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.info-detail p span {
+    font-weight: normal;
+}
+
+/* BẢNG THỜI GIAN ĐIỂM DANH */
+.table-time table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.table-time th,
+.table-time td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-time th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+.table-time .good {
+    background-color: rgb(220, 248, 220);
+}
+
+.table-time .late {
+    background-color: rgb(250, 250, 210);
+}
+
+.table-time .miss {
+    background-color: rgb(250, 220, 220);
+}

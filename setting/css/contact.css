@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+main .tab-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+main .tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    color: black;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main .tab-btn.active {
+    background-color: var(--primary-color);
+    /* Active state color */
+    color: var(--white-color);
+}
+
+main .tab-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+main .tab-btn:focus {
+    outline: none;
+}
+
+/* Tab content styles */
+
+
+main .tab-content.active {
+    display: block;
+}
+
+/* info công ty */
+main .info__company {
+    width: 100%;
+}
+main .info__company .photo__company {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info__company .photo__company img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+main .info__company .info__detail  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.info__company .info__detail .detail {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    overflow-wrap: break-word; 
+    word-break: break-word;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+.info__detail .detail i{
+    font-size: 30px;
+    width: 8%;
+    text-align: center;
+    margin-right: 5px;
+}
+.info__detail .detail span {
+    flex: 1; 
+    white-space: normal; 
+    font-size: 15px;
+}
+.detail a {
+    text-decoration: none;
+    color: black;
+}
+
+/* INFO TRƯỜNG HỌC */
+main .info__school {
+    width: 100%;
+}
+main .info__school .photo__school {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info__school .photo__school img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+main .info__school .info__detail  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.info__school .info__detail .detail {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    overflow-wrap: break-word; 
+    word-break: break-word;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+@media (max-width: 768px) {
+    main .tab-container {
+        gap: 5px;
+    }
+
+    main .tab-btn {
+        width: 48%;
+        padding: 15px 0;
+        font-size: 15px;
+    }
+    
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    main .tab-btn {
+        width: 48%;
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+
+@media (min-width: 1025px) {
+    main .tab-btn {
+        width: 48%;
+        font-size: 20px;
+        padding: 14px 28px;
+    }
+}

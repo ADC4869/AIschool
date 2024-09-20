@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .icon-back,
+.header i {
+    font-size: 20px;
+    color: var(--white-color);
+    position: relative;
+    top: 30px;
+    left: 15px;
+}
+
+header .header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+
+main .event-section {
+    margin: 10px;
+    overflow: hidden;
+}
+
+main .event-section a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+main .event-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+main .event-header .event-icon {
+    font-size: 24px;
+}
+
+main .event-header .event-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+main .event-header .event-options {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+main .event-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    display: flex;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    gap: 10px; /* Khoảng cách giữa các sự kiện */
+    padding: 10px;
+    scroll-snap-type: x mandatory; /* Giúp các mục "dính" lại khi cuộn */
+}
+
+main .event-item {
+    width: 30%;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    flex: none; /* Ngăn các mục co giãn */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    scroll-snap-align: start; /* Canh chỉnh mục khi dừng cuộn */
+}
+
+main .event-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+main .event-info {
+    text-align: center;
+}
+
+main .event-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+main .event-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Ẩn thanh cuộn trên một số trình duyệt */
+main .event-list::-webkit-scrollbar {
+    display: none;
+}
+
+main .event-list {
+    -ms-overflow-style: none;  /* Ẩn thanh cuộn trên Internet Explorer và Edge */
+    scrollbar-width: none;  /* Ẩn thanh cuộn trên Firefox */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    main .event-item {
+        width: 70%;
+    }
+}

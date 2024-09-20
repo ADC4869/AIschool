@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main .profile-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+main .profile-container img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+main .profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .profile-details span {
+    color: #888;
+    font-size: 12px;
+}
+
+main .profile-details h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+main .account-info {
+    font-size: 16px; /* Kích thước chữ phù hợp với mọi thiết bị */
+    color: var(--primary-color); /* Màu chữ giống trong ảnh */
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    /* Điều chỉnh kích thước chữ cho các màn hình nhỏ hơn */
+    main .account-info {
+        font-size: 15px;
+    }
+}
+
+main .info-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+main .info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+main .info-row:last-child {
+    margin-bottom: 0;
+}
+
+main .icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+main .label {
+    font-weight: bold;
+    color: #666;
+    flex: 1;
+}
+
+main .value {
+    color: #333;
+}
+
+@media screen and (min-width: 768px) {
+    main .info-card {
+        max-width: 800px;
+        padding: 30px;
+    }
+
+    main .icon {
+        font-size: 24px;
+    }
+
+    main .label, .value {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main .info-card {
+        max-width: 1200px;
+        padding: 30px;
+    }
+
+    main .icon {
+        font-size: 24px;
+    }
+
+    main .label, .value {
+        font-size: 18px;
+    }
+}
+
+footer .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer a span{
+    position: relative;
+    left: 195px;
+}
+
+footer a span i{
+    color: var(--white-color);
+}
+
+footer .button .login {
+    width: 500px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    color: var(--white-color);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    footer .button .login {
+        width: 320px;
+    }
+
+    footer a span{
+        position: relative;
+        left: 115px;
+    }
+}

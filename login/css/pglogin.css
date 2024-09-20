@@ -1,0 +1,782 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.main__photo {
+    width: 100%;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__photo .img__login {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main__title {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__title .main__title1 {
+    font-size: 35px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.main__input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.main__input .input {
+    width: 800px;
+    height: 70px;
+    border: 0.5px solid rgb(190, 189, 189);
+    border-radius: 30px;
+    background-color: #FAFAFA;
+    text-align: left;
+    padding-left: 25px;
+    font-size: 20px;
+}
+
+.main__fogotpassword {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.main__fogotpassword .fogotpassword {
+    font-size: 25px;
+    text-decoration: none;
+    padding-left: 11%;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.main__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+.main__button .btn__button1 {
+    width: 800px;
+    height: 65px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 25px;
+}
+.main__button .main__buttontitle {
+    font-weight: bold;
+    opacity: 0.6;
+}
+.main__button .btn__button2 {
+    width: 800px;
+    height: 70px;
+    background-color: #FAFAFA;
+    border: 0.5px solid rgb(190, 189, 189);
+    border-radius: 30px;
+    color: var(--primary-color);
+    font-size: 25px;
+}
+
+@media (max-width: 890px) {
+
+    .main__photo .img__login {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title .main__title1 {
+        font-size: 35px;
+    }
+
+    .main__input .input {
+        width: 600px;
+        height: 65px;
+        padding-left: 25px;
+        font-size: 20px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 20px;
+        text-decoration: none;
+        padding-left: 13%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        font-size: 20px;
+    }
+
+    .main__button .btn__button1 {
+        width: 600px;
+        height: 65px;
+        font-size: 20px;
+    }
+
+    .main__button .btn__button2 {
+        width: 600px;
+        height: 65px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .main__photo .img__login {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title .main__title1 {
+        font-size: 25px;
+    }
+
+    .main__input .input {
+        width: 350px;
+        height: 55px;
+        padding-left: 25px;
+        font-size: 18px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 20px;
+        text-decoration: none;
+        padding-left: 11%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        font-size: 20px;
+    }
+
+    .main__button .btn__button1 {
+        width: 350px;
+        height: 55px;
+        font-size: 20px;
+    }
+
+    .main__button .btn__button2 {
+        width: 350px;
+        height: 55px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 390px) {
+    .main__photo {
+        margin-top: 80px;
+    }
+
+    .main__photo .img__login {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title {
+        margin-top: 20px
+    }
+
+    .main__title .main__title1 {
+        font-size: 20px;
+    }
+
+    .main__input {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .main__input .input {
+        width: 250px;
+        height: 40px;
+        padding-left: 25px;
+        font-size: 15px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 15px;
+        text-decoration: none;
+        padding-left: 15%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        font-size: 15px;
+        gap: 10px;
+    }
+
+    .main__button .btn__button1 {
+        width: 250px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .main__button .btn__button2 {
+        width: 250px;
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main__photo .img__login {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title {
+        margin-top: 40px
+    }
+
+    .main__title .main__title1 {
+        font-size: 30px;
+    }
+
+    .main__input {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .main__input .input {
+        width: 400px;
+        height: 55px;
+        padding-left: 25px;
+        font-size: 15px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 15px;
+        text-decoration: none;
+        padding-left: 50%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        font-size: 15px;
+        gap: 20px;
+    }
+
+    .main__button .btn__button1 {
+        width: 400px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .main__button .btn__button2 {
+        width: 400px;
+        height: 55px;
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 712px) {
+    .main__photo .img__login {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title {
+        margin-top: 40px
+    }
+
+    .main__title .main__title1 {
+        font-size: 30px;
+    }
+
+    .main__input {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .main__input .input {
+        width: 600px;
+        height: 65px;
+        padding-left: 25px;
+        font-size: 20px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 20px;
+        text-decoration: none;
+        padding-left: 8%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        font-size: 20px;
+        gap: 20px;
+    }
+
+    .main__button .btn__button1 {
+        width: 600px;
+        height: 65px;
+        font-size: 20px;
+    }
+
+    .main__button .btn__button2 {
+        width: 600px;
+        height: 65px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+    .main__photo .img__login {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title {
+        margin-top: 20px
+    }
+
+    .main__title .main__title1 {
+        font-size: 20px;
+    }
+
+    .main__input {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .main__input .input {
+        width: 250px;
+        height: 40px;
+        padding-left: 25px;
+        font-size: 15px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 15px;
+        text-decoration: none;
+        padding-left: 15%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        font-size: 15px;
+        gap: 10px;
+    }
+
+    .main__button .btn__button1 {
+        width: 250px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .main__button .btn__button2 {
+        width: 250px;
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 412px) {
+    .main__photo .img__login {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title {
+        margin-top: 20px
+    }
+
+    .main__title .main__title1 {
+        font-size: 20px;
+    }
+
+    .main__input {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .main__input .input {
+        width: 250px;
+        height: 40px;
+        padding-left: 25px;
+        font-size: 15px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 15px;
+        text-decoration: none;
+        padding-left: 20%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        font-size: 15px;
+        gap: 10px;
+    }
+
+    .main__button .btn__button1 {
+        width: 250px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .main__button .btn__button2 {
+        width: 250px;
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+
+    .main__photo .img__login {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title {
+        margin-top: 70px;
+    }
+
+    .main__title .main__title1 {
+        font-size: 35px;
+    }
+
+    .main__input {
+        margin-top: 70px;
+        gap: 30px;
+    }
+
+    .main__input .input {
+        width: 600px;
+        height: 65px;
+        padding-left: 25px;
+        font-size: 20px;
+    }
+
+    .main__fogotpassword {
+        margin-top: 30px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 20px;
+        text-decoration: none;
+        padding-left: 13%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        font-size: 20px;
+        gap: 30px;
+    }
+
+    .main__button .btn__button1 {
+        width: 600px;
+        height: 65px;
+        font-size: 20px;
+    }
+
+    .main__button .btn__button2 {
+        width: 600px;
+        height: 65px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 450px) {
+    .main__photo .img__login {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title {
+        margin-top: 20px
+    }
+
+    .main__title .main__title1 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .main__input {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .main__input .input {
+        width: 350px;
+        height: 55px;
+        padding-left: 25px;
+        font-size: 15px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 15px;
+        text-decoration: none;
+        padding-left: 10%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        font-size: 15px;
+        gap: 20px;
+    }
+
+    .main__button .btn__button1 {
+        width: 350px;
+        height: 55px;
+        font-size: 15px;
+    }
+
+    .main__button .btn__button2 {
+        width: 350px;
+        height: 55px;
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .main__photo .img__login {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title {
+        margin-top: 70px;
+    }
+
+    .main__title .main__title1 {
+        font-size: 35px;
+    }
+
+    .main__input {
+        margin-top: 70px;
+        gap: 30px;
+    }
+
+    .main__input .input {
+        width: 800px;
+        height: 70px;
+        padding-left: 25px;
+        font-size: 20px;
+    }
+
+    .main__fogotpassword {
+        margin-top: 30px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 20px;
+        text-decoration: none;
+        padding-left: 10%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        font-size: 20px;
+        gap: 30px;
+    }
+
+    .main__button .btn__button1 {
+        width: 800px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .main__button .btn__button2 {
+        width: 800px;
+        height: 70px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .main__fogotpassword .fogotpassword {
+        padding-left: 11%;
+    }
+}
+
+@media (min-width: 480px) {
+    .main__fogotpassword .fogotpassword {
+        padding-left: 13%;
+    }
+}
+
+@media (min-width: 820px) {
+
+    .main__fogotpassword .fogotpassword {
+        padding-left: 13%;
+    }
+}
+
+@media (min-width: 912px) {
+    .main__fogotpassword .fogotpassword {
+        padding-left: 13%;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 590px) {
+    .main__photo {
+        margin-top: 80px;
+    }
+
+    .main__photo .img__login {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title {
+        margin-top: 30px
+    }
+
+    .main__title .main__title1 {
+        font-size: 25px;
+    }
+
+    .main__input {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .main__input .input {
+        width: 400px;
+        height: 60px;
+        padding-left: 25px;
+        font-size: 15px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 15px;
+        text-decoration: none;
+        padding-left: 13%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        margin-top: 20px;
+        font-size: 15px;
+        gap: 20px;
+    }
+
+    .main__button .btn__button1 {
+        width: 400px;
+        height: 60px;
+        font-size: 15px;
+    }
+
+    .main__button .btn__button2 {
+        width: 400px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .main__photo {
+        margin-top: 80px;
+    }
+
+    .main__photo .img__login {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .main__title {
+        margin-top: 30px
+    }
+
+    .main__title .main__title1 {
+        font-size: 25px;
+    }
+
+    .main__input {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .main__input .input {
+        width: 800px;
+        height: 70px;
+        padding-left: 25px;
+        font-size: 15px;
+    }
+
+    .main__fogotpassword .fogotpassword {
+        font-size: 15px;
+        text-decoration: none;
+        padding-left: 18%;
+        color: var(--primary-color);
+    }
+
+    .main__button {
+        margin-top: 20px;
+        font-size: 15px;
+        gap: 20px;
+    }
+
+    .main__button .btn__button1 {
+        width: 800px;
+        height: 70px;
+        font-size: 15px;
+    }
+
+    .main__button .btn__button2 {
+        width: 800px;
+        height: 70px;
+        font-size: 15px;
+    }
+}

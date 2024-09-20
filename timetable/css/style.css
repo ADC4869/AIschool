@@ -1,0 +1,364 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    margin-top: 120px;
+}
+
+main .main__title {
+    width: 100%;
+}
+
+main .main__title p {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+/* MAIN RADIO */
+.main__radio {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.2rem;
+}
+
+.main__radio label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+.main__radio input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.main__radio input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+/* MAIN LỊCH */
+.main__calendar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-left: 15px;
+}
+
+.main__calendar .calendar {
+    width: 30%;
+    height: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 0 0.75rem;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main__calendar button {
+    height: 30px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+.main__calendar .btn__present {
+    width: 20%;
+    font-size: 13px;
+    padding: 2px;
+    justify-content: center;
+}
+
+.main__calendar .btn__undo {
+    width: 18%;
+    font-size: 13px;
+    padding: 2px;
+    justify-content: center;
+    gap: 4px;
+}
+
+.main__calendar .btn__next {
+    width: 18%;
+    font-size: 13px;
+    padding: 2px;
+    justify-content: center;
+    gap: 3px;
+}
+
+.main__calendar button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.main__calendar i {
+    font-size: 13px;
+}
+
+/* THỜI KHÓA BIỂU */
+main .main__schedule {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+}
+
+main .main__schedule .schedule {
+    width: 90%;
+    border-collapse: collapse;
+    min-width: 600px;
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+.schedule th,
+.schedule td {
+    border: 1px solid #afaeae;
+    padding: 10px;
+    text-align: center;
+}
+
+.main__schedule .schedule .schedule__time {
+    background-color: var(--light-color);
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.main__schedule .schedule .body__time {
+    background-color: #EEEEEE;
+    font-weight: bold;
+    
+
+}
+
+.main__schedule .timetable__detail {
+    width: 115px;
+    height: 85px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.main__schedule .timetable__detail1 {
+    background-color: white;
+    width: 115px;
+    height: 85px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.schedule td {
+    background-color: #fff;
+}
+
+.time-slot {
+    background-color: #f4f4f4;
+    width: 150px;
+}
+
+main .main__color {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    gap : 10px;
+    flex-wrap: wrap;
+}
+
+.color__detail {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    gap: 3px;
+}
+
+.color {
+    width: 60px;
+    height: 20px;
+    border-radius: 5px;
+    
+}
+
+.color__lythuyet {
+    background-color: var(--light-color);
+}
+
+.title p {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+}
+
+.color__thuchanh {
+    background-color: #76C4AA;
+}
+.color__online {
+    background-color: #6A9CFD;
+}
+.color__lichthi {
+    background-color: #FFF48F;
+}
+.color__tamngung {
+    background-color: #EF9A93;
+}
+
+@media (max-width: 390px) {
+    .main__radio {
+        gap: 1rem;
+    }
+    .main__calendar {
+        gap: 0.2rem;
+    }
+    .main__calendar .calendar {
+        width: 35%;
+        height: 30px;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__present {
+        width: 25%;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__undo {
+        width: 18%;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__next {
+        width: 18%;
+        font-size: 13px;
+    }
+    main .main__color {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main__color .color__detail {
+        width: 45%;
+        margin-right: 10px;
+        gap: 5px;
+    }
+    
+    .main__color .color__detail .color {
+        width: 30%;
+        height: 20px;
+        border-radius: 5px;
+    }
+    .main__color .color__detail .title {
+        width: 50%;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    .main__radio {
+        gap: 3px;
+    }
+    .main__calendar {
+        gap: 0.2rem;
+    }
+    .main__calendar .calendar {
+        width: 35%;
+        height: 30px;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__present {
+        width: 25%;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__undo {
+        width: 18%;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__next {
+        width: 18%;
+        font-size: 13px;
+    }
+    main .main__color {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main__color .color__detail {
+        width: 40%;
+        gap: 5px;
+    }
+    
+    .main__color .color__detail .color {
+        width: 40%;
+        height: 20px;
+        border-radius: 5px;
+    }
+    .main__color .color__detail .title {
+        width: 50%;
+    }
+    
+}

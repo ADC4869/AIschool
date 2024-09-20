@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+
+/* Đảm bảo phần tử căn giữa và có độ rộng thích ứng */
+main .button-container {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+/* Nút tải dữ liệu */
+main .upload-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    color: var(--primary-color);
+    border: 1px solid #d1d5da;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Danh sách tệp */
+main #file-list {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Khu vực hiển thị nội dung tệp */
+main #file-viewer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Các nút hành động */
+main .action-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+main .save-button, .delete-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+main .save-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 20px;
+}
+
+main .delete-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 20px;
+}
+
+main .delete-button:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: solid 1px;
+    
+}

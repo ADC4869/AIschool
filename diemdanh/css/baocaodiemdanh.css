@@ -1,0 +1,500 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+main {
+    margin-top: 120px;
+}
+
+main .main__calendar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+main .main__calendar .calendar {
+    width: 90%;
+    height: 35px;
+    background-color: var(--pastel-color);
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+
+main .main__tongquan {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main__tongquan .tongquan__content {
+    width: 90%;
+    height: 240px;
+    background-color: var(--pastel-color);
+    border-radius: 5px;
+}
+.tongquan__content .title__tongquan {
+    width: 100%;
+    height: 8%;
+}
+.tongquan__content .title__tongquan p {
+    padding-left: 15px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+.tongquan__content .top__tonquan {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tongquan__content .circle__tongso,
+.tongquan__content .circle__hiendien,
+.tongquan__content .circle__tre,
+.tongquan__content .circle__vang {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: border-color 0.1s, border-width 0.1s;
+}
+
+.tongquan__content .circle__tongso .title,
+.tongquan__content .circle__hiendien .title,
+.tongquan__content .circle__tre .title,
+.tongquan__content .circle__vang .title {
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.tongquan__content .circle__tongso:hover {
+    border-color: #A5A8A9;
+    border-width: 8px;
+}
+
+.tongquan__content .circle__hiendien:hover {
+    border-color: #0085E4;
+    border-width: 8px;
+}
+
+.tongquan__content .circle__vang:hover {
+    border-color: var(--bright-color);
+    border-width: 8px;
+}
+
+.tongquan__content .circle__tre:hover {
+    border-color: var(--orange-color);
+    border-width: 8px;
+}
+
+
+
+
+.title__tongso {
+    color: black;
+}
+
+.title__hiendien {
+    color: #0091F9;
+}
+
+.title__tre {
+    color: var(--orange-color);
+}
+
+.title__vang {
+    color: var(--bright-color);
+}
+
+.tongquan__content .bottom__tongquan {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.title p {
+    margin-bottom: 0rem;
+}
+
+
+/* KHỐI */
+/* Căn giữa các khối */
+.main__khoi {
+    display: flex;
+    justify-content: center;
+    /* Căn giữa các khối theo chiều ngang */
+    gap: 10px;
+    /* Khoảng cách giữa các khối */
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+
+.main__khoi {
+    scrollbar-width: none;
+    /* Ẩn thanh cuộn trong Firefox */
+}
+
+.btn__khoi {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* LỚP */
+main .main__class {
+    width: 100%;
+    margin-top: 20px;
+}
+
+main .main__class .class__detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Mỗi lớp */
+.class__detail .class {
+    width: 200px;
+    background-color: var(--cream-color);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2),
+        6px 6px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Phần tiêu đề lớp */
+.top__class {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.classname {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.between__class {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.img__class {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.content__class {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+.teachername {
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: bold;
+
+}
+
+.siso {
+    display: flex;
+    font-size: 13px;
+}
+
+.bottom__class {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.bottom__class a {
+    text-decoration: none;
+}
+
+.btn__diemdanh,
+.btn__thongtinlop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn__diemdanh {
+    background-color: var(--pale-color);
+    color: #333;
+}
+
+.btn__diemdanh:hover {
+    background-color: rgb(124, 227, 124);
+    transform: scale(1.05);
+}
+
+.btn__thongtinlop {
+    background-color: rgb(132, 168, 223);
+    color: #fff;
+}
+
+.btn__thongtinlop:hover {
+    background-color: rgb(112, 148, 200);
+    transform: scale(1.05);
+}
+
+/* MODAL THÔNG TIN LỚP */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-dialog {
+    width: 90%;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: var(--pastel-pink-color);
+    font-size: 25px;
+    color: white;
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teacher-name-modal {
+    font-weight: bold;
+}
+
+.info-class-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-info-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.img-teacher-modal {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.table .table-header {
+    background-color: var(--cream-color);
+}
+
+.table-body .gvcn {
+    background-color: rgb(243, 221, 225);
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.btn__close {
+    width: 50px;
+    height: 30px;
+    background-color: gray;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+@media (max-width: 393px) {
+    main .main__class .class {
+        width: 300px;
+        padding: 10px;
+    }
+
+    .main__khoi {
+        width: 95%;
+        justify-content: flex-start;
+        padding-left: 18px;
+    }
+
+    .img__class {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .siso {
+        display: flex;
+        font-size: 13px;
+        gap: 10px;
+    }
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: portrait) {
+    main .main__class .class {
+        width: 265px;
+        padding: 10px;
+    }
+
+    .siso {
+        display: flex;
+        font-size: 13px;
+        gap: 10px;
+    }
+}
+
+@media only screen and (min-device-width: 712px) and (max-device-width: 1138px) and (orientation: portrait) {
+    main .main__class .class {
+        width: 208px;
+        padding: 10px;
+    }
+
+    .siso {
+        display: flex;
+        font-size: 13px;
+        gap: 10px;
+    }
+}
+
+@media only screen and (min-device-width: 412px) and (max-device-width: 490px) and (orientation: portrait) {
+    .main__khoi {
+        width: 95%;
+        justify-content: flex-start;
+        padding-left: 18px;
+    }
+}
+
+
+footer {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+}
+
+footer .footer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+footer .footer button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 20px;
+}

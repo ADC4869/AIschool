@@ -1,0 +1,336 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+header .subheader {
+    background-color: #fafafa;
+    height: auto;
+    /* Adjust based on content */
+    padding: 10px;
+    /* Add padding if needed */
+}
+.subheader img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
+header .subheader .row1 {
+    display: flex;
+    justify-content: space-between;
+    /* Space out the items */
+    margin-bottom: 5px;
+    /* Space between rows */
+
+}
+.subheader .row1 .row__title {
+text-align: center;
+    
+}
+header .subheader .row {
+    display: flex;
+    justify-content: space-between;
+    /* Space out the items */
+    margin-bottom: 5px;
+    /* Space between rows */
+}
+
+header .subheader span {
+    margin: 5px 10px;
+    /* Space between items within the row */
+}
+
+@media screen and (min-width: 768px) {
+    header .back-arrow {
+        font-size: 24px;
+    }
+
+    header .title {
+        font-size: 22px;
+    }
+}
+
+main {
+    margin-top: 205px;
+}
+
+main .table-container {
+    display: flex;
+    overflow-x: auto;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+}
+
+main .table-container::-webkit-scrollbar {
+    display: none;
+}
+
+main .fixed-column {
+    min-width: 100px;
+    background-color: #f9f9f9;
+    border-right: 0px solid #ddd;
+    z-index: 2;
+    position: sticky;
+    left: 0;
+}
+
+main .table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+main td,
+th {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+main th {
+    background-color: var(--light-color);
+    border-radius: 7px;
+}
+
+main .grades {
+    border-radius: 50%;
+    background-color: var(--medium-color);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 2px 0;
+}
+
+main .grade-circle {
+    width: 30px; /* Kích thước hình tròn */
+    height: 30px;
+    border-radius: 50%; /* Tạo hình tròn */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0 5px; /* Khoảng cách giữa các hình tròn */
+}
+
+main .grade-green {
+    background-color: #76C4AA; /* Xanh lá */
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    margin: 2px 0;
+    justify-content: center;
+}
+
+main .grade-yellow {
+    background-color: #FFC107; /* Vàng */
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    margin: 2px 0;
+    justify-content: center;
+}
+
+main .grade-orange {
+    background-color: #E18786; /* Cam đỏ */
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    margin: 2px 0;
+    justify-content: center;
+}
+
+main .grade-red {
+    background-color: #F44336; /* Đỏ */
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    margin: 2px 0;
+    justify-content: center;
+}
+
+main .grades-wrapper {
+    display: flex;
+    gap: 5px; /* Khoảng cách giữa các điểm */
+    justify-content: center; /* Mặc định là căn giữa */
+}
+
+@media (max-width: 768px) {
+    main .grades,.grade-yellow, .grade-green, .grade-orange, .grade-red {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+    }
+
+    main td,
+    th {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+
+/* Sticky header */
+main thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+main .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Box */
+main .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+main .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+main .close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Body Layout */
+main .modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+main .info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+main .info {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #87c8d7;
+    margin-right: 10px;
+    background-color: #f9f9f9;
+}
+
+main .info:last-child {
+    margin-right: 0;
+}
+
+main .grade-review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    gap: 10px;
+    /* Optional: Adds some space between the two sections */
+    border: 1px solid #87c8d7;
+}
+
+main .grade,
+.review {
+    flex: 1;
+    /* Make both the .grade and .review take up equal space */
+    box-sizing: border-box;
+}
+
+main .grade {
+    text-align: center;
+}
+
+main .review {
+    text-align: center;
+    border-left: 2px solid #87c8d7;
+    /* Add vertical line */
+    padding-left: 20px;
+    /* Add some space to separate the text from the line */
+}
+
+main .grade .grades {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #76C4AA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* Center the grade circle within its container */
+}

@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    height: 85px;
+    background-color: #E9E9E9;
+    opacity: 0.86;
+    display: flex;
+}
+
+.content-header {
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: -30px;
+}
+
+.icon-header {
+    margin-right: 10px;
+    margin-bottom: -5px;
+}
+
+.title-header h5 {
+    margin: 0;
+}
+
+/* THÔNG TIN TỔNG QUAN CỦA LỚP */
+.infoclass-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.info-class {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoclass-top {
+    display: flex;
+    align-items: center;
+    line-height: 10px;
+}
+
+.teacher-photo {
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.img-teacher {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.infoclass-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.infoclass-bottom a {
+    text-decoration: none;
+}
+
+.siso {
+    color: black;
+}
+
+.hiendien {
+    color: #029766;
+}
+
+.tre {
+    color: #F8800F;
+}
+
+.vang {
+    color: #EC1111;
+}
+
+
+
+/* THÔNG TIN HIỆN DIỆN - TRỄ - VẮNG */
+.infostudy-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10PX;
+    margin-top: 15px;
+}
+
+.infostudy-detail {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+    gap: 15px;
+    background-color: #CAECED;
+    margin-top: 15px;
+}
+
+.img-student {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.infostudy-content {
+    line-height: 5px;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-suckhoe {
+    width: 60px;
+    height: 25px;
+    background-color: #3A4E6F;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    border: none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-chat {
+    width: 50px;
+    height: 25px;
+    background-color: #3A4E6F;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-chat:active,
+.btn-suckhoe:active {
+    transform: scale(0.95);
+}
+
+.sisolop {
+    background-color: rgb(216, 241, 216);
+}
+
+.dihoctre {
+    background-color: #f5ebab;
+}
+
+.vanghoc {
+    background-color: #fccec0;
+}
+
+/* MODAL SỨC KHỎE */
+.modal-header {
+    background-color: #6610F2;
+    opacity: 0.2;
+    color: white;
+}
+
+.check-suckhoe {
+    margin-top: 5px;
+}
+
+.form-suckhoe-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.form-control {
+    margin-top: 8px;
+}
+
+.form-photo {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(238, 238, 238);
+}
+
+.btn-send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(227, 247, 188);
+    color: #333;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+.btn-send:hover {
+    background-color: rgb(217, 242, 165);
+    transform: scale(1.05);
+}
+
+.btn-camera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(176, 176, 248);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+.btn-camera:hover {
+    background-color: rgb(150, 150, 250);
+    transform: scale(1.1);
+}
+
+.btn-exit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(165, 165, 167);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-exit:hover {
+    background-color: rgb(140, 140, 142);
+    transform: scale(1.05);
+}
