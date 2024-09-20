@@ -1,6 +1,47 @@
+<?php
+session_start();
+include '../database/db_config.php';
+
+// Kiểm tra quyền truy cập
+if ($_SESSION['role'] !== 'giaovien') {
+    die("Bạn không có quyền truy cập trang này.");
+}
+
+// Lấy ID học sinh từ URL
+$student_id = isset($_GET['student_id']) ? $_GET['student_id'] : '';
+
+if (empty($student_id)) {
+    die("ID học sinh không hợp lệ.");
+}
+
+// Kiểm tra kết nối cơ sở dữ liệu
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Lấy thông tin học sinh và lớp
+$stmt = $conn->prepare("SELECT u.fullname AS student_name, c.class_name 
+                        FROM students s 
+                        JOIN users u ON s.id = u.id 
+                        JOIN classes c ON s.class_id = c.id 
+                        WHERE s.student_code = ?");
+$stmt->bind_param("s", $student_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $student_info = $result->fetch_assoc();
+    $student_name = $student_info['student_name'];
+    $class_name = $student_info['class_name'];
+} else {
+    die("Học sinh không tìm thấy.");
+}
+
+$stmt->close();
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +49,6 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="./css/kqht.css">
 </head>
-
 <body>
     <header>
         <div class="header">
@@ -24,8 +64,8 @@
 
         <div class="subheader">
             <div class="row">
-                <span>Họ tên: Nguyễn A</span>
-                <span>Lớp: 1B</span>
+                <span>Họ tên: <?php echo htmlspecialchars($student_name); ?></span>
+                <span>Lớp: <?php echo htmlspecialchars($class_name); ?></span>
             </div>
 
             <div class="row">
@@ -436,7 +476,7 @@ window.onload = function() {
     }
 
     if (savedSemester) {
-        document.getElementById('selectedSemester').innerText = 'Học kỳ: ' + savedSemester;
+        document.getElementById('selectedSemester').innerText = '' + savedSemester;
     }
 };
 </script>

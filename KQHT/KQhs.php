@@ -77,7 +77,7 @@ $conn->close();
     </header>
 
     <main>
-    <div class="student-list">
+        <div class="student-list">
             <h2>Danh sách học sinh lớp <?php echo htmlspecialchars($class_name); ?></h2>
             
             <?php foreach ($students as $student): ?>
