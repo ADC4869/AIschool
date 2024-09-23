@@ -16,7 +16,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="css/fee.css">
-    <link rel="stylesheet" href="css/tuition.css">
+    <link rel="stylesheet" href="css/tuitionstyle.css">
 </head>
 
 <body>
@@ -256,7 +256,7 @@
 </body>
 <script src="./js/back.js"></script>
 <script src="./js/modal.js"></script>
-<script src="./js/tuition.js"></script>
+<script src="./js/fee.js"></script>
 <script src="./node_modules/feather-icons/dist/feather.js"></script>
 <script src="./node_modules/feather-icons/dist/feather.min.js"></script>
 <script>

@@ -54,7 +54,7 @@
 
                     <!-- Modal -->
                     <div class="dialog-box" id="dialog-box-1">
-                        <i class="fa-solid fa-computer"></i>
+                        <i data-feather="tablet" style="color: black"></i>
                         <h2>Iphone 7 Plus</h2>
                         <ul>
                             <li><strong>Đăng nhập:</strong> 15/03/2022 18:00</li>
@@ -80,7 +80,7 @@
 
                     <!-- Modal -->
                     <div class="dialog-box" id="dialog-box-2">
-                        <i class="fa-solid fa-computer"></i>
+                    <i data-feather="monitor" style="color: black"></i>
                         <h2>PC-Windows</h2>
                         <ul>
                             <li><strong>Đăng nhập:</strong> 15/03/2022 18:00</li>

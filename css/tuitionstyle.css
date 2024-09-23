@@ -202,7 +202,9 @@ main .cancelBtn {
 main #student-list {
     display: none;
 }
-
+main #student-listpaid {
+    display: none;
+}
 
 main .student-card {
     display: flex;

@@ -119,6 +119,10 @@ main .dialog-box {
     text-align: center;
     display: none; /* Mặc định ẩn hộp thoại */
 }
+main .dialog-box h2 {
+    color: var(--primary-color);
+}
+
 
 main .dialog-box.active {
     display: block; /* Hiển thị hộp thoại khi nhấn nút */
