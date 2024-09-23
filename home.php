@@ -7,7 +7,7 @@ if (isset($_GET['role'])) {
 ?>
 
 <?php
-session_start();
+include './database/theme_loader.php';
 
 // Kiểm tra xem người dùng đã đăng nhập chưa
 if (!isset($_SESSION['role'])) {
@@ -24,7 +24,6 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,8 +40,8 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/giaodien.css">
 </head>
-
 <body>
     <header>
         <div class="header">
@@ -204,20 +203,8 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
 
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
     </main>
 
     <?php include 'footer.php' ?>
 </body>
-
 </html>

@@ -1,5 +1,18 @@
+<?php
+session_start();
+
+// Kiểm tra ngôn ngữ được gửi từ form
+if (isset($_POST['language'])) {
+    $language = $_POST['language'];
+    setcookie('language', $language, time() + (365 * 24 * 60 * 60), "/");
+    $_SESSION['language'] = $language; // Lưu vào session
+}
+
+// Lấy ngôn ngữ từ cookie
+$lang = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'vi';
+?>
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="<?php echo $lang; ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +28,18 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/language.css">
+    <style>
+    .checkmark {
+        display: none;
+    }
+
+    /* Ẩn checkmark mặc định */
+    .language-option.active .checkmark {
+        display: block;
+    }
+
+    /* Hiện checkmark cho ngôn ngữ được chọn */
+    </style>
 </head>
 <body>
     <header>
@@ -32,24 +57,45 @@
 
     <main>
         <div class="language-dropdown">
-            <div class="language-option" data-lang="vi" onclick="selectLanguage(this)">
+            <div class="language-option <?php echo $lang === 'vi' ? 'active' : ''; ?>" data-lang="vi">
                 <img src="../img/VN.png" alt="Vietnam Flag">
                 <span>Tiếng Việt</span>
                 <div class="checkmark"><i class="fa-solid fa-check"></i></div>
             </div>
-            <div class="language-option" data-lang="en" onclick="selectLanguage(this)">
+            <div class="language-option <?php echo $lang === 'en' ? 'active' : ''; ?>" data-lang="en">
                 <img src="../img/my.png" alt="USA Flag">
                 <span>English</span>
                 <div class="checkmark"><i class="fa-solid fa-check"></i></div>
             </div>
         </div>
     </main>
-
-    <div id="content">
-        <h1 id="title"></h1>
-        <p id="description"></p>
-    </div>
 </body>
 <script src="../js/back.js"></script>
-<script src="js/language.js"></script>
+<script>
+// JavaScript để xử lý chọn ngôn ngữ
+document.querySelectorAll('.language-option').forEach(option => {
+    option.addEventListener('click', function() {
+        // Xóa class active khỏi tất cả ngôn ngữ
+        document.querySelectorAll('.language-option').forEach(opt => {
+            opt.classList.remove('active');
+        });
+
+        // Thêm class active cho ngôn ngữ đã chọn
+        this.classList.add('active');
+
+        // Gửi yêu cầu để lưu ngôn ngữ vào cookie
+        const lang = this.getAttribute('data-lang');
+        const form = document.createElement('form');
+        form.method = 'POST';
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'language';
+        input.value = lang;
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.submit(); // Tải lại trang
+    });
+});
+</script>
+
 </html>
