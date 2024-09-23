@@ -16,7 +16,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="css/fee.css">
-    <link rel="stylesheet" href="css/fee1.css">
+    <link rel="stylesheet" href="css/tuition.css">
 </head>
 
 <body>
@@ -107,28 +107,75 @@
                 <div id="student-list" class="student-list">
                     <h4>Danh sách chưa đóng</h4>
                     <div class="student-card">
-                        <img src="path/to/avatar1.jpg" alt="avatar">
+                        <img src="./img/hs.jpg" alt="avatar">
                         <div style="position: relative; right: 15px;">
                             <h4>Nguyễn Ngọc Ánh</h4>
                             <p>Chưa đóng học phí</p>
                             <p>Ghi chú: Khó khăn</p>
                         </div>
                         <div class="icons">
-                            <span class="icon-phone"><i class="fa-solid fa-phone"></i></span>
-                            <span class="icon-chat"><i class="fa-solid fa-message"></i></span>
+                        <a href="./call/index.php">
+                            <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
+                            </a>
+                            <a href="./chat/chathocsinh.php">
+                            <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
+                            </a>
                         </div>
                     </div>
 
                     <div class="student-card">
-                        <img src="path/to/avatar1.jpg" alt="avatar">
+                        <img src="./img/hs1.jpg" alt="avatar">
                         <div style="position: relative; right: 15px;">
                             <h4>Phạm Gia Bách</h4>
                             <p>Chưa đóng học phí</p>
                             <p>Ghi chú: Khó khăn</p>
                         </div>
                         <div class="icons">
-                            <span class="icon-phone"><i class="fa-solid fa-phone"></i></span>
-                            <span class="icon-chat"><i class="fa-solid fa-message"></i></span>
+                        <a href="./call/index.php">
+                            <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
+                            </a>
+                            <a href="./chat/chathocsinh.php">
+                            <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Add more student cards as needed -->
+                </div>
+
+                <!-- Hidden List Section for đã đóng -->
+                <div id="student-listpaid" class="student-listpaid">
+                    <h4>Danh sách đã đóng</h4>
+                    <div class="student-card-paid">
+                        <img src="./img/hs.jpg" alt="avatar">
+                        <div style="position: relative; right: 15px;">
+                            <h4>Nguyễn Ngọc Ánh</h4>
+                            <p>Chưa đóng học phí</p>
+                            <p>Ghi chú: Khó khăn</p>
+                        </div>
+                        <div class="icons">
+                            <a href="./call/index.php">
+                            <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
+                            </a>
+                            <a href="./chat/chathocsinh.php">
+                            <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="student-card-paid">
+                        <img src="./img/hs1.jpg" alt="avatar">
+                        <div style="position: relative; right: 15px;">
+                            <h4>Phạm Gia Bách</h4>
+                            <p>Chưa đóng học phí</p>
+                            <p>Ghi chú: Khó khăn</p>
+                        </div>
+                        <div class="icons">
+                        <a href="./call/index.php">
+                            <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
+                            </a>
+                            <a href="./chat/chathocsinh.php">
+                            <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
+                            </a>
                         </div>
                     </div>
                     <!-- Add more student cards as needed -->
@@ -212,5 +259,10 @@
 <script src="./js/back.js"></script>
 <script src="./js/modal.js"></script>
 <script src="./js/tuition.js"></script>
+<script src="./node_modules/feather-icons/dist/feather.js"></script>
+<script src="./node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
 
 </html>

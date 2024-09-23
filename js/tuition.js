@@ -9,3 +9,15 @@ document.querySelectorAll('.fee-item2').forEach(item => {
         }
     });
 });
+
+document.querySelectorAll('.fee-item1').forEach(item => {
+    item.addEventListener('click', function() {
+        // Toggle the student list visibility
+        const studentListpaid = document.getElementById('student-listpaid');
+        if (studentListpaid.style.display === 'block') {
+            studentListpaid.style.display = 'none';
+        } else {
+            studentListpaid.style.display = 'block';
+        }
+    });
+});

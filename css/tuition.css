@@ -56,7 +56,6 @@ main .header {
 }
 
 main .class-info, .student-count {
-    font-weight: bold;
     font-size: 1em;
 }
 
@@ -204,7 +203,16 @@ main #student-list {
     display: none;
 }
 
+
 main .student-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEC9C5;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+main .student-card-paid {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -215,10 +223,22 @@ main .student-card {
 
 main .student-card img {
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     position: relative;
     left: 20px;
+}
+main .student-card-paid img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    left: 20px;
+}
+main .student-card-paid .icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
 }
 
 main .icons {
@@ -227,7 +247,7 @@ main .icons {
 }
 
 main .icon-phone, .icon-chat {
-    margin-left: 10px;
+    margin-left: 5px;
     cursor: pointer;
     /* Add icon styles here */
 }
