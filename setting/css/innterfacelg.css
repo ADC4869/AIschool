@@ -195,6 +195,10 @@ article .header {
     color: var(--text-color);
     font-size: 18px;
 }
+article .header_language {
+    color: var(--primary-color);
+    font-size: 18px;
+}
 
 article .item {
     display: flex;

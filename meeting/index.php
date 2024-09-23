@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/meetingschool.css">
+    <link rel="stylesheet" href="css/meeting.css">
 </head>
 
 <body>
@@ -64,7 +64,7 @@
             <button class="tab-btn" onclick="openTab('me')">Lịch họp của lớp</button>
         </div>
 
-        <!-- Lịch họp đã qua -->
+        <!-- Lịch họp của trường -->
         <div class="tab-content" id="school">
             <div class="container">
                 <div class="card important">
@@ -105,7 +105,7 @@
             </div>
         </div>
 
-        <!-- Lịch họp sắp tới -->
+        <!-- Lịch họp của tôi -->
         <div class="tab-content" id="me" style="display:none;">
             <div class="container1">
                 <span class="text">Tạo lịch họp</span>
@@ -131,6 +131,13 @@
 
                         <label for="meetingNotes">Ghi chú</label>
                         <input type="text" id="meetingNotes" name="meetingNotes" placeholder="Nhập ghi chú">
+
+                        <label for="meetingparticipants">Người tham gia</label>
+                        <select name="options" id="meetingparticipants">
+                            <option value="">Tập thể lớp 9A</option>
+                            <option value="">Tập thể giáo viên lớp 9A</option>
+                            <option value="">Tập thể phụ huynh lớp 9A</option>
+                        </select>
 
                         <div class="actions">
                             <button type="submit" class="create-btn">Tạo</button>
@@ -185,4 +192,5 @@
 <script src="./js/tab.js"></script>
 <script src="../js/back.js"></script>
 <script src="./js/modal.js"></script>
+
 </html>

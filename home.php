@@ -55,71 +55,71 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
         <div class="button-container">
             <!-- Phân quyền cho học sinh -->
             <?php if ($user_role == 'hocsinh'): ?>
-            <a href="./timetable/index.php" class="button"><i class="fa-regular fa-calendar"></i> Thời khóa biểu</a>
-            <a href="tuition.php" class="button"><i class="fa-solid fa-coins" style="color: #63E6BE;"></i> Học phí</a>
-            <a href="./information/index.php" class="button"><i class="fa-solid fa-circle-info"
-                    style="color: #B197FC;"></i> Thông tin liên lạc</a>
-            <a href="./diemdanh/index.php" class="button"><i class="fa-solid fa-calendar-days"></i> Điểm danh</a>
-            <a href="./meeting/index.php" class="button"><i class="fa-solid fa-book"></i> Lịch họp</a>
-            <a href="./thongtingiaovienhocsinh/index.php" class="button"><i class="fa-solid fa-medal"
-                    style="color: #FFD43B;"></i> Thông tin</a>
+                <a href="./timetable/index.php" class="button"><i class="fa-regular fa-calendar"></i> Thời khóa biểu</a>
+                <a href="tuition.php" class="button"><i class="fa-solid fa-coins" style="color: #63E6BE;"></i> Học phí</a>
+                <a href="./information/index.php" class="button"><i class="fa-solid fa-circle-info"
+                        style="color: #B197FC;"></i> Thông tin liên lạc</a>
+                <a href="./diemdanh/index.php" class="button"><i class="fa-solid fa-calendar-days"></i> Điểm danh</a>
+                <a href="./meeting/index.php" class="button"><i class="fa-solid fa-book"></i> Lịch họp</a>
+                <a href="./thongtingiaovienhocsinh/index.php" class="button"><i class="fa-solid fa-medal"
+                        style="color: #FFD43B;"></i> Thông tin</a>
             <?php endif; ?>
 
             <!-- Phân quyền cho giáo viên -->
             <?php if ($user_role == 'giaovien'): ?>
-            <a href="./timetable/index.php?role=giaovien" class="button">
-                <div class="circle circle__timetable">
-                    <i class="fa-regular fa-calendar" style="color: #ffffff;"></i>
-                </div>
-                Thời khóa biểu
-            </a>
+                <a href="./timetable/index.php?role=giaovien" class="button">
+                    <div class="circle circle__timetable">
+                        <i class="fa-regular fa-calendar" style="color: #ffffff;"></i>
+                    </div>
+                    Thời khóa biểu
+                </a>
 
-            <a href="tuition.php?role=giaovien" class="button">
-                <div class="circle circle__fee">
-                    <i class="fa-solid fa-dollar-sign" style="color: #ffffff;"></i>
-                </div>
-                Tình trạng học phí
-            </a>
+                <a href="tuition.php?role=giaovien" class="button">
+                    <div class="circle circle__fee">
+                        <i class="fa-solid fa-dollar-sign" style="color: #ffffff;"></i>
+                    </div>
+                    Tình trạng học phí
+                </a>
 
-            <a href="./information/index.php?role=giaovien" class="button">
-                <div class="circle circle__contact">
-                    <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
-                </div>
-                Thông tin liên lạc
-            </a>
+                <a href="./information/index.php?role=giaovien" class="button">
+                    <div class="circle circle__contact">
+                        <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
+                    </div>
+                    Thông tin liên lạc
+                </a>
 
-            <a href="./diemdanh/index.php?role=giaovien" class="button">
-                <div class="circle circle__diligence">
-                    <i class="fa-regular fa-clipboard" style="color: #ffffff;"></i>
-                </div>
-                Tình trạng chuyên cần
-            </a>
+                <a href="./diemdanh/index.php?role=giaovien" class="button">
+                    <div class="circle circle__diligence">
+                        <i class="fa-regular fa-clipboard" style="color: #ffffff;"></i>
+                    </div>
+                    Tình trạng chuyên cần
+                </a>
 
-            <a href="./meeting/index.php?role=giaovien" class="button">
-                <div class="circle circle__meeting">
-                    <i class="fa-solid fa-book-open" style="color: #ffffff;"></i>
-                </div>
-                Lịch họp
-            </a>
+                <a href="./meeting/index.php?role=giaovien" class="button">
+                    <div class="circle circle__meeting">
+                        <i class="fa-solid fa-book-open" style="color: #ffffff;"></i>
+                    </div>
+                    Lịch họp
+                </a>
 
-            <a href="./thongtingiaovienhocsinh/index.php?role=giaovien" class="button">
-                <div class="circle circle__infoclass">
-                    <i class="fa-solid fa-users" style="color: #ffffff;"></i>
-                </div>
-                Lớp chủ nhiệm
-            </a>
+                <a href="./thongtingiaovienhocsinh/index.php?role=giaovien" class="button">
+                    <div class="circle circle__infoclass">
+                        <i class="fa-solid fa-users" style="color: #ffffff;"></i>
+                    </div>
+                    Lớp chủ nhiệm
+                </a>
             <?php endif; ?>
 
             <!-- Phân quyền cho hiệu trưởng -->
             <?php if ($user_role == 'hieutruong'): ?>
-            <a href="./principal/statisticsHS.php" class="button"><i class="fa-regular fa-calendar"></i> Thống kê số học
-                sinh</a>
-            <a href="./principal/statisticsDD.php" class="button"><i class="fa-solid fa-book"></i> Thống kê điểm
-                danh</a>
-            <a href="./principal/statisticsHT.php" class="button"><i class="fa-solid fa-circle-info"
-                    style="color: #B197FC;"></i> Thống kê KQHT</a>
-            <a href="./principal/event.php" class="button"><i class="fa-solid fa-medal" style="color: #FFD43B;"></i>
-                Quản lý sự kiện và lịch trình</a>
+                <a href="./principal/statisticsHS.php" class="button"><i class="fa-regular fa-calendar"></i> Thống kê số học
+                    sinh</a>
+                <a href="./principal/statisticsDD.php" class="button"><i class="fa-solid fa-book"></i> Thống kê điểm
+                    danh</a>
+                <a href="./principal/statisticsHT.php" class="button"><i class="fa-solid fa-circle-info"
+                        style="color: #B197FC;"></i> Thống kê KQHT</a>
+                <a href="./principal/event.php" class="button"><i class="fa-solid fa-medal" style="color: #FFD43B;"></i>
+                    Quản lý sự kiện và lịch trình</a>
             <?php endif; ?>
         </div>
 
@@ -185,7 +185,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
         <div class="title">
             <p>Hoạt động ngoại khóa</p>
             <a href="./activity.php">
-            <i class="fa-solid fa-ellipsis" style="color: #5C6898;"></i>
+                <i class="fa-solid fa-ellipsis" style="color: #5C6898;"></i>
             </a>
         </div>
 
@@ -219,4 +219,5 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
 
     <?php include 'footer.php' ?>
 </body>
+
 </html>

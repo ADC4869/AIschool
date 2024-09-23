@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="./css/noti.css">
+    <link rel="stylesheet" href="./css/notification.css">
     <link rel="stylesheet" href="../css/footer.css">
 </head>
 
@@ -36,7 +36,7 @@
     <main>
         <div class="search">
         <i class="fa-solid fa-magnifying-glass search__icon" style="color: #b7b7b8;"></i>
-            <input type="text" placeholder=" Tìm kiếm" class="input__search">
+            <input type="text" placeholder="Tìm kiếm" class="input__search">
         </div>
 
         <div class="card">

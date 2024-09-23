@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- css -->
      <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/password.css">
+    <link rel="stylesheet" href="css/resetpassword.css">
 </head>
 <body>
     <header>
@@ -31,32 +31,42 @@
     </header>
 
     <main>
-        <div class="container">
-            <div class="content">Mật khẩu phải gồm chữ, số hoặc kí tự đặt biệt</div>
-            <div class="password-form">
-                <div class="form-group">
-                    <label for="current-password">Mật khẩu hiện tại</label>
-                    <input type="password" id="current-password" placeholder="Nhập mật khẩu hiện tại">
-                </div>
+        <div class="main__content">
+            <div class="text">
+                <p>Mật khẩu phải dài 6-15 kí tự gồm chữ hoa, chữ thường, số hoặc ký tự đặt biệt</p>
+            </div>
 
-                <div class="form-group">
-                    <label for="new-password">Mật khẩu mới</label>
-                    <input type="password" id="new-password" placeholder="Nhập mật khẩu mới">
-                </div>
+            <div class="title">
+                <p>Mật khẩu hiện tại </p>
+            </div>
 
-                <div class="form-group">
-                    <label for="new-password">Nhập lại mật khẩu mới</label>
-                    <input type="password" id="reset-new-password" placeholder="Nhập mật khẩu mới">
-                </div>
+            <div class="input">
+                <input type="text" placeholder="Nhập mật khẩu hiện tại">
+            </div>
+
+            <div class="title">
+                <p>Mật khẩu mới</p>
+            </div>
+
+            <div class="input">
+                <input type="text" placeholder="Nhập mật khẩu mới">
+            </div>
+
+            <div class="title">
+                <p>Nhập lại mật khẩu mới</p>
+            </div>
+
+            <div class="input">
+                <input type="text" placeholder="Nhập mật khẩu mới">
+            </div>
+
+            <div class="button">
+                <button type="button">Cập nhật</button>
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <button class="button">Cập nhật</button>
-        </div>
-    </footer>
+   
 </body>
 <script src="../js/back.js"></script>
 </html>

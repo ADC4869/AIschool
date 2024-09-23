@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/innterface.css">
+    <link rel="stylesheet" href="css/innterfacelg.css">
 </head>
 <body>
     <header>
@@ -87,7 +87,7 @@
 
     <article>
         <div class="container">
-            <div class="header">Ngôn ngữ</div>
+            <div class="header_language">Ngôn ngữ</div>
             <a href="language.php">
                 <div class="item">
                     <div class="item-text">Đổi ngôn ngữ</div>

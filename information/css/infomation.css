@@ -73,8 +73,8 @@ main {
 }
 main .card img {
     border-radius: 8px;
-    width: 100%;
-    height: auto;
+    width: 115px;
+    height: 110px;
     max-width: 150px;
     object-fit: cover;
     position: relative;
@@ -89,13 +89,13 @@ main .card-content {
 
 main .card-content h3 {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 16px;
     font-weight: bold;
 }
 
 main .card-content p {
     margin: 5px 0;
-    font-size: 0.9em;
+    font-size: 14px;
 }
 
 main .chat-button {
@@ -157,7 +157,7 @@ main .button-group {
     margin-top: 10px;
 }
 
-main .button-group .detail-button,
+
 .button-group .chat-button {
     background-color: white;
     color: var(--navy-color);
@@ -170,12 +170,18 @@ main .button-group .detail-button,
     /* Set a fixed width */
     transition: background-color 0.3s ease;
 }
-
 main .button-group .detail-button {
-    position: relative;
-    left: -10px;
-    top: 2px;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 13px;
+    background-color: white;
+    margin-top: 10px;
 }
+
+
 
 main .button-group .detail-button:hover,
 .button-group .chat-button:hover {
@@ -227,7 +233,7 @@ main .modal {
 
 /* Modal content */
 main .modal-content {
-    background-color: #fefefe;
+    background-color: #b0d5f3;
     margin: 15% auto;
     /* 15% from the top and centered */
     padding: 20px;
@@ -238,6 +244,7 @@ main .modal-content {
     /* Max width on larger screens */
     border-radius: 8px;
 }
+
 
 /* Close button */
 main .close-button {
@@ -261,6 +268,7 @@ main .student-info {
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #e0e0e0;
+    background-color: white;
 }
 
 main .student-info img {

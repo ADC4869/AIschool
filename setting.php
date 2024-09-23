@@ -51,7 +51,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh';
 
         <div class="menu">
             <div class="menu-item">
-                <a href="<?php echo $basePath; ?>account.php?role=<?= isset($_GET["role"]) ? $_GET["role"] : "" ?>">
+                <a href="<?php echo $basePath; ?>accountteacher.php?role=<?= isset($_GET["role"]) ? $_GET["role"] : "" ?>">
                     <i class="fa-solid fa-gear"></i>
                     <span>Cài đặt tài khoản</span>
                 </a>

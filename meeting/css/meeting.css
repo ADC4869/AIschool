@@ -193,6 +193,20 @@ main .card {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
+main .past {
+    position: relative;
+}
+main .past::before {
+    content: ''; /* Tạo lớp nền phủ */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 229, 229, 0.5); /* Màu xám với độ trong suốt */
+    z-index: 1;
+}
+
 
 main .card-header {
     background-color: var(--blue-color);
@@ -300,7 +314,7 @@ main .modal-content {
     background-color: var(--white-color);
     padding: 20px;
     border-radius: 8px;
-    width: 90%;
+    width: 80%;
 }
 
 main h3 {
@@ -319,6 +333,13 @@ main form label {
 }
 
 main form input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+main form select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;

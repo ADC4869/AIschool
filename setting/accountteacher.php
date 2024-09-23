@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +14,14 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/brands.min.js">
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
-    <link rel="stylesheet" href="./css/lylichhocsinh.css">
+    <link rel="stylesheet" href="./css/accountteacher.css">
     <link rel="stylesheet" href="../css/global.css">
 </head>
+
 <body>
     <header>
         <div class="header">
-            <p class="header__title">Thông Tin Học Sinh</p>
+            <p class="header__title">Cài đặt tài khoản</p>
             <div class="back-arrow">
                 <span class="back-arrow" onclick="goBack()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -29,20 +31,184 @@
                     </svg>
                 </span>
             </div>
-            <div class="student-info">
-                <img src="../img/hs.jpg" alt="Student Photo" class="student-photo">
-                <div class="student-details">
-                    <p>Trương Thùy Dung</p>
-                    <p>HS20015847</p>
+            <div class="teacher-info">
+                <img src="../img/hs.jpg" alt="Teacher Photo" class="teacher-photo">
+                <div class="teacher-details">
+                    <p>Nguyễn Thị Ánh Xuân</p>
+                    <p>GV20014567</p>
                 </div>
             </div>
         </div>
     </header>
 
-   
+    <main>
+        <div class="main__title">
+            <h5>Thông tin cá nhân</h5>
+        </div>
+        <div class="main__content">
+            <div class="short__row">
+                <div>
+                    <p class="small__title">Phụ trách môn</p>
+                    <div class="info">
+                        <p>Văn</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="small__title">Chủ nhiệm lớp</p>
+                    <div class="info">
+                        <p>9A1</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">CCCD / Định danh</p>
+                <div class="info">
+                    <p>6506864875124</p>
+                    <i data-feather="edit-2" style="color: #000000"></i>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Ngày sinh</p>
+                <div class="info">
+                    <p>30/05/1995</p>
+                    <i data-feather="edit-2" style="color: #000000"></i>
+                </div>
+            </div>
+
+            <div class="short__row">
+                <div>
+                    <p class="small__title">Giới tính</p>
+                    <div class="info">
+                        <p>Nữ</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="small__title">Tôn giáo </p>
+                    <div class="info">
+                        <p>Không</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="short__row">
+                <div>
+                    <p class="small__title">Quốc tịch</p>
+                    <div class="info">
+                        <p>Việt Nam</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="small__title">Dân tộc</p>
+                    <div class="info">
+                        <p>Kinh</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Số điện thoại</p>
+                <div class="info">
+                    <p>0897879799</p>
+                    <i data-feather="edit-2" style="color: #000000"></i>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Email</p>
+                <div class="info">
+                    <p>anhxuan300595@gmail.com</p>
+                    <i data-feather="edit-2" style="color: #000000"></i>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Địa chỉ</p>
+                <div class="info__address">
+                    <p>28/16 Lê Văn Thọ, phường 6, Gò Vấp, Hồ Chí Minh</p>
+                    <i data-feather="edit-2" style="color: #000000"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__title">
+            <h5>Trình độ học vấn</h5>
+        </div>
+
+        <div class="main__content">
+            <div>
+                <p class="small__title">Băng cấp chuyên môn</p>
+                <div class="info">
+                    <p>Cử nhân Sư phạm Ngữ văn</p>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Chứng chỉ</p>
+                <div class="info">
+                    <p>Chứng chỉ Sư phạm Trung học Cơ sở</p>
+                </div>
+                <div class="info">
+                    <p>Chứng chỉ Tiếng Anh B2 - Hội đồng Anh</p>
+                </div>
+                <div class="info">
+                    <p class="long__info">Khóa học Phát triển Kỹ năng Sư phạm - Viện Nghiên cứu Giáo dục</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__title">
+            <h5>Trình độ học vấn</h5>
+        </div>
+
+        <div class="main__content">
+            <div>
+                <p class="small__title">Số năm kinh nghiệm</p>
+                <div class="info">
+                    <p>10 năm</p>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Các trường đã từng giảng dạy: </p>
+                <div class="info">
+                    <p>Trường Trung học Cơ sở Lê Quý Đôn</p>
+                </div>
+                <div class="info">
+                    <p>Trường Trung học Cơ sở Tam Nông</p>
+                </div>
+                <div class="info">
+                    <p>Trường Trung học Cơ sở Nguyễn An Ninh</p>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Môn học và cấp độ giảng dạy</p>
+                <div class="info">
+                    <p class="long__info">Ngữ văn - Trung học Cơ sở và Trung học Phổ thông</p>
+                </div>
+                <div class="info">
+                    <p>Tiếng Anh - Trung học Cơ sở</p>
+                </div>
+            </div>
+
+            
+        </div>
+    </main>
+
 
 
 </body>
 <script src="../js/back.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
 
 </html>

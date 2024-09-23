@@ -46,7 +46,7 @@ main .search {
 main .search .input__search {
     width: 80%;
     height: 30px;
-    border-radius: 340px;
+    border-radius: 30px;
     border: 1px solid gray;
     justify-content: center;
     align-items: center;
@@ -55,7 +55,6 @@ main .search .input__search {
     background-color: #FAFAFA;
 }
 .search .input__search::placeholder {
-    padding-left: 5px;
     font-size: 16px;
 }
 main .search .search__icon {

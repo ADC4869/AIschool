@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/device.css">
+    <link rel="stylesheet" href="css/devices.css">
 </head>
 
 <body>
@@ -40,7 +40,7 @@
                     <li class="device-item">
                         <div class="device-info">
                             <span class="device-icon">
-                                📱
+                            <i data-feather="tablet" style="color: black"></i>
                             </span>
                             <div>
                                 <div class="device-name">Iphone 7 Plus</div>
@@ -67,7 +67,9 @@
 
                     <li class="device-item">
                         <div class="device-info">
-                            <span class="device-icon">💻</span>
+                            <span class="device-icon">
+                            <i data-feather="monitor" style="color: black"></i>
+                            </span>
                             <div>
                                 <div class="device-name">PC-Windows</div>
                                 <div class="device-status">Đăng nhập bằng mật khẩu</div>
@@ -95,7 +97,9 @@
                 <ul class="device-list">
                     <li class="device-item">
                         <div class="device-info">
-                            <span class="device-icon">📱</span>
+                            <span class="device-icon">
+                            <i data-feather="tablet" style="color: black"></i>
+                            </span>
                             <div>
                                 <div class="device-name">Iphone 8 Plus</div>
                                 <div class="device-status">Đăng nhập bằng mật khẩu</div>
@@ -105,7 +109,9 @@
                     </li>
                     <li class="device-item">
                         <div class="device-info">
-                            <span class="device-icon">🌐</span>
+                            <span class="device-icon">
+                            <i data-feather="globe" style="color: black"></i>
+                            </span>
                             <div>
                                 <div class="device-name">Edge-Windows</div>
                                 <div class="device-status">Đăng nhập bằng mật khẩu</div>
@@ -115,7 +121,9 @@
                     </li>
                     <li class="device-item">
                         <div class="device-info">
-                            <span class="device-icon">🌐</span>
+                            <span class="device-icon">
+                            <i data-feather="globe" style="color: black"></i>
+                            </span>
                             <div>
                                 <div class="device-name">Chrome-Windows</div>
                                 <div class="device-status">Đăng nhập bằng mật khẩu</div>
@@ -130,5 +138,9 @@
 </body>
 <script src="../js/back.js"></script>
 <script src="./js/device.js"></script>
-
+<script src="../node_modules/feather-icons/dist/feather.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
 </html>

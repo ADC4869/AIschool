@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký giáo viên</title>
-    <link rel="stylesheet" href="./css/signinpage.css">
+    <link rel="stylesheet" href="./css/signin.css">
     <link rel="stylesheet" href="../fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../css/global.css">
 </head>
@@ -27,8 +27,11 @@
                 <form method="POST" action="register_gv.php">
                     <div class="main__input">
                         <div class="main__input1">
+                            <label for="">Họ và tên</label>
                             <input type="text" name="fullname" placeholder="Họ và tên" required>
+                            <label for="">CCCD / Định danh</label>
                             <input type="text" name="cccd" placeholder="CCCD / Định danh" required>
+                            <label for="">Ngày sinh</label>
                             <input type="date" name="dob" placeholder="Ngày sinh" required>
 
                         </div>
@@ -39,10 +42,13 @@
                             <input type="text" name="religion" placeholder="Tôn giáo" required>
                         </div>
                         <div class="main__input1">
+                        <label for="">Địa chỉ</label>
                             <input type="text" name="address" placeholder="Địa chỉ" required>
+                            <label for="">Số điện thoại</label>
                             <input type="text" name="phone" placeholder="Số điện thoại" required>
+                            <label for="">Mã giáo viên</label>
                             <input type="text" name="teacher_code" placeholder="Mã giáo viên" required>
-                            
+                            <label for="">Lớp chủ nhiệm</label>
                             <select name="class_supervised" required>
                                 <option value="0">Lớp chủ nhiệm</option>
                                 <option value="1">Lớp 9A1</option>
@@ -55,7 +61,7 @@
                                 <option value="8">Lớp 8A3</option>
                                 <option value="9">Lớp 8A4</option>
                             </select>
-
+                            <label for="">Môn dạy</label>
                             <select name="subjects" required>
                                 <option value="">Môn dạy</option>
                                 <option value="Văn">Văn</option>
