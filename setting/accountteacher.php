@@ -1,6 +1,85 @@
+<?php
+include '../database/db_config.php';
+session_start();
+
+if (!isset($_SESSION['role'])) {
+    header("Location: ../login/login.php");
+    exit;
+}
+
+$fullname = isset($_SESSION['fullname']) ? $_SESSION['fullname'] : 'Người dùng';
+$user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'guest';
+
+// Initialize variables
+$code = 'Chưa có mã';
+$class_name = 'Chưa có lớp';
+$subject_name = 'Chưa có môn';
+$cccd = $religion = $ethnic = $nationality = $phone = $address = $dob = $gender = 'Chưa cập nhật';
+
+// Query to get general user information, including CCCD, religion, ethnic, nationality, phone, address, date of birth, and gender
+$query = "SELECT cccd, religion, ethnic, nationality, phone, address, dob, gender FROM users WHERE fullname = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("s", $fullname);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($row = $result->fetch_assoc()) {
+    $cccd = htmlspecialchars($row['cccd']);
+    $religion = htmlspecialchars($row['religion']);
+    $ethnic = htmlspecialchars($row['ethnic']);
+    $nationality = htmlspecialchars($row['nationality']);
+    $phone = htmlspecialchars($row['phone']);
+    $address = htmlspecialchars($row['address']);
+    $dob = htmlspecialchars($row['dob']);
+    $gender = htmlspecialchars($row['gender']);
+}
+
+$stmt->close();
+
+// Fetch role-specific information
+if ($user_role === 'giaovien') {
+    // Query for teacher's code, homeroom class, and subjects
+    $query = "SELECT teachers.teacher_code, classes.class_name, GROUP_CONCAT(subjects.subject_name SEPARATOR ', ') AS subject_names
+              FROM teachers
+              LEFT JOIN classes ON teachers.class_supervised_id = classes.id
+              LEFT JOIN teacher_subjects ON teachers.id = teacher_subjects.teacher_id
+              LEFT JOIN subjects ON teacher_subjects.subject_id = subjects.id
+              WHERE teachers.id = (SELECT id FROM users WHERE fullname = ?)";
+    
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $fullname);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    if ($row = $result->fetch_assoc()) {
+        $code = htmlspecialchars($row['teacher_code']);
+        $class_name = htmlspecialchars($row['class_name']);
+        $subject_name = htmlspecialchars($row['subject_names']);
+    }
+} elseif ($user_role === 'hocsinh') {
+    // Query for student's code and class
+    $query = "SELECT students.student_code, classes.class_name
+              FROM students
+              LEFT JOIN classes ON students.class_id = classes.id
+              WHERE students.id = (SELECT id FROM users WHERE fullname = ?)";
+    
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $fullname);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    if ($row = $result->fetch_assoc()) {
+        $code = htmlspecialchars($row['student_code']);
+        $class_name = htmlspecialchars($row['class_name']);
+    }
+}
+
+$stmt->close();
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +96,6 @@
     <link rel="stylesheet" href="./css/accountteacher.css">
     <link rel="stylesheet" href="../css/global.css">
 </head>
-
 <body>
     <header>
         <div class="header">
@@ -32,16 +110,34 @@
                 </span>
             </div>
             <div class="teacher-info">
-                <img src="../img/hs.jpg" alt="Teacher Photo" class="teacher-photo">
+                <img src="../img/hs1.jpg" alt="Teacher Photo" class="teacher-photo">
                 <div class="teacher-details">
-                    <p>Nguyễn Thị Ánh Xuân</p>
-                    <p>GV20014567</p>
+                    <p><?php echo htmlspecialchars($fullname); ?></p>
+                    <p><?php echo htmlspecialchars($code); ?></p>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
+        <?php
+            $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh'; // Mặc định là học sinh nếu không có vai trò
+        ?>
+
+        <?php
+            $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
+            $accountInfo = '';
+            if ($role === 'giaovien') {
+                $accountInfo = 'Tài khoản : Giáo viên';
+                $msLabel = 'MSGV';
+            } elseif ($role === 'hieutruong') {
+                $accountInfo = 'Tài khoản : Hiệu trưởng';
+                $msLabel = 'MSHT';
+            } else {
+                $accountInfo = 'Tài khoản : Học sinh';
+                $msLabel = 'MSHS';
+            }
+        ?>
         <div class="main__title">
             <h5>Thông tin cá nhân</h5>
         </div>
@@ -50,13 +146,13 @@
                 <div>
                     <p class="small__title">Phụ trách môn</p>
                     <div class="info">
-                        <p>Văn</p>
+                        <p><?php echo htmlspecialchars($subject_name); ?></p>
                     </div>
                 </div>
                 <div>
                     <p class="small__title">Chủ nhiệm lớp</p>
                     <div class="info">
-                        <p>9A1</p>
+                        <p><?php echo htmlspecialchars($class_name); ?></p>
                     </div>
                 </div>
             </div>
@@ -64,7 +160,7 @@
             <div>
                 <p class="small__title">CCCD / Định danh</p>
                 <div class="info">
-                    <p>6506864875124</p>
+                    <p><?php echo htmlspecialchars($cccd); ?></p>
                     <i data-feather="edit-2" style="color: #000000"></i>
                 </div>
             </div>
@@ -72,7 +168,7 @@
             <div>
                 <p class="small__title">Ngày sinh</p>
                 <div class="info">
-                    <p>30/05/1995</p>
+                    <p><?php echo htmlspecialchars($dob); ?></p>
                     <i data-feather="edit-2" style="color: #000000"></i>
                 </div>
             </div>
@@ -81,14 +177,14 @@
                 <div>
                     <p class="small__title">Giới tính</p>
                     <div class="info">
-                        <p>Nữ</p>
+                        <p><?php echo htmlspecialchars($gender); ?></p>
                         <i data-feather="edit-2" style="color: #000000"></i>
                     </div>
                 </div>
                 <div>
                     <p class="small__title">Tôn giáo </p>
                     <div class="info">
-                        <p>Không</p>
+                        <p><?php echo htmlspecialchars($religion); ?></p>
                         <i data-feather="edit-2" style="color: #000000"></i>
                     </div>
                 </div>
@@ -98,14 +194,14 @@
                 <div>
                     <p class="small__title">Quốc tịch</p>
                     <div class="info">
-                        <p>Việt Nam</p>
+                        <p><?php echo htmlspecialchars($nationality); ?></p>
                         <i data-feather="edit-2" style="color: #000000"></i>
                     </div>
                 </div>
                 <div>
                     <p class="small__title">Dân tộc</p>
                     <div class="info">
-                        <p>Kinh</p>
+                        <p><?php echo htmlspecialchars($ethnic); ?></p>
                         <i data-feather="edit-2" style="color: #000000"></i>
                     </div>
                 </div>
@@ -114,7 +210,7 @@
             <div>
                 <p class="small__title">Số điện thoại</p>
                 <div class="info">
-                    <p>0897879799</p>
+                    <p><?php echo htmlspecialchars($phone); ?></p>
                     <i data-feather="edit-2" style="color: #000000"></i>
                 </div>
             </div>
@@ -122,7 +218,7 @@
             <div>
                 <p class="small__title">Email</p>
                 <div class="info">
-                    <p>anhxuan300595@gmail.com</p>
+                    <p>thanhdat300595@gmail.com</p>
                     <i data-feather="edit-2" style="color: #000000"></i>
                 </div>
             </div>
@@ -130,7 +226,7 @@
             <div>
                 <p class="small__title">Địa chỉ</p>
                 <div class="info__address">
-                    <p>28/16 Lê Văn Thọ, phường 6, Gò Vấp, Hồ Chí Minh</p>
+                    <p><?php echo htmlspecialchars($address); ?></p>
                     <i data-feather="edit-2" style="color: #000000"></i>
                 </div>
             </div>
@@ -196,13 +292,8 @@
                     <p>Tiếng Anh - Trung học Cơ sở</p>
                 </div>
             </div>
-
-            
         </div>
     </main>
-
-
-
 </body>
 <script src="../js/back.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
@@ -210,5 +301,4 @@
 <script>
     feather.replace();
 </script>
-
 </html>

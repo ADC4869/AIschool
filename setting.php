@@ -1,5 +1,5 @@
 <?php
-session_start();
+include './database/theme_loader.php';
 $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh';
 ?>
 <!DOCTYPE html>
@@ -21,6 +21,19 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh';
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="css/settingpage.css">
     <link rel="stylesheet" href="css/footer.css">
+    <style>
+        /* Giao diện sáng */
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+/* Giao diện tối */
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+    </style>
 </head>
 
 <body>

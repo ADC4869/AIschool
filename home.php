@@ -7,7 +7,7 @@ if (isset($_GET['role'])) {
 ?>
 
 <?php
-session_start();
+include './database/theme_loader.php';
 
 // Kiểm tra xem người dùng đã đăng nhập chưa
 if (!isset($_SESSION['role'])) {
@@ -21,10 +21,12 @@ $fullname = isset($_SESSION['fullname']) ? $_SESSION['fullname'] : 'Người dù
 $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'guest';
 $teacher_code = isset($_SESSION['teacher_code']) ? $_SESSION['teacher_code'] : 'mã số';
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID từ session
+
+// Kiểm tra và lấy teacher_id từ URL
+$teacher_id = isset($_GET['teacher_id']) ? $_GET['teacher_id'] : $user_id; // Sử dụng user_id nếu không có teacher_id
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,8 +43,8 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/giaodien.css">
 </head>
-
 <body>
     <header>
         <div class="header">
@@ -102,7 +104,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
                     Lịch họp
                 </a>
 
-                <a href="./thongtingiaovienhocsinh/index.php?role=giaovien" class="button">
+                <a href="./thongtingiaovienhocsinh/index.php?role=giaovien&teacher_id=<?php echo htmlspecialchars($teacher_id); ?>" class="button">
                     <div class="circle circle__infoclass">
                         <i class="fa-solid fa-users" style="color: #ffffff;"></i>
                     </div>
@@ -291,14 +293,18 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
         </div>
 
 
+
+
+
+
+
+
+
+
+
     </main>
 
     <?php include 'footer.php' ?>
 </body>
-<script src="./node_modules/feather-icons/dist/feather.js"></script>
-<script src="./node_modules/feather-icons/dist/feather.min.js"></script>
-<script>
-    feather.replace();
-</script>
 
 </html>

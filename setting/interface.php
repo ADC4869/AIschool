@@ -1,3 +1,6 @@
+<?php
+include '../database/theme_loader.php'
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -15,6 +18,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/innterfacelg.css">
+    <link rel="stylesheet" href="../css/giaodien.css">
 </head>
 <body>
     <header>
@@ -35,21 +39,21 @@
             <div class="title">Giao diện</div>
             <div class="theme-options">
                 <div class="theme-option">
-                    <input type="radio" id="light" name="theme" checked>
+                    <input type="radio" id="light" name="theme" onclick="changeTheme('light')" checked>
                     <label for="light">
                         <img src="../img/sang.png" alt="Sáng">
                         <div>Sáng</div>
                     </label>
                 </div>
                 <div class="theme-option">
-                    <input type="radio" id="dark" name="theme">
+                    <input type="radio" id="dark" name="theme" onclick="changeTheme('dark')">
                     <label for="dark">
                         <img src="../img/toi.png" alt="Tối">
                         <div>Tối</div>
                     </label>
                 </div>
                 <div class="theme-option">
-                    <input type="radio" id="system" name="theme">
+                    <input type="radio" id="system" name="theme" onclick="setTheme('system')">
                     <label for="system">
                         <img src="../img/hethong.png" alt="Theo hệ thống">
                         <div>Theo hệ thống</div>
@@ -108,4 +112,22 @@
     </article>
 </body>
 <script src="../js/back.js"></script>
+<script>
+    // Hàm thay đổi theme
+function changeTheme(theme) {
+    document.body.classList.remove('light-theme', 'dark-theme');
+    document.body.classList.add(theme + '-theme');
+    
+    // Cập nhật màu chữ
+    if (theme === 'light') {
+        document.body.style.color = 'black';
+    } else {
+        document.body.style.color = 'white';
+    }
+
+    // Lưu vào cookie
+    document.cookie = "theme=" + theme + "; path=/";
+}
+
+</script>
 </html>
