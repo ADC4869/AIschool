@@ -38,6 +38,7 @@ while ($row = $result->fetch_assoc()) {
 ?>
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,8 +53,9 @@ while ($row = $result->fetch_assoc()) {
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/infomation.css">
+    <link rel="stylesheet" href="css/infocontact.css">
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -89,8 +91,11 @@ while ($row = $result->fetch_assoc()) {
                         <?php endif; ?>
                     </div>
                     <div class="icon">
-                        <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i data-feather="phone" style="color: #5B6998"></i></a>
-                        <a href="../chat/chat.php" style="font-size: 25px; color: var(--primary-color); position: relative; left: 30px;"><i data-feather="message-square" style="color: #5B6998"></i></a>
+                        <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i
+                                data-feather="phone" style="color: #5B6998"></i></a>
+                        <a href="../chat/chat.php"
+                            style="font-size: 25px; color: var(--primary-color); position: relative; left: 30px;"><i
+                                data-feather="message-square" style="color: #5B6998"></i></a>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -149,8 +154,10 @@ while ($row = $result->fetch_assoc()) {
                     <p>Địa chỉ: 123/25 Võ Thị Sáu, Quận 3, HCM</p>
                 </div>
                 <div class="button-group">
-                    <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i data-feather="phone" style="color: #5B6998"></i></a>
-                    <a href="../chat/chat.php" style="font-size: 25px; color: var(--primary-color)"><i data-feather="message-square" style="color: #5B6998"></i></a>
+                    <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i
+                            data-feather="phone" style="color: #5B6998"></i></a>
+                    <a href="../chat/chat.php" style="font-size: 25px; color: var(--primary-color)"><i
+                            data-feather="message-square" style="color: #5B6998"></i></a>
                     <button class="detail-button" onclick="openModal()">Chi tiết</button>
                 </div>
             </div>
@@ -159,10 +166,18 @@ while ($row = $result->fetch_assoc()) {
                 <div class="modal-content">
                     <span class="close-button" onclick="closeModal()">&times;</span>
                     <center>
-                        <h4>Thông tin của các con đang theo học tại trường</h4>
+                        <p class="title">Thông tin của các con đang theo học tại trường</p>
                     </center>
                     <div class="student-info">
-                        <img src="../img/hs.jpg" alt="Student Image">
+                        <div class="student-image">
+                            <img src="../img/hs.jpg" alt="Student Image">
+                            <div class="icon">
+                                <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i
+                                        data-feather="phone" style="color: #5B6998"></i></a>
+                                <a href="../chat/chathocsinh.php" style="font-size: 25px; color: var(--primary-color)"><i
+                                        data-feather="message-square" style="color: #5B6998"></i></a>
+                            </div>
+                        </div>
                         <div class="student-details">
                             <p>Họ tên: Nguyễn Thị Mỹ Anh</p>
                             <p>Lớp: 9A1</p>
@@ -173,7 +188,15 @@ while ($row = $result->fetch_assoc()) {
                         </div>
                     </div>
                     <div class="student-info">
-                        <img src="../img/hs1.jpg" alt="Student Image">
+                        <div class="student-image">
+                            <img src="../img/hs1.jpg" alt="Student Image">
+                            <div class="icon">
+                                <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i
+                                        data-feather="phone" style="color: #5B6998"></i></a>
+                                <a href="../chat/chathocsinh.php" style="font-size: 25px; color: var(--primary-color)"><i
+                                        data-feather="message-square" style="color: #5B6998"></i></a>
+                            </div>
+                        </div>
                         <div class="student-details">
                             <p>Họ tên: Nguyễn Minh Khoa</p>
                             <p>Lớp: 6A2</p>
@@ -195,8 +218,10 @@ while ($row = $result->fetch_assoc()) {
                     <p>Địa chỉ: 208/30 Tên Lửa, Quận Bình Tân, HCM</p>
                 </div>
                 <div class="button-group">
-                    <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i data-feather="phone" style="color: #5B6998"></i></a>
-                    <a href="../chat/chat.php" style="font-size: 25px; color: var(--primary-color)"><i data-feather="message-square" style="color: #5B6998"></i></a>
+                    <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i
+                            data-feather="phone" style="color: #5B6998"></i></a>
+                    <a href="../chat/chat.php" style="font-size: 25px; color: var(--primary-color)"><i
+                            data-feather="message-square" style="color: #5B6998"></i></a>
                     <button class="detail-button">Chi tiết</button>
                 </div>
             </div>
@@ -210,8 +235,10 @@ while ($row = $result->fetch_assoc()) {
                     <p>Địa chỉ: 33, Nguyễn Hữu Thọ, Quận Gò Vấp, HCM</p>
                 </div>
                 <div class="button-group">
-                    <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i data-feather="phone" style="color: #5B6998"></i></a>
-                    <a href="../chat/chat.php" style="font-size: 25px; color: var(--primary-color)"><i data-feather="message-square" style="color: #5B6998"></i></a>
+                    <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i
+                            data-feather="phone" style="color: #5B6998"></i></a>
+                    <a href="../chat/chat.php" style="font-size: 25px; color: var(--primary-color)"><i
+                            data-feather="message-square" style="color: #5B6998"></i></a>
                     <button class="detail-button">Chi tiết</button>
                 </div>
             </div>
@@ -226,4 +253,5 @@ while ($row = $result->fetch_assoc()) {
 <script>
     feather.replace();
 </script>
+
 </html>

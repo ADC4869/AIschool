@@ -204,7 +204,7 @@ main .button-group .chat-button {
 
     main .button-group .detail-button,
     .button-group .chat-button {
-        margin-bottom: 5px;
+        margin-bottom: 8px;
     }
 
     main .button-group {
@@ -233,7 +233,6 @@ main .modal {
 
 /* Modal content */
 main .modal-content {
-    background-color: #b0d5f3;
     margin: 15% auto;
     /* 15% from the top and centered */
     padding: 20px;
@@ -243,7 +242,9 @@ main .modal-content {
     max-width: 600px;
     /* Max width on larger screens */
     border-radius: 8px;
+    background-color: #E1F0F9;
 }
+
 
 
 /* Close button */
@@ -265,12 +266,26 @@ main .close-button:hover,
 main .student-info {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 5px 0;
+    border-bottom: 1px solid #c4c0c0;
     background-color: white;
+    width: 100%;
+    border-radius: 5px;
 }
-
+main .modal-content .title {
+    font-size: 14px;
+}
+.student-info .student-image {
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.modal-content .student-info .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
 main .student-info img {
     border-radius: 50%;
     margin-right: 20px;
@@ -295,7 +310,7 @@ main .student-details p {
     }
 
     main .student-info img {
-        margin-bottom: 10px;
+        margin: 10px;
     }
 }
 

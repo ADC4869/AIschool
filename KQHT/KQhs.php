@@ -60,7 +60,7 @@ $conn->close();
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/HS.css">
+    <link rel="stylesheet" href="css/hs.css">
 </head>
 <body>
     <header>
@@ -83,7 +83,7 @@ $conn->close();
             <?php foreach ($students as $student): ?>
                 <div class="student-card">
                     <div class="info">
-                        <p><strong>Họ tên: <?php echo htmlspecialchars($student['student_name']); ?></strong></p>
+                        <p class="name"><strong>Họ tên: <?php echo htmlspecialchars($student['student_name']); ?></strong></p>
                         <p>Lớp: <?php echo htmlspecialchars($class_name); ?></p>
                         <p>Mã học sinh: <?php echo htmlspecialchars($student['student_code']); ?></p>
                         <p>Phụ huynh: <?php echo htmlspecialchars($student['parent_phone'] ?? 'Chưa có'); ?></p>
@@ -91,8 +91,12 @@ $conn->close();
                             <button>Chi tiết</button>
                         </a>
                     </div>
-                    <img src="../img/ht.jpg" alt="Student">
+                    <img src="../img/hs1.jpg" alt="Student">
                 </div>
+
+                
+
+               
             <?php endforeach; ?>
         </div>
         <!-- <div class="student-list">

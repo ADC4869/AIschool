@@ -9,15 +9,15 @@ header .header {
     justify-content: space-between;
     background-color: var(--primary-color);
     padding: 40px;
+    margin-left: -20px;
     position: fixed;
     top: 0;
-    right: 0;
     left: 0;
-    z-index: 1000;
+    right: 0;
 }
 
 header .back-arrow {
-    color: white;
+    color: var(--white-color);
     font-size: 25px;
     margin-right: 10px;
     position: relative;
@@ -27,12 +27,13 @@ header .back-arrow {
 header .header .title {
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: var(--white-color);
     flex-grow: 1;
     text-align: center;
     position: relative;
     top: 30px;
 }
+
 main {
     margin-top: 120px;
 }
@@ -54,6 +55,7 @@ main .menu-item {
     transition: background-color 0.3s;
 }
 
+
 main .menu-item a {
     text-decoration: none;
     color: var(--text-color);
@@ -67,10 +69,7 @@ main .menu-item:hover {
     background-color: #f0f0f0;
 }
 
-main .menu-item i {
-    font-size: 20px;
-    margin-right: 15px;
-}
+
 
 main .menu-item span {
     flex: 1;

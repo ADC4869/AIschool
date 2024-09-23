@@ -123,101 +123,182 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
             <?php endif; ?>
         </div>
 
+        <div class="main__content">
+            <div class="content__title">
+                <p>Hình ảnh nổi bật</p>
+            </div>
 
+            <div class="content__slider">
+                <img src="img/slide1.jpg" alt="Image 1">
+                <img src="img/slide2.jpg" alt="Image 2">
+                <img src="img/slide3.jpg" alt="Image 3">
+            </div>
 
-        <div class="title">
-            <p>Hình ảnh nổi bật</p>
-        </div>
-        <div class="slider">
-            <img src="img/slide1.jpg" alt="Image 1">
-            <img src="img/slide2.jpg" alt="Image 2">
-            <img src="img/slide3.jpg" alt="Image 3">
-        </div>
-        <!-- TIN TỨC -->
-        <div class="title">
-            <p>Tin tức</p>
-            <a href="./news.php">
-                <i class="fa-solid fa-ellipsis" style="color: #5C6898;"></i>
-            </a>
-        </div>
-
-        <div class="news">
-            <div class="left__news">
-                <a href="">
-                    <img src="./img/thivaolop10.jpg" alt="anh tin tuc">
-                    <div class="secction">
-                        <p class="news__title">Tuyển sinh lớp 10 năm học 2024 - 2025</p>
-                        <p class="news__time"><i class="fa-regular fa-clock" style="color: #a1a1a1;"></i> 05/08/2024</p>
-                    </div>
+            <div class="content__title">
+                <p>Tin tức</p>
+                <a href="./news.php">
+                    <i class="fa-solid fa-ellipsis" style="color: #5C6898;"></i>
                 </a>
             </div>
 
-            <div class="right__news">
+            <div class="content__news">
+                <div class="left__news">
+                    <a href="">
+                        <div class="photo">
+                            <img src="./img/thivaolop10.jpg" alt="">
+                        </div>
+
+                        <div class="info">
+                            <p class="news__title">Tuyển sinh lớp 10 năm học 2024-2025</p>
+                            <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                        </div>
+
+                    </a>
+                </div>
+
+                <div class="right__news">
+                    <div class="top__news">
+                        <a href="">
+                            <div class="photo">
+                                <img src="./img/thigiuaki.jpeg" alt="">
+                            </div>
+
+                            <div class="info">
+                                <p class="news__title">Lịch thi giữa kì học kì I năm học 2024-2025</p>
+                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="bottom__news">
+                        <a href="">
+                            <div class="photo">
+                                <img src="./img/thihocsinhgioi.jfif" alt="">
+                            </div>
+
+                            <div class="info">
+                                <p class="news__title">Kết quả cuộc thi học sinh giỏi cấp trường năm 2024-2024</p>
+                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-        </div>
-
-        <!-- DIỄN ĐÀN -->
-        <div class="title">
-            <p>Diễn đàn</p>
-            <a href="./forum.php">
-                <i class="fa-solid fa-ellipsis" style="color: #5C6898;"></i>
-            </a>
-        </div>
-
-        <div class="news">
-            <div class="left__news">
-                <a href="">
-                    <img src="./img/tg1.jpg" alt="anh dien dan">
-                    <div class="secction">
-                        <p class="news__title">Quản lý thời gian là gì? 9 Cách quản lý thời gian hiệu quả hơn</p>
-                        <p class="news__time"><i class="fa-regular fa-clock" style="color: #a1a1a1;"></i> 05/08/2024</p>
-                    </div>
+            <div class="content__title">
+                <p>Diễn đàn</p>
+                <a href="./forum.php">
+                    <i class="fa-solid fa-ellipsis" style="color: #5C6898;"></i>
                 </a>
             </div>
 
-            <div class="right__news">
+            <div class="content__news">
+                <div class="left__news">
+                    <a href="">
+                        <div class="photo">
+                            <img src="./img/tg1.jpg" alt="">
+                        </div>
 
-            </div>
-        </div>
+                        <div class="info">
+                            <p class="news__title">Quản lý thời gian là gì? 9 Cách quản lý thời gian hiệu quả hơn</p>
+                            <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                        </div>
 
-        <!-- HOẠT ĐỘNG NGOẠI KHÓA  -->
-        <div class="title">
-            <p>Hoạt động ngoại khóa</p>
-            <a href="./activity.php">
-                <i class="fa-solid fa-ellipsis" style="color: #5C6898;"></i>
-            </a>
-        </div>
+                    </a>
+                </div>
 
-        <div class="news">
-            <div class="left__news">
-                <a href="">
-                    <img src="./img/dt.jpg" alt="anh dien dan">
-                    <div class="secction">
-                        <p class="news__title">Tham quan tìm hiểu lịch sử dân tộc Việt Nam</p>
-                        <p class="news__time"><i class="fa-regular fa-clock" style="color: #a1a1a1;"></i> 05/08/2024</p>
+                <div class="right__news">
+                    <div class="top__news">
+                        <a href="">
+                            <div class="photo">
+                                <img src="./img/dd.jpg" alt="">
+                            </div>
+
+                            <div class="info">
+                                <p class="news__title">Kỹ năng mềm là gì? Cách rèn luyện và phát triển kỹ năng mềm</p>
+                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                            </div>
+                        </a>
                     </div>
+
+                    <div class="bottom__news">
+                        <a href="">
+                            <div class="photo">
+                                <img src="./img/en.jpg" alt="">
+                            </div>
+
+                            <div class="info">
+                                <p class="news__title">11 cách tự học tiếng Anh giao tiếp nhanh chóng và hiệu quả nhất
+                                </p>
+                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content__title">
+                <p>Hoạt động ngoại khóa</p>
+                <a href="./activity.php">
+                    <i class="fa-solid fa-ellipsis" style="color: #5C6898;"></i>
                 </a>
             </div>
 
-            <div class="right__news">
+            <div class="content__news">
+                <div class="left__news">
+                    <a href="./activitydetail.php">
+                        <div class="photo">
+                            <img src="./img/dt.jpg" alt="">
+                        </div>
 
+                        <div class="info">
+                            <p class="news__title">Tham quan tìm hiểu lịch sử dân tộc Việt Nam</p>
+                            <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                        </div>
+
+                    </a>
+                </div>
+
+                <div class="right__news">
+                    <div class="top__news">
+                        <a href="./activitydetail.php">
+                            <div class="photo">
+                                <img src="./img/atb.jpg" alt="">
+                            </div>
+
+                            <div class="info">
+                                <p class="news__title">Chiến dịch lao động làm sạch và nâng cao ý thức bảo vệ m...</p>
+                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="bottom__news">
+                        <a href="./activitydetail.php">
+                            <div class="photo">
+                                <img src="./img/cayxanh.jfif" alt="">
+                            </div>
+
+                            <div class="info">
+                                <p class="news__title">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'
+                                </p>
+                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
 
 
     </main>
 
     <?php include 'footer.php' ?>
 </body>
+<script src="./node_modules/feather-icons/dist/feather.js"></script>
+<script src="./node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
 
 </html>

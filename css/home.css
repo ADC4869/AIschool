@@ -129,30 +129,29 @@ main .button:hover {
     background-color: #ddd;
 }
 
-main .title {
+main .main__content {
+    width: 100%;
+}
+
+.main__content .content__title {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.main__content .content__title p {
     font-size: 15px;
     color: var(--primary-color);
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding-left: 20px;
 }
 
-main .title p {
-    padding-left: 15px;
-    justify-content: flex-start;
-    margin-top: 3px;
+.main__content .content__title i {
+padding-right: 20PX;
 }
-
-main .title i {
-    padding-right: 15px;
-    justify-content: flex-end;
-    font-size: 20px;
-    margin-top: -15px;
-}
-
-main .slider {
-    width: 93%;
+.main__content .content__slider {
+    width: 92%;
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -161,11 +160,11 @@ main .slider {
     margin-top: 3px;
 }
 
-main .slider::-webkit-scrollbar {
+main .content__slider::-webkit-scrollbar {
     display: none;
 }
 
-main .slider img {
+main .content__slider img {
     width: 50%;
     height: 210px;
     object-fit: cover;
@@ -173,105 +172,133 @@ main .slider img {
     border-radius: 5px;
 }
 
-/* TIN TỨC */
-
-main .news {
-    width: 93%;
-    max-height: 210px;
-    height: 100%;
+main .content__news {
+    width: 92%;
     display: flex;
     margin: 15px;
+    gap: 2%;
     margin-top: 3px;
 }
 
-.news .left__news {
+.content__news .left__news {
     width: 50%;
     height: 100%;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
-    background-color: #FAFAFA;
 }
 
-.news .left__news a {
+.content__news a {
     width: 50%;
     height: 100%;
     text-decoration: none;
 }
 
-.left__news img {
+.left__news .photo {
     width: 100%;
     height: 60%;
+}
+.left__news .photo img {
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
     object-fit: cover;
 }
-.left__news .secction {
-    padding-left: 10px;
+.left__news .info {
+    margin: 0 5px;
 }
-.left__news .secction .news__title{
-    color: var(--primary-color);
+.left__news .info .news__title{
     font-size: 15px;
-    font-weight: bold;
-    margin-top: 5px;
 }
-.left__news .secction .news__time {
-    color: #a1a1a1;
+.left__news .info .news__time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #b0b0b0;
+}
+
+.content__news .right__news {
+    width: 50%;
+    height: 100%;
+}
+
+.right__news .top__news {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+.right__news a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+.top__news .photo {
+    width: 50%;
+    height: 100%;
+}
+.top__news .info {
+    width: 50%;
+    height: 100%;
     font-size: 10px;
+    margin-left: 5px;
 }
-
-/* right news */
-.news .right__news {
-    width: 50%;
-    height: 100%;
+.top__news .info .news__time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: #b0b0b0;
 }
-
-/* top  */
-
-.right__news .top {
-    width: 100%;
-    max-height: 100px;
-    height: 100%;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
+.left__news .news__time i {
+    font-size: 13px;
+    color: #b0b0b0;
 }
-
-.right__news .top a {
+.top__news .photo img {
     width: 100%;
     height: 100%;
-    max-height: 100px;
-}
-
-.right__news .top img {
-    width: 100%;
-    height: 50%;
     object-fit: cover;
     border-radius: 5px;
 }
-.right__news .top .secction {
+.top__news.news__time i {
+    font-size: 10px;
+    color: #b0b0b0;
+}
+
+.right__news .bottom__news {
     width: 100%;
     height: 50%;
 }
 
-/* bottom */
-.right__news .bottom {
-    width: 100%;
-    max-height: 100px;
-    height: 100%;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-}
-
-.right__news .bottom a {
-    width: 100%;
-    height: 100%;
-    max-height: 100px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-}
-
-.right__news .bottom img {
+.bottom__news .photo {
     width: 50%;
+    height: 100%;
+}
+.bottom__news .info {
+    width: 50%;
+    height: 100%;
+    font-size: 10px;
+    margin-left: 5px;
+}
+.bottom__news .photo img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
+}
+.bottom__news .info .news__time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: #b0b0b0;
+}
+
+.bottom__news.news__time i {
+    font-size: 10px;
+    color: #b0b0b0;
 }
 

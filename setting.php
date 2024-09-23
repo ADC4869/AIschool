@@ -19,7 +19,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh';
     <link rel="stylesheet" href="./fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- css -->
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="css/caidat.css">
+    <link rel="stylesheet" href="css/settingpage.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
 
@@ -51,57 +51,58 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh';
 
         <div class="menu">
             <div class="menu-item">
-                <a href="<?php echo $basePath; ?>accountteacher.php?role=<?= isset($_GET["role"]) ? $_GET["role"] : "" ?>">
-                    <i class="fa-solid fa-gear"></i>
+                <a
+                    href="<?php echo $basePath; ?>accountteacher.php?role=<?= isset($_GET["role"]) ? $_GET["role"] : "" ?>">
+                    <i data-feather="settings" style="color: #5C6898 ; margin-bottom: -5px; margin-right: 10px"></i>
                     <span>Cài đặt tài khoản</span>
                 </a>
             </div>
 
             <div class="menu-item">
                 <a href="<?php echo $basePath; ?>password.php?role=<?= isset($_GET["role"]) ? $_GET["role"] : "" ?>">
-                    <i class="fa-solid fa-lock"></i>
+                <i data-feather="lock" style="color: #5C6898 ; margin-bottom: -5px; margin-right: 10px"></i>
                     <span>Đặt lại mật khẩu</span>
                 </a>
             </div>
 
             <div class="menu-item">
                 <a href="<?php echo $basePath; ?>device.php?role=<?= isset($_GET["role"]) ? $_GET["role"] : "" ?>">
-                    <i class="fa-solid fa-mobile"></i>
+                <i data-feather="tablet" style="color: #5C6898 ; margin-bottom: -5px; margin-right: 10px"></i>
                     <span>Quản lý thiết bị</span>
                 </a>
             </div>
 
             <div class="menu-item">
                 <a href="<?php echo $basePath; ?>interface.php?role=<?= isset($_GET["role"]) ? $_GET["role"] : "" ?>">
-                    <i class="fa-solid fa-globe"></i>
+                <i data-feather="globe" style="color: #5C6898 ; margin-bottom: -5px; margin-right: 10px"></i>
                     <span>Giao diện và ngôn ngữ</span>
                 </a>
             </div>
 
             <div class="menu-item">
                 <a href="<?php echo $basePath; ?>application.php?role=<?= isset($_GET["role"]) ? $_GET["role"] : "" ?>">
-                    <i class="fa-solid fa-circle-info"></i>
+                <i data-feather="info" style="color: #5C6898 ; margin-bottom: -5px; margin-right: 10px"></i>
                     <span>Giới thiệu về ứng dụng</span>
                 </a>
             </div>
 
             <div class="menu-item">
                 <a href="<?php echo $basePath; ?>contact.php?role=<?= isset($_GET["role"]) ? $_GET["role"] : "" ?>">
-                    <i class="fa-solid fa-address-book"></i>
+                <i data-feather="user" style="color: #5C6898 ; margin-bottom: -5px; margin-right: 10px"></i>
                     <span>Thông tin liên hệ</span>
                 </a>
             </div>
 
             <div class="menu-item">
                 <a href="<?php echo $basePath; ?>help.php?role=<?= isset($_GET["role"]) ? $_GET["role"] : "" ?>">
-                    <i class="fa-solid fa-circle-question"></i>
+                <i data-feather="help-circle" style="color: #5C6898 ; margin-bottom: -5px; margin-right: 10px"></i>
                     <span>Trợ giúp</span>
                 </a>
             </div>
 
             <div class="menu-item">
                 <a href="./login/login.php">
-                    <i class="fa-solid fa-right-from-bracket"></i>
+                <i data-feather="log-out" style="color: #5C6898 ; margin-bottom: -5px; margin-right: 10px"></i>
                     <span>Đăng xuất</span>
                 </a>
             </div>
@@ -111,5 +112,9 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh';
     <?php include 'footer.php' ?>
 </body>
 <script src="./js/back.js"></script>
-
+<script src="./node_modules/feather-icons/dist/feather.js"></script>
+<script src="./node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
 </html>

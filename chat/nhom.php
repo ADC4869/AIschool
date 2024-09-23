@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/brands.min.js">
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
-    <link rel="stylesheet" href="css/group.css">
+    <link rel="stylesheet" href="css/groupstyle.css">
     <link rel="stylesheet" href="../css/global.css">
 </head>
 
 <body>
-    <header>
-        <div class="container">
+<header>
+        <div class="header">
             <span class="back-arrow" onclick="goBack()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-chevron-left" viewBox="0 0 16 16">
@@ -28,8 +28,8 @@
                         d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                 </svg>
             </span>
-            <img src="../img/a.jpg" alt="Avatar" class="avatar">
-            <div class="username">Lớp 1A</div>
+            <img src="../img/group1.jfif" alt="Avatar" class="avatar">
+            <div class="username">Lớp 9A - Nhóm chat chung</div>
             <div class="menu-icon">
                 <a href="../call/index.php">
                 <i class="fa-solid fa-phone" style="color: white; font-size: 20px"></i>
@@ -41,7 +41,7 @@
     <main>
         <div class="chat-container">
             <div class="chat-bubble bot">
-                <img src="https://via.placeholder.com/40" alt="Bot">
+                <img src="../img/group1.jfif" alt="Bot">
                 <div class="message">Nội dung chat...
                     <p class="time">18:05</p>
                 </div>
@@ -52,12 +52,20 @@
                 </div>
             </div>
             <div class="chat-bubble bot">
-                <img src="https://via.placeholder.com/40" alt="Bot">
+                <img src="../img/hs.jpg" alt="Bot">
                 <div class="message">
                     Nội dung chat...
                     <p class="time">18:08</p>
                 </div>
             </div>
+            <div class="chat-bubble bot">
+                <img src="../img/hs1.jpg" alt="Bot">
+                <div class="message">
+                    Nội dung chat...
+                    <p class="time">18:08</p>
+                </div>
+            </div>
+
 
             <div class="chat-bubble user" style="justify-content: right;">
                 <div class="message">Nội dung chat...
@@ -81,11 +89,7 @@
                 <p class="time">18:20</p>
                 </div>
             </div>
-            <div class="chat-bubble user" style="justify-content: right;">
-                <div class="message">Nội dung chat...
-                <p class="time">18:26</p>
-                </div>
-            </div>
+            
         </div>
     </main>
 

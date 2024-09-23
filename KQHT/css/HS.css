@@ -43,29 +43,35 @@ main {
 main .student-list {
     max-width: 600px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
     margin-top: -30px;
 }
   
 main h2 {
     text-align: center;
-    background-color: var(--primary-color);
-    color: var(--white-color);
+    background-color: white;
+    color: var(--primary-color);
     padding: 10px;
     border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid rgb(199, 196, 196);
 }
   
 main .student-card {
     display: flex;
     align-items: center;
-    background-color: #ffeae1;
+    background-color: #fafafa;
     padding: 15px;
     margin: 15px 0;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+    font-size: 15px;
 }
-  
+  .student-card .info .name {
+    font-size: 20px;
+  }
 main .student-card img {
     width: 100px;
     height: 100px;
@@ -81,11 +87,11 @@ main .student-card p {
 }
   
 main button {
-    background-color: var(--mint-green-color);
-    color: var(--text-color);
+    background-color: white;
+    color: var(--primary-color);
     padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
     font-weight: bold;

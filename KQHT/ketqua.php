@@ -42,13 +42,15 @@ $conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kết quả học tập</title>
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="./css/kqht.css">
+    <link rel="stylesheet" href="./css/resultstudy.css">
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -63,14 +65,19 @@ $conn->close();
         </div>
 
         <div class="subheader">
-            <div class="row">
-                <span>Họ tên: <?php echo htmlspecialchars($student_name); ?></span>
-                <span>Lớp: <?php echo htmlspecialchars($class_name); ?></span>
+            <div class="image">
+                <img src="../img/hs1.jpg" alt="">
             </div>
+            <div class="info">
+                <div class="row">
+                    <span>Họ tên: <?php echo htmlspecialchars($student_name); ?></span>
+                    <span>Lớp: <?php echo htmlspecialchars($class_name); ?></span>
+                </div>
 
-            <div class="row">
-                <span id="selectedSemester">Học kỳ: </span>
-                <span id="selectedYear">Năm học: </span>
+                <div class="row">
+                    <span id="selectedYear">Năm học: </span>
+                    <span id="selectedSemester">Học kỳ: </span>
+                </div>
             </div>
         </div>
     </header>
@@ -127,56 +134,56 @@ $conn->close();
                             <!-- Tổng kết môn toán -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Tiếng Anh -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Lịch sử -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn địa lý -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Hóa học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Sinh học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Vật Lý -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Tin học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
                         </tr>
@@ -189,56 +196,56 @@ $conn->close();
                             <!-- Tổng kết môn toán -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Tiếng Anh -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Lịch sử -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn địa lý -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Hóa học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Sinh học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Vật Lý -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Tin học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
                         </tr>
@@ -249,56 +256,56 @@ $conn->close();
                             <!-- Tổng kết môn toán -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Tiếng Anh -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Lịch sử -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn địa lý -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Hóa học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Sinh học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Vật Lý -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Tin học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
                         </tr>
@@ -309,56 +316,56 @@ $conn->close();
                             <!-- Tổng kết môn toán -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Tiếng Anh -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Lịch sử -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn địa lý -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Hóa học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Sinh học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Vật Lý -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Tin học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
                         </tr>
@@ -369,61 +376,65 @@ $conn->close();
                             <!-- Tổng kết môn toán -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Tiếng Anh -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Lịch sử -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn địa lý -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Hóa học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Sinh học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Vật Lý -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Tin học -->
                             <td>
                                 <button class="enter-grade-button">Nhập điểm</button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;"/>
+                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
                                 <div class="grades-wrapper"></div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+
+                <div class="total">
+                    
+                </div>
             </div>
             <!-- Modal Structure -->
             <div id="gradeModal" class="modal">
@@ -466,18 +477,19 @@ $conn->close();
 <script src="../js/back.js"></script>
 <script src="./js/diemso.js"></script>
 <script>
-// Hiển thị năm học và học kỳ đã chọn
-window.onload = function() {
-    const savedYear = localStorage.getItem('selectedYear');
-    const savedSemester = localStorage.getItem('selectedSemester');
-    
-    if (savedYear) {
-        document.getElementById('selectedYear').innerText = 'Năm học: ' + savedYear;
-    }
+    // Hiển thị năm học và học kỳ đã chọn
+    window.onload = function () {
+        const savedYear = localStorage.getItem('selectedYear');
+        const savedSemester = localStorage.getItem('selectedSemester');
 
-    if (savedSemester) {
-        document.getElementById('selectedSemester').innerText = '' + savedSemester;
-    }
-};
+        if (savedYear) {
+            document.getElementById('selectedYear').innerText = 'Năm học: ' + savedYear;
+        }
+
+        if (savedSemester) {
+            document.getElementById('selectedSemester').innerText = '' + savedSemester;
+        }
+    };
 </script>
+
 </html>
