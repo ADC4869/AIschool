@@ -21,6 +21,9 @@ $fullname = isset($_SESSION['fullname']) ? $_SESSION['fullname'] : 'Người dù
 $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'guest';
 $teacher_code = isset($_SESSION['teacher_code']) ? $_SESSION['teacher_code'] : 'mã số';
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID từ session
+
+// Kiểm tra và lấy teacher_id từ URL
+$teacher_id = isset($_GET['teacher_id']) ? $_GET['teacher_id'] : $user_id; // Sử dụng user_id nếu không có teacher_id
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -101,7 +104,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
                     Lịch họp
                 </a>
 
-                <a href="./thongtingiaovienhocsinh/index.php?role=giaovien" class="button">
+                <a href="./thongtingiaovienhocsinh/index.php?role=giaovien&teacher_id=<?php echo htmlspecialchars($teacher_id); ?>" class="button">
                     <div class="circle circle__infoclass">
                         <i class="fa-solid fa-users" style="color: #ffffff;"></i>
                     </div>

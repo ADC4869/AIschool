@@ -18,17 +18,21 @@
 </head>
 <body>
     <?php
+        session_start();
+        include '../database/db_config.php'; // Kết nối đến cơ sở dữ liệu
+
         $role = isset($_GET['role']) ? $_GET['role'] : '';
-            if ($role == 'giaovien') {
-                header('Location: giaovien.php');
-                exit();
-            } elseif ($role == 'hocsinh') {
-                header('Location: hocsinh.php');
-                exit();
-            } else {
-                header('Location: hocsinh.php');
-                exit();
-            }
+        $teacher_id = isset($_GET['teacher_id']) ? $_GET['teacher_id'] : null;
+
+        if ($role == 'giaovien') {
+            include 'giaovien.php'; // Bao gồm trang giaovien.php
+        } elseif ($role == 'hocsinh') {
+            // Chuyển đến trang hocsinh.php nếu cần
+        } else {
+            // Mặc định là hocsinh.php nếu không có role
+            header('Location: hocsinh.php');
+            exit();
+        }
     ?>
 </body>
 </html>

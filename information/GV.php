@@ -6,13 +6,7 @@ include '../database/db_config.php';
 $class_id = isset($_GET['class_id']) ? intval($_GET['class_id']) : 0;
 
 // Truy vấn để lấy thông tin các giáo viên dạy lớp và giáo viên chủ nhiệm
-$query = "
-    SELECT 
-        t.id AS teacher_id,
-        u.fullname AS teacher_name,
-        s.subject_name,
-        u.phone,
-        u.address,
+$query = "SELECT t.id AS teacher_id, u.fullname AS teacher_name, s.subject_name, u.phone, u.address,
         CASE 
             WHEN c.homeroom_teacher_id = t.id THEN 'GVCN'
             ELSE ''

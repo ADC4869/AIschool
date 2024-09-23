@@ -1,3 +1,42 @@
+<?php
+session_start();
+include '../database/db_config.php'; // Kết nối đến cơ sở dữ liệu
+
+// Kiểm tra xem có student_id không
+if (!isset($_GET['student_id'])) {
+    die("Không tìm thấy học sinh.");
+}
+
+$student_id = $_GET['student_id'];
+
+// Bước 1: Lấy thông tin học sinh và giáo viên chủ nhiệm
+$query_student = "SELECT u.fullname AS student_name, u.cccd, u.dob, u.gender, u.religion, 
+                         u.nationality, u.ethnic, u.phone, u.address, s.student_code, 
+                         c.class_name, tu.fullname AS teacher_name
+                  FROM users AS u
+                  JOIN students AS s ON u.id = s.id
+                  JOIN classes AS c ON s.class_id = c.id
+                  JOIN teachers AS t ON c.homeroom_teacher_id = t.id
+                  JOIN users AS tu ON t.user_id = tu.id
+                  WHERE u.id = ?";
+                  
+$stmt = $conn->prepare($query_student);
+if (!$stmt) {
+    die("Lỗi trong câu lệnh chuẩn bị: " . $conn->error);
+}
+
+$stmt->bind_param("i", $student_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $student_info = $result->fetch_assoc();
+} else {
+    die("Không tìm thấy thông tin học sinh.");
+}
+
+$stmt->close(); // Đóng statement
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,10 +69,10 @@
                 </span>
             </div>
             <div class="student-info">
-                <img src="../img/hs.jpg" alt="Student Photo" class="student-photo">
+                <img src="../img/hs1.jpg" alt="Student Photo" class="student-photo">
                 <div class="student-details">
-                    <p>Trương Thùy Dung</p>
-                    <p>HS20015847</p>
+                    <p><?php echo htmlspecialchars($student_info['student_name']); ?></p>
+                    <p><?php echo htmlspecialchars($student_info['student_code']); ?></p>
                 </div>
             </div>
         </div>
@@ -48,24 +87,24 @@
         <div class="main__content">
             <p class="small__title">CCCD / Định danh</p>
             <div class="info">
-                <p>6506864875124</p>
+                <p><?php echo htmlspecialchars($student_info['cccd']); ?></p>
             </div>
 
             <p class="small__title">Ngày sinh</p>
             <div class="info">
-                <p>30/05/1995</p>
+                <p><?php echo htmlspecialchars($student_info['dob']); ?></p>
             </div>
             <div class="short__row">
                 <div>
                     <p class="small__title">Giới tính</p>
                     <div class="info">
-                        <p>Nữ</p>
+                        <p><?php echo htmlspecialchars($student_info['gender']); ?></p>
                     </div>
                 </div>
                 <div>
                     <p class="small__title">Tôn giáo</p>
                     <div class="info">
-                        <p>Không</p>
+                        <p><?php echo htmlspecialchars($student_info['religion']); ?></p>
                     </div>
                 </div>
             </div>
@@ -74,13 +113,13 @@
                 <div>
                     <p class="small__title">Quốc tịch</p>
                     <div class="info">
-                        <p>Việt Nam</p>
+                        <p><?php echo htmlspecialchars($student_info['nationality']); ?></p>
                     </div>
                 </div>
                 <div>
                     <p class="small__title">Dân tộc</p>
                     <div class="info">
-                        <p>Kinh</p>
+                        <p><?php echo htmlspecialchars($student_info['ethnic']); ?></p>
                     </div>
                 </div>
             </div>
@@ -88,7 +127,7 @@
             <div>
                 <p class="small__title">Số điện thoại</p>
                 <div class="info">
-                    <p>0897879799</p>
+                    <p><?php echo htmlspecialchars($student_info['phone']); ?></p>
                 </div>
             </div>
 
@@ -101,7 +140,7 @@
             <div>
                 <p class="small__title">Địa chỉ</p>
                 <div class="info__address">
-                    <p>28/16 Lê Văn Thọ, phường 6, Gò Vấp, Hồ Chí Minh</p>
+                    <p><?php echo htmlspecialchars($student_info['address']); ?></p>
                 </div>
             </div>
 
@@ -116,14 +155,14 @@
             <div>
                 <p class="small__title">Lớp</p>
                 <div class="info">
-                    <p>9A1</p>
+                    <p><?php echo htmlspecialchars($student_info['class_name']); ?></p>
                 </div>
             </div>
 
             <div>
                 <p class="small__title">Giáo viên chủ nhiệm</p>
                 <div class="info">
-                    <p>Nguyễn Thị Ánh Xuân</p>
+                    <p><?php echo htmlspecialchars($student_info['teacher_name']); ?></p>
                 </div>
             </div>
             <div class="short__row">
