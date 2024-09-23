@@ -148,9 +148,8 @@
                     <div class="student-card-paid">
                         <img src="./img/hs.jpg" alt="avatar">
                         <div style="position: relative; right: 15px;">
-                            <h4>Nguyễn Ngọc Ánh</h4>
-                            <p>Chưa đóng học phí</p>
-                            <p>Ghi chú: Khó khăn</p>
+                            <h4>Đào Ngọc Hoa</h4>
+                            <p>Đã đóng học phí</p>
                         </div>
                         <div class="icons">
                             <a href="./call/index.php">
@@ -165,9 +164,8 @@
                     <div class="student-card-paid">
                         <img src="./img/hs1.jpg" alt="avatar">
                         <div style="position: relative; right: 15px;">
-                            <h4>Phạm Gia Bách</h4>
-                            <p>Chưa đóng học phí</p>
-                            <p>Ghi chú: Khó khăn</p>
+                            <h4>Hoa Thanh Sơn</h4>
+                            <p>Đã đóng học phí</p>
                         </div>
                         <div class="icons">
                         <a href="./call/index.php">
