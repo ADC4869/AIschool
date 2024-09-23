@@ -9,7 +9,7 @@ if (!isset($_GET['student_id'])) {
 
 $student_id = $_GET['student_id'];
 
-// Bước 1: Lấy thông tin học sinh và giáo viên chủ nhiệm
+// Lấy thông tin học sinh và giáo viên chủ nhiệm
 $query_student = "SELECT u.fullname AS student_name, u.cccd, u.dob, u.gender, u.religion, 
                          u.nationality, u.ethnic, u.phone, u.address, s.student_code, 
                          c.class_name, tu.fullname AS teacher_name
