@@ -2,11 +2,6 @@
 session_start();
 include '../database/db_config.php';
 
-// Kiểm tra quyền truy cập
-if ($_SESSION['role'] !== 'giaovien') {
-    die("Bạn không có quyền truy cập trang này.");
-}
-
 // Lấy ID học sinh từ URL
 $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : '';
 
@@ -20,11 +15,11 @@ if ($conn->connect_error) {
 }
 
 // Lấy thông tin học sinh và lớp
-$stmt = $conn->prepare("SELECT u.fullname AS student_name, c.class_name 
-                        FROM students s 
-                        JOIN users u ON s.id = u.id 
-                        JOIN classes c ON s.class_id = c.id 
-                        WHERE s.student_code = ?");
+$stmt = $conn->prepare("SELECT u.fullname AS student_name, c.class_name, u.phone AS parent_phone 
+                               FROM students s 
+                               JOIN users u ON s.id = u.id 
+                               JOIN classes c ON s.class_id = c.id 
+                               WHERE s.student_code = ?");
 $stmt->bind_param("s", $student_id);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -33,6 +28,7 @@ if ($result->num_rows > 0) {
     $student_info = $result->fetch_assoc();
     $student_name = $student_info['student_name'];
     $class_name = $student_info['class_name'];
+    $parent_phone = $student_info['parent_phone'] ?? 'Chưa có thông tin';
 } else {
     die("Học sinh không tìm thấy.");
 }
