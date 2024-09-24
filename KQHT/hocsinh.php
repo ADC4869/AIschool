@@ -34,7 +34,7 @@ $conn->close();
 <!-- Học sinh -->
 <div class="container">
             <div class="year-semester">
-                <div id="yearDisplay" class="year" onclick="openDialog()">Năm học: 2023 - 2024</div>
+                <div id="yearDisplay" class="year" onclick="openDialog()">Năm học: 2024 - 2025</div>
                 <div class="semester" id="openModalBtn">Chọn học kì</div>
             </div>
 
