@@ -1,5 +1,4 @@
 <?php
-session_start();
 include '../database/db_config.php'; // Kết nối đến cơ sở dữ liệu
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'giaovien') {
