@@ -19,7 +19,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh';
     <link rel="stylesheet" href="./fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- css -->
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="css/setting.css">
+    <link rel="stylesheet" href="css/caidat.css">
     <link rel="stylesheet" href="css/footer.css">
     <style>
         /* Giao diện sáng */
@@ -37,7 +37,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh';
 </head>
 
 <body>
-    <header>
+<header>
         <div class="header">
             <span class="back-arrow" onclick="goBack()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

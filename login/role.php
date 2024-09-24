@@ -43,21 +43,21 @@
                     <button type="button" class="btn__teacher">
                         <div class="div"></div>
                         <p>Giáo viên</p>
-                        <i class="fa-solid fa-camera"></i>
+                        <i data-feather="camera" style="color: #5B6998"></i>
                     </button>
                 </a>
                 <a href="./loginPH.php?role=phuhuynh">
                     <button type="button" class="btn__teacher">
                         <div class="div"></div>
                         <p>Phụ huynh</p>
-                        <i class="fa-solid fa-camera"></i>
+                        <i data-feather="camera" style="color: #5B6998"></i>
                     </button>
                 </a>
                 <a href="./loginHS.php?role=hocsinh">
                     <button type="button" class="btn__teacher">
                         <div class="div"></div>
                         <p>Học sinh</p>
-                        <i class="fa-solid fa-camera"></i>
+                        <i data-feather="camera" style="color: #5B6998"></i>
                     </button>
                 </a>
             </div>
@@ -65,4 +65,9 @@
     </div>
 </body>
 <script src="../js/back.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
 </html>

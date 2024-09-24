@@ -40,7 +40,7 @@
 
     <footer>
         <a href="../login/login.php">
-            <button type="button" class="btn__button">Bắt đầu</button>
+            <button type="button" class="btn__button">Bắt đầu...</button>
         </a>
     </footer>
 
