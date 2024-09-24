@@ -1,6 +1,6 @@
 // Open the semester modal
 document.getElementById("openModalBtn").onclick = function() {
-    document.getElementById("myModal").style.display = "flex";
+document.getElementById("myModal").style.display = "flex";
 };
 
 // Close the semester modal
