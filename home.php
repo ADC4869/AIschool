@@ -49,7 +49,7 @@ $teacher_id = isset($_GET['teacher_id']) ? $_GET['teacher_id'] : $user_id; // S·
     <header>
         <div class="header">
             <h1><span>Xin ch√†o,</span><br><?php echo htmlspecialchars($fullname); ?></h1>
-            <img src="img/a.jpg" alt="Avatar">
+            <img src="./img/hs1.jpg" alt="Avatar">
         </div>
     </header>
 

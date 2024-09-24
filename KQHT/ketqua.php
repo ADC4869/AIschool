@@ -48,7 +48,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kết quả học tập</title>
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="./css/resultstudy.css">
+    <link rel="stylesheet" href="./css/result.css">
 </head>
 
 <body>
@@ -113,8 +113,8 @@ $conn->close();
                 <table>
                     <thead>
                         <tr>
-                            <th>Văn</th>
-                            <th>Toán</th>
+                            <th>Ngữ Văn</th>
+                            <th>Toán Học</th>
                             <th>Tiếng Anh</th>
                             <th>Lịch Sử</th>
                             <th>Địa Lý</th>
@@ -431,11 +431,8 @@ $conn->close();
                         </tr>
                     </tbody>
                 </table>
-
-                <div class="total">
-                    
-                </div>
             </div>
+
             <!-- Modal Structure -->
             <div id="gradeModal" class="modal">
                 <div class="modal-content">
@@ -469,6 +466,225 @@ $conn->close();
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- BẢNG ĐIỂM CẢ NĂM -->
+        <div class="table-container" style="display: none">
+            <table class="fixed-column">
+                <thead>
+                    <tr>
+                        <th>Môn học</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HỌC KÌ I</td>
+                    </tr>
+                    <tr>
+                        <td>HỌC KÌ II</td>
+                    </tr>
+                    <tr>
+                        <td>ĐTB</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="scrollable-columns">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ngữ Văn</th>
+                            <th>Toán Học</th>
+                            <th>Tiếng Anh</th>
+                            <th>Lịch Sử</th>
+                            <th>Địa Lý</th>
+                            <th>Hóa học</th>
+                            <th>Sinh học</th>
+                            <th>Vật Lý</th>
+                            <th>Tin học</th>
+                            <!-- Add more subjects as needed -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="grades">10</div>
+                            </td>
+
+                            <!-- Tổng kết môn toán -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Tiếng Anh -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Lịch sử -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn địa lý -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Hóa học -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Sinh học -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Vật Lý -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Tin học -->
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="grades" style="background-color: var(--peachy-color);">5</div>
+                            </td>
+                            <!-- Tổng kết môn toán -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Tiếng Anh -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Lịch sử -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn địa lý -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Hóa học -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Sinh học -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Vật Lý -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Tin học -->
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="grades">6.7</div>
+                            </td>
+                            <!-- Tổng kết môn toán -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Tiếng Anh -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Lịch sử -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn địa lý -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Hóa học -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Sinh học -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Vật Lý -->
+                            <td>
+
+                            </td>
+
+                            <!-- Tổng kết môn Tin học -->
+                            <td>
+                                <div class="grades-wrapper"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Modal Structure -->
+            <div id="gradeModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Chi tiết bài kiểm tra</h2>
+                    <div class="modal-body">
+                        <div class="info-row">
+                            <div class="info">
+                                <p>Trường: IUH</p>
+                                <p>Lớp: 1B</p>
+                                <p>Tên: Nguyễn Thị Yến Loan</p>
+                            </div>
+                            <div class="info">
+                                <p>Ngày: 14/08/2024</p>
+                                <p>Môn: Toán</p>
+                                <p>Thời gian: 15’</p>
+                            </div>
+                        </div>
+                        <div class="grade-review">
+                            <div class="grade">
+                                <div class="grades">10</div><br>
+                                <img id="image" src="../img/header1.jpg" alt="Image to Download" width="300px"
+                                    style="width: 120px; height: 85px;">
+                                <br><br>
+                                <button id="downloadBtn">Tải ảnh</button>
+                            </div>
+                            <div class="review">
+                                <p>Nhận xét của giáo viên</p>
+                                <p>Very good</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="totalscore">
+            <div class="totalscore__content">
+                <p class="score__title">Điểm trung bình: </p>
+                <p class="score__total">8.8</p>
             </div>
         </div>
     </main>
