@@ -24,6 +24,7 @@ $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID 
 
 // Kiểm tra và lấy teacher_id từ URL
 $teacher_id = isset($_GET['teacher_id']) ? $_GET['teacher_id'] : $user_id; // Sử dụng user_id nếu không có teacher_id
+$student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 ?>
 <!DOCTYPE html>
 <html lang="en">

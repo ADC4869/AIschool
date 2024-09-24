@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,7 @@
     <link rel="stylesheet" href="css/giaovien.css">
     <link rel="stylesheet" href="../css/footer.css">
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -53,6 +55,25 @@
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>
-  feather.replace();
+feather.replace();
+</script>
+<script>
+function showClasses(grade) {
+    var gradeElement = document.getElementById(grade);
+
+    // Kiểm tra trạng thái hiện tại của danh sách lớp
+    if (gradeElement.style.display === 'none' || gradeElement.style.display === '') {
+        // Ẩn tất cả các danh sách lớp khác
+        var classLists = document.querySelectorAll('.class-list');
+        classLists.forEach(function(list) {
+            list.style.display = 'none';
+        });
+        // Hiển thị danh sách lớp được chọn
+        gradeElement.style.display = 'block';
+    } else {
+        // Ẩn danh sách lớp nếu nó đang hiển thị
+        gradeElement.style.display = 'none';
+    }
+}
 </script>
 </html>
