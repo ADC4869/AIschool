@@ -182,7 +182,7 @@ main .content__news {
 
 .content__news .left__news {
     width: 50%;
-    height: 100%;
+    height: 210px;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
 }
@@ -199,26 +199,29 @@ main .content__news {
 }
 .left__news .photo img {
     width: 100%;
-    height: 100%;
+    height: 150px;
     border-radius: 5px;
     object-fit: cover;
 }
 .left__news .info {
-    margin: 0 5px;
+    margin: 0 10px;
+    margin-top: 30px;
 }
 .left__news .info .news__title{
-    font-size: 15px;
+    font-size: 12px;
 }
 .left__news .info .news__time {
     display: flex;
     align-items: center;
     gap: 5px;
     color: #b0b0b0;
+    font-size: 8px;
 }
 
 .content__news .right__news {
     width: 50%;
     height: 100%;
+    gap: 5px;
 }
 
 .right__news .top__news {
@@ -228,17 +231,17 @@ main .content__news {
     align-items: center;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
+    margin-bottom: 9px;
 }
 .right__news a {
     width: 100%;
     height: 100%;
     display: flex;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
+   
 }
 .top__news .photo {
     width: 50%;
-    height: 100%;
+    height: 100px;
 }
 .top__news .info {
     width: 50%;
@@ -254,12 +257,12 @@ main .content__news {
     color: #b0b0b0;
 }
 .left__news .news__time i {
-    font-size: 13px;
+    font-size: 8px;
     color: #b0b0b0;
 }
 .top__news .photo img {
     width: 100%;
-    height: 100%;
+    height: 100px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -271,11 +274,13 @@ main .content__news {
 .right__news .bottom__news {
     width: 100%;
     height: 50%;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
 }
 
 .bottom__news .photo {
     width: 50%;
-    height: 100%;
+    height: 100px;
 }
 .bottom__news .info {
     width: 50%;
@@ -285,7 +290,7 @@ main .content__news {
 }
 .bottom__news .photo img {
     width: 100%;
-    height: 100%;
+    height: 100px;
     object-fit: cover;
     border-radius: 5px;
 }

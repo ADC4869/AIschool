@@ -41,7 +41,7 @@ $teacher_id = isset($_GET['teacher_id']) ? $_GET['teacher_id'] : $user_id; // Sá
     <link rel="stylesheet" href="./fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/giaodien.css">
 </head>
