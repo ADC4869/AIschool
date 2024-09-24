@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- css -->
      <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/resetpassword.css">
+    <link rel="stylesheet" href="css/password.css">
 </head>
 <body>
     <header>
