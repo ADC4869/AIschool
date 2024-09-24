@@ -9,12 +9,16 @@ header .header {
     background-color: var(--primary-color);
     color: var(--white-color);
     padding: 20px;
-    height: 80px;
+    height: 150px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 header .header h1 {
@@ -52,19 +56,24 @@ header .header img {
 
 @media (max-width: 480px) {
     header .header h1 {
-        font-size: 18px;
+        font-size: 28px;
+        margin-top: 30px;
     }
 
     header .header h1 span {
-        font-size: 15px;
+        font-size: 22px;
     }
 
     header .header img {
-        width: 50px;
-        height: 50px;
+        width: 68px;
+        height: 68px;
+        margin-top: 30px;
+        margin-right: 25px;
     }
 }
-
+main {
+    margin-top: 200px;
+}
 main .button-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -50,7 +50,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
     <header>
         <div class="header">
             <h1><span>Xin chào,</span><br><?php echo htmlspecialchars($fullname); ?></h1>
-            <img src="img/a.jpg" alt="Avatar">
+            <img src="./img/hs1.jpg" alt="Avatar">
         </div>
     </header>
 
