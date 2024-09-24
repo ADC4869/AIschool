@@ -96,7 +96,7 @@ header .subheader span {
 }
 
 main {
-    margin-top: 205px;
+    margin-top: 290px;
 }
 
 main .table-container {
@@ -375,6 +375,81 @@ main .grade .grades {
     font-size: 30px; 
     color: #4CAF50; 
     font-weight: bold; 
+}
+
+
+
+/* INFO STUDENT */
+.subheader {
+    display: flex; /* Sử dụng flexbox cho bố cục */
+    justify-content: space-between; /* Căn giữa các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 5px;
+    background-color: #f9f9f9; /* Màu nền */
+    border-radius: 8px; /* Bo góc */
+    gap: 10px;
+}
+
+.subheader .info__student {
+    width: 50%;
+    height: 100%;
+}
+
+.subheader .info__student .photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__student .photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.subheader .infodetail {
+    width: 50%;
+}
+
+.subheader .infodetail .student-name {
+    font-weight: bold;
+}
+.button__header {
+    display: flex; /* Sử dụng flexbox cho bố cục */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 5px; /* Khoảng cách bên trong */
+    background-color: #f9f9f9; /* Màu nền */
+    border-bottom: 1px solid #ddd; /* Đường viền */
+    border-radius: 8px;
+    justify-content: center;
+    gap: 10px;
+}
+.button__header .button__year {
+    justify-content: flex-end;
+}
+.button__header .button__semester {
+    justify-content: flex-start;
+}
+
+.button__header .year, .semester {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--light-periwinkle-color);
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    cursor: pointer;
+    
+}
+
+
+.button__header .button__year, .button__semester {
+    width: 50%;
+    align-items: center;
+    display: flex;
 }
 
 
