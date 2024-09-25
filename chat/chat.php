@@ -1,6 +1,41 @@
+<?php
+session_start();
+require_once '../database/db_config.php'; // Kết nối database
+
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['role'])) {
+    http_response_code(403); // Trả về mã lỗi 403 nếu chưa đăng nhập
+    echo json_encode(['error' => 'Unauthorized']);
+    exit;
+}
+
+$user_id = $_SESSION['user_id'];
+$chat_id = $_GET['chat_id'] ?? null; // Lấy chat_id từ URL
+
+// Biến để lưu tên người đang chat
+$chat_with_name = '';
+
+// Kiểm tra xem chat_id có hợp lệ không
+if ($chat_id) {
+    // Truy vấn để lấy tên người dùng mà bạn đang trò chuyện
+    $query = "SELECT u.fullname FROM messages m
+              JOIN users u ON u.id = m.sender_id
+              WHERE m.chat_id = ?
+              LIMIT 1"; // Lấy tên của người gửi tin nhắn đầu tiên
+
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $chat_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($row = $result->fetch_assoc()) {
+        $chat_with_name = $row['fullname']; // Lưu tên người dùng
+    }
+}
+
+// Hiển thị tên người dùng trong HTML
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +52,6 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/groupstyle.css">
 </head>
-
 <body>
     <header>
         <div class="header">
@@ -28,8 +62,8 @@
                         d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                 </svg>
             </span>
-            <img src="../img/hs.jpg" alt="Avatar" class="avatar">
-            <div class="username">Lê Hồng Anh</div>
+            <img src="../img/hs1.jpg" alt="Avatar" class="avatar">
+            <div class="username"><?php echo htmlspecialchars($chat_with_name); ?></div>
             <div class="menu-icon">
                 <a href="../call/index.php">
                 <i class="fa-solid fa-phone" style="color: white; font-size: 20px"></i>
@@ -39,7 +73,10 @@
     </header>
 
     <main>
-    <div class="chat-container">
+        <div class="chat-container" id="chatContainer">
+            <!-- Tin nhắn sẽ được chèn vào đây từ chat.js -->
+        </div>
+        <!-- <div class="chat-container">
             <div class="chat-bubble bot">
                 <img src="../img/hs.jpg" alt="Bot">
                 <div class="message">Nội dung chat...
@@ -86,7 +123,7 @@
                 <p class="time">18:26</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </main>
 
     <footer>
@@ -137,5 +174,5 @@
 <script src="./js/camera.js"></script>
 <script src="./js/mic.js"></script>
 <script src="./js/send.js"></script>
-
+<script src="./js/chat.js"></script>
 </html>

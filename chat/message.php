@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,20 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="./css/messagestyle.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <style>
+    main .time {
+        /* Màu sắc mặc định cho số lượng tin nhắn */
+        color: transparent;
+        /* Ẩn màu sắc nếu không có tin nhắn */
+    }
+
+    main .time.has-unread {
+        color: red;
+        /* Màu sắc hiển thị khi có tin nhắn chưa đọc */
+    }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -43,7 +56,78 @@
         <!-- Đoạn chat -->
         <div id="chatContent" class="content">
             <ul class="chat-list">
-                <li class="chat-item" data-chat-id="A">
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        fetchMessages();
+
+                        function fetchMessages() {
+                            fetch('fetch_messages.php')
+                                .then(response => {
+                                    if (!response.ok) {
+                                        throw new Error('Network response was not ok');
+                                    }
+                                    return response.json();
+                                })
+                                .then(messages => {
+                                    const chatList = document.querySelector('.chat-list');
+                                    chatList.innerHTML = ''; // Xóa nội dung hiện tại
+
+                                    if (messages.length === 0) {
+                                        chatList.innerHTML =
+                                        '<li>Chưa có tin nhắn nào.</li>'; // Thông báo không có tin nhắn
+                                        return;
+                                    }
+
+                                    messages.forEach(message => {
+                                        // Tạo phần tử chat mới
+                                        const chatItem = document.createElement('li');
+                                        chatItem.classList.add('chat-item');
+                                        chatItem.setAttribute('data-chat-id', message
+                                        .chat_id); // ID chat
+
+                                        chatItem.innerHTML = `
+                            <img src="../img/hs1.jpg" alt="User Image">
+                            <div class="chat-info">
+                                <div class="chat-name">${message.sender_name}</div>
+                                <div class="chat-message">${message.message || 'Chưa có tin nhắn'}</div>
+                            </div>
+                            <div class="days">
+                                <div class="chat-time">${formatTime(message.created_at)}</div>
+                                <div class="time">${message.unread_messages > 0 ? (message.unread_messages > 5 ? '5+' : message.unread_messages) : ''}</div>
+                            </div>
+                        `;
+                                        chatList.appendChild(chatItem);
+                                    });
+
+                                    // Thêm sự kiện click cho từng phần tử chat
+                                    addChatItemListeners();
+                                })
+                                .catch(error => {
+                                    console.error('Error fetching messages:', error);
+                                    alert(
+                                    'Không thể tải tin nhắn. Vui lòng thử lại sau.'); // Thông báo lỗi cho người dùng
+                                });
+                        }
+
+                        function formatTime(timestamp) {
+                            const date = new Date(timestamp);
+                            const hours = date.getHours();
+                            const minutes = date.getMinutes();
+                            return `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+                        }
+
+                        function addChatItemListeners() {
+                            document.querySelectorAll('.chat-item').forEach(item => {
+                                item.addEventListener('click', function() {
+                                    const chatId = this.getAttribute('data-chat-id');
+                                    window.location.href =
+                                    `chat.php?chat_id=${chatId}`; // Chuyển đến trang chat với chat_id
+                                });
+                            });
+                        }
+                    });
+                </script>
+                <!-- <li class="chat-item" data-chat-id="A">
                     <img src="../img/hs.jpg" alt="">
                     <div class="chat-info">
                         <div class="chat-name">Lê Hồng Anh</div>
@@ -54,69 +138,7 @@
                         <div class="chat-time">1 giờ</div>
                         <div class="time">5+</div>
                     </div>
-                </li>
-
-                <li class="chat-item" data-chat-id="B">
-                    <img src="../img/hs.jpg" alt="">
-                    <div class="chat-info">
-                        <div class="chat-name">Trần Uyên Bạch Yên Vy</div>
-                        <div class="chat-message">Tôi cần thay đổi thông tin số điện thoại...</div>
-                    </div>
-
-                    <div class="days">
-                        <div class="chat-time">1 giờ</div>
-                        <div class="time">5+</div>
-                    </div>
-                </li>
-
-                <li class="chat-item" data-chat-id="C">
-                    <img src="../img/hs1.jpg" alt="">
-                    <div class="chat-info">
-                        <div class="chat-name">Nguyễn Đăng Khoa</div>
-                        <div class="chat-message">Nội dung họp phụ huynh thứ 5 ngày 15/...</div>
-                    </div>
-                    <div class="chat-time">1 giờ</div>
-                </li>
-                <li class="chat-item" data-chat-id="D">
-                    <img src="../img/hs.jpg" alt="">
-                    <div class="chat-info">
-                        <div class="chat-name">Uyên Mỹ Anh</div>
-                        <div class="chat-message">Nội dung họp phụ huynh thứ 5 ngày 15/...</div>
-                    </div>
-                    <div class="chat-time">1 giờ</div>
-                </li>
-                <li class="chat-item">
-                    <img src="../img/hs1.jpg" alt="">
-                    <div class="chat-info">
-                        <div class="chat-name">Lâm Anh Tuấn</div>
-                        <div class="chat-message">Nội dung họp phụ huynh thứ 5 ngày 15/...</div>
-                    </div>
-                    <div class="chat-time">1 giờ</div>
-                </li>
-                <li class="chat-item">
-                    <img src="../img/hs1.jpg" alt="">
-                    <div class="chat-info">
-                        <div class="chat-name">Lê Huỳnh Anh</div>
-                        <div class="chat-message">Nội dung họp phụ huynh thứ 5 ngày 15/...</div>
-                    </div>
-                    <div class="chat-time">1 giờ</div>
-                </li>
-                <li class="chat-item">
-                    <img src="../img/hs.jpg" alt="">
-                    <div class="chat-info">
-                        <div class="chat-name">Vũ Thị Thu Phương</div>
-                        <div class="chat-message">Nội dung họp phụ huynh thứ 5 ngày 15/...</div>
-                    </div>
-                    <div class="chat-time">1 giờ</div>
-                </li>
-                <li class="chat-item">
-                    <img src="../img/hs.jpg" alt="">
-                    <div class="chat-info">
-                        <div class="chat-name">Uyên Mỹ Anh</div>
-                        <div class="chat-message">Nội dung họp phụ huynh thứ 5 ngày 15/...</div>
-                    </div>
-                    <div class="chat-time">1 giờ</div>
-                </li>
+                </li> -->
             </ul>
         </div>
 
@@ -214,7 +236,7 @@
     <?php include '../footer/footer.php' ?>
 </body>
 <script src="js/tab.js"></script>
-<script src="js/chat.js"></script>
 <script src="js/nhom.js"></script>
 <script src="../js/back.js"></script>
+
 </html>

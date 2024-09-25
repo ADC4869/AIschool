@@ -1,120 +1,130 @@
 <?php
 session_start();
-include '../database/db_config.php'; // Kết nối tới database
+require_once '../database/db_config.php'; // Kết nối database
 
-$user_id = $_SESSION['user_id']; // ID của người dùng đăng nhập
-$user_role = $_SESSION['role']; // Vai trò của người dùng (hocsinh, giaovien)
-
-$messages = [];
-
-if ($user_role == 'hocsinh') {
-    // Lấy thông tin lớp của học sinh
-    $query_class = "SELECT class_id FROM students WHERE user_id = ?";
-    $stmt_class = $conn->prepare($query_class);
-    $stmt_class->bind_param("i", $user_id);
-    $stmt_class->execute();
-    $result_class = $stmt_class->get_result();
-    $class_row = $result_class->fetch_assoc();
-    $class_id = $class_row['class_id'];
-
-    // Truy vấn tin nhắn giữa học sinh và giáo viên chủ nhiệm, giáo viên dạy môn, và học sinh cùng lớp
-    $query_messages = "
-        SELECT m.*, u.fullname as sender_name, u2.fullname as receiver_name 
-        FROM messages m
-        JOIN users u ON m.sender_id = u.id
-        JOIN users u2 ON m.receiver_id = u2.id
-        WHERE (
-            m.sender_id = ? OR m.receiver_id = ?
-        )
-        AND (
-            m.sender_id IN (
-                SELECT t.user_id
-                FROM teachers t
-                JOIN teacher_subjects ts ON t.user_id = ts.teacher_id
-                WHERE ts.class_id = ?
-            ) OR m.receiver_id IN (
-                SELECT t.user_id
-                FROM teachers t
-                JOIN teacher_subjects ts ON t.user_id = ts.teacher_id
-                WHERE ts.class_id = ?
-            ) OR m.sender_id IN (
-                SELECT s.user_id
-                FROM students s
-                WHERE s.class_id = ?
-            ) OR m.receiver_id IN (
-                SELECT s.user_id
-                FROM students s
-                WHERE s.class_id = ?
-            )
-        )
-        ORDER BY m.created_at ASC
-    ";
-    $stmt_messages = $conn->prepare($query_messages);
-    $stmt_messages->bind_param("iiiiii", $user_id, $user_id, $class_id, $class_id, $class_id, $class_id);
-} elseif ($user_role == 'giaovien') {
-    // Giáo viên - Lấy danh sách lớp mà giáo viên chủ nhiệm hoặc dạy
-    $query_classes = "
-        SELECT c.id AS class_id
-        FROM classes c
-        LEFT JOIN teacher_subjects ts ON c.id = ts.class_id
-        WHERE ts.teacher_id = ? OR c.homeroom_teacher_id = ?
-    ";
-    $stmt_classes = $conn->prepare($query_classes);
-    $stmt_classes->bind_param("ii", $user_id, $user_id);
-    $stmt_classes->execute();
-    $result_classes = $stmt_classes->get_result();
-
-    $class_ids = [];
-    while ($row = $result_classes->fetch_assoc()) {
-        $class_ids[] = $row['class_id'];
-    }
-    $class_ids_placeholder = implode(',', array_fill(0, count($class_ids), '?'));
-
-    // Truy vấn tin nhắn giữa giáo viên và học sinh/phụ huynh trong lớp
-    $query_messages = "
-        SELECT m.*, u.fullname as sender_name, u2.fullname as receiver_name 
-        FROM messages m
-        JOIN users u ON m.sender_id = u.id
-        JOIN users u2 ON m.receiver_id = u2.id
-        WHERE (
-            m.sender_id = ? OR m.receiver_id = ?
-        )
-        AND (
-            m.sender_id IN (
-                SELECT s.user_id
-                FROM students s
-                WHERE s.class_id IN ($class_ids_placeholder)
-            ) OR m.receiver_id IN (
-                SELECT s.user_id
-                FROM students s
-                WHERE s.class_id IN ($class_ids_placeholder)
-            ) OR m.sender_id IN (
-                SELECT u.id
-                FROM users u
-                JOIN students s ON u.id = s.parent_id
-                WHERE s.class_id IN ($class_ids_placeholder)
-            ) OR m.receiver_id IN (
-                SELECT u.id
-                FROM users u
-                JOIN students s ON u.id = s.parent_id
-                WHERE s.class_id IN ($class_ids_placeholder)
-            )
-        )
-        ORDER BY m.created_at ASC
-    ";
-    $stmt_messages = $conn->prepare($query_messages);
-    $params = array_merge([$user_id, $user_id], $class_ids, $class_ids, $class_ids, $class_ids);
-    $types = str_repeat('i', count($params));
-    $stmt_messages->bind_param($types, ...$params);
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['role'])) {
+    http_response_code(403); // Trả về mã lỗi 403 nếu chưa đăng nhập
+    echo json_encode(['error' => 'Unauthorized']);
+    exit;
 }
 
-$stmt_messages->execute();
-$result_messages = $stmt_messages->get_result();
+$user_id = $_SESSION['user_id'];
+$role = $_SESSION['role']; // Vai trò của tài khoản đang đăng nhập
+$messages = [];
 
-while ($row = $result_messages->fetch_assoc()) {
-    $messages[] = $row;
+// Truy vấn cho giáo viên
+if ($role === 'giaovien') {
+    // Lấy tất cả học sinh trong lớp mà giáo viên chủ nhiệm hoặc dạy, không bao gồm chính giáo viên
+    $query_students = "SELECT s.id AS student_id, u.fullname AS student_name, c.class_name, p.fullname AS parent_name,
+            COALESCE(m.message, 'Chưa có tin nhắn') AS message,
+            COALESCE(m.created_at, NOW()) AS created_at,
+            COALESCE(m.is_read, 1) AS is_read
+        FROM students s
+        JOIN classes c ON s.class_id = c.id
+        JOIN users u ON s.id = u.id
+        JOIN users p ON s.parent_id = p.id
+        LEFT JOIN messages m ON m.receiver_id = u.id AND m.sender_id <> ? AND m.chat_id = m.id
+        WHERE s.class_id IN (
+            SELECT ts.class_id FROM teacher_subjects ts WHERE ts.teacher_id = ?
+            UNION
+            SELECT c.id FROM classes c WHERE c.homeroom_teacher_id = ?
+        )
+        ORDER BY m.created_at DESC ";
+
+    $stmt_students = $conn->prepare($query_students);
+    $stmt_students->bind_param("sss", $user_id, $user_id, $user_id);
+    $stmt_students->execute();
+    $result_students = $stmt_students->get_result();
+
+    while ($row = $result_students->fetch_assoc()) {
+        $unread_messages = ($row['is_read'] == 0) ? 1 : 0;
+        $messages[] = [
+            'chat_id' => $row['student_id'], // Sử dụng ID học sinh cho chat_id
+            'sender_name' => $row['student_name'] . ' (' . $row['class_name'] . ')',
+            'message' => $row['message'],
+            'created_at' => $row['created_at'],
+            'unread_messages' => $unread_messages
+        ];
+
+        // Thêm phụ huynh của học sinh
+        $messages[] = [
+            'chat_id' => $row['student_id'], // Sử dụng ID học sinh cho chat_id
+            'sender_name' => $row['parent_name'] . ' (Phụ huynh của ' . $row['student_name'] . ')',
+            'message' => $row['message'],
+            'created_at' => $row['created_at'],
+            'unread_messages' => $unread_messages
+        ];
+    }
+
+    // Truy vấn cho giáo viên khác trong cùng lớp
+    $query_teachers = "SELECT m.id AS chat_id, u.fullname AS teacher_name, s.subject_name, 
+               COALESCE(m.message, 'Chưa có tin nhắn') AS message, 
+               COALESCE(m.created_at, NOW()) AS created_at, 
+               COALESCE(m.is_read, 1) AS is_read
+        FROM teachers t
+        JOIN users u ON t.user_id = u.id
+        JOIN teacher_subjects ts ON t.id = ts.teacher_id
+        JOIN subjects s ON ts.subject_id = s.id
+        LEFT JOIN messages m ON m.receiver_id = u.id AND m.sender_id = ? AND m.chat_id = m.id
+        WHERE ts.class_id IN (
+            SELECT ts.class_id FROM teacher_subjects ts WHERE ts.teacher_id = ?
+        )
+        ORDER BY m.created_at DESC
+    ";
+
+    $stmt_teachers = $conn->prepare($query_teachers);
+    $stmt_teachers->bind_param("ss", $user_id, $user_id);
+    $stmt_teachers->execute();
+    $result_teachers = $stmt_teachers->get_result();
+
+    while ($row = $result_teachers->fetch_assoc()) {
+        $subject_info = ($row['subject_name'] === null) ? 'GVCN' : $row['subject_name'];
+        $unread_messages = ($row['is_read'] == 0) ? 1 : 0;
+        $messages[] = [
+            'chat_id' => $row['chat_id'],
+            'sender_name' => $row['teacher_name'] . ' (' . $subject_info . ')',
+            'message' => $row['message'],
+            'created_at' => $row['created_at'],
+            'unread_messages' => $unread_messages
+        ];
+    }
+} elseif ($role === 'hocsinh') {
+    // Truy vấn cho học sinh
+    $query_students = "SELECT m.id AS chat_id, u.fullname AS name, 
+               CASE 
+                   WHEN t.class_supervised_id = st.class_id THEN 'GVCN' 
+                   ELSE s.subject_name 
+               END AS role_info,
+               COALESCE(m.message, 'Chưa có tin nhắn') AS message, 
+               COALESCE(m.created_at, NOW()) AS created_at, 
+               COALESCE(m.is_read, 1) AS is_read 
+        FROM students st
+        JOIN classes c ON st.class_id = c.id
+        JOIN teacher_subjects ts ON c.id = ts.class_id
+        JOIN teachers t ON ts.teacher_id = t.id
+        JOIN users u ON t.user_id = u.id
+        LEFT JOIN subjects s ON ts.subject_id = s.id
+        LEFT JOIN messages m ON m.receiver_id = u.id AND m.sender_id = ? AND m.chat_id = m.id
+        WHERE st.id = ?
+        ORDER BY m.created_at DESC
+    ";
+    
+    $stmt_students = $conn->prepare($query_students);
+    $stmt_students->bind_param("ss", $user_id, $user_id);
+    $stmt_students->execute();
+    $result_students = $stmt_students->get_result();
+    
+    while ($row = $result_students->fetch_assoc()) {
+        $unread_messages = ($row['is_read'] == 0) ? 1 : 0;
+        $messages[] = [
+            'chat_id' => $row['chat_id'],
+            'sender_name' => $row['name'] . ' (' . $row['role_info'] . ')',
+            'message' => $row['message'],
+            'created_at' => $row['created_at'],
+            'unread_messages' => $unread_messages
+        ];
+    }
 }
 
 echo json_encode($messages);
-
 ?>

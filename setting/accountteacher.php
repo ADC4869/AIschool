@@ -18,10 +18,10 @@ $cccd = $religion = $ethnic = $nationality = $phone = $address = $dob = $gender 
 
 // Query to get general user information, including CCCD, religion, ethnic, nationality, phone, address, date of birth, and gender
 $query = "SELECT cccd, religion, ethnic, nationality, phone, address, dob, gender FROM users WHERE fullname = ?";
-$stmt = $conn->prepare($query);
-$stmt->bind_param("s", $fullname);
-$stmt->execute();
-$result = $stmt->get_result();
+$stmt1 = $conn->prepare($query);
+$stmt1->bind_param("s", $fullname);
+$stmt1->execute();
+$result = $stmt1->get_result();
 
 if ($row = $result->fetch_assoc()) {
     $cccd = htmlspecialchars($row['cccd']);
@@ -34,7 +34,7 @@ if ($row = $result->fetch_assoc()) {
     $gender = htmlspecialchars($row['gender']);
 }
 
-$stmt->close();
+$stmt1->close();
 
 // Fetch role-specific information
 if ($user_role === 'giaovien') {
@@ -46,16 +46,18 @@ if ($user_role === 'giaovien') {
               LEFT JOIN subjects ON teacher_subjects.subject_id = subjects.id
               WHERE teachers.id = (SELECT id FROM users WHERE fullname = ?)";
     
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("s", $fullname);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $stmt2 = $conn->prepare($query);
+    $stmt2->bind_param("s", $fullname);
+    $stmt2->execute();
+    $result = $stmt2->get_result();
     
     if ($row = $result->fetch_assoc()) {
         $code = htmlspecialchars($row['teacher_code']);
         $class_name = htmlspecialchars($row['class_name']);
         $subject_name = htmlspecialchars($row['subject_names']);
     }
+    
+    $stmt2->close();
 } elseif ($user_role === 'hocsinh') {
     // Query for student's code and class
     $query = "SELECT students.student_code, classes.class_name
@@ -63,18 +65,19 @@ if ($user_role === 'giaovien') {
               LEFT JOIN classes ON students.class_id = classes.id
               WHERE students.id = (SELECT id FROM users WHERE fullname = ?)";
     
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("s", $fullname);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $stmt3 = $conn->prepare($query);
+    $stmt3->bind_param("s", $fullname);
+    $stmt3->execute();
+    $result = $stmt3->get_result();
     
     if ($row = $result->fetch_assoc()) {
         $code = htmlspecialchars($row['student_code']);
         $class_name = htmlspecialchars($row['class_name']);
     }
+    
+    $stmt3->close();
 }
 
-$stmt->close();
 $conn->close();
 ?>
 
