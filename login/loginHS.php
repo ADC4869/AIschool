@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký học sinh</title>
-    <link rel="stylesheet" href="./css/signinpage.css">
+    <link rel="stylesheet" href="./css/signin.css">
     <link rel="stylesheet" href="../fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../css/global.css">
 </head>
@@ -42,15 +42,16 @@
                             <input type="text" name="student_code" placeholder="Mã học sinh" required>
                             <select name="classes" required>
                                 <option value="">Lớp</option>
-                                <option value="1">Lớp 1A</option>
-                                <option value="2">Lớp 1B</option>
-                                <option value="3">Lớp 1C</option>
-                                <option value="4">Lớp 2A</option>
-                                <option value="5">Lớp 2B</option>
-                                <option value="6">Lớp 2C</option>
-                                <option value="7">Lớp 3A</option>
-                                <option value="8">Lớp 3B</option>
-                                <option value="9">Lớp 3C</option>
+                                <option value="1">Lớp 9A1</option>
+                                <option value="2">Lớp 9A2</option>
+                                <option value="3">Lớp 9A3</option>
+                                <option value="4">Lớp 9A4</option>
+                                <option value="5">Lớp 9A5</option>
+                                <option value="6">Lớp 8A1</option>
+                                <option value="7">Lớp 8A2</option>
+                                <option value="8">Lớp 8A3</option>
+                                <option value="9">Lớp 8A4</option>
+                                <option value="10">Lớp 8A5</option>
                             </select>
                         </div>
                     </div>
