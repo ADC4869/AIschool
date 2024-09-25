@@ -1,19 +1,4 @@
-<?php
-// message.php
-include '../database/db_config.php'; // Kết nối tới cơ sở dữ liệu
 
-session_start();
-
-// Kiểm tra xem người dùng đã đăng nhập hay chưa
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php"); // Chuyển hướng về trang đăng nhập nếu chưa đăng nhập
-    exit();
-}
-
-$user_id = $_SESSION['user_id'];
-$role = $_SESSION['role'];
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +42,7 @@ $role = $_SESSION['role'];
     <main>
         <!-- Đoạn chat -->
         <div id="chatContent" class="content">
-            <!-- <ul class="chat-list">
+            <ul class="chat-list">
                 <li class="chat-item" data-chat-id="A">
                     <img src="../img/hs.jpg" alt="">
                     <div class="chat-info">
@@ -132,7 +117,7 @@ $role = $_SESSION['role'];
                     </div>
                     <div class="chat-time">1 giờ</div>
                 </li>
-            </ul> -->
+            </ul>
         </div>
 
         <!-- Nhóm -->
@@ -232,56 +217,4 @@ $role = $_SESSION['role'];
 <script src="js/chat.js"></script>
 <script src="js/nhom.js"></script>
 <script src="../js/back.js"></script>
-<script>
-// JavaScript để fetch danh sách tin nhắn
-document.addEventListener('DOMContentLoaded', function() {
-    fetchMessages();
-
-    function fetchMessages() {
-        fetch('fetch_messages.php')
-        .then(response => response.json())
-        .then(data => {
-            const chatList = document.querySelector('.chat-list');
-            chatList.innerHTML = ''; // Xóa nội dung cũ
-
-            data.forEach(message => {
-                const chatItem = document.createElement('li');
-                chatItem.classList.add('chat-item');
-                chatItem.setAttribute('data-chat-id', message.id);
-
-                // Kiểm tra xem ảnh người gửi có tồn tại không, nếu không thì hiển thị ảnh mặc định
-                const senderImage = message.sender_image ? message.sender_image : 'default-image.png';
-
-                chatItem.innerHTML = `
-                    <img src="${senderImage}" alt="Profile Picture">
-                    <div class="chat-info">
-                        <div class="chat-name">${message.sender_name}</div>
-                        <div class="chat-message">${message.message}</div>
-                    </div>
-                    <div class="days">
-                        <div class="chat-time">${timeAgo(message.created_at)}</div>
-                        <div class="time">${message.unread_messages > 0 ? message.unread_messages + '+' : ''}</div>
-                    </div>
-                `;
-
-                chatList.appendChild(chatItem);
-            });
-        })
-        .catch(error => console.error('Lỗi khi lấy tin nhắn:', error));
-    }
-
-    // Hàm timeAgo tính thời gian tin nhắn
-    function timeAgo(datetime) {
-        const time = new Date(datetime).getTime();
-        const now = new Date().getTime();
-        const diff = Math.floor((now - time) / 1000); // Tính thời gian khác biệt tính bằng giây
-
-        if (diff < 60) return diff + " giây trước";
-        if (diff < 3600) return Math.floor(diff / 60) + " phút trước";
-        if (diff < 86400) return Math.floor(diff / 3600) + " giờ trước";
-        if (diff < 604800) return Math.floor(diff / 86400) + " ngày trước"; // Dưới 1 tuần
-        return new Date(datetime).toLocaleDateString(); // Hiển thị ngày tháng nếu cũ hơn 1 tuần
-    }
-});
-</script>
 </html>
