@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+
+main .tabs {
+    display: flex;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+main .tablinks {
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+}
+
+main .tablinks:hover {
+    background-color: #ddd;
+}
+
+main .tablinks.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* Style cho thanh dọc */
+main .vertical-line {
+    width: 1px;
+    background-color: var(--text-color);
+    margin: 0;
+    height: auto;
+    position: relative;
+}
+
+/* Định dạng nội dung tab */
+main .tabcontent {
+    display: none;
+    padding: 20px;
+    /*border: 1px solid #ccc; */
+    border-top: none;
+}
+
+@media (max-width: 768px) {
+    main .tablinks {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    main .tabcontent {
+        padding: 15px;
+    }
+}
+
+main .chart-container {
+    position: relative;
+    width: 350px; /* Cố định chiều rộng của biểu đồ */
+    height: 350px; /* Cố định chiều cao của biểu đồ */
+    text-align: center;
+    margin: 0 auto;
+}
+
+main .btn {
+    background-color: var(--gray-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+}
+
+main canvas {
+    width: 70% !important;
+    height: 70% !important; /* Đảm bảo biểu đồ giữ nguyên chiều cao */
+    margin-left: 45px;
+}
+
+main .chart-labels {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+main .label-nu, .label-nam {
+    font-size: 14px;
+    color: #666;
+}
+
+main .center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    main .chart-container {
+        width: 280px;  /* Thay đổi kích thước cho màn hình nhỏ hơn */
+        height: 280px;
+    }
+
+    main .center-text {
+        font-size: 20px;
+    }
+
+    main .label-nu, .label-nam {
+        font-size: 12px;
+    }
+}
+
+main .container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+main .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5B5F93;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    width: 115px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+main .item img {
+    width: 60px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+main .item p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+main .class-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+main .class-card {
+    width: 100%;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+main .class-info {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 20px;
+}
+
+main .class-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+main .class-details {
+    font-size: 15px;
+}
+
+main .green {
+    background-color: var(--medium-color);
+}
+
+main .class-details {
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+main .class-icon {
+    font-size: 24px;
+    color: #777;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    main .class-card {
+        max-width: 100%;
+    }
+
+    main .class-info {
+        gap: 10px;
+    }
+
+    main .class-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
