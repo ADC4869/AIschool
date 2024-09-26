@@ -45,16 +45,29 @@ header .header .title {
 }
 
 main {
-    width: 100%;
+    width: 100vw;
     margin-top: 115px;
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
+main .main_event {
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main_eventpresent {
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .main_tab {
-    width: 95%; 
+    width: 95%;
     height: 110px;
     display: flex;
     align-items: center;
@@ -80,12 +93,17 @@ main {
     flex-shrink: 0;
 }
 
+.main_tab .tab_item:hover {
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
 main .main_content {
-    width: 95%; 
-    display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .main_content .event_item {
@@ -97,6 +115,7 @@ main .main_content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 13px;
 }
 
 .main_content .event_item a {
@@ -126,27 +145,213 @@ main .main_content {
 .event_item .event_info {
     width: 75%;
     height: 100%;
-    padding: 10px;
+    display: flex;
     align-items: center;
-    line-height: 15px;
+    line-height: 10px;
+    padding: 15px;
+    flex-direction: column;
 }
 
 .event_info .event_title {
-    font-size: 15px;
-    margin-bottom: 5px; 
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    color: black;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .event_info .event_time {
-    font-size: 14px;
-    gap: 5px;
-    margin-bottom: 5px;
-    align-items: center;
+    width: 100%;
+    height: 23%;
     display: flex;
+    align-items: center;
+    gap: 5px;
     color: gray;
+    font-size: 14px;
 }
 
 .event_info .event_status {
+    width: 100%;
+    height: 22%;
+    display: flex;
+    align-items: center;
     font-size: 14px;
-    color: green; 
+}
+
+.event_info .present {
+    color: var(--green-color);
+}
+
+.event_info .finished {
+    color: var(--orange-color);
+}
+
+.event_info .prepare {
+    color: #0085E4;
+}
+
+.main_event .main_addevent {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    height: 100%;
+    max-height: 500px;
+    max-width: 600px;
+    position: relative;
+}
+
+.modal-content .modal_header {
+    width: 100%;
+    height: 13%;
+    font-size: 16px;
+    color: white;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_header p {
+    margin-top: 35px;
+}
+
+.modal-content .modal_body {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal_body .body_title {
+    width: 90%;
+    margin-top: 10px;
+}
+
+.modal_body .body_title span {
+    font-size: 15px;
+}
+
+.modal_body .body_input {
+    width: 90%;
+    margin-top: 5px;
+}
+
+.body_input input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid gray;
+}
+
+
+/* LỊCH HỌP */
+main .main_schedule {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1PX solid rgb(218, 216, 216);
+}
+
+.main_schedule .schedule_tab {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_schedule .schedule_tab .tab_schoolschedule {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_schedule .schedule_tab .tab_myschedule {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tab_schoolschedule .schoolschedule {
+    width: 90%;
+    height: 100%;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+}
+.tab_schoolschedule .schoolschedule:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.tab_myschedule .myschedule {
+    width: 90%;
+    height: 100%;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+}
+.tab_myschedule .myschedule:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.main_schedule .schedule_content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.main_schedule .schedule_content .schedule_item {
+    width: 80%;
+
+}
+
+.schedule_item .schedule_title {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    background-color: var(--peachy-colo);
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule_item .schedule_info {
+    width: 100%;
+    height: 80%;
 }
