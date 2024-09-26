@@ -124,7 +124,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     </div>
                     <span>Quản lý học sinh</span>
                 </a>
-                <a href="#" class="button">
+                <a href="./principal/managementGV.php" class="button">
                     <div class="circle circle__diligence">
                         <i class="fa-regular fa-clipboard" style="color: #ffffff;"></i>
                     </div>

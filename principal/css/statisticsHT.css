@@ -50,7 +50,6 @@ main .btn {
     cursor: pointer;
     outline: none;
     white-space: nowrap;
-    margin-top: 10px;
 }
 main .btn i {
     margin-left: 10px;
