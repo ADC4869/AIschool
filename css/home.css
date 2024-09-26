@@ -94,15 +94,21 @@ main .button {
     transition: background-color 0.3s ease;
     gap: 5px;
 }
+main .button span {
+    font-size: 14px;
+}
 
 main .button .circle {
-    width: 40px;
+    width: 25%;
     height: 40px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     object-fit: cover;
+}
+main .button span {
+    width: 75%;
 }
 
 main .button .circle__timetable {

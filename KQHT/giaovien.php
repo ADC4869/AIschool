@@ -33,10 +33,7 @@ $conn->close();
 
 <!-- Giáo viên -->
 <div class="container">
-    <div class="year-semester">
-        <div id="yearDisplay" class="year" onclick="openDialog()">Năm học: 2023 - 2024</div>
-        <div class="semester" id="openModalBtn">Chọn học kì</div>
-    </div>
+    
 
     <!-- Modal năm học -->
     <div id="yearDialog" class="dialog">

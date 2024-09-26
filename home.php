@@ -28,6 +28,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,10 +43,11 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
     <link rel="stylesheet" href="./fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/giaodien.css">
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -105,7 +107,8 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     Lịch họp
                 </a>
 
-                <a href="./thongtingiaovienhocsinh/index.php?role=giaovien&teacher_id=<?php echo htmlspecialchars($teacher_id); ?>" class="button">
+                <a href="./thongtingiaovienhocsinh/index.php?role=giaovien&teacher_id=<?php echo htmlspecialchars($teacher_id); ?>"
+                    class="button">
                     <div class="circle circle__infoclass">
                         <i class="fa-solid fa-users" style="color: #ffffff;"></i>
                     </div>
@@ -115,14 +118,42 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 
             <!-- Phân quyền cho hiệu trưởng -->
             <?php if ($user_role == 'hieutruong'): ?>
-                <a href="./principal/statisticsHS.php" class="button"><i class="fa-regular fa-calendar"></i> Thống kê số học
-                    sinh</a>
-                <a href="./principal/statisticsDD.php" class="button"><i class="fa-solid fa-book"></i> Thống kê điểm
-                    danh</a>
-                <a href="./principal/statisticsHT.php" class="button"><i class="fa-solid fa-circle-info"
-                        style="color: #B197FC;"></i> Thống kê KQHT</a>
-                <a href="./principal/event.php" class="button"><i class="fa-solid fa-medal" style="color: #FFD43B;"></i>
-                    Quản lý sự kiện và lịch trình</a>
+                <a href="./principal/statisticsHS.php" class="button">
+                    <div class="circle circle__timetable">
+                        <i class="fa-regular fa-clipboard" style="color: #ffffff;"></i>
+                    </div>
+                    <span>Quản lý học sinh</span>
+                </a>
+                <a href="#" class="button">
+                    <div class="circle circle__diligence">
+                        <i class="fa-regular fa-clipboard" style="color: #ffffff;"></i>
+                    </div>
+                    <span>Quản lý giáo viên</span>
+                </a>
+                <a href="#" class="button">
+                    <div class="circle circle__contact">
+                        <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
+                    </div>
+                    <span>Quản lý cơ sở vật chất</span>
+                </a>
+                <a href="./principal/eventsschedules.php" class="button">
+                    <div class="circle circle__infoclass">
+                        <i class="fa-solid fa-award" style="color: #ffffff;"></i>
+                    </div>
+                    <span>Quản lý sự kiện và lịch trình</span>
+                </a>
+                <a href="#" class="button">
+                    <div class="circle circle__timetable">
+                        <i class="fa-regular fa-calendar" style="color: #ffffff;"></i>
+                    </div>
+                    <span>Phân công giảng dạy</span>
+                </a>
+                <a href="#" class="button">
+                    <div class="circle circle__fee">
+                        <i class="fa-solid fa-dollar-sign" style="color: #ffffff;"></i>
+                    </div>
+                    <span>Tình trạng học phí</span>
+                </a>
             <?php endif; ?>
         </div>
 
