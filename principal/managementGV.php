@@ -79,7 +79,7 @@
                             <p>Số lớp: 4 &nbsp;&nbsp; Tổng số giáo viên: 30</p>
                             <p>Trưởng khối: Lưu trên database</p>
                         </div>
-                        <div class="class-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <a href="statisticalGV.php"><div class="class-icon"><i class="fa-solid fa-circle-exclamation"></i></div></a>
                     </div>
                 </div>
 
