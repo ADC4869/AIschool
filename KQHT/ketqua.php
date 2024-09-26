@@ -96,438 +96,487 @@ $conn->close();
 
     <main>
         <div class="table-container">
-            <table class="fixed-column">
-                <thead>
-                    <tr>
-                        <th>Môn học</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Tổng kết</td>
-                    </tr>
-                    <tr>
-                        <td>Điểm 15'</td>
-                    </tr>
-                    <tr>
-                        <td>Điểm 1 tiết</td>
-                    </tr>
-                    <tr>
-                        <td>Điểm GK</td>
-                    </tr>
-                    <tr>
-                        <td>Điểm CK</td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <!-- MODAL NĂM HỌC VÀ HỌC KÌ -->
+            <div id="yearDialog" class="dialog">
+                <div class="dialog-content">
+                    <h3>Năm học</h3>
+                    <ul>
+                        <li onclick="selectYear('2024-2025')">2024-2025</li>
+                        <li onclick="selectYear('2023-2024')">2023-2024</li>
+                        <li onclick="selectYear('2022-2023')">2022-2023</li>
+                        <li onclick="selectYear('2021-2022')">2021-2022</li>
+                    </ul>
+                    <button onclick="closeDialog()" class="cancel-btn">Hủy</button>
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <h3>Học kì</h3>
+                    <ul>
+                        <li class="semester-option">Học kì: I</li>
+                        <li class="semester-option">Học kì: II</li>
+                        <li class="semester-option">Cả năm</li>
+                    </ul>
+                    <button class="cancelBtn">Hủy</button>
+                </div>
+            </div>
+
 
             <div class="scrollable-columns">
-    <table>
-        <thead>
-            <tr>
-                <th>Ngữ Văn</th>
-                <th>Toán Học</th>
-                <th>Tiếng Anh</th>
-                <th>Lịch Sử</th>
-                <th>Địa Lý</th>
-                <th>Hóa học</th>
-                <th>Sinh học</th>
-                <th>Vật Lý</th>
-                <th>Tin học</th>
-                <!-- Thêm nhiều môn học nếu cần -->
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div class="grades">10</div>
-                </td>
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="pointtitle">Môn Học</td>
+                            <th>Ngữ Văn</th>
+                            <th>Toán</th>
+                            <th>Tiếng Anh</th>
+                            <th>Lịch Sử</th>
+                            <th>Địa Lý</th>
+                            <th>Hóa học</th>
+                            <th>Sinh học</th>
+                            <th>Vật Lý</th>
+                            <th>Tin học</th>
+                            <!-- Thêm nhiều môn học nếu cần -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="pointtitle">Tổng kết</td>
+                            <td>
+                                <div class="grades">10</div>
+                            </td>
 
-                <!-- Tổng kết môn Toán -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Toán -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Tiếng Anh -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Tiếng Anh -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Lịch sử -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Lịch sử -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Địa lý -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Địa lý -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Hóa học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Hóa học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Sinh học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Sinh học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Vật Lý -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Vật Lý -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Tin học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="grades" style="background-color: var(--peachy-color);">5</div>
-                    <div class="grades">10</div>
-                    <div class="grades">10</div>
-                </td>
-                <!-- Tổng kết môn Toán -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Tin học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pointtitle">Điểm 15'</td>
+                            <td>
+                                <div class="grades" style="background-color: var(--peachy-color);">5</div>
+                                <div class="grades">10</div>
+                                <div class="grades">10</div>
+                            </td>
+                            <!-- Tổng kết môn Toán -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Tiếng Anh -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Tiếng Anh -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Lịch sử -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Lịch sử -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Địa lý -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Địa lý -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Hóa học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Hóa học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Sinh học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Sinh học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Vật Lý -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Vật Lý -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Tin học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
-            </tr>
+                            <!-- Tổng kết môn Tin học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
+                        </tr>
 
-            <tr>
-                <td>
-                    <div class="grades" style="background-color: var(--peachy-color);">5</div>
-                    <div class="grades">10</div>
-                </td>
-                <!-- Tổng kết môn Toán -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                        <tr>
+                            <td class="pointtitle">Điểm 1 tiết</td>
+                            <td>
+                                <div class="grades" style="background-color: var(--peachy-color);">5</div>
+                                <div class="grades">10</div>
+                            </td>
+                            <!-- Tổng kết môn Toán -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Tiếng Anh -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Tiếng Anh -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Lịch sử -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Lịch sử -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Địa lý -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Địa lý -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Hóa học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Hóa học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Sinh học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Sinh học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Vật Lý -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Vật Lý -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Tin học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
-            </tr>
+                            <!-- Tổng kết môn Tin học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
+                        </tr>
 
-            <tr>
-                <td>
-                    <div class="grades">10</div>
-                </td>
-                <!-- Tổng kết môn Toán -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                        <tr>
+                            <td class="pointtitle">Điểm GK</td>
+                            <td>
+                                <div class="grades">10</div>
+                            </td>
+                            <!-- Tổng kết môn Toán -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Tiếng Anh -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Tiếng Anh -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Lịch sử -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Lịch sử -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Địa lý -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Địa lý -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Hóa học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Hóa học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Sinh học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Sinh học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Vật Lý -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Vật Lý -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Tin học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
-            </tr>
+                            <!-- Tổng kết môn Tin học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
+                        </tr>
 
-            <tr>
-                <td>
-                    <div class="grades">10</div>
-                </td>
-                <!-- Tổng kết môn Toán -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                        <tr>
+                            <td class="pointtitle">Điểm CK</td>
+                            <td>
+                                <div class="grades">10</div>
+                            </td>
+                            <!-- Tổng kết môn Toán -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Tiếng Anh -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Tiếng Anh -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Lịch sử -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Lịch sử -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Địa lý -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Địa lý -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Hóa học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Hóa học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Sinh học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Sinh học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Vật Lý -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
+                            <!-- Tổng kết môn Vật Lý -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
 
-                <!-- Tổng kết môn Tin học -->
-                <td>
-                    <?php if ($user_role === 'giaovien'): ?>
-                        <button class="enter-grade-button">Nhập điểm</button>
-                        <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                    <?php endif; ?>
-                    <div class="grades-wrapper"></div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+                            <!-- Tổng kết môn Tin học -->
+                            <td>
+                                <?php if ($user_role === 'giaovien'): ?>
+                                    <button class="enter-grade-button"><i data-feather="plus"
+                                            style="color: #bcbcbd"></i></button>
+                                    <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
+                                <?php endif; ?>
+                                <div class="grades-wrapper"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <!-- Modal Structure -->
             <div id="gradeModal" class="modal">
@@ -777,11 +826,14 @@ $conn->close();
         </div>
 
 
-        
+
 </body>
 <script src="./js/kq.js"></script>
 <script src="../js/back.js"></script>
 <script src="./js/diemso.js"></script>
+<script src="./js/tacvu.js"></script>
+<script src="./js/hocki.js"></script>
+<script src="./js/namhoc.js"></script>
 <script>
     // Hiển thị năm học và học kỳ đã chọn
     window.onload = function () {
@@ -796,6 +848,11 @@ $conn->close();
             document.getElementById('selectedSemester').innerText = '' + savedSemester;
         }
     };
+</script>
+<script src="../node_modules/feather-icons/dist/feather.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
 </script>
 
 </html>

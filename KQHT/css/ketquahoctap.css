@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
 header {
     position: fixed;
     top: 0;
@@ -10,6 +11,7 @@ header {
     left: 0;
     z-index: 1000;
 }
+
 header .header {
     display: flex;
     justify-content: space-between;
@@ -46,6 +48,7 @@ header .subheader {
     align-items: center;
 
 }
+
 .subheader .image {
     width: 20%;
     height: 100%;
@@ -53,6 +56,7 @@ header .subheader {
     align-items: center;
     display: flex;
 }
+
 .subheader img {
     width: 50px;
     height: 50px;
@@ -60,6 +64,7 @@ header .subheader {
     justify-content: center;
     align-items: center;
 }
+
 header .subheader .row1 {
     display: flex;
     justify-content: space-between;
@@ -68,10 +73,12 @@ header .subheader .row1 {
     /* Space between rows */
 
 }
+
 .subheader .row1 .row__title {
-text-align: center;
-    
+    text-align: center;
+
 }
+
 header .subheader .row {
     display: flex;
     justify-content: space-between;
@@ -151,19 +158,23 @@ main .grades {
 }
 
 main .grade-circle {
-    width: 30px; /* Kích thước hình tròn */
+    width: 30px;
+    /* Kích thước hình tròn */
     height: 30px;
-    border-radius: 50%; /* Tạo hình tròn */
+    border-radius: 50%;
+    /* Tạo hình tròn */
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     color: var(--text-color);
-    margin: 0 5px; /* Khoảng cách giữa các hình tròn */
+    margin: 0 5px;
+    /* Khoảng cách giữa các hình tròn */
 }
 
 main .grade-green {
-    background-color: #76C4AA; /* Xanh lá */
+    background-color: #76C4AA;
+    /* Xanh lá */
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -173,7 +184,8 @@ main .grade-green {
 }
 
 main .grade-yellow {
-    background-color: #FFC107; /* Vàng */
+    background-color: #FFC107;
+    /* Vàng */
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -183,7 +195,8 @@ main .grade-yellow {
 }
 
 main .grade-orange {
-    background-color: #E18786; /* Cam đỏ */
+    background-color: #E18786;
+    /* Cam đỏ */
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -193,7 +206,8 @@ main .grade-orange {
 }
 
 main .grade-red {
-    background-color: #F44336; /* Đỏ */
+    background-color: #F44336;
+    /* Đỏ */
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -204,12 +218,19 @@ main .grade-red {
 
 main .grades-wrapper {
     display: flex;
-    gap: 5px; /* Khoảng cách giữa các điểm */
-    justify-content: center; /* Mặc định là căn giữa */
+    gap: 5px;
+    /* Khoảng cách giữa các điểm */
+    justify-content: center;
+    /* Mặc định là căn giữa */
 }
 
 @media (max-width: 768px) {
-    main .grades,.grade-yellow, .grade-green, .grade-orange, .grade-red {
+
+    main .grades,
+    .grade-yellow,
+    .grade-green,
+    .grade-orange,
+    .grade-red {
         width: 24px;
         height: 24px;
         line-height: 24px;
@@ -218,6 +239,7 @@ main .grades-wrapper {
 
     main td,
     th {
+        min-width: 100px;
         padding: 6px;
         font-size: 14px;
     }
@@ -346,13 +368,13 @@ main .grade .grades {
 }
 
 .totalscore {
-    background-color: #f9f9f9; 
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     max-width: 90%;
-    height: 50px; 
-    margin: 20px auto; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    height: 50px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
 }
 
@@ -366,27 +388,32 @@ main .grade .grades {
 }
 
 .score__title {
-    font-size: 20px; 
-    color: #333; 
+    font-size: 20px;
+    color: #333;
     font-weight: bold;
 }
 
 .score__total {
-    font-size: 30px; 
-    color: #4CAF50; 
-    font-weight: bold; 
+    font-size: 30px;
+    color: #4CAF50;
+    font-weight: bold;
 }
 
 
 
 /* INFO STUDENT */
 .subheader {
-    display: flex; /* Sử dụng flexbox cho bố cục */
-    justify-content: space-between; /* Căn giữa các phần tử */
-    align-items: center; /* Căn giữa theo chiều dọc */
+    display: flex;
+    /* Sử dụng flexbox cho bố cục */
+    justify-content: space-between;
+    /* Căn giữa các phần tử */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
     padding: 5px;
-    background-color: #f9f9f9; /* Màu nền */
-    border-radius: 8px; /* Bo góc */
+    background-color: #f9f9f9;
+    /* Màu nền */
+    border-radius: 8px;
+    /* Bo góc */
     gap: 10px;
 }
 
@@ -416,41 +443,167 @@ main .grade .grades {
 .subheader .infodetail .student-name {
     font-weight: bold;
 }
+
 .button__header {
-    display: flex; /* Sử dụng flexbox cho bố cục */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    padding: 5px; /* Khoảng cách bên trong */
-    background-color: #f9f9f9; /* Màu nền */
-    border-bottom: 1px solid #ddd; /* Đường viền */
+    display: flex;
+    /* Sử dụng flexbox cho bố cục */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    padding: 5px;
+    /* Khoảng cách bên trong */
+    background-color: #f9f9f9;
+    /* Màu nền */
+    border-bottom: 1px solid #ddd;
+    /* Đường viền */
     border-radius: 8px;
     justify-content: center;
     gap: 10px;
 }
+
 .button__header .button__year {
     justify-content: flex-end;
 }
+
 .button__header .button__semester {
     justify-content: flex-start;
 }
 
-.button__header .year, .semester {
+.button__header .year,
+.semester {
     width: 90%;
     height: 30px;
     border-radius: 5px;
     background-color: var(--light-periwinkle-color);
     display: flex;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
     cursor: pointer;
-    
+
 }
 
 
-.button__header .button__year, .button__semester {
+.button__header .button__year,
+.button__semester {
     width: 50%;
     align-items: center;
     display: flex;
 }
 
 
+/* BUTTON NHẬP ĐIỂM */
+.enter-grade-button {
+    background-color: white;
+    border: none;
+}
 
+thead .pointtitle {
+    z-index: 10;
+    left: 0;
+    position: sticky;
+    background-color: #FAFAFA;
+}
+
+tbody .pointtitle {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: #FAFAFA;
+}
+
+/* MODAL NĂM HỌC, HỌC KÌ */
+main .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content */
+main .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* List style */
+main .modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+main .modal-content li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Cancel button */
+main .cancelBtn {
+    color: var(--red-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Dialog box container */
+main .dialog {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Dialog content */
+main .dialog-content {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    /* Responsive width */
+    max-width: 400px;
+    text-align: center;
+}
+
+/* List of years */
+main .dialog-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main .dialog-content li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Cancel button styling */
+main .cancel-btn {
+    background-color: transparent;
+    color: var(--red-color);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+}
