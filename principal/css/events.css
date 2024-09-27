@@ -25,6 +25,7 @@ header .back-arrow {
     top: 22px;
 }
 
+
 header .header .icon-back,
 .header i {
     font-size: 20px;
@@ -46,17 +47,16 @@ header .header .title {
 
 main {
     width: 100vw;
-    margin-top: 115px;
+    margin-top: 220px;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
 }
 
+/* EVENT */
 main .main_event {
     width: 95%;
-    justify-content: center;
-    align-items: center;
 }
 
 main .main_eventpresent {
@@ -75,6 +75,10 @@ main .main_eventpresent {
     overflow-x: auto;
     white-space: nowrap;
     scrollbar-width: none;
+    top: 110px;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
 }
 
 
@@ -93,7 +97,7 @@ main .main_eventpresent {
     flex-shrink: 0;
 }
 
-.main_tab .tab_item:hover {
+.main_tab .tab_item.active {
     background-color: white;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
@@ -204,7 +208,7 @@ main .main_content {
 /* modal */
 .modal {
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
@@ -218,10 +222,10 @@ main .main_content {
 .modal-content {
     background-color: white;
     border-radius: 10px;
-    width: 80%;
+    width: 95%;
     height: 100%;
-    max-height: 500px;
     max-width: 600px;
+    max-height: 600px;
     position: relative;
 }
 
@@ -242,7 +246,7 @@ main .main_content {
 
 .modal-content .modal_body {
     width: 100%;
-    height: 80%;
+    height: 87%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -262,96 +266,202 @@ main .main_content {
     margin-top: 5px;
 }
 
+.modal_body .body_inputtime {
+    width: 90%;
+    margin-top: 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    height: 40px;
+}
+
 .body_input input {
     width: 100%;
     height: 40px;
     border: 1px solid gray;
 }
 
+.modal_body .body_inputtime .time {
+    width: 15%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+}
+
+.modal_body .body_inputtime .date {
+    width: 25%;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal_body .body_button {
+    width: 90%;
+    height: 20%;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.body_button button {
+    width: 20%;
+    height: 65%;
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+}
+
+.body_button .btn_save {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.body_button .btn_cancel {
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
 
 /* LỊCH HỌP */
 main .main_schedule {
     width: 95%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1PX solid rgb(218, 216, 216);
 }
 
 .main_schedule .schedule_tab {
     width: 100%;
+    height: 50px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #bcbcbd;
 }
 
-.main_schedule .schedule_tab .tab_schoolschedule {
+.schedule_tab .tab_schoolschedule {
     width: 50%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.main_schedule .schedule_tab .tab_myschedule {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.tab_schoolschedule .schoolschedule {
-    width: 90%;
-    height: 100%;
     font-size: 16px;
+}
+
+.schedule_tab .tab_myschedule {
+    width: 50%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    text-align: center;
+    font-size: 16px;
 }
-.tab_schoolschedule .schoolschedule:hover {
+
+.schedule_tab .tab_schoolschedule.active {
     background-color: var(--primary-color);
     color: white;
+    border-radius: 10px;
 }
 
-.tab_myschedule .myschedule {
-    width: 90%;
-    height: 100%;
-    font-size: 16px;
+.schedule_tab .tab_myschedule.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+}
+
+.schedule_tab .separate {
+    width: 10%;
+    height: 90%;
+    font-size: 30px;
+    color: rgb(235, 233, 233);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    text-align: center;
-}
-.tab_myschedule .myschedule:hover {
-    background-color: var(--primary-color);
-    color: white;
 }
 
 .main_schedule .schedule_content {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-top: 10px;
 }
 
-.main_schedule .schedule_content .schedule_item {
-    width: 80%;
-
+.schedule_content .schedule_item {
+    width: 90%;
 }
 
-.schedule_item .schedule_title {
+.schedule_item .schedule_header {
     width: 100%;
-    height: 20%;
+    height: 25%;
     display: flex;
-    background-color: var(--peachy-colo);
     justify-content: center;
     align-items: center;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    border: 1px solid rgba(153, 153, 153, 0.2);
 }
 
-.schedule_item .schedule_info {
-    width: 100%;
-    height: 80%;
+.important .schedule_header {
+    background-color: var(--peachy-color);
 }
+
+.normal .schedule_header {
+    background-color: #B0DEFF;
+}
+
+.schedule_item .schedule_body {
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid rgba(153, 153, 153, 0.2);
+    flex-direction: column;
+    display: flex;
+    line-height: 25px;
+}
+.schedule_item .schedule_body span {
+    padding-left: 15px;
+}
+
+.schedule_content .past {
+    position: relative;
+}
+.schedule_content .past::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 229, 229, 0.5); /* Màu xám với độ trong suốt */
+    z-index: 1;
+}
+
+/* LỊCH HỌP CỦA TÔI */
+.schedule_content .create_schedule {
+    width: 90%;
+    height: 35px;
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #bcbcbd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #bcbcbd;
+}
+
+.schedule_content .create_schedule i {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width: 480px) {
+    main .main_tab {
+        justify-content: center;
+    }
+}
+
+
+

@@ -36,6 +36,7 @@ header .header .search-bar {
     height: 30px;
     border-radius: 30px;
     border: none;
+    padding-left: 10px;
 }
 header .tab-container {
     display: flex;

@@ -28,32 +28,34 @@
                         d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                 </svg>
             </span>
-            <div class="title">Sự kiện và lịch trình</div>
+            <div class="title" id="headerTitle">Sự kiện và lịch trình
+            </div>
         </div>
+
     </header>
 
     <main>
         <!-- TAB SỰ KIỆN -->
         <div class="main_tab">
-            <div class="tab_item" id="tab_eventpresent">
+            <div class="tab_item active" id="tab_eventpresent" onclick="changeHeaderTitle('Sự kiện đang diễn ra')">
                 <p>Sự kiện <br> đang diễn ra</p>
             </div>
 
-            <div class="tab_item" id="tab_upcoming">
+            <div class="tab_item" id="tab_upcoming" onclick="changeHeaderTitle('Sự kiện sắp tới')">
                 <p>Sự kiện <br> sắp tới</p>
             </div>
 
-            <div class="tab_item">
+            <div class="tab_item" id="tab_schedule" onclick="changeHeaderTitle('Lịch họp')">
                 <p>Lịch họp</p>
             </div>
 
-            <div class="tab_item">
+            <div class="tab_item" id="tab_collaborate" onclick="changeHeaderTitle('Lịch công tác')">
                 <p>Lịch công tác</p>
             </div>
 
         </div>
         <!-- SỰ KIỆN ĐANG DIỄN RA -->
-        <div class="main_eventpresent" id="eventpresent" style="display: none">
+        <div class="main_eventpresent" id="eventpresent">
             <div class="main_content">
                 <div class="event_item">
                     <a href="./eventpresent.php">
@@ -223,32 +225,386 @@
                         <div class="body_title">
                             <span>Thời gian</span>
                         </div>
+                        <div class="body_inputtime">
+                            <input type="text" class="time" placeholder="11:00">
+                            <input type="date" class=date>
+                            <span>đến</span>
+                            <input type="text" class="time" placeholder="11:00">
+                            <input type="date" class="date">
+                        </div>
+                        <div class="body_title">
+                            <span>Địa điểm</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Ghi chú</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Đối tượng tham gia</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+
+                        <div class="body_button">
+                            <button type="button" class="btn_save">Tạo</button>
+                            <button type="button" class="btn_cancle" id="closeModal">Hủy</button>
+                        </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
         <!-- LỊCH HỌP -->
-            <div class="main_schedule">
-                <div class="schedule_tab">
-                    <div class="tab_schoolschedule">
-                        <div class="schoolschedule">
-                            <p>Lịch họp của trường</p>
-                        </div>
-                    </div>
-                    <div class="tab_myschedule">
-                    <div class="myschedule">
-                            <p>Lịch họp của tôi</p>
-                        </div>
-                    </div>
+        <div class="main_schedule" style="display: none" id="schedule">
+            <div class="schedule_tab">
+                <div class="tab_schoolschedule active" id="tab_schoolschedule">
+                    <p class="schoolschedule">Lịch họp của trường</p>
                 </div>
-
-
-               
-
-
+                <p class="separate">|</p>
+                <div class="tab_myschedule" id="tab_myschedule">
+                    <p class="myschedule">Lịch họp của tôi</p>
+                </div>
             </div>
 
 
+            <!-- LỊCH HỌP CỦA TRƯỜNG -->
+            <div class="schedule_content" id="schoolschedule">
+                <div class="schedule_item important">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 6 - 06/09/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Họp với Phòng Đào tạo về kế hoạch học kỳ mới</span>
+                        <span>Nội dung: Họp triển khai nội dung đầu năm</span>
+                        <span>Người chủ trì : Hiệu trưởng nhà trường</span>
+                        <span>Thời gian : 10:30</span>
+                        <span>Địa điểm : Phòng họp 01</span>
+                        <span>Ghi chú : Quan trọng</span>
+                    </div>
+                </div>
+
+                <div class="schedule_item normal">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 5 - 12/09/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Họp với Phòng Tài chính về ngân sách năm học</span>
+                        <span>Nội dung: Phân bổ ngân sách và lên kế hoạch...</span>
+                        <span>Người chủ trì : Trần Nguyên Khởi</span>
+                        <span>Thời gian : 14:00 - 015:00:</span>
+                        <span>Địa điểm : Phòng họp 02</span>
+                        <span>Ghi chú : ....</span>
+                    </div>
+                </div>
+
+                <div class="schedule_item normal past">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 5 - 12/09/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Họp ban Giám Hiệu</span>
+                        <span>Nội dung: Họp ban Giám Hiệu</span>
+                        <span>Người chủ trì : Trần Nguyên Khởi</span>
+                        <span>Thời gian : :0800 - 09:00:</span>
+                        <span>Địa điểm : Phòng họp 04</span>
+                        <span>Ghi chú : ....</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LỊCH HỌP CỦA TÔI -->
+            <div class="schedule_content normal" style="display: none" id="myschedule">
+
+                <div class="create_schedule">
+                    <span>Tạo lịch họp</span>
+                    <i data-feather="plus" id="openmeetingModal" style="color: #bcbcbd; width: 25px; height: 25px"></i>
+
+                </div>
+
+                <div class="schedule_item">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 5 - 15/08/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Họp với Phòng Truyền thông</span>
+                        <span>Nội dung: Lên kế hoạch quảng bá trường</span>
+                        <span>Người chủ trì : Nguyễn Thị Ánh Xuân </span>
+                        <span>Thời gian : 08:00 - 09:30</span>
+                        <span>Địa điểm : Phòng họp 01</span>
+                        <span>Ghi chú : ....</span>
+                    </div>
+                </div>
+
+                <div class="schedule_item normal">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 5 - 08/08/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Họp với Ban Giám hiệu về tổng kết tuần</span>
+                        <span>Nội dung: Tổng kết cuối tuần</span>
+                        <span>Người chủ trì : Trần Nguyên Khởi</span>
+                        <span>Thời gian : 08:00 - 09:30</span>
+                        <span>Địa điểm : Phòng học lớp 9B</span>
+                        <span>Ghi chú : .....</span>
+                    </div>
+                </div>
+
+                <div class="schedule_item normal">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 7 - 03/08/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Họp với Phòng Hành chính</span>
+                        <span>Nội dung: Công tác chuẩn bị cho tuần</span>
+                        <span>Người chủ trì : Hiệu trưởng nhà trường</span>
+                        <span>Thời gian : 10:00 - 11:30</span>
+                        <span>Địa điểm : Phòng học lớp 9A</span>
+                        <span>Ghi chú : ....</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL TẠO LỊCH HỌP-->
+            <div class="modal" id="meetingModal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal_header">
+                        <p>Thông tin lịch họp</p>
+                    </div>
+                    <div class="modal_body">
+                        <div class="body_title">
+                            <span>Tên cuộc họp</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Nội dung họp</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Thời gian</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Địa điểm</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Ghi chú</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Đối tượng tham gia</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+
+                        <div class="body_button">
+                            <button type="button" class="btn_save" id="savemeetingModal">Tạo</button>
+                            <button type="button" class="btn_cancle" id="closemeetingModal">Hủy</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- LỊCH CÔNG TÁC -->
+        <div class="main_schedule" style="display: none" id="collaborate">
+            <div class="schedule_tab">
+                <div class="tab_schoolschedule active" id="tab_schoolcollaborate">
+                    <p class="schoolschedule">Lịch công tác của trường</p>
+                </div>
+                <p class="separate">|</p>
+                <div class="tab_myschedule" id="tab_mycollaborate">
+                    <p class="myschedule">Lịch công tác của tôi</p>
+                </div>
+            </div>
+
+
+            <!-- LỊCH CÔNG TÁC CỦA TRƯỜNG -->
+            <div class="schedule_content" id="schoolcollaborate">
+                <div class="schedule_item important">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 6 - 06/09/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Hội nghị triển khai công tác giáo vụ đầu năm </span>
+                        <span>Nội dung: Họp triển khai nội dung đầu năm</span>
+                        <span>Người chủ trì : Hiệu trưởng nhà trường</span>
+                        <span>Thời gian : 10:30</span>
+                        <span>Địa điểm : Phòng họp 01</span>
+                        <span>Ghi chú : Quan trọng</span>
+                    </div>
+                </div>
+
+                <div class="schedule_item normal">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 5 - 12/09/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Họp với Phòng Tài chính về ngân sách năm học</span>
+                        <span>Nội dung: Phân bổ ngân sách và lên kế hoạch...</span>
+                        <span>Người chủ trì : Trần Nguyên Khởi</span>
+                        <span>Thời gian : 14:00 - 015:00:</span>
+                        <span>Địa điểm : Phòng họp 02</span>
+                        <span>Ghi chú : ....</span>
+                    </div>
+                </div>
+
+                <div class="schedule_item normal past">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 5 - 12/09/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Họp ban Giám Hiệu</span>
+                        <span>Nội dung: Họp ban Giám Hiệu</span>
+                        <span>Người chủ trì : Trần Nguyên Khởi</span>
+                        <span>Thời gian : :0800 - 09:00:</span>
+                        <span>Địa điểm : Phòng họp 04</span>
+                        <span>Ghi chú : ....</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LỊCH CÔNG TÁC CỦA TÔI -->
+            <div class="schedule_content" style="display: none" id="mycollaborate">
+
+                <div class="create_schedule">
+                    <span>Tạo lịch</span>
+                    <i data-feather="plus" id="opencollaborateModal"
+                        style="color: #bcbcbd; width: 25px; height: 25px"></i>
+
+                </div>
+
+                <div class="schedule_item important">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 5 - 15/08/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Họp với Phòng Truyền thông</span>
+                        <span>Nội dung: Lên kế hoạch quảng bá trường</span>
+                        <span>Người chủ trì : Nguyễn Thị Ánh Xuân </span>
+                        <span>Thời gian : 08:00 - 09:30</span>
+                        <span>Địa điểm : Phòng họp 01</span>
+                        <span>Ghi chú : ....</span>
+                    </div>
+                </div>
+
+                <div class="schedule_item normal">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 5 - 08/08/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Họp với Ban Giám hiệu về tổng kết tuần</span>
+                        <span>Nội dung: Tổng kết cuối tuần</span>
+                        <span>Người chủ trì : Trần Nguyên Khởi</span>
+                        <span>Thời gian : 08:00 - 09:30</span>
+                        <span>Địa điểm : Phòng học lớp 9B</span>
+                        <span>Ghi chú : .....</span>
+                    </div>
+                </div>
+
+                <div class="schedule_item normal">
+                    <div class="schedule_header">
+                        <p class="schedule_title">Thứ 7 - 03/08/2024</p>
+                    </div>
+
+                    <div class="schedule_body">
+                        <span>Họp với Phòng Hành chính</span>
+                        <span>Nội dung: Công tác chuẩn bị cho tuần</span>
+                        <span>Người chủ trì : Hiệu trưởng nhà trường</span>
+                        <span>Thời gian : 10:00 - 11:30</span>
+                        <span>Địa điểm : Phòng học lớp 9A</span>
+                        <span>Ghi chú : ....</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL TẠO LỊCH CÔNG TÁC-->
+            <div class="modal" id="collaborateModal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal_header">
+                        <p>Thông tin lịch công tác</p>
+                    </div>
+                    <div class="modal_body">
+                        <div class="body_title">
+                            <span>Tên lịch công tác</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Nội dung công tác</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Thời gian</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Địa điểm</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Ghi chú</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+                        <div class="body_title">
+                            <span>Người tham gia</span>
+                        </div>
+                        <div class="body_input">
+                            <input type="text">
+                        </div>
+
+                        <div class="body_button">
+                            <button type="button" class="btn_save" id="savecollaborateModal">Tạo</button>
+                            <button type="button" class="btn_cancle" id="closecollaborateModal">Hủy</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
     </main>
 
 
@@ -256,49 +612,13 @@
 
 </body>
 <script src="../js/back.js"></script>
+<script src="./js/choosetab.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>
     feather.replace();
 </script>
-<script>
-    document.getElementById('tab_eventpresent').addEventListener('click', function () {
-        // Ẩn tất cả các nội dung khác
-        document.getElementById('eventpresent').style.display = 'flex'; // Hiển thị sự kiện đang diễn ra
-        document.getElementById('upcoming').style.display = 'none';     // Ẩn sự kiện sắp diễn ra
-    });
+<script src="./js/openmodal.js"></script>
 
-    document.getElementById('tab_upcoming').addEventListener('click', function () {
-        // Ẩn tất cả các nội dung khác
-        document.getElementById('eventpresent').style.display = 'none';  // Ẩn sự kiện đang diễn ra
-        document.getElementById('upcoming').style.display = '';      // Hiển thị sự kiện sắp diễn ra
-    });
-
-
-    // MODAL
-    // Lấy các phần tử
-    var modal = document.getElementById("myModal");
-    var openBtn = document.getElementById("openModal");
-    var closeBtn = document.getElementsByClassName("close")[0];
-
-    // Khi nhấn vào dấu cộng, mở modal
-    openBtn.onclick = function () {
-        modal.style.display = "flex";
-    }
-
-    // Khi nhấn vào dấu X, đóng modal
-    closeBtn.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // Khi nhấn ngoài modal, cũng đóng modal
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-
-</script>
 
 </html>
