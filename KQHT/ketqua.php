@@ -824,9 +824,7 @@ $conn->close();
                 </div>
             </div>
         </div>
-
-
-
+    </main>
 </body>
 <script src="./js/kq.js"></script>
 <script src="../js/back.js"></script>
@@ -839,14 +837,6 @@ $conn->close();
     window.onload = function () {
         const savedYear = localStorage.getItem('selectedYear');
         const savedSemester = localStorage.getItem('selectedSemester');
-
-        if (savedYear) {
-            document.getElementById('selectedYear').innerText = 'Năm học: ' + savedYear;
-        }
-
-        if (savedSemester) {
-            document.getElementById('selectedSemester').innerText = '' + savedSemester;
-        }
     };
 </script>
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
@@ -854,5 +844,4 @@ $conn->close();
 <script>
     feather.replace();
 </script>
-
 </html>

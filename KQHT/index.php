@@ -49,8 +49,6 @@
     <?php include '../footer/footer.php' ?>
 </body>
 <script src="../js/back.js"></script>
-<script src="./js/hocki.js"></script>
-<script src="./js/namhoc.js"></script>
 <script src="./js/khoi.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
