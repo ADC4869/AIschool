@@ -49,8 +49,8 @@
                 </div>
             </div>
             <div class="actions">
-                <button class="call"><i class="fas fa-phone"></i></button>
-                <button class="message"><i class="fas fa-comment"></i></button>
+                <button class="call"><i class="fa-solid fa-phone"></i></button>
+                <button class="message"><i class="fa-solid fa-message"></i></button>
             </div>
         </div>
 
@@ -63,8 +63,8 @@
                 </div>
             </div>
             <div class="actions">
-                <button class="call"><i class="fas fa-phone"></i></button>
-                <button class="message"><i class="fas fa-comment"></i></button>
+                <button class="call"><i class="fa-solid fa-phone"></i></button>
+                <button class="message"><i class="fa-solid fa-message"></i></button>
             </div>
         </div>
     </main>

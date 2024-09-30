@@ -12,9 +12,24 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/all.min.js">
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/brands.min.js">
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="./css/managementGV.css">
+    <style>
+    .card {
+        transition: background-color 0.3s;
+    }
+
+    .absent-card.active {
+        background-color: #FFB9BD; /* Background color for absent */
+    }
+
+    .late-card.active {
+        background-color: #F8AD29; /* Background color for late */
+    }
+</style>
 </head>
 <body>
     <header>
@@ -120,8 +135,68 @@
 
         <!-- Thống kê chuyên cần -->
         <div id="chuyencan" class="tabcontent">
-            <h3>Thống kê chuyên cần</h3>
-            <p>Nội dung thống kê chuyên cần.</p>
+            <div class="attendance-container">
+                <div class="date-container">
+                    <span class="date" id="selected-date">15/08/2024</span>
+                    <button class="calendar-btn" id="calendar-btn">
+                        <i class="fas fa-calendar-alt"></i> <!-- Font Awesome calendar icon -->
+                    </button>
+                    <!-- This div will be used to show the calendar -->
+                    <div class="calendar" id="calendar-container"></div>
+                </div>
+
+                <div class="attendance-summary">
+                    <span id="total-attendance">Tổng: <strong>125</strong></span>
+                    <span class="present" id="present-count">Có mặt: <strong>123</strong></span>
+                    <span class="absent" id="absent-count">Vắng mặt: <strong>2</strong></span>
+                    <span class="late" id="late-count">Trễ: <strong>1</strong></span>
+                </div>
+            </div>
+
+            <div class="container1">
+                <div class="card present-card">
+                    <img src="../img/hs.jpg" alt="Nguyễn Thị Ánh Xuân" class="profile-image">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h2>Tên: Nguyễn Thị Ánh Xuân</h2>
+                            <span class="edit-icon"><i class="fa-solid fa-pen"></i></span>
+                        </div>
+                        <p>Mã nhân viên: GV20014567</p>
+                        <p>Phụ trách: Môn Văn</p>
+                        <p>Thời gian vào lớp: 07:55</p>
+                        <p>Thời gian ra lớp: 11:40</p>
+                        <p>Số tiết trong ngày: 4</p>
+                    </div>
+                </div>
+                <div class="card absent-card" style="display:none;">
+                    <img src="../img/gvn.jpg" alt="Lý Lan Anh" class="profile-image">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h2>Tên: Lý Lan Anh</h2>
+                            <span class="edit-icon"><i class="fa-solid fa-pen"></i></span>
+                        </div>
+                        <p>Mã nhân viên: GV20014567</p>
+                        <p>Phụ trách: Môn Toán</p>
+                        <p>Thời gian vào lớp: 07:55</p>
+                        <p>Thời gian ra lớp: 11:40</p>
+                        <p>Số tiết trong ngày: 4</p>
+                    </div>
+                </div>
+                <div class="card late-card" style="display:none;">
+                    <img src="../img/hs1.jpg" alt="Trần Nguyên Khôi" class="profile-image">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h2>Tên: Trần Nguyên Khôi</h2>
+                            <span class="edit-icon"><i class="fa-solid fa-pen"></i></span>
+                        </div>
+                        <p>Mã nhân viên: GV20014567</p>
+                        <p>Phụ trách: Môn Lý</p>
+                        <p>Thời gian vào lớp: 07:55</p>
+                        <p>Thời gian ra lớp: 11:40</p>
+                        <p>Số tiết trong ngày: 4</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Thành tích -->
@@ -132,6 +207,7 @@
     </main>
 </body>
 <script src="../js/back.js"></script>
+<script src="./js/manage.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     function openTab(evt, tabName) {
@@ -155,4 +231,33 @@
 }
 </script>
 <script src="./js/GV.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const calendarBtn = document.getElementById('calendar-btn');
+    const selectedDate = document.getElementById('selected-date');
+    const calendarContainer = document.getElementById('calendar-container');
+
+    // Initialize Flatpickr inside the calendar container
+    const flatpickrInstance = flatpickr(calendarContainer, {
+        enableTime: false, // Only select the date
+        dateFormat: "d/m/Y", // Format as DD/MM/YYYY
+        defaultDate: "15/08/2024", // Pre-select a default date
+        onChange: function(selectedDates, dateStr, instance) {
+            selectedDate.textContent = dateStr; // Update the displayed date
+        }
+    });
+
+    // Show calendar when the icon is clicked
+    calendarBtn.addEventListener('click', function() {
+        flatpickrInstance.open(); // Open the Flatpickr calendar
+    });
+
+    // Close the calendar when clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!calendarContainer.contains(event.target) && !calendarBtn.contains(event.target)) {
+            flatpickrInstance.close(); // Close the calendar
+        }
+    });
+});
+</script>
 </html>

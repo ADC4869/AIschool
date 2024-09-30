@@ -75,9 +75,10 @@ main .teacher-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e9f7ff;
+    background-color: #C2E3EC;
     border-radius: 10px;
     padding: 10px;
+    margin: 10px;
     margin-bottom: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -109,7 +110,7 @@ main .actions button {
     border: none;
     cursor: pointer;
     font-size: 18px;
-    color: #5c9ecf;
+    color: var(--primary-color);
 }
   
 main .actions button:hover {
@@ -119,6 +120,7 @@ main .actions button:hover {
 @media (max-width: 768px) {
     main .teacher-card {
         align-self: center;
+        width: 90%;
     }
   
     main .profile {
@@ -133,6 +135,7 @@ main .actions button:hover {
 @media (min-width: 769px) and (max-width: 1024px) {
     main .teacher-card {
       padding: 15px;
+      width: 94%;
     }
   
     main .profile img {
