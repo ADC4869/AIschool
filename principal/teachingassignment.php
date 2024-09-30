@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/teachingassignment.css">
+    <link rel="stylesheet" href="css/assignmenttimetable.css">
 </head>
 
 <body>
@@ -48,11 +48,148 @@
             </div>
         </div>
 
-        <div class="main_content">
+        <!-- DANH SÁCH CÁC GIÁO VIÊN  -->
+        <div class="main_teacher" style="display: none">
             <div class="number_student">
                 <p>Tổng số: 40</p>
                 <p>Nam: 25</p>
                 <p>Nữ: 15</p>
+            </div>
+
+            <div class="info_student">
+                <div class="info_detail">
+                    <a href="">
+                        <div class="photo_student">
+                            <img src="../img/hs.jpg" alt="">
+                        </div>
+
+                        <div class="content_student">
+                            <span class="name_teacher">Nguyễn Thị Ánh Xuân</span>
+                            <span class="id_teacher">Mã giáo viên: GVV12345678</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info_student">
+                <div class="info_detail">
+                    <a href="">
+                        <div class="photo_student">
+                            <img src="../img/hs1.jpg" alt="">
+                        </div>
+
+                        <div class="content_student">
+                            <span class="name_teacher">Lý Bí</span>
+                            <span class="id_teacher">Mã giáo viên: GVS12345678</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info_student">
+                <div class="info_detail">
+                    <a href="">
+                        <div class="photo_student">
+                            <img src="../img/hs.jpg" alt="">
+                        </div>
+
+                        <div class="content_student">
+                            <span class="name_teacher">Huỳnh Thị Giàu</span>
+                            <span class="id_teacher">Mã giáo viên: GVL12345678</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info_student">
+                <div class="info_detail">
+                    <a href="">
+                        <div class="photo_student">
+                            <img src="../img/hs.jpg" alt="">
+                        </div>
+
+                        <div class="content_student">
+                            <span class="name_teacher">Hoa Mộng</span>
+                            <span class="id_teacher">Mã giáo viên: GVD12345678</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info_student">
+                <div class="info_detail">
+                    <a href="">
+                        <div class="photo_student">
+                            <img src="../img/hs1.jpg" alt="">
+                        </div>
+
+                        <div class="content_student">
+                            <span class="name_teacher">Hoàng Minh Kha</span>
+                            <span class="id_teacher">Mã giáo viên: GVH12345678</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info_student">
+                <div class="info_detail">
+                    <a href="">
+                        <div class="photo_student">
+                            <img src="../img/hs.jpg" alt="">
+                        </div>
+
+                        <div class="content_student">
+                            <span class="name_teacher">Đào Mộng</span>
+                            <span class="id_teacher">Mã giáo viên: GVH12345678</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- DANH SÁCH CÁC KHỐI -->
+        <div class="main_grades">
+            <div class="grade_content">
+                <button type="button">Khối 6</button>
+                <button type="button">Khối 7</button>
+                <button type="button">Khối 8</button>
+                <button type="button">Khối 9</button>
+            </div>
+
+            <div class="info_class">
+                <div class="class_card">
+                    <a href="">
+                        <span class="name_class">Lớp 9A1</span>
+                        <span>GVCN: Nguyễn Thị Ánh Xuân</span>
+                        <span>Sỉ số: 40</span>
+                    </a>
+                </div>
+
+                <div class="class_card">
+                    <a href="">
+                        <span class="name_class">Lớp 9A2</span>
+                        <span>GVCN: Trần Nguyễn Khởi</span>
+                        <span>Sỉ số: 40</span>
+                    </a>
+                </div>
+
+                <div class="class_card">
+                    <a href="">
+                        <span class="name_class">Lớp 9A3</span>
+                        <span>GVCN: Huỳnh Vũ Nhi</span>
+                        <span>Sỉ số: 40</span>
+                    </a>
+                </div>
+
+                <div class="class_card">
+                    <a href="">
+                        <span class="name_class">Lớp 9A4</span>
+                        <span>GVCN: Trương Tam</span>
+                        <span>Sỉ số: 40</span>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
@@ -69,7 +206,6 @@
 <script>
     feather.replace();
 </script>
-<script src="./js/openmodal.js"></script>
 
 
 </html>
