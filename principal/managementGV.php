@@ -155,7 +155,7 @@
 
             <div class="container1">
                 <div class="card present-card">
-                    <img src="../img/hs.jpg" alt="Nguyễn Thị Ánh Xuân" class="profile-image">
+                    <a href="../diemdanh/diemdanhhocsinh.php"><img src="../img/hs.jpg" alt="Nguyễn Thị Ánh Xuân" class="profile-image"></a>
                     <div class="card-content">
                         <div class="card-header">
                             <h2>Tên: Nguyễn Thị Ánh Xuân</h2>
@@ -168,8 +168,9 @@
                         <p>Số tiết trong ngày: 4</p>
                     </div>
                 </div>
+
                 <div class="card absent-card" style="display:none;">
-                    <img src="../img/gvn.jpg" alt="Lý Lan Anh" class="profile-image">
+                    <a href="../diemdanh/diemdanhhocsinh.php"><img src="../img/gvn.jpg" alt="Lý Lan Anh" class="profile-image"></a>
                     <div class="card-content">
                         <div class="card-header">
                             <h2>Tên: Lý Lan Anh</h2>
@@ -182,8 +183,9 @@
                         <p>Số tiết trong ngày: 4</p>
                     </div>
                 </div>
+
                 <div class="card late-card" style="display:none;">
-                    <img src="../img/hs1.jpg" alt="Trần Nguyên Khôi" class="profile-image">
+                    <a href="../diemdanh/diemdanhhocsinh.php"><img src="../img/hs1.jpg" alt="Trần Nguyên Khôi" class="profile-image"></a>
                     <div class="card-content">
                         <div class="card-header">
                             <h2>Tên: Trần Nguyên Khôi</h2>
@@ -201,8 +203,47 @@
 
         <!-- Thành tích -->
         <div id="thanhtich" class="tabcontent">
-            <h3>Thành tích</h3>
-            <p>Nội dung thành tích.</p>
+            <center>
+                <button class="btn">Chọn học kỳ</button>
+            </center>
+
+            <div class="summary">
+                <span>Tổng số: 30</span>
+                <span>Nam: 18</span>
+                <span>Nữ: 12</span>
+            </div>
+            
+            <div class="teacher-list">
+                <div class="teacher-card">
+                    <img src="../img/gv.jpg" alt="Nguyễn Thị Ánh Xuân">
+                    <div class="teacher-info">
+                        <h3>Nguyễn Thị Ánh Xuân</h3>
+                        <p>Mã nhân viên: GV20014567</p>
+                        <p>Chủ nhiệm: Lớp 9A1</p>
+                    </div>
+                    <a href="achievementsGV.php">
+                        <div class="icon">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="../img/gv.jpg" alt="Hoàng Hồng">
+                    <div class="teacher-info">
+                        <h3>Hoàng Hồng</h3>
+                        <p>Mã nhân viên: GV20014677</p>
+                    </div>
+                    <a href="achievementsGV.php">
+                        <div class="icon">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Add more teacher cards here -->
+
+            </div>
         </div>
     </main>
 </body>

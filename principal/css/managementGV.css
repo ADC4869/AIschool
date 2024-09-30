@@ -425,3 +425,89 @@ main p {
         justify-content: space-between;
     }
 }
+
+main .summary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+main .teacher-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .teacher-card {
+    display: flex;
+    align-items: center;
+    background-color: #e8f4ff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+main .teacher-card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+main .teacher-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+main .teacher-card a {
+    margin-left: auto;
+}
+
+main .teacher-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+main .teacher-list .teacher-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+main .icon {
+    font-size: 24px;
+    color: #007BFF;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    main .teacher-card img {
+        margin-bottom: 10px;
+    }
+
+    main .summary {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main .teacher-info h3 {
+        font-size: 14px;
+    }
+
+    main .teacher-info p {
+        font-size: 12px;
+    }
+
+    main .summary {
+        font-size: 14px;
+    }
+
+    main .teacher-card img {
+        width: 60px;
+        height: 60px;
+    }
+}
