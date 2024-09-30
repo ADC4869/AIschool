@@ -72,13 +72,13 @@ header .header img {
     }
 }
 main {
-    margin-top: 200px;
+    margin-top: 210px;
 }
 main .button-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin: 20px;
+    margin: 0 20px;
 }
 
 main .button {
@@ -170,7 +170,7 @@ padding-right: 20PX;
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    margin: 15px;
+    margin: 0 15px;
     gap: 2%;
     margin-top: 3px;
 }
@@ -190,7 +190,7 @@ main .content__slider img {
 main .content__news {
     width: 92%;
     display: flex;
-    margin: 15px;
+    margin: 0 15px;
     gap: 2%;
     margin-top: 3px;
 }

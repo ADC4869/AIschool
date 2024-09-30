@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký giáo viên</title>
-    <link rel="stylesheet" href="./css/signin.css">
+    <link rel="stylesheet" href="./css/signinbyrole.css">
     <link rel="stylesheet" href="../fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../css/global.css">
 </head>
@@ -19,7 +19,7 @@
             <!-- Giáo viên -->
             <div class="main__content">
                 <img src="../img/intro4.jpg" alt="anh dang nhap">
-                <p class="title">Chào mừng đến SchoolAI App</p>
+                <p class="title">Chào mừng đến SchoolAI</p>
                 <!-- Thêm method POST và action trỏ đến file xử lý đăng ký -->
                 <form method="POST" action="register_gv.php">
                     <div class="main__input">
@@ -33,8 +33,16 @@
 
                         </div>
                         <div class="main__input2">
+                            <div class="main_label">
+                                <label for="">Giới tính</label>
+                                <label for="">Quốc tịch</label>
+                            </div>
                             <input type="text" name="gender" placeholder="Giới tính" required>
                             <input type="text" name="nationality" placeholder="Quốc tịch" required>
+                            <div class="main_label">
+                                <label for="">Dân tộc</label>
+                                <label for="">Tôn giáo</label>
+                            </div>
                             <input type="text" name="ethnic" placeholder="Dân tộc" required>
                             <input type="text" name="religion" placeholder="Tôn giáo" required>
                         </div>

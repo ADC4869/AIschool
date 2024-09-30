@@ -79,17 +79,19 @@
                     </li>
 
                     <!-- Modal -->
-                    <div class="dialog-box" id="dialog-box-2">
-                    <i data-feather="monitor" style="color: black"></i>
-                        <h2>PC-Windows</h2>
-                        <ul>
-                            <li><strong>Đăng nhập:</strong> 15/03/2022 18:00</li>
-                            <li><strong>Phương thức:</strong> Mật khẩu</li>
-                            <li><strong>Hoạt động lần cuối:</strong> 25/08/2024 19:45</li>
-                            <li><strong>Địa điểm:</strong> Hà Nội, Việt Nam</li>
-                            <li><strong>Địa chỉ IP:</strong> 117.108.90.200</li>
-                        </ul>
-                    </div>
+                    <!-- Modal -->
+<div class="dialog-box" id="dialog-box-1" style="display: none;">
+    <i data-feather="tablet" style="color: black"></i>
+    <h2>Iphone 7 Plus</h2>
+    <ul>
+        <li><strong>Đăng nhập:</strong> 15/03/2022 18:00</li>
+        <li><strong>Phương thức:</strong> Mật khẩu</li>
+        <li><strong>Hoạt động lần cuối:</strong> 25/08/2024 19:45</li>
+        <li><strong>Địa điểm:</strong> Hà Nội, Việt Nam</li>
+        <li><strong>Địa chỉ IP:</strong> 117.108.90.200</li>
+    </ul>
+</div>
+
                 </ul>
             </div>
             <div class="section">
@@ -142,5 +144,31 @@
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>
     feather.replace();
+</script>
+<script>
+    function toggleDialog(dialogId) {
+    const dialogBox = document.getElementById(dialogId);
+
+    // Hiển thị hoặc ẩn modal
+    if (dialogBox.style.display === "none" || dialogBox.style.display === "") {
+        dialogBox.style.display = "block";
+
+        // Thêm sự kiện nhấp chuột bên ngoài modal để đóng
+        window.addEventListener('click', function(event) {
+            if (event.target === dialogBox) {
+                closeDialog(dialogId);
+            }
+        });
+    } else {
+        closeDialog(dialogId);
+    }
+}
+
+function closeDialog(dialogId) {
+    const dialogBox = document.getElementById(dialogId);
+    dialogBox.style.display = "none";
+}
+
+
 </script>
 </html>

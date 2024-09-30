@@ -43,7 +43,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
     <link rel="stylesheet" href="./fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/giaodien.css">
 </head>
@@ -142,7 +142,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     </div>
                     <span>Quản lý sự kiện và lịch trình</span>
                 </a>
-                <a href="#" class="button">
+                <a href="./principal/teachingassignment.php" class="button">
                     <div class="circle circle__timetable">
                         <i class="fa-regular fa-calendar" style="color: #ffffff;"></i>
                     </div>

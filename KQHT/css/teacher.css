@@ -263,3 +263,9 @@ main .popup-content a {
     text-decoration: none;
     color: var(--text-color);
 }
+
+@media (min-width: 430px) {
+    main .grade-buttons {
+        justify-content: center;
+    }
+}

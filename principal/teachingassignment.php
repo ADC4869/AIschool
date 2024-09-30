@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Học tập</title>
+    <title>Phân công giảng dạy</title>
     <!-- Fontawesome css -->
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/css/all.min.css">
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/css/brands.min.css">
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../fonts/themify-icons/themify-icons.css">
     <!-- Fontawesome js -->
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/all.min.js">
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/brands.min.js">
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
-    <!-- css -->
+    <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/teacher.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="css/teachingassignment.css">
 </head>
 
 <body>
@@ -31,49 +28,48 @@
                         d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                 </svg>
             </span>
-            <div class="title">Kết Quả Học Tập</div>
+            <div class="title" id="headerTitle">Phân công giảng dạy
+            </div>
         </div>
     </header>
 
     <main>
-        <?php
-            $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
-            if ($role == 'giaovien') {
-                include 'giaovien.php';
-            } else {
-                include 'hocsinh.php';
-            }
-        ?>
+        <div class="main_tab">
+            <div class="tab_content">
+                <div class="tab_timetable">
+                    <p>Thời khóa biểu giáo viên</p>
+                </div>
+                <div class="wall">
+                    <p>|</p>
+                </div>
+                <div class="tab_timetable">
+                    <p>Thời khóa biểu theo lớp</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_content">
+            <div class="number_student">
+                <p>Tổng số: 40</p>
+                <p>Nam: 25</p>
+                <p>Nữ: 15</p>
+            </div>
+        </div>
     </main>
 
-    <?php include '../footer/footer.php' ?>
+
+
+
+
 </body>
 <script src="../js/back.js"></script>
-<script src="./js/hocki.js"></script>
-<script src="./js/namhoc.js"></script>
-<script src="./js/khoi.js"></script>
+<script src="./js/choosetab.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>
-feather.replace();
+    feather.replace();
 </script>
-<script>
-function showClasses(grade) {
-    var gradeElement = document.getElementById(grade);
+<script src="./js/openmodal.js"></script>
 
-    // Kiểm tra trạng thái hiện tại của danh sách lớp
-    if (gradeElement.style.display === 'none' || gradeElement.style.display === '') {
-        // Ẩn tất cả các danh sách lớp khác
-        var classLists = document.querySelectorAll('.class-list');
-        classLists.forEach(function(list) {
-            list.style.display = 'none';
-        });
-        // Hiển thị danh sách lớp được chọn
-        gradeElement.style.display = 'block';
-    } else {
-        // Ẩn danh sách lớp nếu nó đang hiển thị
-        gradeElement.style.display = 'none';
-    }
-}
-</script>
+
 </html>

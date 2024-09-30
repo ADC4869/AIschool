@@ -16,11 +16,11 @@ if ($teacher_id) {
                     JOIN teachers ON classes.homeroom_teacher_id = teachers.id 
                     WHERE teachers.id = ?";
     $stmt = $conn->prepare($query_class);
-    
+
     if (!$stmt) {
         die("Lỗi trong câu lệnh chuẩn bị: " . $conn->error);
     }
-    
+
     $stmt->bind_param("i", $teacher_id);
     $stmt->execute();
     $result_class = $stmt->get_result();
@@ -36,7 +36,7 @@ if ($teacher_id) {
                            JOIN users AS u ON s.id = u.id 
                            WHERE s.class_id = ?";
         $stmt_students = $conn->prepare($query_students);
-        
+
         if (!$stmt_students) {
             die("Lỗi trong câu lệnh chuẩn bị: " . $conn->error);
         }
@@ -60,6 +60,7 @@ if ($teacher_id) {
 ?>
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,6 +77,7 @@ if ($teacher_id) {
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -130,7 +132,7 @@ if ($teacher_id) {
             </div>
 
             <!-- Danh sách lớp -->
-            <?php if ($class_info): ?> 
+            <?php if ($class_info): ?>
                 <h2>Danh sách học sinh lớp <?php echo htmlspecialchars($class_info['class_name']); ?></h2>
                 <div class="student-list">
                     <?php foreach ($students as $student): ?>
@@ -140,8 +142,12 @@ if ($teacher_id) {
                                     <img src="../img/hs1.jpg" alt="Học sinh 1">
                                 </a>
                                 <div class="icons">
-                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                    <i class="fa-solid fa-message"></i>
+                                    <a href="../call/index.php">
+                                        <i data-feather="phone" style="color: #5B6998"></i>
+                                    </a>
+                                    <a href="../chat/chathocsinh.php">
+                                        <i data-feather="message-square" style="color: #5B6998"></i>
+                                    </a>
                                 </div>
                             </div>
                             <div class="student-info">
@@ -151,13 +157,21 @@ if ($teacher_id) {
                                 <p>SĐT liên lạc: <?php echo htmlspecialchars($student['phone']); ?></p>
                                 <p>Phụ huynh: </p>
                             </div>
+                            <div class="icon">
+                                <i data-feather="edit-3" style="color: #5B6998" onclick="openModal()"></i>
+                            </div>
                         </div>
                     <?php endforeach; ?>
-                </div>
-            <?php else: ?>
-                <p>Giáo viên này không phụ trách lớp nào.</p>
-            <?php endif; ?>
-            <!-- <div id="class-list">
+
+
+                <?php else: ?>
+                    <p>Giáo viên này không phụ trách lớp nào.</p>
+                <?php endif; ?>
+
+
+
+
+                <!-- <div id="class-list">
                 <h2>Danh sách lớp 9A1</h2>
                 <div class="student-list">
                     
@@ -232,312 +246,313 @@ if ($teacher_id) {
                 </div>
             </div> -->
 
-            <!-- Học lực -->
-            <div id="xuat-sac" class="hidden-content">
-                <h2>Số học sinh xuất sắc: 2</h2>
-                <div class="student-list">
-                    <!-- Học sinh 1 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs.jpg" alt="Học sinh 1">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
+                <!-- Học lực -->
+                <div id="xuat-sac" class="hidden-content">
+                    <h2>Số học sinh xuất sắc: 2</h2>
+                    <div class="student-list">
+                        <!-- Học sinh 1 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs.jpg" alt="Học sinh 1">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                            </div>
+                            <div class="student-info">
+                                <h4>Họ tên: Nguyễn Thị Mỹ Anh</h4>
+                                <p>Hạng: 1</p>
+                                <p>Trung bình: 9.8</p>
+                                <p>Học lực: Xuất sắc</p>
+                                <p>Hạnh kiểm: Tốt</p>
+                            </div>
+
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
                             </div>
                         </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Nguyễn Thị Mỹ Anh</h4>
-                            <p>Hạng: 1</p>
-                            <p>Trung bình: 9.8</p>
-                            <p>Học lực: Xuất sắc</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
 
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                    </div>
-
-                    <!-- Học sinh 2 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs1.jpg" alt="Học sinh 2">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
+                        <!-- Học sinh 2 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs1.jpg" alt="Học sinh 2">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Trần Văn Giàu</h4>
-                            <p>Hạng: 2</p>
-                            <p>Trung bình: 9.7</p>
-                            <p>Học lực: Xuất sắc</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Học lực giỏi -->
-            <div id="gioi" class="hidden-content">
-                <h2>Số học sinh giỏi: 30</h2>
-                <div class="student-list">
-                    <!-- Học sinh 1 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs.jpg" alt="Học sinh 1">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
+                            <div class="student-info">
+                                <h4>Họ tên: Trần Văn Giàu</h4>
+                                <p>Hạng: 2</p>
+                                <p>Trung bình: 9.7</p>
+                                <p>Học lực: Xuất sắc</p>
+                                <p>Hạnh kiểm: Tốt</p>
                             </div>
-                        </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Nguyễn Thị Mỹ Anh</h4>
-                            <p>Hạng: 3</p>
-                            <p>Trung bình: 9.65</p>
-                            <p>Học lực: Giỏi</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
-
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                    </div>
-
-                    <!-- Học sinh 2 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs1.jpg" alt="Học sinh 2">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
                             </div>
-                        </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Nguyễn Minh Khoa</h4>
-                            <p>Hạng: 4</p>
-                            <p>Trung bình: 9.6</p>
-                            <p>Học lực: Giỏi</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                    </div>
-
-                    <!-- Học sinh 3 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs.jpg" alt="Học sinh 2">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
-                            </div>
-                        </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Nguyễn Khoa Điềm</h4>
-                            <p>Hạng: 5</p>
-                            <p>Trung bình: 9.5</p>
-                            <p>Học lực: Giỏi</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Học lực khá -->
-            <div id="kha" class="hidden-content">
-                <h2>Số học sinh khá: 6</h2>
-                <div class="student-list">
-                    <!-- Học sinh 1 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs.jpg" alt="Học sinh 1">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
+                <!-- Học lực giỏi -->
+                <div id="gioi" class="hidden-content">
+                    <h2>Số học sinh giỏi: 30</h2>
+                    <div class="student-list">
+                        <!-- Học sinh 1 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs.jpg" alt="Học sinh 1">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                            </div>
+                            <div class="student-info">
+                                <h4>Họ tên: Nguyễn Thị Mỹ Anh</h4>
+                                <p>Hạng: 3</p>
+                                <p>Trung bình: 9.65</p>
+                                <p>Học lực: Giỏi</p>
+                                <p>Hạnh kiểm: Tốt</p>
+                            </div>
+
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
                             </div>
                         </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Nguyễn Lan Hương</h4>
-                            <p>Hạng: 11</p>
-                            <p>Trung bình: 8.8</p>
-                            <p>Học lực: Khá</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
 
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                    </div>
-
-                    <!-- Học sinh 2 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs1.jpg" alt="Học sinh 2">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
+                        <!-- Học sinh 2 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs1.jpg" alt="Học sinh 2">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                            </div>
+                            <div class="student-info">
+                                <h4>Họ tên: Nguyễn Minh Khoa</h4>
+                                <p>Hạng: 4</p>
+                                <p>Trung bình: 9.6</p>
+                                <p>Học lực: Giỏi</p>
+                                <p>Hạnh kiểm: Tốt</p>
+                            </div>
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
                             </div>
                         </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Trần Đức Minh</h4>
-                            <p>Hạng: 12</p>
-                            <p>Trung bình: 8.65</p>
-                            <p>Học lực: Khá</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                    </div>
 
-                    <!-- Học sinh 3 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs.jpg" alt="Học sinh 2">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
+                        <!-- Học sinh 3 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs.jpg" alt="Học sinh 2">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Nguyễn Minh Anh</h4>
-                            <p>Hạng: 13</p>
-                            <p>Trung bình: 8.5</p>
-                            <p>Học lực: Khá</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                    </div>
-
-                    <!-- Học sinh 4 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs1.jpg" alt="Học sinh 2">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
+                            <div class="student-info">
+                                <h4>Họ tên: Nguyễn Khoa Điềm</h4>
+                                <p>Hạng: 5</p>
+                                <p>Trung bình: 9.5</p>
+                                <p>Học lực: Giỏi</p>
+                                <p>Hạnh kiểm: Tốt</p>
                             </div>
-                        </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Trần Đức Mẫn</h4>
-                            <p>Hạng: 14</p>
-                            <p>Trung bình: 8.4</p>
-                            <p>Học lực: Khá</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                    </div>
-
-                    <!-- Học sinh 5 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs.jpg" alt="Học sinh 2">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
                             </div>
-                        </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Nguyễn Lê Thúy Vy</h4>
-                            <p>Hạng: 15</p>
-                            <p>Trung bình: 8.3</p>
-                            <p>Học lực: Khá</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                    </div>
-
-                    <!-- Học sinh 6 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs1.jpg" alt="Học sinh 2">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
-                            </div>
-                        </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Trần Anh Tuấn</h4>
-                            <p>Hạng: 16</p>
-                            <p>Trung bình: 8.2</p>
-                            <p>Học lực: Khá</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Học lực trung bình -->
-            <div id="trung-binh" class="hidden-content">
-                <h2>Số học sinh trung bình: 2</h2>
-                <div class="student-list">
-                    <!-- Học sinh 1 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs.jpg" alt="Học sinh 1">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
+                <!-- Học lực khá -->
+                <div id="kha" class="hidden-content">
+                    <h2>Số học sinh khá: 6</h2>
+                    <div class="student-list">
+                        <!-- Học sinh 1 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs.jpg" alt="Học sinh 1">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                            </div>
+                            <div class="student-info">
+                                <h4>Họ tên: Nguyễn Lan Hương</h4>
+                                <p>Hạng: 11</p>
+                                <p>Trung bình: 8.8</p>
+                                <p>Học lực: Khá</p>
+                                <p>Hạnh kiểm: Tốt</p>
+                            </div>
+
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
                             </div>
                         </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Đào Gia Hảo</h4>
-                            <p>Hạng: 28</p>
-                            <p>Trung bình: 6.3</p>
-                            <p>Học lực: Trung Bình</p>
-                            <p>Hạnh kiểm: Tốt</p>
-                        </div>
 
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                    </div>
-
-                    <!-- Học sinh 2 -->
-                    <div class="student-card">
-                        <div class="student-left">
-                            <img src="../img/hs1.jpg" alt="Học sinh 2">
-                            <div class="icons">
-                                <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
-                                <i class="fa-solid fa-message"></i>
+                        <!-- Học sinh 2 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs1.jpg" alt="Học sinh 2">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                            </div>
+                            <div class="student-info">
+                                <h4>Họ tên: Trần Đức Minh</h4>
+                                <p>Hạng: 12</p>
+                                <p>Trung bình: 8.65</p>
+                                <p>Học lực: Khá</p>
+                                <p>Hạnh kiểm: Tốt</p>
+                            </div>
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
                             </div>
                         </div>
-                        <div class="student-info">
-                            <h4>Họ tên: Phương Chí Hùng</h4>
-                            <p>Hạng: 29</p>
-                            <p>Trung bình: 6.2</p>
-                            <p>Học lực: Trung bình</p>
-                            <p>Hạnh kiểm: Tốt</p>
+
+                        <!-- Học sinh 3 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs.jpg" alt="Học sinh 2">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                            </div>
+                            <div class="student-info">
+                                <h4>Họ tên: Nguyễn Minh Anh</h4>
+                                <p>Hạng: 13</p>
+                                <p>Trung bình: 8.5</p>
+                                <p>Học lực: Khá</p>
+                                <p>Hạnh kiểm: Tốt</p>
+                            </div>
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
                         </div>
-                        <div class="icons1">
-                            <i class="fa-solid fa-pen"></i>
+
+                        <!-- Học sinh 4 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs1.jpg" alt="Học sinh 2">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                            </div>
+                            <div class="student-info">
+                                <h4>Họ tên: Trần Đức Mẫn</h4>
+                                <p>Hạng: 14</p>
+                                <p>Trung bình: 8.4</p>
+                                <p>Học lực: Khá</p>
+                                <p>Hạnh kiểm: Tốt</p>
+                            </div>
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+                        </div>
+
+                        <!-- Học sinh 5 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs.jpg" alt="Học sinh 2">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                            </div>
+                            <div class="student-info">
+                                <h4>Họ tên: Nguyễn Lê Thúy Vy</h4>
+                                <p>Hạng: 15</p>
+                                <p>Trung bình: 8.3</p>
+                                <p>Học lực: Khá</p>
+                                <p>Hạnh kiểm: Tốt</p>
+                            </div>
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+                        </div>
+
+                        <!-- Học sinh 6 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs1.jpg" alt="Học sinh 2">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                            </div>
+                            <div class="student-info">
+                                <h4>Họ tên: Trần Anh Tuấn</h4>
+                                <p>Hạng: 16</p>
+                                <p>Trung bình: 8.2</p>
+                                <p>Học lực: Khá</p>
+                                <p>Hạnh kiểm: Tốt</p>
+                            </div>
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Học sinh yếu -->
-            <div id="yeu" class="hidden-content">
-                <h2>Số học sinh yếu: 0</h2>
-                <div class="student-list">
+                <!-- Học lực trung bình -->
+                <div id="trung-binh" class="hidden-content">
+                    <h2>Số học sinh trung bình: 2</h2>
+                    <div class="student-list">
+                        <!-- Học sinh 1 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs.jpg" alt="Học sinh 1">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                            </div>
+                            <div class="student-info">
+                                <h4>Họ tên: Đào Gia Hảo</h4>
+                                <p>Hạng: 28</p>
+                                <p>Trung bình: 6.3</p>
+                                <p>Học lực: Trung Bình</p>
+                                <p>Hạnh kiểm: Tốt</p>
+                            </div>
 
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+                        </div>
+
+                        <!-- Học sinh 2 -->
+                        <div class="student-card">
+                            <div class="student-left">
+                                <img src="../img/hs1.jpg" alt="Học sinh 2">
+                                <div class="icons">
+                                    <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                            </div>
+                            <div class="student-info">
+                                <h4>Họ tên: Phương Chí Hùng</h4>
+                                <p>Hạng: 29</p>
+                                <p>Trung bình: 6.2</p>
+                                <p>Học lực: Trung bình</p>
+                                <p>Hạnh kiểm: Tốt</p>
+                            </div>
+                            <div class="icons1">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Học sinh yếu -->
+                <div id="yeu" class="hidden-content">
+                    <h2>Số học sinh yếu: 0</h2>
+                    <div class="student-list">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -552,6 +567,24 @@ if ($teacher_id) {
                 <canvas id="attendanceChart"></canvas>
             </div>
         </div>
+
+        <!-- MODAL GHI CHÚ -->
+        <div class="modal fade hidden" id="detailModal">
+            <div class="modal-dialog modal__ghichu">
+                <div class="modal-content">
+                    <div class="modal-header modal__header">
+                        <h3 class="header__title">Ghi chú</h3>
+                    </div>
+                    <div class="modal-body modal__body">
+                        <!-- Chỉnh lại class ở đây nếu cần -->
+                        <textarea class="note__input" placeholder="Nhập ghi chú..."></textarea>
+                    </div>
+                    <div class="modal-footer modal__footer">
+                        <button type="button" class="btn__save" onclick="saveNote()">Lưu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 <script src="../js/back.js"></script>
@@ -559,4 +592,33 @@ if ($teacher_id) {
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./js/chart.js"></script>
 <script src="./js/hocluc.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
+
+<script>
+
+    function openModal() {
+        document.getElementById("detailModal").classList.remove("hidden");
+    }
+
+    function closeModal() {
+        document.getElementById("detailModal").classList.add("hidden");
+    }
+
+    function saveNote() {
+        // Lấy giá trị từ ô ghi chú
+        const noteInput = document.querySelector(".note__input");
+
+        // Xóa nội dung của ô ghi chú sau khi lưu
+        noteInput.value = "";
+
+        // Đóng modal
+        closeModal();
+    }
+
+</script>
+
 </html>

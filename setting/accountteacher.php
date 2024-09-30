@@ -96,7 +96,7 @@ $conn->close();
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/brands.min.js">
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
-    <link rel="stylesheet" href="./css/accountteacher.css">
+    <link rel="stylesheet" href="./css/accteacher.css">
     <link rel="stylesheet" href="../css/global.css">
 </head>
 <body>
