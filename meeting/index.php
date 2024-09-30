@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/meeting.css">
+    <link rel="stylesheet" href="css/meetingpage.css">
 </head>
 
 <body>
@@ -61,7 +61,7 @@
     <main>
         <div class="tab-container">
             <button class="tab-btn active" onclick="openTab('school')">Lịch họp của trường</button>
-            <button class="tab-btn" onclick="openTab('me')">Lịch họp của lớp</button>
+            <button class="tab-btn" onclick="openTab('me')">Lịch họp của tôi</button>
         </div>
 
         <!-- Lịch họp của trường -->
@@ -189,7 +189,7 @@
     </main>
 </body>
 <script src="js/lich.js"></script>
-<script src="./js/tab.js"></script>
+<script src="./js/opentab.js"></script>
 <script src="../js/back.js"></script>
 <script src="./js/modal.js"></script>
 

@@ -17,7 +17,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/giaovien.css">
+    <link rel="stylesheet" href="css/teacher.css">
     <link rel="stylesheet" href="../css/footer.css">
 </head>
 

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="./css/notification.css">
+    <link rel="stylesheet" href="./css/notifi.css">
     <link rel="stylesheet" href="../css/footer.css">
 </head>
 

@@ -145,7 +145,6 @@ main .tab-btn:focus {
 
 /* Tab content styles */
 main .tab-content {
-    display: none;
     text-align: center;
 }
 

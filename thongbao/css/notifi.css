@@ -53,6 +53,7 @@ main .search .input__search {
     display: flex;
     padding: 5px;
     background-color: #FAFAFA;
+    padding-left: 15px;
 }
 .search .input__search::placeholder {
     font-size: 16px;
@@ -95,7 +96,6 @@ main .card-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
 }
 
 main .card-text h3 {
@@ -136,16 +136,16 @@ main .arrow {
     }
 
     main .card-text h3 {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     main .card-text p {
-        font-size: 12px;
+        font-size: 9px;
     }
 
     main .card-image img {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
 }
 

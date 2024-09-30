@@ -16,7 +16,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="css/fee.css">
-    <link rel="stylesheet" href="css/tuitionstyle.css">
+    <link rel="stylesheet" href="css/tuitionpage.css">
 </head>
 
 <body>

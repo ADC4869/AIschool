@@ -271,7 +271,7 @@ main div p {
 
 @media screen and (max-width: 480px) {
     main .fee-item {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     main .student-card .icons {

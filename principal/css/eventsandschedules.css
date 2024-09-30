@@ -280,6 +280,11 @@ main .main_content {
     height: 40px;
     border: 1px solid gray;
 }
+.body_input select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid gray;
+}
 
 .modal_body .body_inputtime .time {
     width: 15%;

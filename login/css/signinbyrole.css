@@ -77,7 +77,6 @@ main {
 .main__input label {
     width: 100%; /* Đảm bảo label chiếm 100% chiều rộng của phần tử cha */
     text-align: left; /* Căn chỉnh text của label sang bên trái */
-    margin-bottom: 0.5rem; /* Tạo khoảng cách dưới label */
     font-size: 16px;
 }
 
@@ -109,6 +108,12 @@ select {
     font-size: 16px;
     outline: none;
     height: 45px;
+    background-position: right 10px center;
+    appearance: none;
+    
+}
+select option {
+    direction: ltr; /* Giữ text trong các option hiển thị từ trái sang phải */
 }
 
 .main__input2 {
@@ -117,6 +122,12 @@ select {
     flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: space-between;
+}
+.main__input2 .main_label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .main__input2 input {

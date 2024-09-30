@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/eventsandschedules.css">
 </head>
 
 <body>
@@ -248,7 +248,13 @@
                             <span>Đối tượng tham gia</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <select name="" id="">
+                                <option value="">Tất cả (Bao gồm: Học sinh, Giáo viên, Phụ huynh)</option>
+                                <option value="">Toàn trường (Bao gồm cả học sinh và giáo viên)</option>
+                                <option value="">Tất cả học sinh</option>
+                                <option value="">Tất cả giáo viên</option>
+                                <option value="">Tất cả phụ huynh học sinh</option>
+                            </select>
                         </div>
 
                         <div class="body_button">
@@ -418,7 +424,11 @@
                             <span>Đối tượng tham gia</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <select name="" id="">
+                                <option value="">Phòng đào tạo</option>
+                                <option value="">Ban giám hiệu</option>
+                                <option value="">Phòng kế toán</option>
+                            </select>
                         </div>
 
                         <div class="body_button">
@@ -591,7 +601,11 @@
                             <span>Người tham gia</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <select name="" id="">
+                                <option value="">Phòng đào tạo</option>
+                                <option value="">Ban giám hiệu</option>
+                                <option value="">Phòng kế toán</option>
+                            </select>
                         </div>
 
                         <div class="body_button">

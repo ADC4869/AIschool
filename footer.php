@@ -22,7 +22,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             <a href="./principal/comment.php" class="'. ($current_page == 'comment.php' ? 'home-active' : '') .'">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
-                    <span>Gợi ý</span>
+                    <span>Ý kiến</span>
                 </div>
             </a>';
         } elseif ($role == 'giaovien' || $role == 'hocsinh') {
