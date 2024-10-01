@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/assignmenttimetable.css">
+    <link rel="stylesheet" href="css/timetableassignment.css">
 </head>
 
 <body>
@@ -36,20 +36,20 @@
     <main>
         <div class="main_tab">
             <div class="tab_content">
-                <div class="tab_timetable">
+                <div class="tab_timetable active" id="tab_timetableteacher">
                     <p>Thời khóa biểu giáo viên</p>
                 </div>
                 <div class="wall">
                     <p>|</p>
                 </div>
-                <div class="tab_timetable">
+                <div class="tab_timetable" id="tab_timetableclass">
                     <p>Thời khóa biểu theo lớp</p>
                 </div>
             </div>
         </div>
 
         <!-- DANH SÁCH CÁC GIÁO VIÊN  -->
-        <div class="main_teacher" style="display: none">
+        <div class="main_teacher" id="listteacher">
             <div class="number_student">
                 <p>Tổng số: 40</p>
                 <p>Nam: 25</p>
@@ -150,15 +150,45 @@
         </div>
 
         <!-- DANH SÁCH CÁC KHỐI -->
-        <div class="main_grades">
+        <div class="main_grades" style="display: none" id="listgrade">
             <div class="grade_content">
-                <button type="button">Khối 6</button>
-                <button type="button">Khối 7</button>
-                <button type="button">Khối 8</button>
-                <button type="button">Khối 9</button>
+                <button type="button" id="class6">Khối 6</button>
+                <button type="button" id="class7">Khối 7</button>
+                <button type="button" id="class8">Khối 8</button>
+                <button type="button" id="class9">Khối 9</button>
             </div>
 
-            <div class="info_class">
+            <div class="info_class" id="listclass6" style="display: none">
+                <div class="class_card">
+                    <a href="">
+                        <span class="name_class">Lớp 6A1</span>
+                        <span>GVCN: Nguyễn Thị Ánh Xuân</span>
+                        <span>Sỉ số: 40</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info_class" id="listclass7" style="display: none">
+                <div class="class_card">
+                    <a href="">
+                        <span class="name_class">Lớp 7A1</span>
+                        <span>GVCN: Nguyễn Thị Ánh Xuân</span>
+                        <span>Sỉ số: 40</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info_class" id="listclass8" style="display: none">
+                <div class="class_card">
+                    <a href="">
+                        <span class="name_class">Lớp 8A1</span>
+                        <span>GVCN: Nguyễn Thị Ánh Xuân</span>
+                        <span>Sỉ số: 40</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="info_class" id="listclass9" style="display: none">
                 <div class="class_card">
                     <a href="">
                         <span class="name_class">Lớp 9A1</span>
@@ -200,7 +230,7 @@
 
 </body>
 <script src="../js/back.js"></script>
-<script src="./js/choosetab.js"></script>
+<script src="./js/timetableassignment.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>

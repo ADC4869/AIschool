@@ -4,7 +4,7 @@ document.getElementById('tab_eventpresent').addEventListener('click', function (
     document.getElementById('upcoming').style.display = 'none';
     document.getElementById('schedule').style.display = 'none';
     document.getElementById('collaborate').style.display = 'none';
-
+    
     // Thêm lớp 'active' cho tab "Sự kiện đang diễn ra" 
     document.getElementById('tab_eventpresent').classList.add('active');
     document.getElementById('tab_upcoming').classList.remove('active');
