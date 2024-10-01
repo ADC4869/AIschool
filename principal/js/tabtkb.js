@@ -13,7 +13,7 @@ document.getElementById('tab_timetableteacher').addEventListener('click', functi
 document.getElementById('tab_timetableclass').addEventListener('click', function () {
     // Ẩn tất cả các nội dung khác
     document.getElementById('listteacher').style.display = 'none';
-    document.getElementById('listgrade').style.display = '';
+    document.getElementById('listgrade').style.display = 'flex';
 
     // Thêm lớp 'active' cho tab "Thời khóa biểu heo lớp" 
     document.getElementById('tab_timetableteacher').classList.remove('active');

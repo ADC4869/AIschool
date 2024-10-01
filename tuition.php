@@ -16,7 +16,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="css/fee.css">
-    <link rel="stylesheet" href="css/tuitionpage.css">
+    <link rel="stylesheet" href="css/tinhtranghocphi.css">
 </head>
 
 <body>
@@ -88,7 +88,7 @@
                         <div class="fee-item">Bảo hiểm y tế
                             <br><span>1.000.000</span>
                         </div>
-                        <div class="fee-item1"><br>40
+                        <div class="fee-item1" style="padding-left: 15px"><br>40
                             <i class="fa-solid fa-check" style="color: #6AB099;"></i>
                         </div>
                         <div class="fee-item2"><br>0</div>

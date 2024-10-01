@@ -96,7 +96,7 @@ $conn->close();
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/brands.min.js">
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
-    <link rel="stylesheet" href="./css/accteacher.css">
+    <link rel="stylesheet" href="./css/accountgv.css">
     <link rel="stylesheet" href="../css/global.css">
 </head>
 <body>
@@ -255,7 +255,7 @@ $conn->close();
                 <div class="info">
                     <p>Chứng chỉ Tiếng Anh B2 - Hội đồng Anh</p>
                 </div>
-                <div class="info">
+                <div class="info_long">
                     <p class="long__info">Khóa học Phát triển Kỹ năng Sư phạm - Viện Nghiên cứu Giáo dục</p>
                 </div>
             </div>
@@ -288,7 +288,7 @@ $conn->close();
 
             <div>
                 <p class="small__title">Môn học và cấp độ giảng dạy</p>
-                <div class="info">
+                <div class="info_long">
                     <p class="long__info">Ngữ văn - Trung học Cơ sở và Trung học Phổ thông</p>
                 </div>
                 <div class="info">
