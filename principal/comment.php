@@ -15,6 +15,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="./css/comment.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
     <header>
@@ -122,5 +123,4 @@
     </main>
 </body>
 <script src="../js/back.js"></script>
-
 </html>
