@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .icon-back {
+    font-size: 20px;
+    color: var(--white-color);
+    position: relative;
+    top: 30px;
+    left: 15px;
+}
+
+header .header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+
+main .class-info {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+main .student-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+}
+
+main .student-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+main .student-item.paid {
+    background-color: #cfe3ff;
+}
+
+main .student-item.unpaid {
+    background-color: #ffe3e3;
+}
+
+main .student-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+main .info {
+    flex-grow: 1;
+}
+
+main .name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+main .status, .note {
+    font-size: 0.9em;
+}
+
+main .icons {
+    display: flex;
+    gap: 15px;
+}
+
+main .icons button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    main .student-item img {
+        width: 60px;
+        height: 60px;
+    }
+    main .student-item {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    main .student-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    main .student-item {
+        flex: 1 1 48%;
+    }
+}

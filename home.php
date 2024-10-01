@@ -148,7 +148,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     </div>
                     <span>Phân công giảng dạy</span>
                 </a>
-                <a href="#" class="button">
+                <a href="./principal/tuition.php" class="button">
                     <div class="circle circle__fee">
                         <i class="fa-solid fa-dollar-sign" style="color: #ffffff;"></i>
                     </div>
