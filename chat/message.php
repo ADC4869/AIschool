@@ -57,22 +57,24 @@
         <div id="chatContent" class="content">
             <ul class="chat-list">
                 <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        fetchMessages();
+                document.addEventListener('DOMContentLoaded', function() {
+                    fetchMessages(); // Gọi hàm tải tin nhắn khi tài liệu đã sẵn sàng
 
-                        function fetchMessages() {
-                            fetch('fetch_messages.php')
-                                .then(response => {
-                                    if (!response.ok) {
-                                        throw new Error('Network response was not ok');
-                                    }
-                                    return response.json();
-                                })
-                                .then(messages => {
-                                    const chatList = document.querySelector('.chat-list');
+                    // Hàm tải tin nhắn từ server
+                    function fetchMessages() {
+                        fetch('fetch_messages.php')
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json(); // Chuyển đổi phản hồi thành JSON
+                            })
+                            .then(messages => {
+                                const chatList = document.querySelector('.chat-list');
+                                if (chatList) { // Kiểm tra sự tồn tại của chatList
                                     chatList.innerHTML = ''; // Xóa nội dung hiện tại
 
-                                    if (messages.length === 0) {
+                                    if (Array.isArray(messages) && messages.length === 0) {
                                         chatList.innerHTML =
                                         '<li>Chưa có tin nhắn nào.</li>'; // Thông báo không có tin nhắn
                                         return;
@@ -86,48 +88,54 @@
                                         .chat_id); // ID chat
 
                                         chatItem.innerHTML = `
-                            <img src="../img/hs1.jpg" alt="User Image">
-                            <div class="chat-info">
-                                <div class="chat-name">${message.sender_name}</div>
-                                <div class="chat-message">${message.message || 'Chưa có tin nhắn'}</div>
-                            </div>
-                            <div class="days">
-                                <div class="chat-time">${formatTime(message.created_at)}</div>
-                                <div class="time">${message.unread_messages > 0 ? (message.unread_messages > 5 ? '5+' : message.unread_messages) : ''}</div>
-                            </div>
-                        `;
+                                <img src="../img/hs1.jpg" alt="User Image">
+                                <div class="chat-info">
+                                    <div class="chat-name">${message.sender_name}</div>
+                                    <div class="chat-message">${message.message || 'Chưa có tin nhắn'}</div>
+                                </div>
+                                <div class="days">
+                                    <div class="chat-time">${formatTime(message.created_at)}</div>
+                                    <div class="time">${message.unread_messages > 0 ? (message.unread_messages > 5 ? '5+' : message.unread_messages) : ''}</div>
+                                </div>
+                            `;
                                         chatList.appendChild(chatItem);
                                     });
 
                                     // Thêm sự kiện click cho từng phần tử chat
                                     addChatItemListeners();
-                                })
-                                .catch(error => {
-                                    console.error('Error fetching messages:', error);
-                                    alert(
-                                    'Không thể tải tin nhắn. Vui lòng thử lại sau.'); // Thông báo lỗi cho người dùng
-                                });
-                        }
-
-                        function formatTime(timestamp) {
-                            const date = new Date(timestamp);
-                            const hours = date.getHours();
-                            const minutes = date.getMinutes();
-                            return `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
-                        }
-
-                        function addChatItemListeners() {
-                            document.querySelectorAll('.chat-item').forEach(item => {
-                                item.addEventListener('click', function() {
-                                    const chatId = this.getAttribute('data-chat-id');
-                                    window.location.href =
-                                    `chat.php?chat_id=${chatId}`; // Chuyển đến trang chat với chat_id
-                                });
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error fetching messages:', error);
+                                alert(
+                                'Không thể tải tin nhắn. Vui lòng thử lại sau.'); // Thông báo lỗi cho người dùng
                             });
-                        }
-                    });
+                    }
+
+                    // Hàm định dạng thời gian
+                    function formatTime(timestamp) {
+                        const date = new Date(timestamp);
+                        const hours = date.getHours();
+                        const minutes = date.getMinutes();
+                        return `${hours}:${minutes < 10 ? '0' + minutes : minutes}`; // Định dạng giờ:phút
+                    }
+
+                    // Hàm thêm sự kiện click cho từng mục chat
+                    function addChatItemListeners() {
+                        document.querySelectorAll('.chat-item').forEach(item => {
+                            item.addEventListener('click', function() {
+                                const chatId = this.getAttribute('data-chat-id');
+                                window.location.href =
+                                `chat.php?chat_id=${chatId}`; // Chuyển đến trang chat với chat_id
+                            });
+                        });
+                    }
+
+                    // Gọi hàm để tự động cập nhật tin nhắn mỗi 5 giây
+                    setInterval(fetchMessages, 5000);
+                });
                 </script>
-                <!-- <li class="chat-item" data-chat-id="A">
+                <li class="chat-item" data-chat-id="A">
                     <img src="../img/hs.jpg" alt="">
                     <div class="chat-info">
                         <div class="chat-name">Lê Hồng Anh</div>
@@ -138,7 +146,7 @@
                         <div class="chat-time">1 giờ</div>
                         <div class="time">5+</div>
                     </div>
-                </li> -->
+                </li>
             </ul>
         </div>
 
