@@ -230,7 +230,7 @@
 
 </body>
 <script src="../js/back.js"></script>
-<script src="./js/tabtkb.js"></script>
+<script src="./js/opentabtkb.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>

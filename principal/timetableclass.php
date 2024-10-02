@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phân công giảng dạy</title>
+    <title>Phân công học tập</title>
     <!-- Fontawesome css -->
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/css/all.min.css">
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/css/brands.min.css">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/tkbgiaovien.css">
+    <link rel="stylesheet" href="css/thoikhoabieu.css">
 </head>
 
 <body>
@@ -112,6 +112,7 @@
                                     <span>ID: 785085936</span>
                                     <span>Password: 123123</span>
                                 </div>
+
                             </td>
                             <td class="teaching_schedule"></td>
                             <td class="teaching_schedule">
@@ -136,6 +137,7 @@
                                     <span>Tiết: 4-5</span>
                                     <span>Phòng: 9A2</span>
                                 </div>
+
                             </td>
                             <td class="teaching_schedule">
                                 <div class="theory">
@@ -235,6 +237,7 @@
                     </tbody>
                 </table>
             </div>
+
         </div>
 
         <div class="main_note">
@@ -280,7 +283,9 @@
 
         <div class="main_button">
             <div class="button_edit">
-                <button type="button" class="btn_edit">Chỉnh sửa</button>
+                <a href="./timetableedit.php">
+                    <button type="button" class="btn_edit" id="edit">Chỉnh sửa</button>
+                </a>
             </div>
         </div>
     </main>
@@ -290,6 +295,7 @@
 
 </body>
 <script src="../js/back.js"></script>
+<script src="./js/opentabtkb.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>

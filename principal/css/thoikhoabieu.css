@@ -265,3 +265,117 @@ main .main_button {
     color: white;
     border: none;
 }
+
+/* MODAL CHỈNH SỬA THỜI KHÓA BIỂU */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+  .modal-content .modal_header {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: flex-end;
+  }
+  .modal-content .modal_body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+  }
+  .modal_body .modalbody_content {
+    width: 80%;
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .modal_body .modalbody_button {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .modalbody_content label {
+    width: 40%;
+  }
+  .modalbody_content select {
+    width: 60%;
+    height: 35px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+  }
+  .modalbody_content input {
+    width: 60%;
+    height: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 0 5px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .modal_body .modalbody_period {
+    width: 80%;
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .modalbody_period label {
+    width: 40%;
+  }
+  .modalbody_period .input {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .input input {
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .modalbody_button button {
+    width: 30%;
+    height: 35px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    color: white;
+  }
+  
+  
