@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="./css/thongbaochitiet.css">
+    <link rel="stylesheet" href="./css/gopychitiet.css">
 </head>
 
 <body>
@@ -36,6 +36,7 @@
         <div class="main__date">
             <p class="date">04/09/2024</p>
         </div>
+
         <div class="main__text">
             <div class="notification">
                 <div class="text__title">
@@ -59,9 +60,66 @@
                 </div>
             </div>
         </div>
+
+        <div class="main__button">
+            <div class="button">
+                <button type="button" id="openModal">Ghi nhận</button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal_header">
+                    <span>Thông báo</span>
+                </div>
+                <div class="modal_body">
+                    <textarea name="" id=""></textarea>
+                    <div class="signature">
+                        <div class="signature_content">
+                            <span>Hiệu trưởng</span>
+                            <span>Kí tên</span>
+                        </div>
+                    </div>
+                    <div class="modal_button">
+                        <button type="button" class="close">Gửi</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </main>
 
 </body>
 <script src="../js/back.js"></script>
+<script>
+    // Lấy phần modal
+    var modal = document.getElementById("myModal");
+
+    // Lấy icon mở modal
+    var icon = document.getElementById("openModal");
+
+    // Lấy phần nút đóng modal
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    // Khi nhấn vào icon, mở modal
+    icon.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // Khi nhấn vào nút đóng, ẩn modal
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Khi nhấn ngoài modal, ẩn modal
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+</script>
 
 </html>
