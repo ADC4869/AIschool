@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/timetableassignment.css">
+    <link rel="stylesheet" href="css/phanconglichday.css">
 </head>
 
 <body>
@@ -58,7 +58,7 @@
 
             <div class="info_student">
                 <div class="info_detail">
-                    <a href="">
+                    <a href="./timetableteacher.php">
                         <div class="photo_student">
                             <img src="../img/hs.jpg" alt="">
                         </div>
@@ -73,7 +73,7 @@
 
             <div class="info_student">
                 <div class="info_detail">
-                    <a href="">
+                    <a href="./timetableteacher.php">
                         <div class="photo_student">
                             <img src="../img/hs1.jpg" alt="">
                         </div>
@@ -88,7 +88,7 @@
 
             <div class="info_student">
                 <div class="info_detail">
-                    <a href="">
+                    <a href="./timetableteacher.php">
                         <div class="photo_student">
                             <img src="../img/hs.jpg" alt="">
                         </div>
@@ -103,7 +103,7 @@
 
             <div class="info_student">
                 <div class="info_detail">
-                    <a href="">
+                    <a href="./timetableteacher.php">
                         <div class="photo_student">
                             <img src="../img/hs.jpg" alt="">
                         </div>
@@ -118,7 +118,7 @@
 
             <div class="info_student">
                 <div class="info_detail">
-                    <a href="">
+                    <a href="./timetableteacher.php">
                         <div class="photo_student">
                             <img src="../img/hs1.jpg" alt="">
                         </div>
@@ -133,7 +133,7 @@
 
             <div class="info_student">
                 <div class="info_detail">
-                    <a href="">
+                    <a href="./timetableteacher.php">
                         <div class="photo_student">
                             <img src="../img/hs.jpg" alt="">
                         </div>
@@ -160,7 +160,7 @@
 
             <div class="info_class" id="listclass6" style="display: none">
                 <div class="class_card">
-                    <a href="">
+                    <a href="./timetableclass.php">
                         <span class="name_class">Lớp 6A1</span>
                         <span>GVCN: Nguyễn Thị Ánh Xuân</span>
                         <span>Sỉ số: 40</span>
@@ -170,7 +170,7 @@
 
             <div class="info_class" id="listclass7" style="display: none">
                 <div class="class_card">
-                    <a href="">
+                    <a href="./timetableclass.php">
                         <span class="name_class">Lớp 7A1</span>
                         <span>GVCN: Nguyễn Thị Ánh Xuân</span>
                         <span>Sỉ số: 40</span>
@@ -180,7 +180,7 @@
 
             <div class="info_class" id="listclass8" style="display: none">
                 <div class="class_card">
-                    <a href="">
+                    <a href="./timetableclass.php">
                         <span class="name_class">Lớp 8A1</span>
                         <span>GVCN: Nguyễn Thị Ánh Xuân</span>
                         <span>Sỉ số: 40</span>
@@ -190,7 +190,7 @@
 
             <div class="info_class" id="listclass9" style="display: none">
                 <div class="class_card">
-                    <a href="">
+                    <a href="./timetableclass.php">
                         <span class="name_class">Lớp 9A1</span>
                         <span>GVCN: Nguyễn Thị Ánh Xuân</span>
                         <span>Sỉ số: 40</span>
@@ -198,7 +198,7 @@
                 </div>
 
                 <div class="class_card">
-                    <a href="">
+                    <a href="./timetableclass.php">
                         <span class="name_class">Lớp 9A2</span>
                         <span>GVCN: Trần Nguyễn Khởi</span>
                         <span>Sỉ số: 40</span>
@@ -206,7 +206,7 @@
                 </div>
 
                 <div class="class_card">
-                    <a href="">
+                    <a href="./timetableclass.php">
                         <span class="name_class">Lớp 9A3</span>
                         <span>GVCN: Huỳnh Vũ Nhi</span>
                         <span>Sỉ số: 40</span>
@@ -214,7 +214,7 @@
                 </div>
 
                 <div class="class_card">
-                    <a href="">
+                    <a href="./timetableclass.php">
                         <span class="name_class">Lớp 9A4</span>
                         <span>GVCN: Trương Tam</span>
                         <span>Sỉ số: 40</span>
@@ -230,7 +230,7 @@
 
 </body>
 <script src="../js/back.js"></script>
-<script src="./js/timetableassignment.js"></script>
+<script src="./js/opentabtkb.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>

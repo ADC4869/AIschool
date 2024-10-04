@@ -139,7 +139,7 @@ main .amount-red {
 @media (max-width: 480px) {
     main .fee-row {
         padding: 14px;
-        font-size: 13px;
+        font-size: 17px;
     }
 }
 
@@ -271,7 +271,7 @@ main div p {
 
 @media screen and (max-width: 480px) {
     main .fee-item {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     main .student-card .icons {
