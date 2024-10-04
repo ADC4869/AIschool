@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .icon-back {
+    font-size: 20px;
+    color: var(--white-color);
+    position: relative;
+    top: 30px;
+    left: 15px;
+}
+
+header .header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+
+main .class-info {
+    max-width: 1000px; /* Adjust the max width based on your need */
+    margin: 20px auto;
+    border-radius: 8px;
+}
+  
+main h3 {
+    text-align: center;
+    font-size: 1.5em;
+}
+  
+main ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+main ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+  
+main .edit-icon::before {
+    content: "\270E"; /* Unicode for pencil icon */
+    font-size: 1.2em;
+    cursor: pointer;
+}
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+    main .class-info {
+      max-width: 90%;
+    }
+  
+    main ul li {
+      font-size: 1em;
+    }
+}
+  
+@media (max-width: 480px) {
+    main ul li {
+      font-size: 0.9em;
+    }
+  
+    main h3 {
+      font-size: 1.2em;
+    }
+}

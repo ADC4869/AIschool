@@ -130,7 +130,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     </div>
                     <span>Quản lý giáo viên</span>
                 </a>
-                <a href="#" class="button">
+                <a href="./principal/managementVC.php" class="button">
                     <div class="circle circle__contact">
                         <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
                     </div>
