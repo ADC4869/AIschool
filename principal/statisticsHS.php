@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,36 @@
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/statisticsHS.css">
+    <link rel="stylesheet" href="css/thongkehocsinh.css">
 </head>
+<style>
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ffffff;
+        border: 1px solid #bcbcbd;
+        z-index: 1;
+    }
+
+    .dropdown ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown li {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .dropdown li:hover {
+        background-color: #f0f0f0;
+    }
+</style>
+
 <body>
     <header>
         <div class="header">
@@ -26,7 +55,15 @@
                         d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                 </svg>
             </span>
-            <div class="title">Thống kê số học sinh</div>
+            <div class="title" onclick="toggleDropdown()">Thống kê số học sinh</div>
+
+            <div class="dropdown" id="dropdownMenu">
+                <ul>
+                    <li>Thống kê số học sinh</li>
+                    <li>Thống kê kết quả học tập</li>
+                    <li>Thống kê chuyên cần</li>
+                </ul>
+            </div>
 
             <center>
                 <button class="btn">Chọn học kỳ<i class="fa-solid fa-angle-down"></i></button>
@@ -98,4 +135,12 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./js/chart.js"></script>
 <script src="../js/back.js"></script>
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    }
+
+</script>
+
 </html>
