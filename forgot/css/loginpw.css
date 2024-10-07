@@ -263,6 +263,7 @@ main a {
 
     .main__input input,
     .btn__signin {
+        width: 350px;
         height: 60px;
         padding: 1.5rem;
         font-size: 15px;
