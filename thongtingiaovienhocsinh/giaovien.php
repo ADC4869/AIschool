@@ -560,7 +560,7 @@ if ($teacher_id) {
             <div class="chart-container1">
                 <div class="chart-header">
                     <h2>Chuyên cần theo ngày</h2>
-                    <input type="date" value="2024-09-10">
+                    <input type="date" id="dailyDate">
                 </div>
                 <canvas id="dailyChart"></canvas>
             </div>
@@ -568,7 +568,7 @@ if ($teacher_id) {
             <div class="chart-container1">
                 <div class="chart-header">
                     <h2>Chuyên cần theo tuần</h2>
-                    <input type="date" value="2024-09-08">
+                    <input type="date" id="weeklyDate">
                 </div>
                 <canvas id="weeklyChart"></canvas>
             </div>

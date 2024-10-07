@@ -97,3 +97,30 @@ const weeklyConfig = {
     }
 };
 const weeklyChart = new Chart(weeklyCtx, weeklyConfig);
+
+// Lấy ngày hiện tại dưới dạng 'yyyy-mm-dd'
+function getCurrentDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
+
+// Lấy ngày bắt đầu tuần hiện tại (thứ Hai)
+function getCurrentWeekStartDate() {
+    const today = new Date();
+    const dayOfWeek = today.getDay(); // 0 (Sunday) to 6 (Saturday)
+    const differenceToMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // Calculate days to Monday
+    const mondayDate = new Date(today.setDate(today.getDate() - differenceToMonday));
+    const year = mondayDate.getFullYear();
+    const month = String(mondayDate.getMonth() + 1).padStart(2, '0');
+    const day = String(mondayDate.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
+
+// Gán ngày hiện tại cho input theo ngày
+document.getElementById('dailyDate').value = getCurrentDate();
+
+// Gán ngày đầu tuần cho input theo tuần
+document.getElementById('weeklyDate').value = getCurrentWeekStartDate();
