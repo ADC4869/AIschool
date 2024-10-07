@@ -83,6 +83,7 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,6 +100,7 @@ $conn->close();
     <link rel="stylesheet" href="./css/accountgv.css">
     <link rel="stylesheet" href="../css/global.css">
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -145,20 +147,35 @@ $conn->close();
             <h5>Thông tin cá nhân</h5>
         </div>
         <div class="main__content">
-            <div class="short__row">
-                <div>
-                    <p class="small__title">Phụ trách môn</p>
-                    <div class="info">
-                        <p><?php echo htmlspecialchars($subject_name); ?></p>
-                    </div>
-                </div>
-                <div>
-                    <p class="small__title">Chủ nhiệm lớp</p>
-                    <div class="info">
-                        <p><?php echo htmlspecialchars($class_name); ?></p>
-                    </div>
-                </div>
-            </div>
+            <?php
+                $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
+                if ($role === 'giaovien' || $role === 'hieutruong') {
+                    // Hiển thị nội dung cho giáo viên hoặc hiệu trưởng
+                    echo '<div class="short__row">
+                                <div>
+                                    <p class="small__title">Phụ trách môn</p>
+                                    <div class="info">
+                                        <p>' . htmlspecialchars($subject_name) . '</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="small__title">Chủ nhiệm lớp</p>
+                                    <div class="info">
+                                        <p>' . htmlspecialchars($class_name) . '</p>
+                                    </div>
+                                </div>
+                            </div>';
+                } else {
+                    // Hiển thị nội dung cho học sinh (hoặc nếu không có role)
+                    echo '<div>
+                                <p class="small__title">Lớp</p>
+                                <div class="info">
+                                    <p>' . htmlspecialchars($class_name) . '</p>
+                                    <i data-feather="edit-2" style="color: #000000"></i>
+                                </div>
+                            </div>';
+                }
+            ?>
 
             <div>
                 <p class="small__title">CCCD / Định danh</p>
@@ -302,6 +319,7 @@ $conn->close();
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>
-    feather.replace();
+feather.replace();
 </script>
+
 </html>
