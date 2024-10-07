@@ -33,39 +33,6 @@ $conn->close();
 ?>
 <!-- Học sinh -->
 <div class="container">
-            <div class="year-semester">
-                <div id="yearDisplay" class="year" onclick="openDialog()">Năm học: 2024 - 2025</div>
-                <div class="semester" id="openModalBtn">Chọn học kì</div>
-            </div>
-
-            <!-- Modal năm học -->
-            <div id="yearDialog" class="dialog">
-                <div class="dialog-content">
-                    <h3>Năm học</h3>
-                    <ul>
-                        <li onclick="selectYear('2024-2025')">2024-2025</li>
-                        <li onclick="selectYear('2023-2024')">2023-2024</li>
-                        <li onclick="selectYear('2022-2023')">2022-2023</li>
-                        <li onclick="selectYear('2021-2022')">2021-2022</li>
-                    </ul>
-                    <button onclick="closeDialog()" class="cancel-btn">Hủy</button>
-                </div>
-            </div>
-
-            <!-- Modal học kì -->
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <h3>Học kì</h3>
-                    <ul>
-                        <li class="semester-option">Học kì: I</li>
-                        <li class="semester-option">Học kì: II</li>
-                        <li class="semester-option">Cả năm</li>
-                    </ul>
-                    <button class="cancelBtn">Hủy</button>
-                </div>
-            </div>
-
-            
             <!-- Hiển thị các khối -->
             <div class="grade-buttons">
                 <?php foreach ($grades as $grade): ?>

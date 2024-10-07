@@ -13,7 +13,6 @@ header .header {
     justify-content: space-between;
     background-color: var(--primary-color);
     padding: 40px;
-    margin-left: -20px;
     position: fixed;
     top: 0;
     right: 0;
@@ -207,7 +206,7 @@ main .main__title {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: -10px;
+    margin-top: 10px;
 }
 
 main .main__title p {
@@ -298,9 +297,9 @@ main .main__diligence .detail__diligence {
     font-weight: bold;
 }
 
-.detail__diligence .info__diligence {
+/* .detail__diligence .info__diligence {
     line-height: 8px;
-}
+} */
 
 .info__diligence .day {
     font-weight: bold;

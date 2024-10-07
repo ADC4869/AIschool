@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký phụ huynh</title>
-    <link rel="stylesheet" href="./css/signin.css">
+    <link rel="stylesheet" href="./css/signinbyrole.css">
     <link rel="stylesheet" href="../fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../css/global.css">
 </head>
