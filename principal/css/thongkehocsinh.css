@@ -5,6 +5,8 @@ body {
     background-color: #eceded;
 }
 
+
+
 header .header {
     background-color: var(--white-color);
     color: var(--text-color);
@@ -15,22 +17,23 @@ header .header {
     position: relative;
 }
 
-header .back-arrow {
+ .back-arrow {
     color: var(--text-color);
     font-size: 25px;
     margin-right: 10px;
     position: relative;
-    top: 15px;
+    top: 50px;
+    left: 30px;
 }
 
-header .header .title {
+.header .title {
     font-size: 20px;
     font-weight: bold;
     color: var(--text-color);
     flex-grow: 1;
     text-align: center;
     position: relative;
-    top: -13px;
+    top: 25px;
     cursor: pointer;
     display: inline-block;
     display: flex;
@@ -131,6 +134,9 @@ header .center-text {
         position: absolute;
         top: 68%;
     }
+    .header .dropdown {
+        top: 12%;
+    }
 }
 
 main h4{
@@ -173,7 +179,13 @@ main .item p {
     main .container {
         gap: 5px;
     }
+    .header .dropdown {
+        top: 14%;
+        width: 201px;
+    }
 }
+
+
 
 @media (min-width: 480px) {
     main .item {
@@ -190,6 +202,12 @@ main .item p {
 @media (min-width: 1024px) {
     main .item {
         width: 160px;
+    }
+    .header .dropdown {
+        top: 6%;
+    }
+    .header .dropdown {
+        top: 8%;
     }
 }
 
