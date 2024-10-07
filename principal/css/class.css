@@ -96,3 +96,116 @@ main .edit-icon::before {
       font-size: 1.2em;
     }
 }
+
+main .dropdown {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+main .dropdown select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+}
+
+main .dropdown select, 
+main .dropdown input, 
+main .dropdown textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+main textarea {
+    min-height: 100px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    main .dropdown label {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    main .dropdown label {
+        font-size: 16px;
+    }
+}
+
+/* Style for additional fields container */
+#additional-fields {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f5f5f5; /* Light grey background */
+    border-radius: 4px;
+}
+
+/* Label styles */
+#additional-fields label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Input field styles */
+#additional-fields input[type="number"],
+#additional-fields textarea {
+    width: 100%;
+    padding: 10px; /* Padding to match the look in the image */
+    font-size: 14px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px;
+    background-color: #f0f0f0; /* Slight grey background */
+}
+
+/* Textarea style to match the image */
+#additional-fields textarea {
+    min-height: 100px; /* Ensure a taller textarea */
+    resize: none; /* Disable resizing */
+    background-color: #f5f5f5; /* Match background color */
+}
+
+/* "Lưu" button style */
+#save-btn {
+    display: block;
+    margin-left: auto; /* Align button to the right */
+    padding: 10px 20px;
+    background-color: var(--primary-color); /* Blue background for the button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* "Lưu" button hover effect */
+#save-btn:hover {
+    background-color: var(--primary-color); /* Darker blue when hovering */
+}
+
+/* Make the fields responsive */
+@media (max-width: 600px) {
+    #additional-fields input[type="number"],
+    #additional-fields textarea {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    #save-btn {
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+}
