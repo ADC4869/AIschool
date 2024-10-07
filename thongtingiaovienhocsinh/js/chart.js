@@ -1,53 +1,4 @@
-// Biểu đồ 1 - Biểu đồ chuyên cần
-const attendanceCtx = document.getElementById('attendanceChart').getContext('2d');
-const attendanceCanvas = document.getElementById('attendanceChart');
-attendanceCanvas.height = 200; // Điều chỉnh chiều cao của biểu đồ
-const attendanceChart = new Chart(attendanceCtx, {
-    type: 'bar',
-    data: {
-        labels: ['Ngày 10/09/2024'],
-        datasets: [
-            {
-                label: 'Hiện diện',
-                data: [36],
-                backgroundColor: 'rgba(173, 216, 230, 1)',
-            },
-            {
-                label: 'Trễ',
-                data: [2],
-                backgroundColor: 'rgba(255, 255, 102, 1)',
-            },
-            {
-                label: 'Vắng',
-                data: [2],
-                backgroundColor: 'rgba(255, 99, 132, 1)',
-            }
-        ]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-            x: {
-                beginAtZero: true
-            },
-            y: {
-                beginAtZero: true,
-                ticks: {
-                    stepSize: 5
-                }
-            }
-        },
-        plugins: {
-            legend: {
-                display: true,
-                position: 'right',
-            }
-        }
-    }
-});
-
-// Biểu đồ 2 - Biểu đồ kết quả học tập
+// Biểu đồ 1 - Biểu đồ kết quả học tập
 const pieCtx = document.getElementById('myPieChart').getContext('2d');
 const data = {
     labels: ['Xuất sắc', 'Giỏi', 'Khá', 'Trung bình', 'Yếu'],
@@ -71,3 +22,78 @@ const config = {
     }
 };
 const myPieChart = new Chart(pieCtx, config);
+
+// Biểu đồ 2: Tình trạng chuyên cần
+// Biểu đồ chuyên cần theo ngày
+const dailyCtx = document.getElementById('dailyChart').getContext('2d');
+const dailyData = {
+    labels: ['Hiện diện', 'Trễ', 'Vắng'],
+    datasets: [{
+        label: 'Tổng số học sinh',
+        data: [36, 2, 2],
+        backgroundColor: ['#ADD8E6', '#FFF48F', '#F08080'],
+        borderWidth: 1
+    }]
+};
+const dailyConfig = {
+    type: 'bar',
+    data: dailyData,
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 40
+            }
+        },
+        plugins: {
+            legend: {
+                display: true,
+                position: 'right',
+            }
+        }
+    }
+};
+const dailyChart = new Chart(dailyCtx, dailyConfig);
+
+// Biểu đồ chuyên cần theo tuần
+const weeklyCtx = document.getElementById('weeklyChart').getContext('2d');
+const weeklyData = {
+    labels: ['8/9', '9/9', '10/9', '11/9', '12/9', '13/9', '14/9'],
+    datasets: [{
+        label: 'Hiện diện',
+        data: [30, 35, 36, 40, 37, 35, 35],
+        backgroundColor: '#ADD8E6',
+        stack: 'Stack 0'
+    }, {
+        label: 'Trễ',
+        data: [7, 5, 2, 3, 2, 3, 4],
+        backgroundColor: '#FFF48F',
+        stack: 'Stack 0'
+    }, {
+        label: 'Vắng',
+        data: [3, 2, 2, 1, 1, 1, 1],
+        backgroundColor: '#F08080',
+        stack: 'Stack 0'
+    }]
+};
+const weeklyConfig = {
+    type: 'bar',
+    data: weeklyData,
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 40
+            }
+        },
+        plugins: {
+            legend: {
+                display: true,
+                position: 'right',
+            }
+        }
+    }
+};
+const weeklyChart = new Chart(weeklyCtx, weeklyConfig);

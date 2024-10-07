@@ -84,9 +84,9 @@ main .tab-content {
     margin-top: -20px;
 }
 
-main .tab-content.active {
+/* main .tab-content.active {
     display: block;
-}
+} */
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -342,4 +342,36 @@ main .hidden-content {
 
 .hidden {
     display: none;
+}
+
+main .chart-container1 {
+    max-width: 100%;
+}
+main .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+main .chart-header h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+main .chart-header input[type="date"] {
+    padding: 5px;
+    font-size: 0.9rem;
+}
+main canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+    main .chart-header h2 {
+        font-size: 0.9rem;
+    }
+    main .chart-header input[type="date"] {
+        font-size: 0.8rem;
+    }
 }

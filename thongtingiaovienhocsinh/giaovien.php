@@ -60,7 +60,6 @@ if ($teacher_id) {
 ?>
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,9 +74,8 @@ if ($teacher_id) {
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/js/fontawesome.min.js">
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/infoteacherstudent.css">
 </head>
-
 <body>
     <header>
         <div class="header">
@@ -559,12 +557,20 @@ if ($teacher_id) {
 
         <!-- Tình trạng chuyên cần -->
         <div id="tab2" class="tab-content">
-            <div class="container1">
-                <div class="date-picker">
-                    <div class="chart-title">Chuyên cần theo ngày</div>
+            <div class="chart-container1">
+                <div class="chart-header">
+                    <h2>Chuyên cần theo ngày</h2>
                     <input type="date" value="2024-09-10">
                 </div>
-                <canvas id="attendanceChart"></canvas>
+                <canvas id="dailyChart"></canvas>
+            </div>
+
+            <div class="chart-container1">
+                <div class="chart-header">
+                    <h2>Chuyên cần theo tuần</h2>
+                    <input type="date" value="2024-09-08">
+                </div>
+                <canvas id="weeklyChart"></canvas>
             </div>
         </div>
 
@@ -597,9 +603,7 @@ if ($teacher_id) {
 <script>
     feather.replace();
 </script>
-
 <script>
-
     function openModal() {
         document.getElementById("detailModal").classList.remove("hidden");
     }
@@ -618,7 +622,5 @@ if ($teacher_id) {
         // Đóng modal
         closeModal();
     }
-
 </script>
-
 </html>
