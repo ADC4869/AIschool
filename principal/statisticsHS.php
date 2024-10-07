@@ -18,10 +18,15 @@
     <link rel="stylesheet" href="css/thongkehocsinh.css">
 </head>
 <style>
+    .header_title {
+        height: 75px;
+        background-color: white;
+    }
+
     .dropdown {
         display: none;
         position: absolute;
-        top: 20%;
+        top: 9%;
         left: 50%;
         transform: translateX(-50%);
         background-color: #ffffff;
@@ -46,25 +51,27 @@
 </style>
 
 <body>
+    <div class="header header_title">
+        <span class="back-arrow" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+            </svg>
+        </span>
+        <div class="title">Thống kê số học sinh <i data-feather="chevron-down"
+                onclick="toggleDropdown()"></i></div>
+
+        <div class="dropdown" id="dropdownMenu">
+            <ul>
+                <li>Thống kê số học sinh</li>
+                <li>Thống kê kết quả học tập</li>
+                <li>Thống kê chuyên cần</li>
+            </ul>
+        </div>
+    </div>
     <header>
         <div class="header">
-            <span class="back-arrow" onclick="goBack()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                </svg>
-            </span>
-            <div class="title" onclick="toggleDropdown()">Thống kê số học sinh</div>
-
-            <div class="dropdown" id="dropdownMenu">
-                <ul>
-                    <li>Thống kê số học sinh</li>
-                    <li>Thống kê kết quả học tập</li>
-                    <li>Thống kê chuyên cần</li>
-                </ul>
-            </div>
-
             <center>
                 <button class="btn">Chọn học kỳ<i class="fa-solid fa-angle-down"></i></button>
             </center>
@@ -76,6 +83,7 @@
                 </div>
             </center>
         </div>
+
     </header>
 
     <main>
@@ -135,6 +143,11 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./js/chart.js"></script>
 <script src="../js/back.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
 <script>
     function toggleDropdown() {
         var dropdown = document.getElementById("dropdownMenu");
