@@ -148,9 +148,7 @@ $conn->close();
         </div>
         <div class="main__content">
             <?php
-                // Giả sử biến role được lấy từ session hoặc cơ sở dữ liệu
-                $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh'; // Mặc định là 'hocsinh' nếu không có role
-
+                $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
                 if ($role === 'giaovien' || $role === 'hieutruong') {
                     // Hiển thị nội dung cho giáo viên hoặc hiệu trưởng
                     echo '<div class="short__row">
