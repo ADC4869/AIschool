@@ -58,14 +58,46 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
         <div class="button-container">
             <!-- Phân quyền cho học sinh -->
             <?php if ($user_role == 'hocsinh'): ?>
-                <a href="./timetable/index.php" class="button"><i class="fa-regular fa-calendar"></i> Thời khóa biểu</a>
-                <a href="tuition.php" class="button"><i class="fa-solid fa-coins" style="color: #63E6BE;"></i> Học phí</a>
-                <a href="./information/index.php" class="button"><i class="fa-solid fa-circle-info"
-                        style="color: #B197FC;"></i> Thông tin liên lạc</a>
-                <a href="./diemdanh/index.php" class="button"><i class="fa-solid fa-calendar-days"></i> Điểm danh</a>
-                <a href="./meeting/index.php" class="button"><i class="fa-solid fa-book"></i> Lịch họp</a>
-                <a href="./thongtingiaovienhocsinh/index.php" class="button"><i class="fa-solid fa-medal"
-                        style="color: #FFD43B;"></i> Thông tin</a>
+                <a href="./timetable/index.php" class="button">
+                    <div class="circle circle__timetable">
+                        <i class="fa-regular fa-calendar" style="color: #ffffff;"></i>
+                    </div> 
+                    Thời khóa biểu
+                </a>
+
+                <a href="tuition.php" class="button">
+                    <div class="circle circle__fee">
+                        <i class="fa-solid fa-dollar-sign" style="color: #ffffff;"></i>
+                    </div> 
+                    Học phí
+                </a>
+                <a href="./information/index.php" class="button">
+                    <div class="circle circle__contact">
+                        <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
+                    </div> 
+                    Thông tin liên lạc
+                </a>
+
+                <a href="./diemdanh/index.php" class="button">
+                    <div class="circle circle__diligence">
+                        <i class="fa-regular fa-clipboard" style="color: #ffffff;"></i>
+                    </div> 
+                    Điểm danh
+                </a>
+
+                <a href="./meeting/index.php" class="button">
+                    <div class="circle circle__meeting">
+                        <i class="fa-solid fa-book-open" style="color: #ffffff;"></i>
+                    </div> 
+                    Lịch họp
+                </a>
+
+                <a href="./thongtingiaovienhocsinh/index.php" class="button">
+                    <div class="circle circle__infoclass">
+                        <i class="fa-solid fa-medal" style="color: #FFD43B;"></i> 
+                    </div>
+                    Thông tin
+                </a>
             <?php endif; ?>
 
             <!-- Phân quyền cho giáo viên -->
