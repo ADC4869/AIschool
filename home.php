@@ -69,7 +69,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     <div class="circle circle__fee">
                         <i class="fa-solid fa-dollar-sign" style="color: #ffffff;"></i>
                     </div> 
-                    Học phí
+                    Tình trạng học phí
                 </a>
                 <a href="./information/index.php" class="button">
                     <div class="circle circle__contact">
@@ -82,21 +82,21 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     <div class="circle circle__diligence">
                         <i class="fa-regular fa-clipboard" style="color: #ffffff;"></i>
                     </div> 
-                    Điểm danh
+                    Tình trạng chuyên cần
                 </a>
 
                 <a href="./meeting/index.php" class="button">
                     <div class="circle circle__meeting">
                         <i class="fa-solid fa-book-open" style="color: #ffffff;"></i>
                     </div> 
-                    Lịch họp
+                    Học tập
                 </a>
 
                 <a href="./thongtingiaovienhocsinh/index.php" class="button">
                     <div class="circle circle__infoclass">
                         <i class="fa-solid fa-medal" style="color: #FFD43B;"></i> 
                     </div>
-                    Thông tin
+                    Hoạt động ngoại khóa
                 </a>
             <?php endif; ?>
 
