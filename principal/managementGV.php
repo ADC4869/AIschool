@@ -58,8 +58,22 @@
         <div id="giaovien" class="tabcontent" style="display: block;">
             <div class="chart-container">
                 <center>
-                    <button class="btn">Chọn học kỳ<i class="fa-solid fa-angle-down"></i></button>
+                    <button class="btn" id="openModalBtn">Chọn học kỳ<i class="fa-solid fa-angle-down"></i></button>
                 </center>
+
+                <!-- Modal -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <ul>
+                            <li class="semester-option active">Chọn học kì</li>
+                            <li class="semester-option">Học kì II (2024-2025)</li>
+                            <li class="semester-option">Học kì I (2024-2025)</li>
+                            <li class="semester-option">Học kì II (2023-2024)</li>
+                            <li class="semester-option">Học kì I (2023-2024)</li>
+                        </ul>
+                        <button class="cancelBtn">Hủy</button>
+                    </div>
+                </div>
 
                 <canvas id="myDoughnutChart"></canvas>
                 <div class="chart-labels">
@@ -248,6 +262,7 @@
     </main>
 </body>
 <script src="../js/back.js"></script>
+<script src="./js/modal.js"></script>
 <script src="./js/manage.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>

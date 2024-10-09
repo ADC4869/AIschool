@@ -18,49 +18,102 @@
     <link rel="stylesheet" href="css/thongkehocsinh.css">
 </head>
 <style>
-    .header_title {
-        height: 75px;
-        background-color: white;
-    }
+    header .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+}
 
-    .dropdown {
-        display: none;
-        position: absolute;
-        top: 9%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #ffffff;
-        border: 1px solid #bcbcbd;
-        z-index: 1;
-    }
+/* Modal Content */
+header .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
 
-    .dropdown ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+/* List style */
+header .modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
 
-    .dropdown li {
-        padding: 10px;
-        cursor: pointer;
-    }
+header .modal-content li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
 
-    .dropdown li:hover {
-        background-color: #f0f0f0;
+/* Cancel button */
+header .cancelBtn {
+    color: var(--red-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media only screen and (min-width: 768px) {
+    header .modal-content {
+        width: 50%;
     }
+}
+.header_title {
+    height: 75px;
+    background-color: white;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 1px solid #bcbcbd;
+    z-index: 1;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown li:hover {
+    background-color: #f0f0f0;
+}
 </style>
 
 <body>
     <div class="header header_title">
-        <span class="back-arrow" >
+        <span class="back-arrow" onclick="goBack()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-chevron-left" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                     d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
             </svg>
         </span>
-        <div class="title">Thống kê số học sinh <i data-feather="chevron-down"
-                onclick="toggleDropdown()"></i></div>
+        <div class="title">Thống kê số học sinh <i data-feather="chevron-down" onclick="toggleDropdown()"></i></div>
 
         <div class="dropdown" id="dropdownMenu">
             <ul>
@@ -73,8 +126,22 @@
     <header>
         <div class="header">
             <center>
-                <button class="btn">Chọn học kỳ<i class="fa-solid fa-angle-down"></i></button>
+                <button class="btn" id="openModalBtn">Chọn học kỳ<i class="fa-solid fa-angle-down"></i></button>
             </center>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <ul>
+                        <li class="semester-option active">Chọn học kì</li>
+                        <li class="semester-option">Học kì II (2024-2025)</li>
+                        <li class="semester-option">Học kì I (2024-2025)</li>
+                        <li class="semester-option">Học kì II (2023-2024)</li>
+                        <li class="semester-option">Học kì I (2023-2024)</li>
+                    </ul>
+                    <button class="cancelBtn">Hủy</button>
+                </div>
+            </div>
 
             <center>
                 <div id="myChartContainer">
@@ -83,7 +150,6 @@
                 </div>
             </center>
         </div>
-
     </header>
 
     <main>
@@ -141,19 +207,19 @@
     </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./js/modal.js"></script>
 <script src="./js/chart.js"></script>
 <script src="../js/back.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>
-    feather.replace();
+feather.replace();
 </script>
 <script>
-    function toggleDropdown() {
-        var dropdown = document.getElementById("dropdownMenu");
-        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
-    }
-
+function toggleDropdown() {
+    var dropdown = document.getElementById("dropdownMenu");
+    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+}
 </script>
 
 </html>

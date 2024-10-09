@@ -39,11 +39,11 @@
     <!-- MAIN -->
     <main>
         <!-- LỊCH -->
-        <!-- <div class="main__calendar">
+         <div class="main__calendar">
             <input type="date" id="date__present" class="calendar">
-        </div> -->
+        </div>
         <!-- TỔNG QUAN -->
-        <!-- <div class="main__tongquan">
+         <div class="main__tongquan">
             <div class="tongquan__content">
                 <div class="title__tongquan">
                     <p>Lớp chủ nhiệm</p>
@@ -79,7 +79,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div> 
         <!-- KHỐI -->
         <?php
         // Kiểm tra xem có giá trị 'role' được truyền qua URL không
