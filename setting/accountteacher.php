@@ -63,7 +63,7 @@ if ($user_role === 'giaovien') {
     $query = "SELECT students.student_code, classes.class_name
               FROM students
               LEFT JOIN classes ON students.class_id = classes.id
-              WHERE students.id = (SELECT id FROM users WHERE fullname = ?)";
+              WHERE students.id = (SELECT id FROM users WHERE fullname = ? limit 1)";
     
     $stmt3 = $conn->prepare($query);
     $stmt3->bind_param("s", $fullname);
