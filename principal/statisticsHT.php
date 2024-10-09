@@ -388,7 +388,11 @@
     </article>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../js/back.js"></script>
+<script>
+    function goBack() {
+        window.location.href = '../home.php?role=hieutruong'; // Chuyển đến trang chủ
+    }
+</script>
 <script src="./js/HT.js"></script>
 <script src="./js/modal.js"></script>
 </html>

@@ -17,92 +17,6 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/thongkehocsinh.css">
 </head>
-<style>
-    header .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-    align-items: center;
-    justify-content: center;
-}
-
-/* Modal Content */
-header .modal-content {
-    background-color: #fff;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-/* List style */
-header .modal-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-header .modal-content li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-}
-
-/* Cancel button */
-header .cancelBtn {
-    color: var(--red-color);
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/* Responsive adjustments */
-@media only screen and (min-width: 768px) {
-    header .modal-content {
-        width: 50%;
-    }
-}
-.header_title {
-    height: 75px;
-    background-color: white;
-}
-
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 9%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #ffffff;
-    border: 1px solid #bcbcbd;
-    z-index: 1;
-}
-
-.dropdown ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown li {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.dropdown li:hover {
-    background-color: #f0f0f0;
-}
-</style>
 
 <body>
     <div class="header header_title">
@@ -117,9 +31,9 @@ header .cancelBtn {
 
         <div class="dropdown" id="dropdownMenu">
             <ul>
-                <li>Thống kê số học sinh</li>
-                <li>Thống kê kết quả học tập</li>
-                <li>Thống kê chuyên cần</li>
+                <li onclick="showPage('HS')">Thống kê số học sinh</li>
+                <li onclick="showPage('DD')">Thống kê chuyên cần</li>
+                <li onclick="showPage('HT')">Thống kê kết quả học tập</li>
             </ul>
         </div>
     </div>
@@ -221,5 +135,13 @@ function toggleDropdown() {
     dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
 }
 </script>
-
+<script>
+    function showPage(page) {
+        if (page === 'DD') {
+            window.location.href = 'statisticsDD.php'; // Chuyển đến DD.php
+        } else if (page === 'HT') {
+            window.location.href = 'statisticsHT.php'; // Chuyển đến HT.php
+        }
+    }
+</script>
 </html>
