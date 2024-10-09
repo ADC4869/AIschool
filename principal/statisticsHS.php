@@ -138,9 +138,9 @@ function toggleDropdown() {
 <script>
     function showPage(page) {
         if (page === 'DD') {
-            window.location.href = 'statisticsDD.php'; // Chuyển đến DD.php
+            window.location.href = 'statisticsDD.php';
         } else if (page === 'HT') {
-            window.location.href = 'statisticsHT.php'; // Chuyển đến HT.php
+            window.location.href = 'statisticsHT.php';
         }
     }
 </script>
