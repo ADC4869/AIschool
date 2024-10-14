@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +17,6 @@
     <link rel="stylesheet" href="./css/notifi.css">
     <link rel="stylesheet" href="../css/footer.css">
 </head>
-
 <body>
     <header>
         <div class="header">
@@ -30,6 +28,17 @@
                 </svg>
             </span>
             <div class="title">Thông báo</div>
+            <?php
+                $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh'; // Mặc định là học sinh nếu không có role
+                if ($role === 'hieutruong') {
+                    // Chỉ hiển thị icon cho hiệu trưởng
+                    echo '<a href="../principal/notificationHT.php">
+                            <div class="icon">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                           </a>';
+                }
+            ?>
         </div>
     </header>
 
