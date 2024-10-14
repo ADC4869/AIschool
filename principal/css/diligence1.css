@@ -54,7 +54,7 @@ main .container {
 
 main .title {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
@@ -96,6 +96,14 @@ main .student-item {
     transition: background-color 0.3s;
 }
 
+.student-item a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
 main .student-item:hover {
     background-color: #d6e6ff;
 }
@@ -132,7 +140,8 @@ main .student-status {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #dcdcdc;
+    background-color: white;
+    border: 1px solid gray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,22 +150,22 @@ main .student-status {
 
 @media screen and (min-width: 768px) {
     main .student-item {
-      padding: 15px;
+        padding: 15px;
     }
 
     main .student-photo {
-      width: 60px;
-      height: 60px;
+        width: 60px;
+        height: 60px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     main .student-item {
-      padding: 20px;
+        padding: 20px;
     }
 
     main .student-photo {
-      width: 70px;
-      height: 70px;
+        width: 70px;
+        height: 70px;
     }
 }

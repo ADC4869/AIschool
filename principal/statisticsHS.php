@@ -79,43 +79,90 @@
             </div>
             <div class="item">
                 <img src="../img/nha.png" alt="Icon 3">
-                <p>2 Cơ sở</p>
+                <p>1 Cơ sở</p>
             </div>
         </div>
 
         <h4>Thông tin các khối lớp :</h4>
         <div class="class-info-container">
             <div class="class-card">
-                <div class="class-info">
-                    <div class="class-circle green">Khối 1</div>
-                    <div class="class-details">
-                        <p>Trưởng khối: Lưu trên database</p>
-                        <p>Số lớp: 2 &nbsp;&nbsp; Số học sinh: 200</p>
+                <a href="../thongkehocsinh/thongkehocsinh.php">
+                    <div class="class-info">
+                        <div class="class-circle green">Khối 6</div>
+                        <div class="class-details">
+                            <p>Số lớp: 4 &nbsp;&nbsp; Số học sinh: 160</p>
+                            <div class="male_female">
+                                <div class="female">
+                                    <span><i class="fa-solid fa-venus"></i> <span>70</span></span>
+                                </div>
+                                <div class="male">
+                                    <span><i class="fa-solid fa-mars-stroke-up"></i> <span>90</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="class-icon"><i data-feather="alert-circle" style="color: #5B6998"></i></div>
                     </div>
-                    <div class="class-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
-                </div>
+                </a>
             </div>
 
             <div class="class-card">
-                <div class="class-info">
-                    <div class="class-circle pink">Khối 1</div>
-                    <div class="class-details">
-                        <p>Trưởng khối: Lưu trên database</p>
-                        <p>Số lớp: 2 &nbsp;&nbsp; Số học sinh: 200</p>
+                <a href="../thongkehocsinh/thongkehocsinh.php">
+                    <div class="class-info">
+                        <div class="class-circle pink">Khối 7</div>
+                        <div class="class-details">
+                            <p>Số lớp: 4 &nbsp;&nbsp; Số học sinh: 160</p>
+                            <div class="male_female">
+                                <div class="female">
+                                    <span><i class="fa-solid fa-venus"></i> <span>70</span></span>
+                                </div>
+                                <div class="male">
+                                    <span><i class="fa-solid fa-mars-stroke-up"></i> <span>90</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="class-icon"><i data-feather="alert-circle" style="color: #5B6998"></i></div>
                     </div>
-                    <div class="class-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
-                </div>
+                </a>
             </div>
 
             <div class="class-card">
-                <div class="class-info">
-                    <div class="class-circle purple">Khối 1</div>
-                    <div class="class-details">
-                        <p>Trưởng khối: Lưu trên database</p>
-                        <p>Số lớp: 2 &nbsp;&nbsp; Số học sinh: 200</p>
+                <a href="../thongkehocsinh/thongkehocsinh.php">
+                    <div class="class-info">
+                        <div class="class-circle purple">Khối 8</div>
+                        <div class="class-details">
+                            <p>Số lớp: 4 &nbsp;&nbsp; Số học sinh: 160</p>
+                            <div class="male_female">
+                                <div class="female">
+                                    <span><i class="fa-solid fa-venus"></i> <span>70</span></span>
+                                </div>
+                                <div class="male">
+                                    <span><i class="fa-solid fa-mars-stroke-up"></i> <span>90</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="class-icon"><i data-feather="alert-circle" style="color: #5B6998"></i></div>
                     </div>
-                    <div class="class-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
-                </div>
+                </a>
+            </div>
+
+            <div class="class-card">
+                <a href="../thongkehocsinh/thongkehocsinh.php">
+                    <div class="class-info">
+                        <div class="class-circle purple">Khối 9</div>
+                        <div class="class-details">
+                            <p>Số lớp: 4 &nbsp;&nbsp; Số học sinh: 160</p>
+                            <div class="male_female">
+                                <div class="female">
+                                    <span><i class="fa-solid fa-venus"></i> <span>70</span></span>
+                                </div>
+                                <div class="male">
+                                    <span><i class="fa-solid fa-mars-stroke-up"></i> <span>90</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="class-icon"><i data-feather="alert-circle" style="color: #5B6998"></i></div>
+                    </div>
+                </a>
             </div>
         </div>
     </main>
@@ -127,13 +174,13 @@
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>
-feather.replace();
+    feather.replace();
 </script>
 <script>
-function toggleDropdown() {
-    var dropdown = document.getElementById("dropdownMenu");
-    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
-}
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    }
 </script>
 <script>
     function showPage(page) {
@@ -144,4 +191,5 @@ function toggleDropdown() {
         }
     }
 </script>
+
 </html>

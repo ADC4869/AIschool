@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/list.css">
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -43,8 +45,12 @@
                     <p class="status">Đã đóng học phí</p>
                 </div>
                 <div class="icons">
-                    <button class="call"><i class="fa-solid fa-phone"></i></button>
-                    <button class="message"><i class="fa-solid fa-message"></i></button>
+                    <a href="../call/index.php">
+                        <button class="call"><i data-feather="phone" style="color: #5B6998"></i></button>
+                    </a>
+                    <a href="../chat/chathocsinh.php">
+                        <button class="message"><i data-feather="message-square" style="color: #5B6998"></i></button>
+                    </a>
                 </div>
             </div>
             <div class="student-item paid">
@@ -54,8 +60,8 @@
                     <p class="status">Đã đóng học phí</p>
                 </div>
                 <div class="icons">
-                    <button class="call"><i class="fa-solid fa-phone"></i></button>
-                    <button class="message"><i class="fa-solid fa-message"></i></button>
+                    <button class="call"><i data-feather="phone" style="color: #5B6998"></i></button>
+                    <button class="message"><i data-feather="message-square" style="color: #5B6998"></i></button>
                 </div>
             </div>
             <!-- Add more student-item divs similarly -->
@@ -67,12 +73,20 @@
                     <p class="note">Ghi chú: Khó khăn</p>
                 </div>
                 <div class="icons">
-                    <button class="call"><i class="fa-solid fa-phone"></i></button>
-                    <button class="message"><i class="fa-solid fa-message"></i></button>
+                    <a href="../call/index.php">
+                        <button class="call"><i data-feather="phone" style="color: #5B6998"></i></button>
+                    </a>
+                    <button class="message"><i data-feather="message-square" style="color: #5B6998"></i></button>
                 </div>
             </div>
         </div>
     </main>
 </body>
 <script src="../js/back.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
+
 </html>

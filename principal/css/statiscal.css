@@ -82,6 +82,11 @@ main .teacher-card {
     margin-bottom: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.teacher-card a {
+  text-decoration: none;
+  color: black;
+}
   
 main .profile {
     display: flex;
@@ -162,3 +167,4 @@ main .actions button:hover {
       font-size: 18px;
     }
 }
+

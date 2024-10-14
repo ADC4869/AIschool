@@ -100,6 +100,50 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                 </a>
             <?php endif; ?>
 
+            <!-- Phụ huynh -->
+            <?php if ($user_role == 'phuhuynh'): ?>
+                <a href="./timetable/index.php" class="button">
+                    <div class="circle circle__timetable">
+                        <i class="fa-regular fa-calendar" style="color: #ffffff;"></i>
+                    </div> 
+                    Thời khóa biểu
+                </a>
+
+                <a href="tuition.php" class="button">
+                    <div class="circle circle__fee">
+                        <i class="fa-solid fa-dollar-sign" style="color: #ffffff;"></i>
+                    </div> 
+                    Tình trạng học phí
+                </a>
+                <a href="./information/index.php" class="button">
+                    <div class="circle circle__contact">
+                        <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
+                    </div> 
+                    Thông tin liên lạc
+                </a>
+
+                <a href="./diemdanh/index.php" class="button">
+                    <div class="circle circle__diligence">
+                        <i class="fa-regular fa-clipboard" style="color: #ffffff;"></i>
+                    </div> 
+                    Tình trạng chuyên cần
+                </a>
+
+                <a href="./meeting/index.php" class="button">
+                    <div class="circle circle__meeting">
+                        <i class="fa-solid fa-book-open" style="color: #ffffff;"></i>
+                    </div> 
+                    Học tập
+                </a>
+
+                <a href="./thongtingiaovienhocsinh/index.php" class="button">
+                    <div class="circle circle__infoclass">
+                        <i class="fa-solid fa-medal" style="color: #FFD43B;"></i> 
+                    </div>
+                    Lịch họp và sự kiện
+                </a>
+            <?php endif; ?>
+
             <!-- Phân quyền cho giáo viên -->
             <?php if ($user_role == 'giaovien'): ?>
                 <a href="./timetable/index.php?role=giaovien" class="button">
@@ -207,7 +251,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 
             <div class="content__news">
                 <div class="left__news">
-                    <a href="">
+                    <a href="./activitydetail.php">
                         <div class="photo">
                             <img src="./img/thivaolop10.jpg" alt="">
                         </div>
@@ -222,7 +266,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 
                 <div class="right__news">
                     <div class="top__news">
-                        <a href="">
+                        <a href="./activitydetail.php">
                             <div class="photo">
                                 <img src="./img/thigiuaki.jpeg" alt="">
                             </div>
@@ -235,7 +279,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     </div>
 
                     <div class="bottom__news">
-                        <a href="">
+                        <a href="./activitydetail.php">
                             <div class="photo">
                                 <img src="./img/thihocsinhgioi.jfif" alt="">
                             </div>
@@ -258,7 +302,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 
             <div class="content__news">
                 <div class="left__news">
-                    <a href="">
+                    <a href="./activitydetail.php">
                         <div class="photo">
                             <img src="./img/tg1.jpg" alt="">
                         </div>
@@ -273,7 +317,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 
                 <div class="right__news">
                     <div class="top__news">
-                        <a href="">
+                        <a href="./activitydetail.php">
                             <div class="photo">
                                 <img src="./img/dd.jpg" alt="">
                             </div>
@@ -286,7 +330,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     </div>
 
                     <div class="bottom__news">
-                        <a href="">
+                        <a href="./activitydetail.php">
                             <div class="photo">
                                 <img src="./img/en.jpg" alt="">
                             </div>

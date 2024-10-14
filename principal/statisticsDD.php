@@ -174,6 +174,89 @@
         <div class="chart-container">
             <canvas id="myChart"></canvas>
         </div>
+
+        <h4 style="padding-left: 10px">Thông tin các khối lớp :</h4>
+        <div class="class-info-container">
+            <div class="class-card">
+                <a href="./diligence1.php">
+                    <div class="class-info">
+                        <div class="class-circle green">Khối 6</div>
+                        <div class="class-details">
+                            <p>Số lớp: 4 &nbsp;&nbsp; Số học sinh: 160</p>
+                            <div class="male_female">
+                                <div class="female">
+                                    <span><i class="fa-solid fa-venus"></i> <span>70</span></span>
+                                </div>
+                                <div class="male">
+                                    <span><i class="fa-solid fa-mars-stroke-up"></i> <span>90</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="class-icon"><i data-feather="alert-circle" style="color: #5B6998"></i></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="class-card">
+                <a href="./diligence1.php">
+                    <div class="class-info">
+                        <div class="class-circle pink">Khối 7</div>
+                        <div class="class-details">
+                            <p>Số lớp: 4 &nbsp;&nbsp; Số học sinh: 160</p>
+                            <div class="male_female">
+                                <div class="female">
+                                    <span><i class="fa-solid fa-venus"></i> <span>70</span></span>
+                                </div>
+                                <div class="male">
+                                    <span><i class="fa-solid fa-mars-stroke-up"></i> <span>90</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="class-icon"><i data-feather="alert-circle" style="color: #5B6998"></i></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="class-card">
+                <a href="./diligence1.php">
+                    <div class="class-info">
+                        <div class="class-circle purple">Khối 8</div>
+                        <div class="class-details">
+                            <p>Số lớp: 4 &nbsp;&nbsp; Số học sinh: 160</p>
+                            <div class="male_female">
+                                <div class="female">
+                                    <span><i class="fa-solid fa-venus"></i> <span>70</span></span>
+                                </div>
+                                <div class="male">
+                                    <span><i class="fa-solid fa-mars-stroke-up"></i> <span>90</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="class-icon"><i data-feather="alert-circle" style="color: #5B6998"></i></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="class-card">
+                <a href="./diligence1.php">
+                    <div class="class-info">
+                        <div class="class-circle purple">Khối 9</div>
+                        <div class="class-details">
+                            <p>Số lớp: 4 &nbsp;&nbsp; Số học sinh: 160</p>
+                            <div class="male_female">
+                                <div class="female">
+                                    <span><i class="fa-solid fa-venus"></i> <span>70</span></span>
+                                </div>
+                                <div class="male">
+                                    <span><i class="fa-solid fa-mars-stroke-up"></i> <span>90</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="class-icon"><i data-feather="alert-circle" style="color: #5B6998"></i></div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -181,9 +264,15 @@
 <script src="./js/chartkhoi.js"></script>
 <script src="./js/lich.js"></script>
 <script src="./js/modal.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
 <script>
     function goBack() {
         window.location.href = '../home.php?role=hieutruong'; // Chuyển đến trang chủ
     }
 </script>
+
 </html>

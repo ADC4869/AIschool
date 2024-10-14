@@ -25,15 +25,16 @@
         <main>
             <div class="main__title">
                 <p class="title">
-                    Danh sách lớp
+                    Danh sách lớp khối 9
                 </p>
             </div>
 
             <div class="main__class">
                 <div class="class">
                     <div class="left__class">
-                        <p class="name__class">Lớp 1A</p>
-                        <p class="name__teacher">GVCN: <span>Nguyễn Thị Mận Xoài</span></p>
+                        <p class="name__class">Lớp 9A1</p>
+                        <p class="name__teacher">GVCN: <span>Nguyễn Thị Ánh Xuân</span></p>
+                        <p>Sỉ số: <span>40</span></p>
                     </div>
                     <div class="right__class">
                         <a href="thongkehocsinh2.php">
@@ -43,8 +44,9 @@
                 </div>
                 <div class="class">
                     <div class="left__class">
-                        <p class="name__class">Lớp 1B</p>
-                        <p class="name__teacher">GVCN: <span>Nguyễn Thị Mận Xoài</span></p>
+                        <p class="name__class">Lớp 9A2</p>
+                        <p class="name__teacher">GVCN: <span>Trần Nguyên Khởi</span></p>
+                        <p>Sỉ số: <span>40</span></p>
                     </div>
                     <div class="right__class">
                         <a href="thongkehocsinh2.php">
@@ -54,8 +56,9 @@
                 </div>
                 <div class="class">
                     <div class="left__class">
-                        <p class="name__class">Lớp 1C</p>
-                        <p class="name__teacher">GVCN: <span>Nguyễn Thị Mận Xoài</span></p>
+                        <p class="name__class">Lớp 9A3</p>
+                        <p class="name__teacher">GVCN: <span>Trương Thanh Phong</span></p>
+                        <p>Sỉ số: <span>40</span></p>
                     </div>
                     <div class="right__class">
                         <a href="thongkehocsinh2.php">
@@ -65,8 +68,9 @@
                 </div>
                 <div class="class">
                     <div class="left__class">
-                        <p class="name__class">Lớp 1D</p>
-                        <p class="name__teacher">GVCN: <span>Nguyễn Thị Mận Xoài</span></p>
+                        <p class="name__class">Lớp 9A4</p>
+                        <p class="name__teacher">GVCN: <span>Huỳnh Vũ Nhi</span></p>
+                        <p>Sỉ số: <span>40</span></p>
                     </div>
                     <div class="right__class">
                         <a href="thongkehocsinh2.php">
@@ -79,4 +83,5 @@
     </div>
 </body>
 <script src="../js/back.js"></script>
-</html>
+
+</html>i
