@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .icon-back {
+    font-size: 20px;
+    color: var(--white-color);
+    position: relative;
+    top: 30px;
+    left: 15px;
+}
+
+header .header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+
+main .container {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+main .title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+main .info-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+main .info-bar span {
+    font-weight: bold;
+}
+
+main .info-bar .green {
+    color: #01B479;
+}
+
+main .info-bar .orgin {
+    color: #FF9000;
+}
+
+main .info-bar .red {
+    color: #D63E30;
+}
+
+main .list-students {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main .student-item {
+    display: flex;
+    align-items: center;
+    background-color: #e7f3ff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+main .student-item:hover {
+    background-color: #d6e6ff;
+}
+
+main .student-photo {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+main .student-photo img {
+    width: 100%;
+    height: auto;
+}
+
+main .student-info {
+    flex-grow: 1;
+}
+
+main .student-name {
+    font-weight: bold;
+}
+
+main .student-id {
+    color: #666;
+    font-size: 0.9em;
+}
+
+main .student-status {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+    main .student-item {
+      padding: 15px;
+    }
+
+    main .student-photo {
+      width: 60px;
+      height: 60px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main .student-item {
+      padding: 20px;
+    }
+
+    main .student-photo {
+      width: 70px;
+      height: 70px;
+    }
+}
