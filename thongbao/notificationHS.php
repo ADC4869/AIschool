@@ -38,7 +38,7 @@
                 </button>
             </a>
             <div class="feedback">
-                <img src="feedback-icon.png" alt="Feedback Icon" class="feedback-icon">
+                <img src="../img/avt.jfif" alt="Feedback Icon" class="feedback-icon">
                 <div class="feedback-details">
                     <h3>Góp ý về quá trình học tập</h3>
                     <p>V/v tiến độ học tập trong năm nay, nhà trường...</p>
