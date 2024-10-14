@@ -53,6 +53,7 @@
                     </a>
                 </div>
             </div>
+
             <div class="student-item paid">
                 <img src="../img/gv.jpg" alt="Hoa Thanh Sơn">
                 <div class="info">
@@ -64,6 +65,7 @@
                     <button class="message"><i data-feather="message-square" style="color: #5B6998"></i></button>
                 </div>
             </div>
+
             <!-- Add more student-item divs similarly -->
             <div class="student-item unpaid">
                 <img src="../img/gv.jpg" alt="Nguyễn Ngọc Ánh">
@@ -80,13 +82,49 @@
                 </div>
             </div>
         </div>
+
+        <div id="studentModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-header">
+                    <p>Nguyễn Ngọc Ánh</p>
+                    <p>HS20015847</p>
+                </div>
+                <div class="contact-info">
+                    <!-- Teacher Section -->
+                    <h5>Giáo viên chủ nhiệm</h5>
+                    <div class="section teacher">
+                        <div class="contact-details">
+                            <img src="../img/gvn1.jpg" alt="Teacher">
+                            <div class="info">
+                                <p>Nguyễn Thị Ánh Xuân</p>
+                                <small>GV24861875</small>
+                            </div>
+                        </div>
+                        <div class="icons">
+                            <button class="call"><i class="fa-solid fa-phone"></i></button>
+                            <button class="message"><i class="fa-solid fa-message"></i></button>
+                        </div>
+                    </div>
+                    <!-- Parent Section -->
+                    <h5>Phụ huynh học sinh</h5>
+                    <div class="section parent">
+                        <div class="contact-details">
+                            <img src="../img/ph2.jpg" alt="Parent">
+                            <div class="info">
+                                <p>Nguyễn Ngọc Hoa</p>
+                                <small>PH20015847</small>
+                            </div>
+                        </div>
+                        <div class="icons">
+                            <button class="call"><i class="fa-solid fa-phone"></i></button>
+                            <button class="message"><i class="fa-solid fa-message"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 <script src="../js/back.js"></script>
-<script src="../node_modules/feather-icons/dist/feather.js"></script>
-<script src="../node_modules/feather-icons/dist/feather.min.js"></script>
-<script>
-    feather.replace();
-</script>
-
 </html>
