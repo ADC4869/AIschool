@@ -107,14 +107,14 @@ function closeConfirmDialog() {
 // Xác nhận thoát (có thể chuyển hướng trang hoặc làm hành động khác)
 function confirmExit() {
     closeConfirmDialog();
-    // Thực hiện hành động thoát, ví dụ như quay lại trang trước
+// Thực hiện hành động thoát, ví dụ như quay lại trang trước
     window.location.href = '../thongbao/notification.php?role=hieutruong'; // Redirect về trang chủ hoặc trang trước
 }
 </script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Bắt sự kiện submit của form
+// Bắt sự kiện submit của form
     const feedbackForm = document.getElementById('feedbackForm');
 
     feedbackForm.addEventListener('submit', function(event) {
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script>
-    // JS for the recipient selector
+// JS for the recipient selector
 document.addEventListener('DOMContentLoaded', function () {
     const selectBox = document.querySelector('.select-box');
     const options = document.querySelector('.select-options');

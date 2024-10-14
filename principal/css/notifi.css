@@ -200,6 +200,8 @@ main .select-box {
     border: 1px solid #ddd;
     padding: 10px;
     cursor: pointer;
+    width: 93%;
+    margin: 10px;
 }
 
 main .select-text {
@@ -232,11 +234,13 @@ main .select-options label:hover {
 @media (max-width: 768px) {
     main .select-box {
         font-size: 14px;
+        width: 93%;
     }
 }
 
 @media (max-width: 480px) {
     main .select-box {
         font-size: 12px;
+        width: 90%;
     }
 }
