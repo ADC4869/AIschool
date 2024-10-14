@@ -47,6 +47,7 @@
                     <button class="message"><i class="fa-solid fa-message"></i></button>
                 </div>
             </div>
+
             <div class="student-item paid">
                 <img src="../img/gv.jpg" alt="Hoa Thanh Sơn">
                 <div class="info">
@@ -58,6 +59,7 @@
                     <button class="message"><i class="fa-solid fa-message"></i></button>
                 </div>
             </div>
+            
             <!-- Add more student-item divs similarly -->
             <div class="student-item unpaid">
                 <img src="../img/gv.jpg" alt="Nguyễn Ngọc Ánh">
