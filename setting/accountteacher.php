@@ -359,7 +359,7 @@ $conn->close();
             // Giả sử biến role được lấy từ session hoặc cơ sở dữ liệu sau khi đăng nhập
             $role = $_GET['role'] ?? 'hocsinh'; // Nếu không có role, mặc định là 'phuhuynh'
 
-            if ($role == 'hocsinh') {
+            if ($role == '') {
             ?>
                 <div class="main__title">
                     <h5>Thông tin học tập</h5>
