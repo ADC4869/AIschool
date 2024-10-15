@@ -251,7 +251,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 
             <div class="content__news">
                 <div class="left__news">
-                    <a href="">
+                    <a href="./activitydetail.php">
                         <div class="photo">
                             <img src="./img/thivaolop10.jpg" alt="">
                         </div>
@@ -266,7 +266,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 
                 <div class="right__news">
                     <div class="top__news">
-                        <a href="">
+                        <a href="./activitydetail.php">
                             <div class="photo">
                                 <img src="./img/thigiuaki.jpeg" alt="">
                             </div>
@@ -279,7 +279,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     </div>
 
                     <div class="bottom__news">
-                        <a href="">
+                        <a href="./activitydetail.php">
                             <div class="photo">
                                 <img src="./img/thihocsinhgioi.jfif" alt="">
                             </div>
@@ -302,7 +302,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 
             <div class="content__news">
                 <div class="left__news">
-                    <a href="">
+                    <a href="./activitydetail.php">
                         <div class="photo">
                             <img src="./img/tg1.jpg" alt="">
                         </div>
@@ -317,7 +317,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 
                 <div class="right__news">
                     <div class="top__news">
-                        <a href="">
+                        <a href="./activitydetail.php">
                             <div class="photo">
                                 <img src="./img/dd.jpg" alt="">
                             </div>
@@ -330,7 +330,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     </div>
 
                     <div class="bottom__news">
-                        <a href="">
+                        <a href="./activitydetail.php">
                             <div class="photo">
                                 <img src="./img/en.jpg" alt="">
                             </div>

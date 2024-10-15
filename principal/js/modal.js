@@ -18,3 +18,4 @@ semesterOptions.forEach(option => {
 });
 
 
+

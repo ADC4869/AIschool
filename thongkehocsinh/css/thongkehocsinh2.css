@@ -55,7 +55,7 @@ main .main__title {
 }
 
 .main__title .title {
-    margin-left: 45px;
+    margin-left: 25px;
     line-height: 50px;
 }
 
@@ -68,7 +68,7 @@ main .main__title {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 75px;
     margin-top: 20px;
     font-weight: bold;
     font-size: 18px;
@@ -94,12 +94,27 @@ main .main__title {
     margin-top: 10px;
     border: 1px solid rgb(204, 204, 204);
 }
+
+.detail__student a {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    background-color: #D0DEFF;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+}
+
 .img__student {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
+
 .left__student {
     display: flex;
     align-items: center;

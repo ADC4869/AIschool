@@ -45,8 +45,12 @@
                     <p class="status">Đã đóng học phí</p>
                 </div>
                 <div class="icons">
-                    <button class="call"><i class="fa-solid fa-phone"></i></button>
-                    <button class="message"><i class="fa-solid fa-message"></i></button>
+                    <a href="../call/index.php">
+                        <button class="call"><i data-feather="phone" style="color: #5B6998"></i></button>
+                    </a>
+                    <a href="../chat/chathocsinh.php">
+                        <button class="message"><i data-feather="message-square" style="color: #5B6998"></i></button>
+                    </a>
                 </div>
             </div>
 
@@ -57,8 +61,8 @@
                     <p class="status">Đã đóng học phí</p>
                 </div>
                 <div class="icons">
-                    <button class="call"><i class="fa-solid fa-phone"></i></button>
-                    <button class="message"><i class="fa-solid fa-message"></i></button>
+                    <button class="call"><i data-feather="phone" style="color: #5B6998"></i></button>
+                    <button class="message"><i data-feather="message-square" style="color: #5B6998"></i></button>
                 </div>
             </div>
 
@@ -71,8 +75,10 @@
                     <p class="note">Ghi chú: Khó khăn</p>
                 </div>
                 <div class="icons">
-                    <button class="call"><i class="fa-solid fa-phone"></i></button>
-                    <button class="message"><i class="fa-solid fa-message"></i></button>
+                    <a href="../call/index.php">
+                        <button class="call"><i data-feather="phone" style="color: #5B6998"></i></button>
+                    </a>
+                    <button class="message"><i data-feather="message-square" style="color: #5B6998"></i></button>
                 </div>
             </div>
         </div>
@@ -121,6 +127,7 @@
     </main>
 </body>
 <script src="../js/back.js"></script>
+<<<<<<< HEAD
 <script>
 // Get the modal element
 var modal = document.getElementById("studentModal");
@@ -180,4 +187,6 @@ document.querySelectorAll('.message').forEach(function(button) {
     });
 });
 </script>
+=======
+>>>>>>> d51a200a19981f61a5ae537b6699deb7e5fc9b05
 </html>

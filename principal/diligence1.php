@@ -43,24 +43,52 @@
             </div>
             <ul class="list-students">
                 <li class="student-item">
-                    <div class="student-photo">
-                        <img src="student1.jpg" alt="Nguyễn Thị Mỹ Tiên">
-                    </div>
-                    <div class="student-info">
-                        <div class="student-name">Nguyễn Thị Mỹ Tiên</div>
-                        <div class="student-id">Mã học sinh: HS0001</div>
-                    </div>
-                    <div class="student-status">i</div>
+                    <a href="./diligence.php">
+                        <div class="student-photo">
+                            <img src="../img/hs.jpg" alt="Nguyễn Thị Mỹ Tiên">
+                        </div>
+                        <div class="student-info">
+                            <div class="student-name">Nguyễn Thị Mỹ Tiên</div>
+                            <div class="student-id">Mã học sinh: HS0001</div>
+                        </div>
+                        <div class="student-status">i</div>
+                    </a>
                 </li>
                 <li class="student-item">
-                    <div class="student-photo">
-                        <img src="student2.jpg" alt="Nguyễn Minh Khoa">
-                    </div>
-                    <div class="student-info">
-                        <div class="student-name">Nguyễn Minh Khoa</div>
-                        <div class="student-id">Mã học sinh: HS0002</div>
-                    </div>
-                    <div class="student-status">i</div>
+                    <a href="./diligence.php">
+                        <div class="student-photo">
+                            <img src="../img/hs1.jpg" alt="Nguyễn Minh Khoa">
+                        </div>
+                        <div class="student-info">
+                            <div class="student-name">Nguyễn Minh Khoa</div>
+                            <div class="student-id">Mã học sinh: HS0002</div>
+                        </div>
+                        <div class="student-status">i</div>
+                    </a>
+                </li>
+                <li class="student-item">
+                    <a href="./diligence.php">
+                        <div class="student-photo">
+                            <img src="../img/hs1.jpg" alt="Nguyễn Minh Khoa">
+                        </div>
+                        <div class="student-info">
+                            <div class="student-name">Nguyễn Minh Khoa</div>
+                            <div class="student-id">Mã học sinh: HS0002</div>
+                        </div>
+                        <div class="student-status">i</div>
+                    </a>
+                </li>
+                <li class="student-item">
+                    <a href="./diligence.php">
+                        <div class="student-photo">
+                                <img src="../img/hs1.jpg" alt="Nguyễn Minh Khoa">
+                        </div>
+                        <div class="student-info">
+                            <div class="student-name">Nguyễn Minh Khoa</div>
+                            <div class="student-id">Mã học sinh: HS0002</div>
+                        </div>
+                        <div class="student-status">i</div>
+                    </a>
                 </li>
                 <!-- Repeat student items as needed -->
             </ul>
@@ -69,3 +97,4 @@
 </body>
 
 </html>
+<script src="../js/back.js"></script>

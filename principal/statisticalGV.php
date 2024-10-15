@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="./css/statiscal.css">
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -41,33 +43,50 @@
         </div>
 
         <div class="teacher-card">
-            <div class="profile">
-                <img src="../img/hs.jpg" alt="Profile Image">
-                <div class="info">
-                    <p><b>Nguyễn Thị Ánh Xuân</b></p>
-                    <p>Mã nhân viên: GV20014567</p>
+            <a href="../setting/accountteacher.php">
+                <div class="profile">
+                    <img src="../img/hs.jpg" alt="Profile Image">
+                    <div class="info">
+                        <p><b>Nguyễn Thị Ánh Xuân</b></p>
+                        <p>Mã nhân viên: GV20014567</p>
+                    </div>
                 </div>
-            </div>
-            <div class="actions">
-                <button class="call"><i class="fa-solid fa-phone"></i></button>
-                <button class="message"><i class="fa-solid fa-message"></i></button>
-            </div>
+                <div class="actions">
+                    <button class="call"><a href="../call/index.php"><i data-feather="phone"
+                                style="color: #5B6998"></i></a></button>
+                    <button class="message"><a href="../chat/chatgiaovien.php"><i data-feather="message-square"
+                                style="color: #5B6998"></i></a></button>
+                </div>
+            </a>
         </div>
 
         <div class="teacher-card">
-            <div class="profile">
-                <img src="../img/hs.jpg" alt="Profile Image">
-                <div class="info">
-                    <p><b>Trần Nguyên Khôi</b></p>
-                    <p>Mã nhân viên: GV20014568</p>
+            <a href="../setting/accountteacher.php">
+                <div class="profile">
+                    <img src="../img/hs.jpg" alt="Profile Image">
+                    <div class="info">
+                        <p><b>Trần Nguyên Khôi</b></p>
+                        <p>Mã nhân viên: GV20014568</p>
+                    </div>
                 </div>
-            </div>
-            <div class="actions">
-                <button class="call"><i class="fa-solid fa-phone"></i></button>
-                <button class="message"><i class="fa-solid fa-message"></i></button>
-            </div>
+                <div class="actions">
+
+                    <button class="call"><a href="../call/index.php"><i data-feather="phone"
+                                style="color: #5B6998"></i></a></button>
+                    <button class="message"><a href="../chat/chatgiaovien.php"><i data-feather="message-square"
+                                style="color: #5B6998"></i></a></button>
+                </div>
+            </a>
         </div>
+
     </main>
 </body>
 <script src="../js/back.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.js"></script>
+<script src="../node_modules/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
+
+
 </html>
