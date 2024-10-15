@@ -80,10 +80,8 @@ if ($user_role === 'giaovien') {
 
 $conn->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,7 +98,6 @@ $conn->close();
     <link rel="stylesheet" href="./css/accountgv.css">
     <link rel="stylesheet" href="../css/global.css">
 </head>
-
 <body>
     <header>
         <div class="header">
@@ -130,18 +127,18 @@ $conn->close();
         ?>
 
         <?php
-        $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
-        $accountInfo = '';
-        if ($role === 'giaovien') {
-            $accountInfo = 'Tài khoản : Giáo viên';
-            $msLabel = 'MSGV';
-        } elseif ($role === 'hieutruong') {
-            $accountInfo = 'Tài khoản : Hiệu trưởng';
-            $msLabel = 'MSHT';
-        } else {
-            $accountInfo = 'Tài khoản : Học sinh';
-            $msLabel = 'MSHS';
-        }
+            $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
+            $accountInfo = '';
+            if ($role === 'giaovien') {
+                $accountInfo = 'Tài khoản : Giáo viên';
+                $msLabel = 'MSGV';
+            } elseif ($role === 'hieutruong') {
+                $accountInfo = 'Tài khoản : Hiệu trưởng';
+                $msLabel = 'MSHT';
+            } else {
+                $accountInfo = 'Tài khoản : Học sinh';
+                $msLabel = 'MSHS';
+            }
         ?>
         <div class="main__title">
             <h5>Thông tin cá nhân</h5>
