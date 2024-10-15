@@ -56,7 +56,7 @@
             }
             // Nếu là học sinh
             else {
-                include 'hocsinh.php';
+                include 'GV.php';
             }
         ?>
     </main>

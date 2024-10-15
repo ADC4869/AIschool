@@ -71,7 +71,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     </div> 
                     Tình trạng học phí
                 </a>
-                <a href="./information/index.php" class="button">
+                <a href="./information/hs.php" class="button">
                     <div class="circle circle__contact">
                         <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
                     </div> 
@@ -85,51 +85,51 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     Tình trạng chuyên cần
                 </a>
 
-                <a href="./meeting/index.php" class="button">
+                <a href="./KQHT/hoctaphocsinh.php" class="button">
                     <div class="circle circle__meeting">
                         <i class="fa-solid fa-book-open" style="color: #ffffff;"></i>
                     </div> 
-                    Học tập
+                    Kết quả Học tập
                 </a>
 
-                <a href="./thongtingiaovienhocsinh/index.php" class="button">
+                <a href="student/hoatdongngoaikhoa.php" class="button">
                     <div class="circle circle__infoclass">
                         <i class="fa-solid fa-medal" style="color: #FFD43B;"></i> 
                     </div>
-                    Hoạt động ngoại khóa
+                   Hoạt động ngoại khóa
                 </a>
             <?php endif; ?>
 
             <!-- Phụ huynh -->
             <?php if ($user_role == 'phuhuynh'): ?>
-                <a href="./timetable/index.php" class="button">
+                <a href="./timetable/index.php?role=phuhuynh" class="button">
                     <div class="circle circle__timetable">
                         <i class="fa-regular fa-calendar" style="color: #ffffff;"></i>
                     </div> 
                     Thời khóa biểu
                 </a>
 
-                <a href="tuition.php" class="button">
+                <a href="tuition.php?role=phuhuynh" class="button">
                     <div class="circle circle__fee">
                         <i class="fa-solid fa-dollar-sign" style="color: #ffffff;"></i>
                     </div> 
                     Tình trạng học phí
                 </a>
-                <a href="./information/index.php" class="button">
+                <a href="./information/index.php?role=hocsinh" class="button">
                     <div class="circle circle__contact">
                         <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
                     </div> 
                     Thông tin liên lạc
                 </a>
 
-                <a href="./diemdanh/index.php" class="button">
+                <a href="./diemdanh/index.php?role=phuhuynh" class="button">
                     <div class="circle circle__diligence">
                         <i class="fa-regular fa-clipboard" style="color: #ffffff;"></i>
                     </div> 
                     Tình trạng chuyên cần
                 </a>
 
-                <a href="./meeting/index.php" class="button">
+                <a href="./KQHT/hoctaphocsinh.php?role=phuhuynh" class="button">
                     <div class="circle circle__meeting">
                         <i class="fa-solid fa-book-open" style="color: #ffffff;"></i>
                     </div> 
@@ -140,7 +140,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     <div class="circle circle__infoclass">
                         <i class="fa-solid fa-medal" style="color: #FFD43B;"></i> 
                     </div>
-                    Lịch họp và sự kiện
+                    Sự kiện và lịch họp
                 </a>
             <?php endif; ?>
 

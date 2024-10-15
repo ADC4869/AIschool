@@ -114,11 +114,11 @@
                             <p>Ghi chú: Khó khăn</p>
                         </div>
                         <div class="icons">
-                        <a href="./call/index.php">
-                            <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
+                            <a href="./call/index.php">
+                                <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
                             </a>
                             <a href="./chat/chathocsinh.php">
-                            <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
+                                <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
                             </a>
                         </div>
                     </div>
@@ -131,11 +131,11 @@
                             <p>Ghi chú: Khó khăn</p>
                         </div>
                         <div class="icons">
-                        <a href="./call/index.php">
-                            <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
+                            <a href="./call/index.php">
+                                <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
                             </a>
                             <a href="./chat/chathocsinh.php">
-                            <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
+                                <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
                             </a>
                         </div>
                     </div>
@@ -153,10 +153,10 @@
                         </div>
                         <div class="icons">
                             <a href="./call/index.php">
-                            <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
+                                <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
                             </a>
                             <a href="./chat/chathocsinh.php">
-                            <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
+                                <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
                             </a>
                         </div>
                     </div>
@@ -168,11 +168,11 @@
                             <p>Đã đóng học phí</p>
                         </div>
                         <div class="icons">
-                        <a href="./call/index.php">
-                            <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
+                            <a href="./call/index.php">
+                                <span class="icon-phone"><i data-feather="phone" style="color: black"></i></span>
                             </a>
                             <a href="./chat/chathocsinh.php">
-                            <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
+                                <span class="icon-chat"><i data-feather="message-square" style="color: black"></i></span>
                             </a>
                         </div>
                     </div>
@@ -202,37 +202,36 @@
 
             <div class="fee-container">
                 <div class="fee-row fee-header">
-                    <div class="fee-item">Mức học phí</div>
-                    <div class="fee-item">Đã đóng</div>
-                    <div class="fee-item">Khấu trừ</div>
-                    <div class="fee-item">Công nợ</div>
+                    <div class="fee-item">Các khoản</div>
+                    <div class="fee-item">Tình trạng</div>
+                    <div class="fee-item">Ghi chú</div>
                 </div>
 
                 <div class="fee-row">
                     <div class="fee-item">Học phí học kì I
                         <br><span>1.000.000</span>
                     </div>
-                    <div class="fee-item" style="color: var(--primary-color); font-weight: bold;"><br>1.000.000</div>
-                    <div class="fee-item"><br>0</div>
-                    <div class="fee-item"><br>0</div>
+                    <div class="fee-item" style="color: var(--primary-color); font-weight: bold;"><br><i
+                            class="fa-solid fa-check" style="color: #6AB099;"></i></div>
+                    <div class="fee-item"><br>Bắt buộc</div>
                 </div>
 
                 <div class="fee-row">
                     <div class="fee-item">Bảo hiểm y tế
                         <br><span>1.000.000</span>
                     </div>
-                    <div class="fee-item" style="color: var(--primary-color); font-weight: bold;"><br>1.000.000</div>
-                    <div class="fee-item"><br>0</div>
-                    <div class="fee-item"><br>0</div>
+                    <div class="fee-item" style="color: var(--primary-color); font-weight: bold;"><br><i
+                            class="fa-solid fa-check" style="color: #6AB099;"></i></div>
+                    <div class="fee-item"><br>Không bắt buộc</div>
                 </div>
 
                 <div class="fee-row">
                     <div class="fee-item">Bảo hiểm tai nạn
                         <br><span>3.000.000</span>
                     </div>
-                    <div class="fee-item" style="color: var(--primary-color); font-weight: bold;"><br>0</div>
-                    <div class="fee-item"><br>0</div>
-                    <div class="fee-item"><br>3.000.000</div>
+                    <div class="fee-item" style="color: var(--primary-color); font-weight: bold;"><br><i
+                            class="fa-solid fa-check" style="color: #6AB099;"></i></div>
+                    <div class="fee-item"><br>Không bắt buộc</div>
                 </div>
                 <!-- Các mục khác -->
             </div>
@@ -249,6 +248,11 @@
             echo '<div class="debt-container">
                         <span class="label">Tổng công nợ :</span>
                         <span class="amount">3.000.000</span>
+                    </div>';
+        } elseif ($role !== 'hocsinh'){
+            echo '<div class="debt-container">
+                        <span class="label">Tổng:</span>
+                        <span class="amount">5.000.000</span>
                     </div>';
         }
         ?>
