@@ -10,13 +10,13 @@ if (!isset($_SESSION['role'])) {
 $fullname = isset($_SESSION['fullname']) ? $_SESSION['fullname'] : 'Người dùng';
 $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'guest';
 
-// Initialize variables
+// Khởi tạo biến
 $code = 'Chưa có mã';
 $class_name = 'Chưa có lớp';
-$subject_name = 'Chưa có môn';
-$cccd = $religion = $ethnic = $nationality = $phone = $address = $dob = $gender = 'Chưa cập nhật';
+$student_name = 'Chưa có học sinh'; // Biến mới để lưu tên học sinh của con phụ huynh
+$parent_code = 'Chưa có mã phụ huynh'; // Biến mới để lưu mã phụ huynh
 
-// Query to get general user information, including CCCD, religion, ethnic, nationality, phone, address, date of birth, and gender
+// Truy vấn để lấy thông tin chung của người dùng, bao gồm CCCD, tôn giáo, dân tộc, quốc tịch, số điện thoại, địa chỉ, ngày sinh và giới tính
 $query = "SELECT cccd, religion, ethnic, nationality, phone, address, dob, gender FROM users WHERE fullname = ?";
 $stmt1 = $conn->prepare($query);
 $stmt1->bind_param("s", $fullname);
@@ -36,9 +36,9 @@ if ($row = $result->fetch_assoc()) {
 
 $stmt1->close();
 
-// Fetch role-specific information
+// Lấy thông tin theo vai trò
 if ($user_role === 'giaovien') {
-    // Query for teacher's code, homeroom class, and subjects
+    // Truy vấn để lấy mã giáo viên, lớp chủ nhiệm và các môn dạy
     $query = "SELECT teachers.teacher_code, classes.class_name, GROUP_CONCAT(subjects.subject_name SEPARATOR ', ') AS subject_names
               FROM teachers
               LEFT JOIN classes ON teachers.class_supervised_id = classes.id
@@ -59,11 +59,11 @@ if ($user_role === 'giaovien') {
     
     $stmt2->close();
 } elseif ($user_role === 'hocsinh') {
-    // Query for student's code and class
+    // Truy vấn để lấy mã học sinh và lớp
     $query = "SELECT students.student_code, classes.class_name
               FROM students
               LEFT JOIN classes ON students.class_id = classes.id
-              WHERE students.id = (SELECT id FROM users WHERE fullname = ? limit 1)";
+              WHERE students.id = (SELECT id FROM users WHERE fullname = ? LIMIT 1)";
     
     $stmt3 = $conn->prepare($query);
     $stmt3->bind_param("s", $fullname);
@@ -76,6 +76,23 @@ if ($user_role === 'giaovien') {
     }
     
     $stmt3->close();
+} elseif ($user_role === 'phuhuynh') {
+    // Query for parent's code (mã phụ huynh)
+    $query = "SELECT parents.parent_code
+              FROM parents
+              LEFT JOIN users ON parents.id = users.id
+              WHERE users.fullname = ? limit 1";
+    
+    $stmt4 = $conn->prepare($query);
+    $stmt4->bind_param("s", $fullname);
+    $stmt4->execute();
+    $result = $stmt4->get_result();
+    
+    if ($row = $result->fetch_assoc()) {
+        $code = htmlspecialchars($row['parent_code']);
+    }
+    
+    $stmt4->close();
 }
 
 $conn->close();
@@ -150,30 +167,43 @@ $conn->close();
             <?php
                 $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
                 if ($role === 'giaovien' || $role === 'hieutruong') {
-                    // Hiển thị nội dung cho giáo viên hoặc hiệu trưởng
                     echo '<div class="short__row">
-                                <div>
-                                    <p class="small__title">Phụ trách môn</p>
-                                    <div class="info">
-                                        <p>' . htmlspecialchars($subject_name) . '</p>
-                                    </div>
+                            <div>
+                                <p class="small__title">Phụ trách môn</p>
+                                <div class="info">
+                                    <p>' . htmlspecialchars($subject_name) . '</p>
                                 </div>
-                                <div>
-                                    <p class="small__title">Chủ nhiệm lớp</p>
-                                    <div class="info">
-                                        <p>' . htmlspecialchars($class_name) . '</p>
-                                    </div>
-                                </div>
-                            </div>';
-                } else {
-                    // Hiển thị nội dung cho học sinh (hoặc nếu không có role)
-                    echo '<div>
-                                <p class="small__title">Lớp</p>
+                            </div>
+                            <div>
+                                <p class="small__title">Chủ nhiệm lớp</p>
                                 <div class="info">
                                     <p>' . htmlspecialchars($class_name) . '</p>
-                                    <i data-feather="edit-2" style="color: #000000"></i>
                                 </div>
-                            </div>';
+                            </div>
+                        </div>';
+                } elseif ($role === 'phuhuynh') {
+                    echo '<div class="short__row">
+                            <div>
+                                <p class="small__title">Tên học sinh</p> 
+                                <div class="info">
+                                    <p>' . htmlspecialchars($student_name) . '</p> 
+                                </div>
+                            </div>
+                            <div>
+                                <p class="small__title">Lớp</p>
+                                <div class="info">
+                                    <p>' . htmlspecialchars($class_name) . '</p> 
+                                </div>
+                            </div>
+                        </div>';
+                } else {
+                    echo '<div>
+                            <p class="small__title">Lớp</p>
+                            <div class="info">
+                                <p>' . htmlspecialchars($class_name) . '</p>
+                                <i data-feather="edit-2" style="color: #000000"></i>
+                            </div>
+                        </div>';
                 }
             ?>
 
