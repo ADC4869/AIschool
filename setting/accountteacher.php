@@ -10,13 +10,13 @@ if (!isset($_SESSION['role'])) {
 $fullname = isset($_SESSION['fullname']) ? $_SESSION['fullname'] : 'Người dùng';
 $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'guest';
 
-// Khởi tạo biến
+// Khởi tạo biến chung
 $code = 'Chưa có mã';
 $class_name = 'Chưa có lớp';
-$student_name = 'Chưa có học sinh'; // Biến mới để lưu tên học sinh của con phụ huynh
-$parent_code = 'Chưa có mã phụ huynh'; // Biến mới để lưu mã phụ huynh
+$student_name = 'Chưa có học sinh';
+$parent_code = 'Chưa có mã phụ huynh';
 
-// Truy vấn để lấy thông tin chung của người dùng, bao gồm CCCD, tôn giáo, dân tộc, quốc tịch, số điện thoại, địa chỉ, ngày sinh và giới tính
+// Truy vấn thông tin cá nhân chung
 $query = "SELECT cccd, religion, ethnic, nationality, phone, address, dob, gender FROM users WHERE fullname = ?";
 $stmt1 = $conn->prepare($query);
 $stmt1->bind_param("s", $fullname);
@@ -36,16 +36,16 @@ if ($row = $result->fetch_assoc()) {
 
 $stmt1->close();
 
-// Lấy thông tin theo vai trò
+// Lấy thông tin chi tiết theo vai trò của người dùng
 if ($user_role === 'giaovien') {
-    // Truy vấn để lấy mã giáo viên, lớp chủ nhiệm và các môn dạy
+    // Truy vấn mã giáo viên, lớp chủ nhiệm và các môn dạy
     $query = "SELECT teachers.teacher_code, classes.class_name, GROUP_CONCAT(subjects.subject_name SEPARATOR ', ') AS subject_names
               FROM teachers
               LEFT JOIN classes ON teachers.class_supervised_id = classes.id
               LEFT JOIN teacher_subjects ON teachers.id = teacher_subjects.teacher_id
               LEFT JOIN subjects ON teacher_subjects.subject_id = subjects.id
               WHERE teachers.id = (SELECT id FROM users WHERE fullname = ?)";
-
+              
     $stmt2 = $conn->prepare($query);
     $stmt2->bind_param("s", $fullname);
     $stmt2->execute();
@@ -59,12 +59,12 @@ if ($user_role === 'giaovien') {
 
     $stmt2->close();
 } elseif ($user_role === 'hocsinh') {
-    // Truy vấn để lấy mã học sinh và lớp
+    // Truy vấn mã học sinh và lớp học
     $query = "SELECT students.student_code, classes.class_name
               FROM students
               LEFT JOIN classes ON students.class_id = classes.id
               WHERE students.id = (SELECT id FROM users WHERE fullname = ? limit 1)";
-    
+              
     $stmt3 = $conn->prepare($query);
     $stmt3->bind_param("s", $fullname);
     $stmt3->execute();
@@ -77,12 +77,12 @@ if ($user_role === 'giaovien') {
 
     $stmt3->close();
 } elseif ($user_role === 'phuhuynh') {
-    // Query for parent's code (mã phụ huynh)
+    // Truy vấn mã phụ huynh
     $query = "SELECT parents.parent_code
               FROM parents
               LEFT JOIN users ON parents.id = users.id
-              WHERE users.fullname = ? limit 1";
-    
+              WHERE users.fullname = ? LIMIT 1";
+              
     $stmt4 = $conn->prepare($query);
     $stmt4->bind_param("s", $fullname);
     $stmt4->execute();
@@ -91,8 +91,26 @@ if ($user_role === 'giaovien') {
     if ($row = $result->fetch_assoc()) {
         $code = htmlspecialchars($row['parent_code']);
     }
-    
     $stmt4->close();
+
+    // Truy vấn thông tin học sinh và lớp học dựa trên `parent_id`
+    $query = "SELECT students.student_code, students.class_id, classes.class_name, users.fullname AS student_name
+              FROM students
+              LEFT JOIN parent_student ON students.id = parent_student.student_id
+              LEFT JOIN classes ON students.class_id = classes.id
+              LEFT JOIN users ON students.id = users.id
+              WHERE parent_student.parent_id = (SELECT id FROM parents WHERE parent_code = ? LIMIT 1)";
+              
+    $stmt5 = $conn->prepare($query);
+    $stmt5->bind_param("s", $code);
+    $stmt5->execute();
+    $result = $stmt5->get_result();
+
+    if ($row = $result->fetch_assoc()) {
+        $student_name = htmlspecialchars($row['student_name']);
+        $class_name = htmlspecialchars($row['class_name']);
+    }
+    $stmt5->close();
 }
 
 $conn->close();
