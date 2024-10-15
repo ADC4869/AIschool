@@ -115,7 +115,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     </div> 
                     Tình trạng học phí
                 </a>
-                <a href="./information/index.php?role=hocsinh" class="button">
+                <a href="./information/ph.php?role=phuhuynh" class="button">
                     <div class="circle circle__contact">
                         <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
                     </div> 
@@ -136,7 +136,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     Học tập
                 </a>
 
-                <a href="./thongtingiaovienhocsinh/index.php" class="button">
+                <a href="./parents/eventandmeeting.php" class="button">
                     <div class="circle circle__infoclass">
                         <i class="fa-solid fa-medal" style="color: #FFD43B;"></i> 
                     </div>
