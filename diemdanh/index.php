@@ -39,7 +39,7 @@
     <!-- MAIN -->
     <main>
         <?php
-            if ($_GET['role'] == 'giaovien') {
+            if (isset($_GET['role']) && $_GET['role'] == 'giaovien') {
             ?>
                 <!-- LỊCH -->
                 <div class="main__calendar">
