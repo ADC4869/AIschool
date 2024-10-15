@@ -36,15 +36,15 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             </a>';
         } elseif ($role == 'hocsinh') {
             echo '
-            <a href="./thongbao/notificationHS.php' . ($role == 'hocsinh' ? '?role=hocsinh' : '') . '" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
+            <a href="../thongbao/notificationHS.php' . ($role == 'hocsinh' ? '?role=hocsinh' : '') . '" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Góp ý</span>
                 </div>
             </a>';
-        } elseif ($role == 'phuhuynh') {
+        } else {
             echo '
-            <a href="./parents/ykiendonggop.php' . ($role == 'phuhuynh' ? '?role=phuhuynh' : '') . '" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
+            <a href="./parents/ykiendonggop.php" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Góp ý</span>

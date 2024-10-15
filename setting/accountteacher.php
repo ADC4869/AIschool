@@ -45,36 +45,36 @@ if ($user_role === 'giaovien') {
               LEFT JOIN teacher_subjects ON teachers.id = teacher_subjects.teacher_id
               LEFT JOIN subjects ON teacher_subjects.subject_id = subjects.id
               WHERE teachers.id = (SELECT id FROM users WHERE fullname = ?)";
-    
+
     $stmt2 = $conn->prepare($query);
     $stmt2->bind_param("s", $fullname);
     $stmt2->execute();
     $result = $stmt2->get_result();
-    
+
     if ($row = $result->fetch_assoc()) {
         $code = htmlspecialchars($row['teacher_code']);
         $class_name = htmlspecialchars($row['class_name']);
         $subject_name = htmlspecialchars($row['subject_names']);
     }
-    
+
     $stmt2->close();
 } elseif ($user_role === 'hocsinh') {
     // Truy vấn để lấy mã học sinh và lớp
     $query = "SELECT students.student_code, classes.class_name
               FROM students
               LEFT JOIN classes ON students.class_id = classes.id
-              WHERE students.id = (SELECT id FROM users WHERE fullname = ? LIMIT 1)";
+              WHERE students.id = (SELECT id FROM users WHERE fullname = ? limit 1)";
     
     $stmt3 = $conn->prepare($query);
     $stmt3->bind_param("s", $fullname);
     $stmt3->execute();
     $result = $stmt3->get_result();
-    
+
     if ($row = $result->fetch_assoc()) {
         $code = htmlspecialchars($row['student_code']);
         $class_name = htmlspecialchars($row['class_name']);
     }
-    
+
     $stmt3->close();
 } elseif ($user_role === 'phuhuynh') {
     // Query for parent's code (mã phụ huynh)
@@ -140,7 +140,7 @@ $conn->close();
 
     <main>
         <?php
-            $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh'; // Mặc định là học sinh nếu không có vai trò
+        $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh'; // Mặc định là học sinh nếu không có vai trò
         ?>
 
         <?php
@@ -152,10 +152,7 @@ $conn->close();
             } elseif ($role === 'hieutruong') {
                 $accountInfo = 'Tài khoản : Hiệu trưởng';
                 $msLabel = 'MSHT';
-            } elseif ($role === 'phuhuynh') {
-                $accountInfo = 'Tài khoản : Phụ Huynh';
-                $msLabel = 'MSHT';
-            }else {
+            } else {
                 $accountInfo = 'Tài khoản : Học sinh';
                 $msLabel = 'MSHS';
             }
@@ -167,43 +164,30 @@ $conn->close();
             <?php
                 $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
                 if ($role === 'giaovien' || $role === 'hieutruong') {
+                    // Hiển thị nội dung cho giáo viên hoặc hiệu trưởng
                     echo '<div class="short__row">
-                            <div>
-                                <p class="small__title">Phụ trách môn</p>
-                                <div class="info">
-                                    <p>' . htmlspecialchars($subject_name) . '</p>
+                                <div>
+                                    <p class="small__title">Phụ trách môn</p>
+                                    <div class="info">
+                                        <p>' . htmlspecialchars($subject_name) . '</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <p class="small__title">Chủ nhiệm lớp</p>
-                                <div class="info">
-                                    <p>' . htmlspecialchars($class_name) . '</p>
+                                <div>
+                                    <p class="small__title">Chủ nhiệm lớp</p>
+                                    <div class="info">
+                                        <p>' . htmlspecialchars($class_name) . '</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>';
-                } elseif ($role === 'phuhuynh') {
-                    echo '<div class="short__row">
-                            <div>
-                                <p class="small__title">Tên học sinh</p> 
-                                <div class="info">
-                                    <p>' . htmlspecialchars($student_name) . '</p> 
-                                </div>
-                            </div>
-                            <div>
+                            </div>';
+                } else {
+                    // Hiển thị nội dung cho học sinh (hoặc nếu không có role)
+                    echo '<div>
                                 <p class="small__title">Lớp</p>
                                 <div class="info">
-                                    <p>' . htmlspecialchars($class_name) . '</p> 
+                                    <p>' . htmlspecialchars($class_name) . '</p>
+                                    <i data-feather="edit-2" style="color: #000000"></i>
                                 </div>
-                            </div>
-                        </div>';
-                } else {
-                    echo '<div>
-                            <p class="small__title">Lớp</p>
-                            <div class="info">
-                                <p>' . htmlspecialchars($class_name) . '</p>
-                                <i data-feather="edit-2" style="color: #000000"></i>
-                            </div>
-                        </div>';
+                            </div>';
                 }
             ?>
 
@@ -343,13 +327,190 @@ $conn->close();
                 </div>
             </div>
         </div>
+
+        <div class="main__title">
+            <h5>Thông tin học tập</h5>
+        </div>
+
+        <div class="main__content">
+            <div>
+                <p class="small__title">Giáo viên chủ nhiệm</p>
+                <div class="info">
+                    <p>Nguyễn Thị Ánh Xuân</p>
+                </div>
+            </div>
+
+            <div class="short__row">
+                <div>
+                    <p class="small__title">Học lực</p>
+                    <div class="info">
+                        <p>Giỏi</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="small__title">Hạnh kiểm</p>
+                    <div class="info">
+                        <p>Tốt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__title">
+            <h5>Sơ yếu lí lịch</h5>
+        </div>
+
+        <div class="main__content">
+            <div>
+                <p class="small__title">Họ và tên Cha</p>
+                <div class="info">
+                    <p>Trương Huỳnh Anh</p>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">CCCD</p>
+                <div class="info">
+                    <p>08730201569</p>
+                </div>
+            </div>
+
+            <div class="short__row">
+                <div>
+                    <p class="small__title">Ngày sinh</p>
+                    <div class="info">
+                        <p>01/01/1978</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="small__title">Quốc tịch</p>
+                    <div class="info">
+                        <p>Việt Nam</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="short__row">
+                <div>
+                    <p class="small__title">Dân tộc</p>
+                    <div class="info">
+                        <p>Kinh</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="small__title">Tôn giáo</p>
+                    <div class="info">
+                        <p>Không</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="small__title">Nghề nghiệp</p>
+                <div class="info">
+                    <p>Kỹ sư</p>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Địa chỉ</p>
+                <div class="info_long">
+                    <p class="long__info">12 Nguyễn Văn Bảo, phường 6, Gò Vấp, Hồ Chí Minh</p>
+                    <i data-feather="edit-2" style="color: #000000"></i>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Số điện hoại</p>
+                <div class="info">
+                    <p>0894567978</p>
+                    <i data-feather="edit-2" style="color: #000000"></i>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Họ và tên Mẹ</p>
+                <div class="info">
+                    <p>Lâm Thị Bảo Ngọc</p>
+                    <i data-feather="edit-2" style="color: #000000"></i>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">CCCD</p>
+                <div class="info">
+                    <p>08736578941</p>
+                </div>
+            </div>
+
+            <div class="short__row">
+                <div>
+                    <p class="small__title">Ngày sinh</p>
+                    <div class="info">
+                        <p>03/10/1975</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="small__title">Quốc tịch</p>
+                    <div class="info">
+                        <p>Việt Nam</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="short__row">
+                <div>
+                    <p class="small__title">Dân tộc</p>
+                    <div class="info">
+                        <p>Kinh</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+                <div>
+                    <p class="small__title">Tôn giáo</p>
+                    <div class="info">
+                        <p>Không</p>
+                        <i data-feather="edit-2" style="color: #000000"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="small__title">Nghề nghiệp</p>
+                <div class="info">
+                    <p>Nhân viên văn phòng</p>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Địa chỉ</p>
+                <div class="info_long">
+                    <p class="long__info">12 Nguyễn Văn Bảo, phường 6, Gò Vấp, Hồ Chí Minh</p>
+                    <i data-feather="edit-2" style="color: #000000"></i>
+                </div>
+            </div>
+
+            <div>
+                <p class="small__title">Số điện hoại</p>
+                <div class="info">
+                    <p>0897888799</p>
+                    <i data-feather="edit-2" style="color: #000000"></i>
+                </div>
+            </div>
+        </div>
+        </div>
+
     </main>
 </body>
 <script src="../js/back.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>
-feather.replace();
+    feather.replace();
 </script>
 
 </html>
