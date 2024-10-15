@@ -8,7 +8,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
 
 <footer>
     <div class="bottom-nav">
-        <a href="./chat/message.php<?php echo ($role == 'giaovien' || $role == 'hieutruong') ? '?role=' . $role : ''; ?>"
+        <a href="./chat/message.php<?php echo ($role == 'giaovien' || $role == 'hieutruong' || $role == 'phuhuynh') ? '?role=' . $role : ''; ?>"
             class="<?php echo ($current_page == 'message.php') ? 'home-active' : ''; ?>">
             <div class="nav-item">
                 <i class="fa-solid fa-message"></i>
@@ -36,7 +36,15 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             </a>';
         } elseif ($role == 'hocsinh') {
             echo '
-            <a href="../thongbao/notificationHS.php' . ($role == 'hocsinh' ? '?role=hocsinh' : '') . '" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
+            <a href="./thongbao/notificationHS.php' . ($role == 'hocsinh' ? '?role=hocsinh' : '') . '" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
+                <div class="nav-item">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Góp ý</span>
+                </div>
+            </a>';
+        } elseif ($role == 'phuhuynh') {
+            echo '
+            <a href="./thongbao/notificationHS.php' . ($role == 'phuhuynh' ? '?role=phuhuynh' : '') . '" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Góp ý</span>
@@ -53,7 +61,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
         }
         ?>
 
-        <a href="home.php<?php echo ($role == 'giaovien' || $role == 'hieutruong') ? '?role=' . $role : ''; ?>"
+        <a href="home.php<?php echo ($role == 'giaovien' || $role == 'hieutruong' || $role == 'phuhuynh') ? '?role=' . $role : ''; ?>"
             class="<?php echo ($current_page == 'home.php') ? 'home-active' : ''; ?>">
             <div class="nav-item">
                 <i class="fa-solid fa-house"></i>
@@ -61,7 +69,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             </div>
         </a>
 
-        <a href="./thongbao/notification.php<?php echo ($role == 'giaovien' || $role == 'hieutruong') ? '?role=' . $role : ''; ?>"
+        <a href="./thongbao/notification.php<?php echo ($role == 'giaovien' || $role == 'hieutruong' || $role == 'phuhuynh') ? '?role=' . $role : ''; ?>"
             class="<?php echo ($current_page == 'notification.php') ? 'home-active' : ''; ?>">
             <div class="nav-item">
                 <i class="fa-solid fa-bell"></i>
@@ -69,7 +77,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             </div>
         </a>
 
-        <a href="setting.php<?php echo ($role == 'giaovien' || $role == 'hieutruong') ? '?role=' . $role : ''; ?>"
+        <a href="setting.php<?php echo ($role == 'giaovien' || $role == 'hieutruong' || $role == 'phuhuynh') ? '?role=' . $role : ''; ?>"
             class="<?php echo ($current_page == 'setting.php') ? 'home-active' : ''; ?>">
             <div class="nav-item">
                 <i class="fa-solid fa-gear"></i>
