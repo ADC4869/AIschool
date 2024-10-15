@@ -127,9 +127,74 @@
     </main>
 </body>
 <script src="../js/back.js"></script>
+<<<<<<< HEAD
 <script src="../node_modules/feather-icons/dist/feather.js"></script>
 <script src="../node_modules/feather-icons/dist/feather.min.js"></script>
 <script>
     feather.replace();
 </script>
+=======
+<<<<<<< HEAD
+<script>
+// Get the modal element
+var modal = document.getElementById("studentModal");
+
+// Get the close button element
+var closeButton = document.getElementsByClassName("close")[0];
+
+// Get all student items
+var studentItems = document.querySelectorAll(".student-item");
+
+// Add click event listener to each student item to open the modal
+studentItems.forEach(function(item) {
+    item.addEventListener("click", function() {
+        // Get the relevant student information from the clicked item
+        var studentName = this.querySelector(".name").innerText;
+        var studentStatus = this.querySelector(".status").innerText;
+
+        // Update modal content with student information
+        var modalHeader = modal.querySelector(".modal-header p:first-child");
+        var modalSubHeader = modal.querySelector(".modal-header p:last-child");
+        
+        modalHeader.innerText = studentName;
+        modalSubHeader.innerText = studentStatus; // Adjust this for student ID if needed
+        
+        // Show the modal
+        modal.style.display = "block";
+    });
+});
+
+// Close modal when the close button is clicked
+closeButton.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Prevent closing modal when clicking outside the modal content
+modal.addEventListener("click", function(event) {
+    // Prevent the modal from closing if the click is inside the modal content
+    if (event.target === modal) {
+        event.stopPropagation();
+    }
+});
+
+// Add functionality to call and message buttons
+document.querySelectorAll('.call').forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Simulate a phone call by opening the dialer (replace with real phone number)
+        alert("Calling the teacher or parent...");
+        // You can use `window.location.href = "tel:+84912345678";` for mobile functionality
+    });
+});
+
+document.querySelectorAll('.message').forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Simulate sending a message (replace with real message app functionality)
+        alert("Sending a message...");
+        // You can use `window.location.href = "sms:+84912345678";` for mobile functionality
+    });
+});
+</script>
+=======
+>>>>>>> d51a200a19981f61a5ae537b6699deb7e5fc9b05
+>>>>>>> 981b3796148bb48e90f6b924957980be77bab624
 </html>

@@ -22,44 +22,46 @@
             <div class="main__content">
                 <img src="../img/intro4.jpg" alt="anh dang nhap">
                 <p class="title">Chào mừng đến AISchool</p>
-                <div class="main__input">
-                    <div class="main__input1">
-                        <label for="">Họ và tên</label>
-                        <input type="text" placeholder="Họ và tên">
-                        <label for="">CCCD / Định danh</label>
-                        <input type="text" placeholder="CCCD / Định danh">
-                        <label for="">Ngày sinh</label>
-                        <input type="date" placeholder="Ngày sinh">
-                    </div>
-                    <div class="main__input2">
-                        <div class="main_label">
-                            <label for="">Giới tính</label>
-                            <label for="">Quốc tịch</label>
-                        </div>
-                        <input type="text" placeholder="Giới tính">
-                        <input type="text" placeholder="Quốc tịch">
-                        <div class="main_label">
-                            <label for="">Dân tộc</label>
-                            <label for="">Tôn giáo</label>
-                        </div>
-                        <input type="text" placeholder="Dân tộc">
-                        <input type="text" placeholder="Tôn giáo">
-                    </div>
-                    <div class="main__input1">
-                        <label for="">Địa chỉ</label>
-                        <input type="text" placeholder="Địa chỉ">
-                        <label for="">Số điện thoại</label>
-                        <input type="text" placeholder="Số điện thoại">
-                        <label for="">Mã phụ huynh</label>
-                        <input type="text" placeholder="Mã phụ huynh">
-                    </div>
-                </div>
 
-                <div class="main__button">
-                    <a href="../forgot/loginpassword.php?role=phuhuynh">
-                        <button type="button" class="btn__signin">Tiếp theo</button>
-                    </a>
-                </div>
+                <!-- Thêm method POST và action trỏ đến file xử lý đăng ký -->
+                <form method="POST" action="register_ph.php">
+                    <div class="main__input">
+                        <div class="main__input1">
+                            <label for="">Họ và tên</label>
+                            <input type="text" name="fullname" placeholder="Họ và tên" required>
+                            <label for="">CCCD / Định danh</label>
+                            <input type="text" name="cccd" placeholder="CCCD / Định danh" required>
+                            <label for="">Ngày sinh</label>
+                            <input type="date" name="dob" placeholder="Ngày sinh" required>
+                        </div>
+                        <div class="main__input2">
+                            <div class="main_label">
+                                <label for="">Giới tính</label>
+                                <label for="">Quốc tịch</label>
+                            </div>
+                            <input type="text" name="gender" placeholder="Giới tính" required>
+                            <input type="text" name="nationality" placeholder="Quốc tịch" required>
+                            <div class="main_label">
+                                <label for="">Dân tộc</label>
+                                <label for="">Tôn giáo</label>
+                            </div>
+                            <input type="text" name="ethnic" placeholder="Dân tộc" required>
+                            <input type="text" name="religion" placeholder="Tôn giáo" required>
+                        </div>
+                        <div class="main__input1">
+                            <label for="">Địa chỉ</label>
+                            <input type="text" name="address" placeholder="Địa chỉ" required>
+                            <label for="">Số điện thoại</label>
+                            <input type="text" name="phone" placeholder="Số điện thoại" required>
+                            <label for="">Mã phụ huynh</label>
+                            <input type="text" name="parent_code" placeholder="Mã phụ huynh" required>
+                        </div>
+                    </div>
+
+                    <div class="main__button">
+                        <button type="submit" class="btn__signin">Tiếp theo</button>
+                    </div>
+                </form>
             </div>
         </main>
     </div>

@@ -100,7 +100,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                 </a>
             <?php endif; ?>
 
-            <!-- Phụ huynh -->
+            <!-- Phân quyền cho phụ huynh -->
             <?php if ($user_role == 'phuhuynh'): ?>
                 <a href="./timetable/index.php?role=phuhuynh" class="button">
                     <div class="circle circle__timetable">
@@ -140,7 +140,11 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     <div class="circle circle__infoclass">
                         <i class="fa-solid fa-medal" style="color: #FFD43B;"></i> 
                     </div>
+<<<<<<< HEAD
                     Sự kiện và lịch họp
+=======
+                    Hoạt động ngoại khóa
+>>>>>>> 981b3796148bb48e90f6b924957980be77bab624
                 </a>
             <?php endif; ?>
 
