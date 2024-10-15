@@ -38,48 +38,54 @@
         ?>
     <!-- MAIN -->
     <main>
-        <!-- LỊCH -->
-         <div class="main__calendar">
-            <input type="date" id="date__present" class="calendar">
-        </div>
-        <!-- TỔNG QUAN -->
-         <div class="main__tongquan">
-            <div class="tongquan__content">
-                <div class="title__tongquan">
-                    <p>Lớp chủ nhiệm</p>
-                </div>
-                <div class="top__tonquan">
-                    <div class="circle__tongso" onclick="toggleTongSo()">
-                        <div class="title">
-                            <p class="title__tongso">Sỉ số</p>
-                            <p class="title__tongso">40</p>
-                        </div>
-                    </div>
-
+        <?php
+            if ($_GET['role'] == 'giaovien') {
+            ?>
+                <!-- LỊCH -->
+                <div class="main__calendar">
+                    <input type="date" id="date__present" class="calendar">
                 </div>
 
-                <div class="bottom__tongquan">
-                    <div class="circle__hiendien">
-                        <div class="title">
-                            <p class="title__hiendien" onclick="toggleHienDien()">Hiện diện</p>
-                            <p class="title__hiendien">36</p>
+                <!-- TỔNG QUAN -->
+                <div class="main__tongquan">
+                    <div class="tongquan__content">
+                        <div class="title__tongquan">
+                            <p>Lớp chủ nhiệm</p>
                         </div>
-                    </div>
-                    <div class="circle__vang" onclick="toggleVang()">
-                        <div class="title">
-                            <p class="title__vang">Vắng</p>
-                            <p class="title__vang">4</p>
+                        <div class="top__tonquan">
+                            <div class="circle__tongso" onclick="toggleTongSo()">
+                                <div class="title">
+                                    <p class="title__tongso">Sỉ số</p>
+                                    <p class="title__tongso">40</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="circle__tre" onclick="toggleTre()">
-                        <div class="title">
-                            <p class="title__tre">Trễ</p>
-                            <p class="title__tre">2</p>
+
+                        <div class="bottom__tongquan">
+                            <div class="circle__hiendien">
+                                <div class="title">
+                                    <p class="title__hiendien" onclick="toggleHienDien()">Hiện diện</p>
+                                    <p class="title__hiendien">36</p>
+                                </div>
+                            </div>
+                            <div class="circle__vang" onclick="toggleVang()">
+                                <div class="title">
+                                    <p class="title__vang">Vắng</p>
+                                    <p class="title__vang">4</p>
+                                </div>
+                            </div>
+                            <div class="circle__tre" onclick="toggleTre()">
+                                <div class="title">
+                                    <p class="title__tre">Trễ</p>
+                                    <p class="title__tre">2</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div> 
+            <?php
+            }
+        ?> 
         <!-- KHỐI -->
         <?php
         // Kiểm tra xem có giá trị 'role' được truyền qua URL không
