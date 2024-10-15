@@ -1,36 +1,3 @@
-<?php
-session_start();
-include '../database/db_config.php';
-
-$teacher_id = $_SESSION['user_id'];
-
-$grades = ['6', '7', '8', '9'];
-$classData = [];
-
-foreach ($grades as $grade) {
-    $stmt = $conn->prepare("SELECT c.id, c.class_name, u.fullname AS homeroom_teacher 
-                             FROM classes c 
-                             LEFT JOIN teachers t ON c.homeroom_teacher_id = t.id 
-                             LEFT JOIN users u ON t.user_id = u.id 
-                             WHERE c.grade = ?");
-    
-    if (!$stmt) {
-        die("Prepare failed: " . $conn->error);
-    }
-    
-    $stmt->bind_param("i", $grade);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    while ($row = $result->fetch_assoc()) {
-        $classData[$grade][] = $row;
-    }
-    $stmt->close();
-}
-
-$conn->close();
-?>
-
 <!-- Giáo viên -->
 <div class="container">
     
@@ -62,31 +29,105 @@ $conn->close();
         </div>
     </div>
 
-    <!-- Hiển thị khối -->
+    <!-- Khối -->
     <div class="grade-buttons">
-        <?php foreach ($grades as $grade): ?>
-            <div class="grade-button" onclick="showClasses('grade<?php echo $grade; ?>')">Khối <?php echo $grade; ?></div>
-        <?php endforeach; ?>
+        <div class="grade-button" onclick="showClasses('grade6')">Khối 6</div>
+        <div class="grade-button" onclick="showClasses('grade7')">Khối 7</div>
+        <div class="grade-button" onclick="showClasses('grade8')">Khối 8</div>
+        <div class="grade-button" onclick="showClasses('grade9')">Khối 9</div>
     </div>
 
-<!-- Hiển thị danh sách lớp cho mỗi khối -->
-<?php foreach ($grades as $grade): ?>
-    <div id="grade<?php echo $grade; ?>" class="class-list" style="display:none;">
-        <?php if (isset($classData[$grade])): ?>
-            <?php foreach ($classData[$grade] as $class): ?>
-                <div class="class-item">
-                    <div class="class-info">
-                        <p><strong><?php echo htmlspecialchars($class['class_name']); ?></strong></p>
-                        <p>GVCN: <?php echo htmlspecialchars($class['homeroom_teacher'] ?? 'Chưa có'); ?></p>
-                    </div>
-                    <button class="details-button" onclick="togglePopup(this, '<?php echo $class['id']; ?>')">Chọn tác vụ</button>
-                </div>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <p>Không có lớp nào trong khối <?php echo $grade; ?>.</p>
-        <?php endif; ?>
+<!-- Hiển thị danh sách lớp -->
+<div id="grade6" class="class-list" style="display:none;">
+        <div class="class-item">
+            <div class="class-info">
+                <p><strong>Lớp 6A1</strong></p>
+                <p>GVCN: Nguyễn Thị Ánh Xuân</p>
+            </div>
+            <button class="details-button" onclick="togglePopup(this)">Chọn tác vụ</button>
+        </div>
+
+        <div class="class-item">
+            <div class="class-info">
+                <p><strong>Lớp 6A2</strong></p>
+                <p>GVCN: Trần Nguyên Khôi</p>
+            </div>
+            <button class="details-button" onclick="togglePopup(this)">Chọn tác vụ</button>
+        </div>
+
+        <div class="class-item">
+            <div class="class-info">
+                <p><strong>Lớp 6A3</strong></p>
+                <p>GVCN: Chu Văn An</p>
+            </div>
+            <button class="details-button" onclick="togglePopup(this)">Chọn tác vụ</button>
+        </div>
     </div>
-<?php endforeach; ?>
+
+    <!-- Lớp cho Khối 7 -->
+    <div id="grade7" class="class-list" style="display:none;">
+        <div class="class-item">
+            <div class="class-info">
+                <p><strong>Lớp 7A1</strong></p>
+                <p>GVCN: Lê Thị Lan</p>
+            </div>
+            <button class="details-button" onclick="togglePopup(this)">Chọn tác vụ</button>
+        </div>
+
+        <div class="class-item">
+            <div class="class-info">
+                <p><strong>Lớp 7A2</strong></p>
+                <p>GVCN: Nguyễn Văn Nam</p>
+            </div>
+            <button class="details-button" onclick="togglePopup(this)">Chọn tác vụ</button>
+        </div>
+    </div>
+
+    <!-- Lớp cho Khối 8 -->
+    <div id="grade8" class="class-list" style="display:none;">
+        <div class="class-item">
+            <div class="class-info">
+                <p><strong>Lớp 8A1</strong></p>
+                <p>GVCN: Lê Thị Lan</p>
+            </div>
+            <button class="details-button" onclick="togglePopup(this)">Chọn tác vụ</button>
+        </div>
+
+        <div class="class-item">
+            <div class="class-info">
+                <p><strong>Lớp 8A2</strong></p>
+                <p>GVCN: Nguyễn Văn Nam</p>
+            </div>
+            <button class="details-button" onclick="togglePopup(this)">Chọn tác vụ</button>
+        </div>
+
+        <div class="class-item">
+            <div class="class-info">
+                <p><strong>Lớp 8A3</strong></p>
+                <p>GVCN: Chu Văn An</p>
+            </div>
+            <button class="details-button" onclick="togglePopup(this)">Chọn tác vụ</button>
+        </div>
+    </div>
+
+    <!-- Lớp cho Khối 9 -->
+    <div id="grade9" class="class-list" style="display:none;">
+        <div class="class-item">
+            <div class="class-info">
+                <p><strong>Lớp 9A1</strong></p>
+                <p>GVCN: Lê Thị Lan</p>
+            </div>
+<button class="details-button" onclick="togglePopup(this)">Chọn tác vụ</button>
+        </div>
+
+        <div class="class-item">
+            <div class="class-info">
+                <p><strong>Lớp 9A2</strong></p>
+                <p>GVCN: Nguyễn Văn Nam</p>
+            </div>
+            <button class="details-button" onclick="togglePopup(this)">Chọn tác vụ</button>
+        </div>
+    </div>
 
 <div id="popup" class="popup">
         <div class="popup-content">
