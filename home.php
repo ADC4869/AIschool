@@ -10,21 +10,21 @@ if (isset($_GET['role'])) {
 include './database/theme_loader.php';
 
 // Kiểm tra xem người dùng đã đăng nhập chưa
-if (!isset($_SESSION['role'])) {
-    // Nếu chưa đăng nhập, chuyển hướng tới trang đăng nhập
-    header("Location: ../login/login.php");
-    exit;  // Dừng thực thi script sau khi chuyển hướng
-}
+// if (!isset($_SESSION['role'])) {
+//     // Nếu chưa đăng nhập, chuyển hướng tới trang đăng nhập
+//     header("Location: ../login/login.php");
+//     exit;  // Dừng thực thi script sau khi chuyển hướng
+// }
 
-// Giả sử bạn đã kết nối với cơ sở dữ liệu và xác thực người dùng ở đây
-$fullname = isset($_SESSION['fullname']) ? $_SESSION['fullname'] : 'Người dùng';
-$user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'guest';
-$teacher_code = isset($_SESSION['teacher_code']) ? $_SESSION['teacher_code'] : 'mã số';
-$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID từ session
+// // Giả sử bạn đã kết nối với cơ sở dữ liệu và xác thực người dùng ở đây
+// $fullname = isset($_SESSION['fullname']) ? $_SESSION['fullname'] : 'Người dùng';
+// $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'guest';
+// $teacher_code = isset($_SESSION['teacher_code']) ? $_SESSION['teacher_code'] : 'mã số';
+// $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID từ session
 
-// Kiểm tra và lấy teacher_id từ URL
-$teacher_id = isset($_GET['teacher_id']) ? $_GET['teacher_id'] : $user_id; // Sử dụng user_id nếu không có teacher_id
-$student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
+// // Kiểm tra và lấy teacher_id từ URL
+// $teacher_id = isset($_GET['teacher_id']) ? $_GET['teacher_id'] : $user_id; // Sử dụng user_id nếu không có teacher_id
+// $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +49,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 <body style="height: 145vh;">
     <header>
         <div class="header">
-            <h1><span>Xin chào,</span><br><?php echo htmlspecialchars($fullname); ?></h1>
+            <h1><span>Xin chào,</span><br>Từ Văn Tú</h1>
             <img src="./img/hs1.jpg" alt="Avatar">
         </div>
     </header>
@@ -181,7 +181,7 @@ $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
                     Lịch họp
                 </a>
 
-                <a href="./thongtingiaovienhocsinh/index.php?role=giaovien&teacher_id=<?php echo htmlspecialchars($teacher_id); ?>"
+                <a href="./thongtingiaovienhocsinh/index.php?role=giaovien"
                     class="button">
                     <div class="circle circle__infoclass">
                         <i class="fa-solid fa-users" style="color: #ffffff;"></i>

@@ -1,63 +1,4 @@
-<?php
-include '../database/db_config.php'; // Kết nối đến cơ sở dữ liệu
 
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'giaovien') {
-    header("Location: ../login/login.php");
-    exit; // Dừng thực thi nếu không phải là giáo viên
-}
-
-// Lấy teacher_id từ URL
-$teacher_id = isset($_GET['teacher_id']) ? $_GET['teacher_id'] : null;
-
-if ($teacher_id) {
-    // Bước 1: Lấy thông tin lớp chủ nhiệm của giáo viên
-    $query_class = "SELECT classes.id AS class_id, classes.class_name 
-                    FROM classes 
-                    JOIN teachers ON classes.homeroom_teacher_id = teachers.id 
-                    WHERE teachers.id = ?";
-    $stmt = $conn->prepare($query_class);
-
-    if (!$stmt) {
-        die("Lỗi trong câu lệnh chuẩn bị: " . $conn->error);
-    }
-
-    $stmt->bind_param("i", $teacher_id);
-    $stmt->execute();
-    $result_class = $stmt->get_result();
-
-    if ($result_class->num_rows > 0) {
-        $class_info = $result_class->fetch_assoc();
-        $class_id = $class_info['class_id'];
-        $class_name = $class_info['class_name'];
-
-        // Bước 2: Lấy thông tin học sinh trong lớp đó
-        $query_students = "SELECT u.id AS student_id, u.fullname, u.dob, u.address, u.phone 
-                           FROM students AS s 
-                           JOIN users AS u ON s.id = u.id 
-                           WHERE s.class_id = ?";
-        $stmt_students = $conn->prepare($query_students);
-
-        if (!$stmt_students) {
-            die("Lỗi trong câu lệnh chuẩn bị: " . $conn->error);
-        }
-
-        $stmt_students->bind_param("i", $class_id);
-        $stmt_students->execute();
-        $result_students = $stmt_students->get_result();
-
-        $students = [];
-        while ($student = $result_students->fetch_assoc()) {
-            // Thêm thông tin học sinh vào mảng
-            $students[] = $student;
-        }
-        $stmt_students->close(); // Đóng statement học sinh
-    } else {
-        $class_info = null;
-    }
-} else {
-    $class_info = null;
-}
-?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -130,46 +71,12 @@ if ($teacher_id) {
             </div>
 
             <!-- Danh sách lớp -->
-            <?php if ($class_info): ?>
-                <h2>Danh sách học sinh lớp <?php echo htmlspecialchars($class_info['class_name']); ?></h2>
-                <div class="student-list">
-                    <?php foreach ($students as $student): ?>
-                        <div class="student-card">
-                            <div class="student-left">
-                                <a href="./lylichhocsinh.php?student_id=<?php echo urlencode($student['student_id']); ?>">
-                                    <img src="../img/hs1.jpg" alt="Học sinh 1">
-                                </a>
-                                <div class="icons">
-                                    <a href="../call/index.php">
-                                        <i data-feather="phone" style="color: #5B6998"></i>
-                                    </a>
-                                    <a href="../chat/chathocsinh.php">
-                                        <i data-feather="message-square" style="color: #5B6998"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="student-info">
-                                <h4>Họ tên: <?php echo htmlspecialchars($student['fullname']); ?></h4>
-                                <p>Ngày sinh: <?php echo htmlspecialchars($student['dob']); ?></p>
-                                <p>Địa chỉ: <?php echo htmlspecialchars($student['address']); ?></p>
-                                <p>SĐT liên lạc: <?php echo htmlspecialchars($student['phone']); ?></p>
-                                <p>Phụ huynh: </p>
-                            </div>
-                            <div class="icon">
-                                <i data-feather="edit-3" style="color: #5B6998" onclick="openModal()"></i>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-
-
-                <?php else: ?>
-                    <p>Giáo viên này không phụ trách lớp nào.</p>
-                <?php endif; ?>
+            
 
 
 
 
-                <!-- <div id="class-list">
+                <div id="class-list">
                 <h2>Danh sách lớp 9A1</h2>
                 <div class="student-list">
                     
@@ -242,7 +149,7 @@ if ($teacher_id) {
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
                 <!-- Học lực -->
                 <div id="xuat-sac" class="hidden-content">

@@ -1,120 +1,4 @@
-<?php
-include '../database/db_config.php';
-session_start();
 
-if (!isset($_SESSION['role'])) {
-    header("Location: ../login/login.php");
-    exit;
-}
-
-$fullname = isset($_SESSION['fullname']) ? $_SESSION['fullname'] : 'Người dùng';
-$user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'guest';
-
-// Khởi tạo biến chung
-$code = 'Chưa có mã';
-$class_name = 'Chưa có lớp';
-$student_name = 'Chưa có học sinh';
-$parent_code = 'Chưa có mã phụ huynh';
-
-// Truy vấn thông tin cá nhân chung
-$query = "SELECT cccd, religion, ethnic, nationality, phone, address, dob, gender FROM users WHERE fullname = ?";
-$stmt1 = $conn->prepare($query);
-$stmt1->bind_param("s", $fullname);
-$stmt1->execute();
-$result = $stmt1->get_result();
-
-if ($row = $result->fetch_assoc()) {
-    $cccd = htmlspecialchars($row['cccd']);
-    $religion = htmlspecialchars($row['religion']);
-    $ethnic = htmlspecialchars($row['ethnic']);
-    $nationality = htmlspecialchars($row['nationality']);
-    $phone = htmlspecialchars($row['phone']);
-    $address = htmlspecialchars($row['address']);
-    $dob = htmlspecialchars($row['dob']);
-    $gender = htmlspecialchars($row['gender']);
-}
-
-$stmt1->close();
-
-// Lấy thông tin chi tiết theo vai trò của người dùng
-if ($user_role === 'giaovien') {
-    // Truy vấn mã giáo viên, lớp chủ nhiệm và các môn dạy
-    $query = "SELECT teachers.teacher_code, classes.class_name, GROUP_CONCAT(subjects.subject_name SEPARATOR ', ') AS subject_names
-              FROM teachers
-              LEFT JOIN classes ON teachers.class_supervised_id = classes.id
-              LEFT JOIN teacher_subjects ON teachers.id = teacher_subjects.teacher_id
-              LEFT JOIN subjects ON teacher_subjects.subject_id = subjects.id
-              WHERE teachers.id = (SELECT id FROM users WHERE fullname = ?)";
-              
-    $stmt2 = $conn->prepare($query);
-    $stmt2->bind_param("s", $fullname);
-    $stmt2->execute();
-    $result = $stmt2->get_result();
-
-    if ($row = $result->fetch_assoc()) {
-        $code = htmlspecialchars($row['teacher_code']);
-        $class_name = htmlspecialchars($row['class_name']);
-        $subject_name = htmlspecialchars($row['subject_names']);
-    }
-
-    $stmt2->close();
-} elseif ($user_role === 'hocsinh') {
-    // Truy vấn mã học sinh và lớp học
-    $query = "SELECT students.student_code, classes.class_name
-              FROM students
-              LEFT JOIN classes ON students.class_id = classes.id
-              WHERE students.id = (SELECT id FROM users WHERE fullname = ? limit 1)";
-              
-    $stmt3 = $conn->prepare($query);
-    $stmt3->bind_param("s", $fullname);
-    $stmt3->execute();
-    $result = $stmt3->get_result();
-
-    if ($row = $result->fetch_assoc()) {
-        $code = htmlspecialchars($row['student_code']);
-        $class_name = htmlspecialchars($row['class_name']);
-    }
-
-    $stmt3->close();
-} elseif ($user_role === 'phuhuynh') {
-    // Truy vấn mã phụ huynh
-    $query = "SELECT parents.parent_code
-              FROM parents
-              LEFT JOIN users ON parents.id = users.id
-              WHERE users.fullname = ? LIMIT 1";
-              
-    $stmt4 = $conn->prepare($query);
-    $stmt4->bind_param("s", $fullname);
-    $stmt4->execute();
-    $result = $stmt4->get_result();
-    
-    if ($row = $result->fetch_assoc()) {
-        $code = htmlspecialchars($row['parent_code']);
-    }
-    $stmt4->close();
-
-    // Truy vấn thông tin học sinh và lớp học dựa trên `parent_id`
-    $query = "SELECT students.student_code, students.class_id, classes.class_name, users.fullname AS student_name
-              FROM students
-              LEFT JOIN parent_student ON students.id = parent_student.student_id
-              LEFT JOIN classes ON students.class_id = classes.id
-              LEFT JOIN users ON students.id = users.id
-              WHERE parent_student.parent_id = (SELECT id FROM parents WHERE parent_code = ? LIMIT 1)";
-              
-    $stmt5 = $conn->prepare($query);
-    $stmt5->bind_param("s", $code);
-    $stmt5->execute();
-    $result = $stmt5->get_result();
-
-    if ($row = $result->fetch_assoc()) {
-        $student_name = htmlspecialchars($row['student_name']);
-        $class_name = htmlspecialchars($row['class_name']);
-    }
-    $stmt5->close();
-}
-
-$conn->close();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -151,8 +35,8 @@ $conn->close();
             <div class="teacher-info">
                 <img src="../img/hs1.jpg" alt="Teacher Photo" class="teacher-photo">
                 <div class="teacher-details">
-                    <p><?php echo htmlspecialchars($fullname); ?></p>
-                    <p><?php echo htmlspecialchars($code); ?></p>
+                    <p>Từ Văn Tú</p>
+                    <p>HS001</p>
                 </div>
             </div>
         </div>
@@ -189,13 +73,13 @@ $conn->close();
                             <div>
                                 <p class="small__title">Phụ trách môn</p>
                                 <div class="info">
-                                    <p>' . htmlspecialchars($subject_name) . '</p>
+                                    <p>Văn</p>
                                 </div>
                             </div>
                             <div>
                                 <p class="small__title">Chủ nhiệm lớp</p>
                                 <div class="info">
-                                    <p>' . htmlspecialchars($class_name) . '</p>
+                                    <p>9A1</p>
                                 </div>
                             </div>
                         </div>';
@@ -205,13 +89,13 @@ $conn->close();
                             <div>
                                 <p class="small__title">Tên học sinh</p> 
                                 <div class="info">
-                                    <p>' . htmlspecialchars($student_name) . '</p> 
+                                    <p>Từ Văn Tú</p> 
                                 </div>
                             </div>
                             <div>
                                 <p class="small__title">Lớp</p>
                                 <div class="info">
-                                    <p>' . htmlspecialchars($class_name) . '</p> 
+                                    <p>9A1</p> 
                                 </div>
                             </div>
                         </div>';
@@ -220,7 +104,7 @@ $conn->close();
                     echo '<div>
                             <p class="small__title">Lớp</p>
                             <div class="info">
-                                <p>' . htmlspecialchars($class_name) . '</p>
+                                <p>9A1</p>
                                 <i data-feather="edit-2" style="color: #000000"></i>
                             </div>
                         </div>';
@@ -230,7 +114,7 @@ $conn->close();
             <div>
                 <p class="small__title">CCCD / Định danh</p>
                 <div class="info">
-                    <p><?php echo htmlspecialchars($cccd); ?></p>
+                    <p>079202099288</p>
                     <i data-feather="edit-2" style="color: #000000"></i>
                 </div>
             </div>
@@ -238,7 +122,7 @@ $conn->close();
             <div>
                 <p class="small__title">Ngày sinh</p>
                 <div class="info">
-                    <p><?php echo htmlspecialchars($dob); ?></p>
+                    <p>2007-11-12</p>
                     <i data-feather="edit-2" style="color: #000000"></i>
                 </div>
             </div>
@@ -247,14 +131,14 @@ $conn->close();
                 <div>
                     <p class="small__title">Giới tính</p>
                     <div class="info">
-                        <p><?php echo htmlspecialchars($gender); ?></p>
+                        <p>Nam</p>
                         <i data-feather="edit-2" style="color: #000000"></i>
                     </div>
                 </div>
                 <div>
                     <p class="small__title">Tôn giáo </p>
                     <div class="info">
-                        <p><?php echo htmlspecialchars($religion); ?></p>
+                        <p>Không</p>
                         <i data-feather="edit-2" style="color: #000000"></i>
                     </div>
                 </div>
@@ -264,14 +148,14 @@ $conn->close();
                 <div>
                     <p class="small__title">Quốc tịch</p>
                     <div class="info">
-                        <p><?php echo htmlspecialchars($nationality); ?></p>
+                        <p>Việt Nam</p>
                         <i data-feather="edit-2" style="color: #000000"></i>
                     </div>
                 </div>
                 <div>
                     <p class="small__title">Dân tộc</p>
                     <div class="info">
-                        <p><?php echo htmlspecialchars($ethnic); ?></p>
+                        <p>Kinh</p>
                         <i data-feather="edit-2" style="color: #000000"></i>
                     </div>
                 </div>
@@ -280,7 +164,7 @@ $conn->close();
             <div>
                 <p class="small__title">Số điện thoại</p>
                 <div class="info">
-                    <p><?php echo htmlspecialchars($phone); ?></p>
+                    <p>0907889677</p>
                     <i data-feather="edit-2" style="color: #000000"></i>
                 </div>
             </div>
@@ -296,7 +180,7 @@ $conn->close();
             <div>
                 <p class="small__title">Địa chỉ</p>
                 <div class="info__address">
-                    <p><?php echo htmlspecialchars($address); ?></p>
+                    <p>123/23 HCM</p>
                     <i data-feather="edit-2" style="color: #000000"></i>
                 </div>
             </div>

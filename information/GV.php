@@ -1,39 +1,4 @@
-<?php
-session_start();
-include '../database/db_config.php';
 
-// Lấy ID lớp từ query string
-$class_id = isset($_GET['class_id']) ? intval($_GET['class_id']) : 0;
-
-if ($class_id > 0) {
-    // Truy vấn để lấy thông tin giáo viên dạy lớp và giáo viên chủ nhiệm
-    $query = "SELECT t.id AS teacher_id, u.fullname AS teacher_name, s.subject_name, u.phone, u.address,
-              CASE 
-              WHEN c.homeroom_teacher_id = t.id THEN 'GVCN'
-              ELSE ''
-              END AS note
-              FROM teacher_subjects ts
-              JOIN teachers t ON ts.teacher_id = t.id
-              JOIN users u ON t.user_id = u.id
-              JOIN subjects s ON ts.subject_id = s.id
-              JOIN classes c ON ts.class_id = c.id
-              WHERE ts.class_id = ? ";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("i", $class_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    // Xử lý dữ liệu trả về
-    $teachers = [];
-    while ($row = $result->fetch_assoc()) {
-        $teachers[] = $row;
-    }
-    $stmt->close();
-} else {
-    echo "Không tìm thấy lớp.";
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -77,29 +42,8 @@ if ($class_id > 0) {
     <main>
         <!-- Giáo viên -->
         <div id="chatContent" class="tab-content active">
-        <?php if (!empty($teachers)): ?>
-            <?php foreach ($teachers as $teacher): ?>
-                <div class="card">
-                    <img src="../img/tg.jpg" alt="Image"> <!-- Placeholder image -->
-                    <div class="card-content">
-                        <h3>Họ Tên: <?php echo htmlspecialchars($teacher['teacher_name']); ?></h3>
-                        <p>Môn: <?php echo htmlspecialchars($teacher['subject_name']); ?></p>
-                        <p>Số điện thoại: <?php echo htmlspecialchars($teacher['phone']); ?></p>
-                        <p>Địa chỉ: <?php echo htmlspecialchars($teacher['address']); ?></p>
-                        <?php if ($teacher['note'] === 'GVCN'): ?>
-                            <p>Ghi chú: Giáo viên chủ nhiệm</p>
-                        <?php endif; ?>
-                    </div>
-                    <div class="icon">
-                        <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i data-feather="phone" style="color: #5B6998"></i></a>
-                        <a href="../chat/chat.php" style="font-size: 25px; color: var(--primary-color); position: relative; left: 30px;"><i data-feather="message-square" style="color: #5B6998"></i></a>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-            <?php else: ?>
-                <p>Không có giáo viên nào dạy lớp này.</p>
-        <?php endif; ?>
-            <!-- <div class="card">
+        
+            <div class="card">
                 <img src="../img/gvn.jpg" alt="Image">
                 <div class="card-content">
                     <h3>Họ Tên : Trần Thành Đạt</h3>
@@ -140,7 +84,7 @@ if ($class_id > 0) {
                     <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i class="fa-solid fa-phone"></i></a>
                     <a href="../chat/chat.php" style="font-size: 25px; color: var(--primary-color); position: relative; left: 30px;"><i class="fa-solid fa-message"></i></a>
                 </div>
-            </div> -->
+            </div>
         </div>
 
         <!-- Phụ huynh -->

@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="main">
-            <form id="loginForm" action="login_process.php" method="POST">
+            <!-- <form id="loginForm" action="login_process.php" method="POST"> -->
                 <div class="main__photo">
                     <img src="../img/intro4.jpg" alt="Anh login" class="img__login">
                 </div>
@@ -29,7 +29,9 @@
                 </div>
 
                 <div class="main__button">
+                    <a href="../home.php">
                         <button type="submit" class="btn__button1" onclick="login()">Đăng nhập</button>
+                    </a>
                     <div class="main__buttontitle">
                         <p>Hoặc</p>
                     </div>
@@ -40,7 +42,7 @@
                         </a>
                     </div>
                 </div>
-            </form>
+            <!-- </form> -->
         </div>
     </div>
 </body>
