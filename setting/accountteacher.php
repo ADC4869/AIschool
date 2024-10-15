@@ -135,7 +135,10 @@ $conn->close();
             } elseif ($role === 'hieutruong') {
                 $accountInfo = 'Tài khoản : Hiệu trưởng';
                 $msLabel = 'MSHT';
-            } else {
+            } elseif ($role === 'phuhuynh') {
+                $accountInfo = 'Tài khoản : Phụ Huynh';
+                $msLabel = 'MSHT';
+            }else {
                 $accountInfo = 'Tài khoản : Học sinh';
                 $msLabel = 'MSHS';
             }
