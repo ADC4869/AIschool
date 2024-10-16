@@ -8,23 +8,6 @@ if (isset($_GET['role'])) {
 
 <?php
 include './database/theme_loader.php';
-
-// Kiểm tra xem người dùng đã đăng nhập chưa
-// if (!isset($_SESSION['role'])) {
-//     // Nếu chưa đăng nhập, chuyển hướng tới trang đăng nhập
-//     header("Location: ../login/login.php");
-//     exit;  // Dừng thực thi script sau khi chuyển hướng
-// }
-
-// // Giả sử bạn đã kết nối với cơ sở dữ liệu và xác thực người dùng ở đây
-// $fullname = isset($_SESSION['fullname']) ? $_SESSION['fullname'] : 'Người dùng';
-// $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'guest';
-// $teacher_code = isset($_SESSION['teacher_code']) ? $_SESSION['teacher_code'] : 'mã số';
-// $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;  // Lấy ID từ session
-
-// // Kiểm tra và lấy teacher_id từ URL
-// $teacher_id = isset($_GET['teacher_id']) ? $_GET['teacher_id'] : $user_id; // Sử dụng user_id nếu không có teacher_id
-// $student_id = isset($_GET['student_id']) ? $_GET['student_id'] : $user_id;
 ?>
 <!DOCTYPE html>
 <html lang="en">
