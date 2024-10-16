@@ -21,7 +21,7 @@
                 <img src="../img/intro4.jpg" alt="anh dang nhap">
                 <p class="title">Chào mừng đến SchoolAI App</p>
                 <!-- Thêm form để xử lý mật khẩu -->
-                <form method="POST" action="save_password.php?user_id=<?php echo $_GET['user_id']; ?>">
+                <form method="POST" action="../login/login.php">
                     <div class="main__input">
                         <input type="password" name="password" placeholder="Nhập mật khẩu" required>
                         <input type="password" name="confirm_password" placeholder="Nhập lại mật khẩu" required>

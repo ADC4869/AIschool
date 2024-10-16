@@ -24,7 +24,7 @@
                 <p class="title">Chào mừng đến AISchool</p>
 
                 <!-- Thêm method POST và action trỏ đến file xử lý đăng ký -->
-                <form method="POST" action="register_ph.php">
+                <form method="POST" action="../forgot/loginpassword.php">
                     <div class="main__input">
                         <div class="main__input1">
                             <label for="">Họ và tên</label>

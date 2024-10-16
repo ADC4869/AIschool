@@ -21,7 +21,7 @@
                 <img src="../img/intro4.jpg" alt="anh dang nhap">
                 <p class="title">Chào mừng đến SchoolAI</p>
                 <!-- Thêm method POST và action trỏ đến file xử lý đăng ký -->
-                <form method="POST" action="register_gv.php">
+                <form method="POST" action="../forgot/loginpassword.php">
                     <div class="main__input">
                         <div class="main__input1">
                             <label for="">Họ và tên</label>
