@@ -1,13 +1,10 @@
 <?php
+include './database/theme_loader.php';
 if (isset($_GET['role'])) {
     $user_role = $_GET['role'];
 } else {
     $user_role = 'hocsinh';
 }
-?>
-
-<?php
-include './database/theme_loader.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
