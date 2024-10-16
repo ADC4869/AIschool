@@ -16,6 +16,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/ykien.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
@@ -103,7 +104,7 @@
 
     </main>
 
-
+    <?php include '../footer/footer.php' ?>
 
 
 </body>

@@ -42,9 +42,9 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
                     <span>Góp ý</span>
                 </div>
             </a>';
-        } else {
+        } elseif ($role == 'phuhuynh') {
             echo '
-            <a href="./parents/ykiendonggop.php" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
+            <a href="./parents/ykiendonggop.php' . ($role == 'phuhuynh' ? '?role=phuhuynh' : '') . '" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Góp ý</span>
