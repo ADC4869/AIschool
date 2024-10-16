@@ -171,15 +171,15 @@
 
             <div>
                 <p class="small__title">Email</p>
-                <div class="info">
+                <div class="info data-email">
                     <p>thanhdat300595@gmail.com</p>
                     <i data-feather="edit-2" style="color: #000000"></i>
                 </div>
             </div>
 
-            <div>
+            <div class="data-diachi">
                 <p class="small__title">Địa chỉ</p>
-                <div class="info__address">
+                <div class="info__address data-address">
                     <p>123/23 HCM</p>
                     <i data-feather="edit-2" style="color: #000000"></i>
                 </div>
