@@ -25,11 +25,11 @@
                     <div class="main__input">
                         <div class="main__input1">
                             <label for="">Họ và tên</label>
-                            <input type="text" name="fullname" placeholder="Họ và tên" required>
+                            <input class="input_hovaten" type="text" name="fullname" placeholder="Họ và tên" required>
                             <label for="">CCCD / Định danh</label>
-                            <input type="text" name="cccd" placeholder="CCCD / Định danh" required>
+                            <input class="input_cccd" type="text" name="cccd" placeholder="CCCD / Định danh" required>
                             <label for="">Ngày sinh</label>
-                            <input type="date" name="dob" placeholder="Ngày sinh" required>
+                            <input class="input_ngaysinh" type="date" name="dob" placeholder="Ngày sinh" required>
 
                         </div>
                         <div class="main__input2">
@@ -37,24 +37,24 @@
                                 <label for="">Giới tính</label>
                                 <label for="">Quốc tịch</label>
                             </div>
-                            <input type="text" name="gender" placeholder="Giới tính" required>
-                            <input type="text" name="nationality" placeholder="Quốc tịch" required>
+                            <input class="input_gioitinh" type="text" name="gender" placeholder="Giới tính" required>
+                            <input class="input_quoctich" type="text" name="nationality" placeholder="Quốc tịch" required>
                             <div class="main_label">
                                 <label for="">Dân tộc</label>
                                 <label for="">Tôn giáo</label>
                             </div>
-                            <input type="text" name="ethnic" placeholder="Dân tộc" required>
-                            <input type="text" name="religion" placeholder="Tôn giáo" required>
+                            <input class="input_dantoc" type="text" name="ethnic" placeholder="Dân tộc" required>
+                            <input class="input_tongiao" type="text" name="religion" placeholder="Tôn giáo" required>
                         </div>
                         <div class="main__input1">
                         <label for="">Địa chỉ</label>
-                            <input type="text" name="address" placeholder="Địa chỉ" required>
+                            <input class="input_diachi" type="text" name="address" placeholder="Địa chỉ" required>
                             <label for="">Số điện thoại</label>
-                            <input type="text" name="phone" placeholder="Số điện thoại" required>
+                            <input class="input_sodienthoai" type="text" name="phone" placeholder="Số điện thoại" required>
                             <label for="">Mã giáo viên</label>
-                            <input type="text" name="teacher_code" placeholder="Mã giáo viên" required>
+                            <input class="input_magiaovien" type="text" name="teacher_code" placeholder="Mã giáo viên" required>
                             <label for="">Lớp chủ nhiệm</label>
-                            <select name="class_supervised" required>
+                            <select clang="select_lophoc" name="class_supervised" required>
                                 <option value="0">Lớp chủ nhiệm</option>
                                 <option value="1">Lớp 9A1</option>
                                 <option value="2">Lớp 9A2</option>
@@ -67,7 +67,7 @@
                                 <option value="9">Lớp 8A4</option>
                             </select>
                             <label for="">Môn dạy</label>
-                            <select name="subjects" required>
+                            <select class="select_monhoc" name="subjects" required>
                                 <option value="">Môn dạy</option>
                                 <option value="Văn">Văn</option>
                                 <option value="Toán">Toán</option>

@@ -20,8 +20,8 @@
                 </div>
 
                 <div class="main__input">
-                    <input type="text" placeholder="Tên đăng nhập" id="username" name="username" class="input">
-                    <input type="text" placeholder="Mật khẩu" id="password" name="password" class="input">
+                    <input type="text" placeholder="Tên đăng nhập" id="username" name="username" class="input input_username">
+                    <input type="text" placeholder="Mật khẩu" id="password" name="password" class="input input_password">
                 </div>
 
                 <div class="main__fogotpassword">

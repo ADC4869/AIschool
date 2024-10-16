@@ -28,33 +28,33 @@
                     <div class="main__input">
                         <div class="main__input1">
                             <label for="">Họ và tên</label>
-                            <input type="text" name="fullname" placeholder="Họ và tên" required>
+                            <input class="input_hovaten" type="text" name="fullname" placeholder="Họ và tên" required>
                             <label for="">CCCD / Định danh</label>
-                            <input type="text" name="cccd" placeholder="CCCD / Định danh" required>
+                            <input class="input_cccd" type="text" name="cccd" placeholder="CCCD / Định danh" required>
                             <label for="">Ngày sinh</label>
-                            <input type="date" name="dob" placeholder="Ngày sinh" required>
+                            <input class="input_ngaysinh" type="date" name="dob" placeholder="Ngày sinh" required>
                         </div>
                         <div class="main__input2">
                             <div class="main_label">
                                 <label for="">Giới tính</label>
                                 <label for="">Quốc tịch</label>
                             </div>
-                            <input type="text" name="gender" placeholder="Giới tính" required>
-                            <input type="text" name="nationality" placeholder="Quốc tịch" required>
+                            <input class="input_gioitinh" type="text" name="gender" placeholder="Giới tính" required>
+                            <input class="input_quoctich" type="text" name="nationality" placeholder="Quốc tịch" required>
                             <div class="main_label">
                                 <label for="">Dân tộc</label>
                                 <label for="">Tôn giáo</label>
                             </div>
-                            <input type="text" name="ethnic" placeholder="Dân tộc" required>
-                            <input type="text" name="religion" placeholder="Tôn giáo" required>
+                            <input class="input_dantoc" type="text" name="ethnic" placeholder="Dân tộc" required>
+                            <input class="input_tongiao" type="text" name="religion" placeholder="Tôn giáo" required>
                         </div>
                         <div class="main__input1">
                             <label for="">Địa chỉ</label>
-                            <input type="text" name="address" placeholder="Địa chỉ" required>
+                            <input class="input_diachi" type="text" name="address" placeholder="Địa chỉ" required>
                             <label for="">Số điện thoại</label>
-                            <input type="text" name="phone" placeholder="Số điện thoại" required>
+                            <input class="input_sodienthoai" type="text" name="phone" placeholder="Số điện thoại" required>
                             <label for="">Mã phụ huynh</label>
-                            <input type="text" name="parent_code" placeholder="Mã phụ huynh" required>
+                            <input class="input_maphuhuynh" type="text" name="parent_code" placeholder="Mã phụ huynh" required>
                         </div>
                     </div>
 

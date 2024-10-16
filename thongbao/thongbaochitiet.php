@@ -32,15 +32,15 @@
 
     <main>
         <div class="main__info">
-            <p class="info">04/09/2024 - 18:35</p>
-            <p class="info"> <strong>Người gửi: </strong> Hiệu trưởng</p>
+            <p class="info data_thoigian">04/09/2024 - 18:35</p>
+            <p class="info data_hovatenhieutruong"> <strong>Người gửi: </strong> Hiệu trưởng</p>
         </div>
         <div class="main__text">
             <div class="notification">
             <div class="text__title">
-                <p>Thông tin học phí HK1 2023-2024</p>
+                <p class="data_tieudethongbao">Thông tin học phí HK1 2023-2024</p>
             </div>
-            <div class="text__content">
+            <div class="text__content data_noidungthongbao">
                 <p>Nhà Trường thông báo thời gian đóng học phí HK1 năm 2024-2025 như sau: <br>
                     I/ Thời gian đóng học phí: <br>
                     Thời gian đóng học phí đợt 1: Từ ngày hiện công nợ đến hết 16h30 ngày 31/07/2024 (Đối với trường hợp

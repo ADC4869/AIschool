@@ -32,10 +32,10 @@
             </div>
 
             <div class="content-section">
-                <img src="../img/avtteacher.png" alt="Nguyễn Thị Yến Loan">
+                <img class="data_anhdaidien" src="../img/avtteacher.png" alt="Nguyễn Thị Yến Loan">
                 <div class="info">
-                    <h3>Nguyễn Thị Yến Loan</h3>
-                    <p>20016741</p>
+                    <h3 class="data_hovatenhocsinh">Nguyễn Thị Yến Loan</h3>
+                    <p class="data_mahocsinh">20016741</p>
                 </div>
             </div>
         </div>
@@ -45,32 +45,32 @@
         <div class="container">
             <h2>Thông tin chung</h2>
             <div class="info-grid">
-                <div class="info-item">
+                <div class="info-item data_lophoc">
                     <span class="label">Lớp</span>
                     <span class="value">1A</span>
                 </div>
 
-                <div class="info-item">
+                <div class="info-item data_hovatengiaovien">
                     <span>GVCN</span>
                     <span>Lưu trên database</span>
                 </div>
 
-                <div class="info-item">
+                <div class="info-item data_ngaysinh">
                     <span>Ngày sinh</span>
                     <span>16/05/2024</span>
                 </div>
 
-                <div class="info-item">
+                <div class="info-item data_namhoc">
                     <span>Niên khóa</span>
                     <span>2024-2025</span>
                 </div>
 
-                <div class="info-item">
+                <div class="info-item data_diachi">
                     <span>Địa chỉ</span>
                     <span>TP.HCM</span>
                 </div>
                 
-                <div class="info-item">
+                <div class="info-item data_sodienthoai">
                     <span>Liên hệ</span>
                     <span>0963852411</span>
                 </div>

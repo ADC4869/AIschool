@@ -257,8 +257,8 @@ include './database/theme_loader.php';
                         </div>
 
                         <div class="info">
-                            <p class="news__title">Tuyển sinh lớp 10 năm học 2024-2025</p>
-                            <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                            <p class="news__title data_tieudetintuc">Tuyển sinh lớp 10 năm học 2024-2025</p>
+                            <p class="news__time data_thoigian"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
                         </div>
 
                     </a>
@@ -272,8 +272,8 @@ include './database/theme_loader.php';
                             </div>
 
                             <div class="info">
-                                <p class="news__title">Lịch thi giữa kì học kì I năm học 2024-2025</p>
-                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                                <p class="news__title data_tieudetintuc">Lịch thi giữa kì học kì I năm học 2024-2025</p>
+                                <p class="news__time data_thoigian"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
                             </div>
                         </a>
                     </div>
@@ -285,8 +285,8 @@ include './database/theme_loader.php';
                             </div>
 
                             <div class="info">
-                                <p class="news__title">Kết quả cuộc thi học sinh giỏi cấp trường năm 2024-2024</p>
-                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                                <p class="news__title data_tieudetintuc">Kết quả cuộc thi học sinh giỏi cấp trường năm 2024-2024</p>
+                                <p class="news__time data_thoigian"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
                             </div>
                         </a>
                     </div>
@@ -308,8 +308,8 @@ include './database/theme_loader.php';
                         </div>
 
                         <div class="info">
-                            <p class="news__title">Quản lý thời gian là gì? 9 Cách quản lý thời gian hiệu quả hơn</p>
-                            <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                            <p class="news__title data_tieudediendan">Quản lý thời gian là gì? 9 Cách quản lý thời gian hiệu quả hơn</p>
+                            <p class="news__time data_thoigian"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
                         </div>
 
                     </a>
@@ -323,8 +323,8 @@ include './database/theme_loader.php';
                             </div>
 
                             <div class="info">
-                                <p class="news__title">Kỹ năng mềm là gì? Cách rèn luyện và phát triển kỹ năng mềm</p>
-                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                                <p class="news__title data_tieudediendan">Kỹ năng mềm là gì? Cách rèn luyện và phát triển kỹ năng mềm</p>
+                                <p class="news__time data_thoigian"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
                             </div>
                         </a>
                     </div>
@@ -336,9 +336,9 @@ include './database/theme_loader.php';
                             </div>
 
                             <div class="info">
-                                <p class="news__title">11 cách tự học tiếng Anh giao tiếp nhanh chóng và hiệu quả nhất
+                                <p class="news__title data_tieudediendan">11 cách tự học tiếng Anh giao tiếp nhanh chóng và hiệu quả nhất
                                 </p>
-                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                                <p class="news__time data_thoigian"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
                             </div>
                         </a>
                     </div>
@@ -360,8 +360,8 @@ include './database/theme_loader.php';
                         </div>
 
                         <div class="info">
-                            <p class="news__title">Tham quan tìm hiểu lịch sử dân tộc Việt Nam</p>
-                            <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                            <p class="news__title data_tieudehoatdong">Tham quan tìm hiểu lịch sử dân tộc Việt Nam</p>
+                            <p class="news__time data_thoigian"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
                         </div>
 
                     </a>
@@ -375,8 +375,8 @@ include './database/theme_loader.php';
                             </div>
 
                             <div class="info">
-                                <p class="news__title">Chiến dịch lao động làm sạch và nâng cao ý thức bảo vệ m...</p>
-                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                                <p class="news__title data_tieudehoatdong">Chiến dịch lao động làm sạch và nâng cao ý thức bảo vệ m...</p>
+                                <p class="news__time data_thoigian"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
                             </div>
                         </a>
                     </div>
@@ -388,9 +388,9 @@ include './database/theme_loader.php';
                             </div>
 
                             <div class="info">
-                                <p class="news__title">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'
+                                <p class="news__title data_tieudehoatdong">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'
                                 </p>
-                                <p class="news__time"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
+                                <p class="news__time data_thoigian"><i class="fa-regular fa-clock"></i> 05/08/2024</p>
                             </div>
                         </a>
                     </div>

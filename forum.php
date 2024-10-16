@@ -37,30 +37,30 @@
             <div class="card">
                 <img src="./img/tg1.jpg" alt="anh dien dan">
                 <div class="card-content">
-                    <h3>Quản lý thời gian là gì? 9 Cách quản lý thời gian hiệu quả hơn</h3>
-                    <span>Quản lý thời gian giúp chúng ta làm việc thông minh hơn chứ không phải vất vả hơn để hoàn
+                    <h3 class="data_tieudediendan">Quản lý thời gian là gì? 9 Cách quản lý thời gian hiệu quả hơn</h3>
+                    <span class="data_noidungdiendan">Quản lý thời gian giúp chúng ta làm việc thông minh hơn chứ không phải vất vả hơn để hoàn
                         thành nhiều...</span>
-                    <p> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 05/08/2024</p>
+                    <p class="data_thoigian"> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 05/08/2024</p>
                 </div>
             </div>
 
             <div class="card">
                 <img src="./img/dd.jpg" alt="anh dien dan">
                 <div class="card-content">
-                    <h3>Kỹ năng mềm là gì? Cách rèn luyện và phát triển kỹ năng mềm</h3>
-                    <span>Bạn muốn bản thân mình trở nên tự tin hơn khi gặp gỡ những người xung quanh, hay cụ thể hơn là
+                    <h3 class="data_tieudediendan">Kỹ năng mềm là gì? Cách rèn luyện và phát triển kỹ năng mềm</h3>
+                    <span class="data_noidungdiendan">Bạn muốn bản thân mình trở nên tự tin hơn khi gặp gỡ những người xung quanh, hay cụ thể hơn là
                         rèn luyện...</span>
-                    <p> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 16/09/2024</p>
+                    <p class="data_thoigian"> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 16/09/2024</p>
                 </div>
             </div>
 
             <div class="card">
                 <img src="./img/en.jpg" alt="anh dien dan">
                 <div class="card-content">
-                    <h3>11 cách tự học tiếng Anh giao tiếp nhanh chóng và hiệu quả nhất</h3>
-                    <span>Để thành thạo ngôn ngữ khác, bạn cần phải dành nhiều thời gian luyện tập và trau dồi, tiếng
+                    <h3 class="data_tieudediendan">11 cách tự học tiếng Anh giao tiếp nhanh chóng và hiệu quả nhất</h3>
+                    <span class="data_noidungdiendan">Để thành thạo ngôn ngữ khác, bạn cần phải dành nhiều thời gian luyện tập và trau dồi, tiếng
                         Anh cũng không...</span>
-                    <p> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 16/09/2024</p>
+                    <p class="data_thoigian"> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 16/09/2024</p>
                 </div>
             </div>
 

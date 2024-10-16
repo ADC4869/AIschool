@@ -26,7 +26,7 @@
                         d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
                 </svg>
             </span>
-            <div class="title">Gợi ý</div>
+            <div class="title">Góp ý</div>
         </div>
     </header>
 
@@ -34,17 +34,17 @@
         <form method="post" enctype="multipart/form-data" id="feedbackForm">
             <div class="form-group">
                 <label for="title">Tiêu đề <span class="required">*</span></label>
-                <input type="text" id="title" name="title" required>
+                <input class="input_tieudegopy" type="text" id="title" name="title" required>
             </div>
 
             <div class="form-group">
                 <label for="content">Nội dung <span class="required">*</span></label>
-                <textarea id="content" name="content" rows="4" required></textarea>
+                <textarea class="input_noidunggopy" id="content" name="content" rows="4" required></textarea>
             </div>
 
             <div class="form-group">
                 <label for="file">Đính kèm tệp</label>
-                <input type="file" id="file" name="file" accept="image/*">
+                <input class="input_file" type="file" id="file" name="file" accept="image/*">
             </div>
 
             <div class="form-actions">

@@ -41,7 +41,7 @@
             </div>
 
             <div class="input">
-                <input type="text" placeholder="Nhập mật khẩu hiện tại">
+                <input class="input_matkhau" type="text" placeholder="Nhập mật khẩu hiện tại">
             </div>
 
             <div class="title">
@@ -49,7 +49,7 @@
             </div>
 
             <div class="input">
-                <input type="text" placeholder="Nhập mật khẩu mới">
+                <input class="input_matkhaumoi" type="text" placeholder="Nhập mật khẩu mới">
             </div>
 
             <div class="title">
@@ -57,7 +57,7 @@
             </div>
 
             <div class="input">
-                <input type="text" placeholder="Nhập mật khẩu mới">
+                <input class="input_matkhaumoi" type="text" placeholder="Nhập mật khẩu mới">
             </div>
 
             <div class="button">

@@ -43,8 +43,8 @@
                             <img src="../img/hs.jpg" alt="anh hoc sinh" class="img__student">
                         </div>
                         <div class="between__student">
-                            <p class="name__student">Nguyễn Thị Ánh Linh</p>
-                            <p class="mshs">Mã học sinh: <span>HS0901</span></p>
+                            <p class="name__student data_hovatenhocsinh">Nguyễn Thị Ánh Linh</p>
+                            <p class="mshs data_mahocsinh">Mã học sinh: <span>HS0901</span></p>
                         </div>
                         <div class="right__class">
                             <button type="button" class="btn__detail"><i data-feather="alert-circle"
@@ -59,8 +59,8 @@
                             <img src="../img/hs.jpg" alt="anh hoc sinh" class="img__student">
                         </div>
                         <div class="between__student">
-                            <p class="name__student">Nguyễn Kim Châu</p>
-                            <p class="mshs">Mã học sinh: <span>HS0902</span></p>
+                            <p class="name__student data_hovatenhocsinh">Nguyễn Kim Châu</p>
+                            <p class="mshs data_mahocsinh">Mã học sinh: <span>HS0902</span></p>
                         </div>
                         <div class="right__class">
                             <button type="button" class="btn__detail"><i data-feather="alert-circle"
@@ -75,8 +75,8 @@
                             <img src="../img/hs1.jpg" alt="anh hoc sinh" class="img__student">
                         </div>
                         <div class="between__student">
-                            <p class="name__student">Lâm Nhựt Nam</p>
-                            <p class="mshs">Mã học sinh: <span>HS0903</span></p>
+                            <p class="name__student data_hovatenhocsinh">Lâm Nhựt Nam</p>
+                            <p class="mshs data_mahocsinh">Mã học sinh: <span>HS0903</span></p>
                         </div>
                         <div class="right__class">
                             <button type="button" class="btn__detail"><i data-feather="alert-circle"
@@ -91,8 +91,8 @@
                             <img src="../img/hs.jpg" alt="anh hoc sinh" class="img__student">
                         </div>
                         <div class="between__student">
-                            <p class="name__student">Nguyễn Thị Mỹ Tiên</p>
-                            <p class="mshs">Mã học sinh: <span>HS0904</span></p>
+                            <p class="name__student data_hovatenhocsinh">Nguyễn Thị Mỹ Tiên</p>
+                            <p class="mshs data_mahocsinh">Mã học sinh: <span>HS0904</span></p>
                         </div>
                         <div class="right__class">
                             <button type="button" class="btn__detail"><i data-feather="alert-circle"
@@ -107,8 +107,8 @@
                             <img src="../img/hs1.jpg" alt="anh hoc sinh" class="img__student">
                         </div>
                         <div class="between__student">
-                            <p class="name__student">Nguyễn Minh Khoa</p>
-                            <p class="mshs">Mã học sinh: <span>HS0905</span></p>
+                            <p class="name__student data_hovatenhocsinh">Nguyễn Minh Khoa</p>
+                            <p class="mshs data_mahocsinh">Mã học sinh: <span>HS0905</span></p>
                         </div>
                         <div class="right__class">
                             <button type="button" class="btn__detail"><i data-feather="alert-circle"
@@ -123,8 +123,8 @@
                             <img src="../img/hs.jpg" alt="anh hoc sinh" class="img__student">
                         </div>
                         <div class="between__student">
-                            <p class="name__student">Nguyễn Thị Yến Loan</p>
-                            <p class="mshs">Mã học sinh: <span>HS0906</span></p>
+                            <p class="name__student data_hovatenhocsinh">Nguyễn Thị Yến Loan</p>
+                            <p class="mshs data_mahocsinh">Mã học sinh: <span>HS0906</span></p>
                         </div>
                         <div class="right__class">
                             <button type="button" class="btn__detail"><i data-feather="alert-circle"

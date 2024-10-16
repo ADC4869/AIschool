@@ -38,11 +38,11 @@
                 <a href="./activitydetail.php">
                     <img src="./img/dt.jpg" alt="anh hoat dong ngoai khoa">
                     <div class="card-content">
-                        <h3>Tham quan cố đô Huế tìm hiểu lịch sử và văn hóa dân tộc Việt Nam</h3>
-                        <span>Nhầm khám phá quần thể di tích cố đô Huế nổi tiếng lưu giữ nhiều giá trị lịch sử được
+                        <h3 class="data_tieudehoatdong">Tham quan cố đô Huế tìm hiểu lịch sử và văn hóa dân tộc Việt Nam</h3>
+                        <span class="data_noidunghoatdong">Nhầm khám phá quần thể di tích cố đô Huế nổi tiếng lưu giữ nhiều giá trị lịch sử được
                             UNESCO
                             công nhận...</span>
-                        <p> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 05/08/2024</p>
+                        <p class="data_thoigian"> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 05/08/2024</p>
                     </div>
                 </a>
             </div>
@@ -51,10 +51,10 @@
                 <a href="./activitydetail.php">
                     <img src="./img/thigiuaki.jpeg" alt="anh hoat dong ngoai khoa">
                     <div class="card-content">
-                        <h3>Chiến dịch lao động làm sạch và nâng cao ý thức bảo vệ môi trường</h3>
-                        <span>nhằm gắn công tác bảo vệ môi trường với phát triển bền vững; góp phần động viên, tôn vinh,
+                        <h3 class="data_tieudehoatdong">Chiến dịch lao động làm sạch và nâng cao ý thức bảo vệ môi trường</h3>
+                        <span class="data_noidunghoatdong">nhằm gắn công tác bảo vệ môi trường với phát triển bền vững; góp phần động viên, tôn vinh,
                             nhân rộng...</span>
-                        <p> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 16/09/2024</p>
+                        <p class="data_thoigian"> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 16/09/2024</p>
                     </div>
                 </a>
             </div>
@@ -64,10 +64,10 @@
                 <a href="./activitydetail.php">
                     <img src="./img/cayxanh.jfif" alt="anh hoat dong ngoai khoa">
                     <div class="card-content">
-                        <h3>Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</h3>
-                        <span>Chương trình được triển khai nhằm góp phần thực hiện thành công Đề án trồng 1 tỷ cây xanh
+                        <h3 class="data_tieudehoatdong">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</h3>
+                        <span class="data_noidunghoatdong">Chương trình được triển khai nhằm góp phần thực hiện thành công Đề án trồng 1 tỷ cây xanh
                             của Chính phủ...</span>
-                        <p> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 16/09/2024</p>
+                        <p class="data_thoigian"> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:39 16/09/2024</p>
                     </div>
                 </a>
             </div>

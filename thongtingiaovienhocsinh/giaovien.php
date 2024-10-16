@@ -82,7 +82,7 @@
                     
                     <div class="student-card">
                         <div class="student-left">
-                            <a href="./lylichhocsinh.php">
+                            <a href="./lylichhocsinh.php" class="data_anhdaidien">
                                 <img src="../img/hs.jpg" alt="Học sinh 1">
                             </a>
                             <div class="icons">
@@ -91,11 +91,11 @@
                             </div>
                         </div>
                         <div class="student-info">
-                            <h4>Họ tên: Nguyễn Thị Mỹ Anh</h4>
-                            <p>Ngày sinh: 01/01/2000</p>
-                            <p>Địa chỉ: 12 Ấp A, Xã Phú Hòa</p>
-                            <p>SDT liên lạc: 0123456789</p>
-                            <p>Phụ huynh: Nguyễn Hoa</p>
+                            <h4 class="data_hovaten">Họ tên: Nguyễn Thị Mỹ Anh</h4>
+                            <p class="data_ngaysinh">Ngày sinh: 01/01/2000</p>
+                            <p class="data_diachi">Địa chỉ: 12 Ấp A, Xã Phú Hòa</p>
+                            <p class="data_sodienthoai">SDT liên lạc: 0123456789</p>
+                            <p class="data_hovaten">Phụ huynh: Nguyễn Hoa</p>
                         </div>
 
                         <div class="icons1">
@@ -106,7 +106,7 @@
                     
                     <div class="student-card">
                         <div class="student-left">
-                            <a href="./lylichhocsinh.php">
+                            <a href="./lylichhocsinh.php" class="data_anhdaidien">
                                 <img src="../img/hs1.jpg" alt="Học sinh 2">
                             </a>
                             <div class="icons">
@@ -115,11 +115,11 @@
                             </div>
                         </div>
                         <div class="student-info">
-                            <h4>Họ tên: Trần Văn Giàu</h4>
-                            <p>Ngày sinh: 01/02/2000</p>
-                            <p>Địa chỉ: 12 Ấp B, Xã Phú Hòa</p>
-                            <p>SDT liên lạc: 0133456789</p>
-                            <p>Phụ huynh: Nguyễn Du</p>
+                            <h4 class="data_hovaten">Họ tên: Trần Văn Giàu</h4>
+                            <p class="data_ngaysinh">Ngày sinh: 01/02/2000</p>
+                            <p class="data_diachi">Địa chỉ: 12 Ấp B, Xã Phú Hòa</p>
+                            <p class="data_sodienthoai">SDT liên lạc: 0133456789</p>
+                            <p class="data_hovaten">Phụ huynh: Nguyễn Du</p>
                         </div>
                         <div class="icons1">
                             <i class="fa-solid fa-pen"></i>
@@ -129,7 +129,7 @@
                    
                     <div class="student-card">
                         <div class="student-left">
-                            <a href="./lylichhocsinh.php">
+                            <a href="./lylichhocsinh.php" class="data_anhdaidien">
                                 <img src="../img/hs.jpg" alt="Học sinh 2">
                             </a>
                             <div class="icons">
@@ -138,11 +138,11 @@
                             </div>
                         </div>
                         <div class="student-info">
-                            <h4>Họ tên: Nguyễn Thị Anh Thư</h4>
-                            <p>Ngày sinh: 01/03/2000</p>
-                            <p>Địa chỉ: 12 Ấp C, Xã Phú Hòa</p>
-                            <p>SĐT liên lạc: 0143456789</p>
-                            <p>Phụ huynh: Nguyễn Hoàng</p>
+                            <h4 class="data_hovaten">Họ tên: Nguyễn Thị Anh Thư</h4>
+                            <p class="data_ngaysinh">Ngày sinh: 01/03/2000</p>
+                            <p class="data_diachi">Địa chỉ: 12 Ấp C, Xã Phú Hòa</p>
+                            <p class="data_sodienthoai">SĐT liên lạc: 0143456789</p>
+                            <p class="data_hovaten">Phụ huynh: Nguyễn Hoàng</p>
                         </div>
                         <div class="icons1">
                             <i class="fa-solid fa-pen"></i>
@@ -158,18 +158,18 @@
                         <!-- Học sinh 1 -->
                         <div class="student-card">
                             <div class="student-left">
-                                <img src="../img/hs.jpg" alt="Học sinh 1">
+                                <img class="data_anhdaidien" src="../img/hs.jpg" alt="Học sinh 1">
                                 <div class="icons">
                                     <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
                                     <i class="fa-solid fa-message"></i>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h4>Họ tên: Nguyễn Thị Mỹ Anh</h4>
-                                <p>Hạng: 1</p>
-                                <p>Trung bình: 9.8</p>
-                                <p>Học lực: Xuất sắc</p>
-                                <p>Hạnh kiểm: Tốt</p>
+                                <h4 class="data_hovaten">Họ tên: Nguyễn Thị Mỹ Anh</h4>
+                                <p class="data_hang">Hạng: 1</p>
+                                <p class="data_diemtrungbinh">Trung bình: 9.8</p>
+                                <p class="data_hocluc">Học lực: Xuất sắc</p>
+                                <p class="data_hanhkiem">Hạnh kiểm: Tốt</p>
                             </div>
 
                             <div class="icons1">
@@ -180,18 +180,18 @@
                         <!-- Học sinh 2 -->
                         <div class="student-card">
                             <div class="student-left">
-                                <img src="../img/hs1.jpg" alt="Học sinh 2">
+                                <img class="data_anhdaidien" src="../img/hs1.jpg" alt="Học sinh 2">
                                 <div class="icons">
                                     <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
                                     <i class="fa-solid fa-message"></i>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h4>Họ tên: Trần Văn Giàu</h4>
-                                <p>Hạng: 2</p>
-                                <p>Trung bình: 9.7</p>
-                                <p>Học lực: Xuất sắc</p>
-                                <p>Hạnh kiểm: Tốt</p>
+                                <h4 class="data_hovaten">Họ tên: Trần Văn Giàu</h4>
+                                <p class="data_hang">Hạng: 2</p>
+                                <p class="data_diemtrungbinh">Trung bình: 9.7</p>
+                                <p class="data_hocluc">Học lực: Xuất sắc</p>
+                                <p class="data_hanhkiem">Hạnh kiểm: Tốt</p>
                             </div>
                             <div class="icons1">
                                 <i class="fa-solid fa-pen"></i>
@@ -206,7 +206,7 @@
                     <div class="student-list">
                         <!-- Học sinh 1 -->
                         <div class="student-card">
-                            <div class="student-left">
+                            <div class="student-left data_anhdaidien">
                                 <img src="../img/hs.jpg" alt="Học sinh 1">
                                 <div class="icons">
                                     <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
@@ -214,11 +214,11 @@
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h4>Họ tên: Nguyễn Thị Mỹ Anh</h4>
-                                <p>Hạng: 3</p>
-                                <p>Trung bình: 9.65</p>
-                                <p>Học lực: Giỏi</p>
-                                <p>Hạnh kiểm: Tốt</p>
+                                <h4 class="data_hovaten">Họ tên: Nguyễn Thị Mỹ Anh</h4>
+                                <p class="data_hang">Hạng: 3</p>
+                                <p class="data_diemtrungbinh">Trung bình: 9.65</p>
+                                <p class="data_hocluc">Học lực: Giỏi</p>
+                                <p class="data_hanhkiem">Hạnh kiểm: Tốt</p>
                             </div>
 
                             <div class="icons1">
@@ -228,7 +228,7 @@
 
                         <!-- Học sinh 2 -->
                         <div class="student-card">
-                            <div class="student-left">
+                            <div class="student-left data_anhdaidien">
                                 <img src="../img/hs1.jpg" alt="Học sinh 2">
                                 <div class="icons">
                                     <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
@@ -236,11 +236,11 @@
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h4>Họ tên: Nguyễn Minh Khoa</h4>
-                                <p>Hạng: 4</p>
-                                <p>Trung bình: 9.6</p>
-                                <p>Học lực: Giỏi</p>
-                                <p>Hạnh kiểm: Tốt</p>
+                                <h4 class="data_hovaten">Họ tên: Nguyễn Minh Khoa</h4>
+                                <p class="data_hang">Hạng: 4</p>
+                                <p class="data_diemtrungbinh">Trung bình: 9.6</p>
+                                <p class="data_hocluc">Học lực: Giỏi</p>
+                                <p class="data_hanhkiem">Hạnh kiểm: Tốt</p>
                             </div>
                             <div class="icons1">
                                 <i class="fa-solid fa-pen"></i>
@@ -250,18 +250,18 @@
                         <!-- Học sinh 3 -->
                         <div class="student-card">
                             <div class="student-left">
-                                <img src="../img/hs.jpg" alt="Học sinh 2">
+                                <img class="data_anhdaidien" src="../img/hs.jpg" alt="Học sinh 2">
                                 <div class="icons">
                                     <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
                                     <i class="fa-solid fa-message"></i>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h4>Họ tên: Nguyễn Khoa Điềm</h4>
-                                <p>Hạng: 5</p>
-                                <p>Trung bình: 9.5</p>
-                                <p>Học lực: Giỏi</p>
-                                <p>Hạnh kiểm: Tốt</p>
+                                <h4 class="data_hovaten">Họ tên: Nguyễn Khoa Điềm</h4>
+                                <p class="data_hang">Hạng: 5</p>
+                                <p class="data_diemtrungbinh">Trung bình: 9.5</p>
+                                <p class="data_hocluc">Học lực: Giỏi</p>
+                                <p class="data_hanhkiem">Hạnh kiểm: Tốt</p>
                             </div>
                             <div class="icons1">
                                 <i class="fa-solid fa-pen"></i>
@@ -277,18 +277,18 @@
                         <!-- Học sinh 1 -->
                         <div class="student-card">
                             <div class="student-left">
-                                <img src="../img/hs.jpg" alt="Học sinh 1">
+                                <img class="data_anhdaidien" src="../img/hs.jpg" alt="Học sinh 1">
                                 <div class="icons">
                                     <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
                                     <i class="fa-solid fa-message"></i>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h4>Họ tên: Nguyễn Lan Hương</h4>
-                                <p>Hạng: 11</p>
-                                <p>Trung bình: 8.8</p>
-                                <p>Học lực: Khá</p>
-                                <p>Hạnh kiểm: Tốt</p>
+                                <h4 class="data_hovaten">Họ tên: Nguyễn Lan Hương</h4>
+                                <p class="data_hang">Hạng: 11</p>
+                                <p class="data_diemtrungbinh">Trung bình: 8.8</p>
+                                <p class="data_hocluc">Học lực: Khá</p>
+                                <p class="data_hanhkiem">Hạnh kiểm: Tốt</p>
                             </div>
 
                             <div class="icons1">
@@ -299,18 +299,18 @@
                         <!-- Học sinh 2 -->
                         <div class="student-card">
                             <div class="student-left">
-                                <img src="../img/hs1.jpg" alt="Học sinh 2">
+                                <img class="data_anhdaidien" src="../img/hs1.jpg" alt="Học sinh 2">
                                 <div class="icons">
                                     <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
                                     <i class="fa-solid fa-message"></i>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h4>Họ tên: Trần Đức Minh</h4>
-                                <p>Hạng: 12</p>
-                                <p>Trung bình: 8.65</p>
-                                <p>Học lực: Khá</p>
-                                <p>Hạnh kiểm: Tốt</p>
+                                <h4 class="data_hovaten">Họ tên: Trần Đức Minh</h4>
+                                <p class="data_hang">Hạng: 12</p>
+                                <p class="data_diemtrungbinh">Trung bình: 8.65</p>
+                                <p class="data_hocluc">Học lực: Khá</p>
+                                <p class="data_hanhkiem">Hạnh kiểm: Tốt</p>
                             </div>
                             <div class="icons1">
                                 <i class="fa-solid fa-pen"></i>
@@ -320,18 +320,18 @@
                         <!-- Học sinh 3 -->
                         <div class="student-card">
                             <div class="student-left">
-                                <img src="../img/hs.jpg" alt="Học sinh 2">
+                                <img class="data_anhdaidien" src="../img/hs.jpg" alt="Học sinh 2">
                                 <div class="icons">
                                     <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
                                     <i class="fa-solid fa-message"></i>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h4>Họ tên: Nguyễn Minh Anh</h4>
-                                <p>Hạng: 13</p>
-                                <p>Trung bình: 8.5</p>
-                                <p>Học lực: Khá</p>
-                                <p>Hạnh kiểm: Tốt</p>
+                                <h4 class="data_hovaten">Họ tên: Nguyễn Minh Anh</h4>
+                                <p class="data_hang">Hạng: 13</p>
+                                <p class="data_diemtrungbinh">Trung bình: 8.5</p>
+                                <p class="data_hocluc">Học lực: Khá</p>
+                                <p class="data_hanhkiem">Hạnh kiểm: Tốt</p>
                             </div>
                             <div class="icons1">
                                 <i class="fa-solid fa-pen"></i>
@@ -383,18 +383,18 @@
                         <!-- Học sinh 6 -->
                         <div class="student-card">
                             <div class="student-left">
-                                <img src="../img/hs1.jpg" alt="Học sinh 2">
+                                <img class="data_anhdaidien" src="../img/hs1.jpg" alt="Học sinh 2">
                                 <div class="icons">
                                     <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
                                     <i class="fa-solid fa-message"></i>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h4>Họ tên: Trần Anh Tuấn</h4>
-                                <p>Hạng: 16</p>
-                                <p>Trung bình: 8.2</p>
-                                <p>Học lực: Khá</p>
-                                <p>Hạnh kiểm: Tốt</p>
+                                <h4 class="data_hovaten">Họ tên: Trần Anh Tuấn</h4>
+                                <p class="data_hang">Hạng: 16</p>
+                                <p class="data_diemtrungbinh">Trung bình: 8.2</p>
+                                <p class="data_hocluc">Học lực: Khá</p>
+                                <p class="data_hanhkiem">Hạnh kiểm: Tốt</p>
                             </div>
                             <div class="icons1">
                                 <i class="fa-solid fa-pen"></i>
@@ -410,18 +410,18 @@
                         <!-- Học sinh 1 -->
                         <div class="student-card">
                             <div class="student-left">
-                                <img src="../img/hs.jpg" alt="Học sinh 1">
+                                <img class="data_anhdaidien" src="../img/hs.jpg" alt="Học sinh 1">
                                 <div class="icons">
                                     <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
                                     <i class="fa-solid fa-message"></i>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h4>Họ tên: Đào Gia Hảo</h4>
-                                <p>Hạng: 28</p>
-                                <p>Trung bình: 6.3</p>
-                                <p>Học lực: Trung Bình</p>
-                                <p>Hạnh kiểm: Tốt</p>
+                                <h4 class="data_hovaten">Họ tên: Đào Gia Hảo</h4>
+                                <p class="data_hang">Hạng: 28</p>
+                                <p class="data_diemtrungbinh">Trung bình: 6.3</p>
+                                <p class="data_hocluc">Học lực: Trung Bình</p>
+                                <p class="data_hanhkiem">Hạnh kiểm: Tốt</p>
                             </div>
 
                             <div class="icons1">
@@ -432,18 +432,18 @@
                         <!-- Học sinh 2 -->
                         <div class="student-card">
                             <div class="student-left">
-                                <img src="../img/hs1.jpg" alt="Học sinh 2">
+                                <img class="data_anhdaidien" src="../img/hs1.jpg" alt="Học sinh 2">
                                 <div class="icons">
                                     <i class="fa fa-phone" style="position: relative; right: 10px;"></i>
                                     <i class="fa-solid fa-message"></i>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h4>Họ tên: Phương Chí Hùng</h4>
-                                <p>Hạng: 29</p>
-                                <p>Trung bình: 6.2</p>
-                                <p>Học lực: Trung bình</p>
-                                <p>Hạnh kiểm: Tốt</p>
+                                <h4 class="data_hovaten">Họ tên: Phương Chí Hùng</h4>
+                                <p class="data_hang">Hạng: 29</p>
+                                <p class="data_diemtrungbinh">Trung bình: 6.2</p>
+                                <p class="data_hocluc">Học lực: Trung bình</p>
+                                <p class="data_hanhkiem">Hạnh kiểm: Tốt</p>
                             </div>
                             <div class="icons1">
                                 <i class="fa-solid fa-pen"></i>
@@ -490,7 +490,7 @@
                     </div>
                     <div class="modal-body modal__body">
                         <!-- Chỉnh lại class ở đây nếu cần -->
-                        <textarea class="note__input" placeholder="Nhập ghi chú..."></textarea>
+                        <textarea class="note__input input_ghichu" placeholder="Nhập ghi chú..."></textarea>
                     </div>
                     <div class="modal-footer modal__footer">
                         <button type="button" class="btn__save" onclick="saveNote()">Lưu</button>

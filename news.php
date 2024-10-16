@@ -37,28 +37,28 @@
             <div class="card">
                 <img src="./img/thivaolop10.jpg" alt="Thi vào lớp 10">
                 <div class="card-content">
-                    <h3>Tuyển sinh lớp 10 năm 2025: TP.HCM sẽ công bố đề minh họa</h3>
-                    <span>Trưa 7-8, giám đốc Sở Giáo dục và Đào tạo TP.HCM đã thông tin về đề thi tuyển sinh lớp 10 năm
+                    <h3 class="data_tieudetintuc">Tuyển sinh lớp 10 năm 2025: TP.HCM sẽ công bố đề minh họa</h3>
+                    <span class="data_noidungtintuc">Trưa 7-8, giám đốc Sở Giáo dục và Đào tạo TP.HCM đã thông tin về đề thi tuyển sinh lớp 10 năm
                         2025...</span>
-                    <p> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:30 05/08/2024</p>
+                    <p class="data_thoigian"> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:30 05/08/2024</p>
                 </div>
             </div>
 
             <div class="card">
                 <img src="./img/thigiuaki.jpeg" alt="Thi giữa kì">
                 <div class="card-content">
-                    <h3>Lịch thi giữa kỳ HK I năm học 2024-2025 từ ngày 23/9/2024 đến 29/9/2024</h3>
-                    <span>Lịch thi Giữa kỳ từ ngày <u>23-29/9/2024</u>. Học sinh chú ý theo dõi lịch thi, các vấn đề liên quan đến môn học...</span>
-                    <p> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:30 05/08/2024</p>
+                    <h3 class="data_tieudetintuc">Lịch thi giữa kỳ HK I năm học 2024-2025 từ ngày 23/9/2024 đến 29/9/2024</h3>
+                    <span class="data_noidungtintuc">Lịch thi Giữa kỳ từ ngày <u>23-29/9/2024</u>. Học sinh chú ý theo dõi lịch thi, các vấn đề liên quan đến môn học...</span>
+                    <p class="data_thoigian"> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:30 05/08/2024</p>
                 </div>
             </div>
 
             <div class="card">
                 <img src="./img/thihocsinhgioi.jfif" alt="Thi học sinh giỏi">
                 <div class="card-content">
-                    <h3>Kết quả cuộc thi học sinh giỏi cấp trường năm 2024-2024</h3>
-                    <span>Lịch thi Giữa kỳ từ ngày <u>23-29/9/2024</u>. Học sinh chú ý theo dõi lịch thi, các vấn đề liên quan đến môn học...</span>
-                    <p> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:30 05/08/2024</p>
+                    <h3 class="data_tieudetintuc">Kết quả cuộc thi học sinh giỏi cấp trường năm 2024-2024</h3>
+                    <span class="data_noidungtictuc">Lịch thi Giữa kỳ từ ngày <u>23-29/9/2024</u>. Học sinh chú ý theo dõi lịch thi, các vấn đề liên quan đến môn học...</span>
+                    <p class="data_thoigian"> <i class="fa-regular fa-clock" style="color: #8a8a8a;"></i> 10:30 05/08/2024</p>
                 </div>
             </div>
             

@@ -35,9 +35,9 @@
     <main>
         <div class="main__content">
             <div class="title">
-                <h3>Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</h3>
+                <h3 class="data_tieudehoatdong">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</h3>
             </div>
-            <div class="content">
+            <div class="content data_noidunghoatdong">
                 <p>Chương trình được triển khai nhằm góp phần thực hiện thành công Đề án trồng 1 tỷ cây xanh của Chính
                     phủ và mục tiêu trồng mới 100 triệu cây do Trung ương Đoàn xác lập trong giai đoạn 2021-2025.
                 </p>

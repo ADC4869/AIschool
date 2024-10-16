@@ -32,8 +32,8 @@
             <div class="main__class">
                 <div class="class">
                     <div class="left__class">
-                        <p class="name__class">Lớp 9A1</p>
-                        <p class="name__teacher">GVCN: <span>Nguyễn Thị Ánh Xuân</span></p>
+                        <p class="name__class data_lophoc">Lớp 9A1</p>
+                        <p class="name__teacher data_hovatengiaovien">GVCN: <span>Nguyễn Thị Ánh Xuân</span></p>
                         <p>Sỉ số: <span>40</span></p>
                     </div>
                     <div class="right__class">
@@ -44,8 +44,8 @@
                 </div>
                 <div class="class">
                     <div class="left__class">
-                        <p class="name__class">Lớp 9A2</p>
-                        <p class="name__teacher">GVCN: <span>Trần Nguyên Khởi</span></p>
+                        <p class="name__class data_lophoc">Lớp 9A2</p>
+                        <p class="name__teacher data_hovatengiaovien">GVCN: <span>Trần Nguyên Khởi</span></p>
                         <p>Sỉ số: <span>40</span></p>
                     </div>
                     <div class="right__class">
@@ -56,8 +56,8 @@
                 </div>
                 <div class="class">
                     <div class="left__class">
-                        <p class="name__class">Lớp 9A3</p>
-                        <p class="name__teacher">GVCN: <span>Trương Thanh Phong</span></p>
+                        <p class="name__class data_lophoc">Lớp 9A3</p>
+                        <p class="name__teacher data_hovatengiaovien">GVCN: <span>Trương Thanh Phong</span></p>
                         <p>Sỉ số: <span>40</span></p>
                     </div>
                     <div class="right__class">
@@ -68,8 +68,8 @@
                 </div>
                 <div class="class">
                     <div class="left__class">
-                        <p class="name__class">Lớp 9A4</p>
-                        <p class="name__teacher">GVCN: <span>Huỳnh Vũ Nhi</span></p>
+                        <p class="name__class data_lophoc">Lớp 9A4</p>
+                        <p class="name__teacher data_hovatengiaovien">GVCN: <span>Huỳnh Vũ Nhi</span></p>
                         <p>Sỉ số: <span>40</span></p>
                     </div>
                     <div class="right__class">

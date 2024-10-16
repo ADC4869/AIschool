@@ -38,10 +38,10 @@
                 </button>
             </a>
             <div class="feedback">
-                <img src="../img/avt.jfif" alt="Feedback Icon" class="feedback-icon">
+                <img  src="../img/avt.jfif" alt="Feedback Icon" class="feedback-icon data_anhdaidien">
                 <div class="feedback-details">
-                    <h3>Góp ý về quá trình học tập</h3>
-                    <p>V/v tiến độ học tập trong năm nay, nhà trường...</p>
+                    <h3 class="data_tieudegopy">Góp ý về quá trình học tập</h3>
+                    <p class="data_noidunggopy">V/v tiến độ học tập trong năm nay, nhà trường...</p>
                 </div>
                 <div class="feedback-right">
                     <span class="notification-badge">1</span>

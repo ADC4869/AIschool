@@ -32,9 +32,9 @@
             <div class="teacher-info">
                 <img src="../img/hs1.jpg" alt="Teacher Photo" class="teacher-photo">
                 <div class="teacher-details">
-                    <p>Nguyễn Thị Ánh Xuân</p>
-                    <p>GV20014567</p>
-                    <p>Chủ nhiệm lớp 9A1</p>
+                    <p class="data_hovatengiaovien">Nguyễn Thị Ánh Xuân</p>
+                    <p class="data_magiaovien">GV20014567</p>
+                    <p class="data_lophoc">Chủ nhiệm lớp 9A1</p>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
         </div>
 
         <div class="main__content">
-            <div>
+            <div class="data_thanhtichgiangday">
                 <div class="info">
                     <p>95% học sinh đạt điểm khá, giỏi trong kỳ thi cuối năm</p>
                 </div>
@@ -80,7 +80,7 @@
         </div>
 
         <div class="main__content">
-            <div>
+            <div class="data_thanhtichnghiencuu">
                 <div class="info">
                     <p>Công bố 3 bài báo khoa học trên tạp chí giáo dục</p>
                 </div>
@@ -92,7 +92,7 @@
         </div>
 
         <div class="main__content">
-            <div>
+            <div class="data_thanhtichchunhiem">
                 <div class="info">
                     <p>Tăng tỷ lệ học sinh tiến bộ trong học tập</p>
                 </div>
@@ -104,7 +104,7 @@
         </div>
 
         <div class="main__content">
-            <div>
+            <div class="data_thanhtichcanhan">
                 <div class="info">
                     <p>Đạt giải 3 cuộc thi Giáo viên dạy giỏi cấp quận</p>
                 </div>
@@ -116,7 +116,7 @@
         </div>
 
         <div class="main__content">
-            <div>
+            <div class="data_donggopcongdong">
                 <div class="info">
                     <p>Tham gia các hoạt động từ thiện, công tác xã hội</p>
                 </div>
