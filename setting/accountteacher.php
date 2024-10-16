@@ -177,7 +177,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="data-diachi">
                 <p class="small__title">Địa chỉ</p>
                 <div class="info__address">
                     <p class="data_diachi">123/23 HCM</p>

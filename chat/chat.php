@@ -39,7 +39,7 @@
     </header>
 
     <main>
-    <div class="chat-container">
+        <div class="chat-container">
             <div class="chat-bubble bot">
                 <img src="https://via.placeholder.com/40" alt="Bot">
                 <div class="message">Nội dung chat...

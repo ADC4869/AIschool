@@ -86,8 +86,11 @@ main button {
 }
 
 main button.cancel {
-    background-color: #5c5f86;
-    color: white;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+    border: solid 1px;
 }
 
 main button.submit {

@@ -1,42 +1,4 @@
-<?php
-session_start();
-include '../database/db_config.php'; // Kết nối đến cơ sở dữ liệu
 
-// Kiểm tra xem có student_id không
-if (!isset($_GET['student_id'])) {
-    die("Không tìm thấy học sinh.");
-}
-
-$student_id = $_GET['student_id'];
-
-// Lấy thông tin học sinh và giáo viên chủ nhiệm
-$query_student = "SELECT u.fullname AS student_name, u.cccd, u.dob, u.gender, u.religion, 
-                         u.nationality, u.ethnic, u.phone, u.address, s.student_code, 
-                         c.class_name, tu.fullname AS teacher_name
-                  FROM users AS u
-                  JOIN students AS s ON u.id = s.id
-                  JOIN classes AS c ON s.class_id = c.id
-                  JOIN teachers AS t ON c.homeroom_teacher_id = t.id
-                  JOIN users AS tu ON t.user_id = tu.id
-                  WHERE u.id = ?";
-                  
-$stmt = $conn->prepare($query_student);
-if (!$stmt) {
-    die("Lỗi trong câu lệnh chuẩn bị: " . $conn->error);
-}
-
-$stmt->bind_param("i", $student_id);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) {
-    $student_info = $result->fetch_assoc();
-} else {
-    die("Không tìm thấy thông tin học sinh.");
-}
-
-$stmt->close(); // Đóng statement
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,8 +33,8 @@ $stmt->close(); // Đóng statement
             <div class="student-info">
                 <img src="../img/hs1.jpg" alt="Student Photo" class="student-photo">
                 <div class="student-details">
-                    <p><?php echo htmlspecialchars($student_info['student_name']); ?></p>
-                    <p><?php echo htmlspecialchars($student_info['student_code']); ?></p>
+                    <p>Từ Văn Tú</p>
+                    <p>HS001</p>
                 </div>
             </div>
         </div>
@@ -87,24 +49,24 @@ $stmt->close(); // Đóng statement
         <div class="main__content">
             <p class="small__title">CCCD / Định danh</p>
             <div class="info">
-                <p><?php echo htmlspecialchars($student_info['cccd']); ?></p>
+                <p>079202099288</p>
             </div>
 
             <p class="small__title">Ngày sinh</p>
             <div class="info">
-                <p><?php echo htmlspecialchars($student_info['dob']); ?></p>
+                <p>2007-11-12</p>
             </div>
             <div class="short__row">
                 <div>
                     <p class="small__title">Giới tính</p>
                     <div class="info">
-                        <p><?php echo htmlspecialchars($student_info['gender']); ?></p>
+                        <p>Nam</p>
                     </div>
                 </div>
                 <div>
                     <p class="small__title">Tôn giáo</p>
                     <div class="info">
-                        <p><?php echo htmlspecialchars($student_info['religion']); ?></p>
+                        <p>Không</p>
                     </div>
                 </div>
             </div>
@@ -113,13 +75,13 @@ $stmt->close(); // Đóng statement
                 <div>
                     <p class="small__title">Quốc tịch</p>
                     <div class="info">
-                        <p><?php echo htmlspecialchars($student_info['nationality']); ?></p>
+                        <p>Việt Nam</p>
                     </div>
                 </div>
                 <div>
                     <p class="small__title">Dân tộc</p>
                     <div class="info">
-                        <p><?php echo htmlspecialchars($student_info['ethnic']); ?></p>
+                        <p>Kinh</p>
                     </div>
                 </div>
             </div>
@@ -127,7 +89,7 @@ $stmt->close(); // Đóng statement
             <div>
                 <p class="small__title">Số điện thoại</p>
                 <div class="info">
-                    <p><?php echo htmlspecialchars($student_info['phone']); ?></p>
+                    <p>0907889677</p>
                 </div>
             </div>
 
@@ -140,7 +102,7 @@ $stmt->close(); // Đóng statement
             <div>
                 <p class="small__title">Địa chỉ</p>
                 <div class="info__address">
-                    <p><?php echo htmlspecialchars($student_info['address']); ?></p>
+                    <p>123/23 HCM</p>
                 </div>
             </div>
 
@@ -155,14 +117,14 @@ $stmt->close(); // Đóng statement
             <div>
                 <p class="small__title">Lớp</p>
                 <div class="info">
-                    <p><?php echo htmlspecialchars($student_info['class_name']); ?></p>
+                    <p>9A1</p>
                 </div>
             </div>
 
             <div>
                 <p class="small__title">Giáo viên chủ nhiệm</p>
                 <div class="info">
-                    <p><?php echo htmlspecialchars($student_info['teacher_name']); ?></p>
+                    <p>Trần Đức Minh</p>
                 </div>
             </div>
             <div class="short__row">
