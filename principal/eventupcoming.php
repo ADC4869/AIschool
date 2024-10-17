@@ -34,11 +34,11 @@
 
     <main>
         <div class="main_content">
-            <div class="event_title">
+            <div class="event_title data_tieudesukien">
                 <span>LỄ KỶ NIỆM NGÀY NHÀ GIÁO VIỆT NAM 20/11 NĂM HỌC 2023-2024</span>
             </div>
 
-            <div class="event_content">
+            <div class="event_content data_noidungsukien">
                 <span>Nhà giáo Việt Nam 20/11 - ngày nêu cao truyền thống “Tôn sư trọng đạo”, phát huy đạo lý “Uống nước
                     nhớ nguồn”, “Ăn quả nhớ kẻ trồng cây”, trong niềm vui hân hoan nồng ấm tình nghĩa thầy trò</span>
 

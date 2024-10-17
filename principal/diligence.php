@@ -39,8 +39,8 @@
             <div class="student-info">
                 <img src="https://via.placeholder.com/60" alt="Student Photo">
                 <div class="student-details">
-                    <h3>Nguyễn Thị Mỹ Tiên</h3>
-                    <p>Mã học sinh: HS0001</p>
+                    <h3 class="data_hovatenhocsinh">Nguyễn Thị Mỹ Tiên</h3>
+                    <p class="data_mahocsinh">Mã học sinh: HS0001</p>
                 </div>
             </div>
 

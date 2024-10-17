@@ -36,7 +36,7 @@
         <div class="container">
             <div class="title">Danh sách học sinh lớp 9A1</div>
             <div class="info-bar">
-                <span>Sĩ số: 40</span>
+                <span class="data_siso">Sĩ số: 40</span>
                 <span class="green">Hiện diện: 38</span>
                 <span class="red">Vắng: 2</span>
                 <span class="orgin">Trễ: 1</span>
@@ -48,8 +48,8 @@
                             <img src="../img/hs.jpg" alt="Nguyễn Thị Mỹ Tiên">
                         </div>
                         <div class="student-info">
-                            <div class="student-name">Nguyễn Thị Mỹ Tiên</div>
-                            <div class="student-id">Mã học sinh: HS0001</div>
+                            <div class="student-name data_hovatenhocsinh">Nguyễn Thị Mỹ Tiên</div>
+                            <div class="student-id data_mahocsinh">Mã học sinh: HS0001</div>
                         </div>
                         <div class="student-status">i</div>
                     </a>
@@ -60,8 +60,8 @@
                             <img src="../img/hs1.jpg" alt="Nguyễn Minh Khoa">
                         </div>
                         <div class="student-info">
-                            <div class="student-name">Nguyễn Minh Khoa</div>
-                            <div class="student-id">Mã học sinh: HS0002</div>
+                            <div class="student-name data_hovatenhocsinh">Nguyễn Minh Khoa</div>
+                            <div class="student-id data_mahocsinh">Mã học sinh: HS0002</div>
                         </div>
                         <div class="student-status">i</div>
                     </a>
@@ -72,8 +72,8 @@
                             <img src="../img/hs1.jpg" alt="Nguyễn Minh Khoa">
                         </div>
                         <div class="student-info">
-                            <div class="student-name">Nguyễn Minh Khoa</div>
-                            <div class="student-id">Mã học sinh: HS0002</div>
+                            <div class="student-name data_hovatenhocsinh">Nguyễn Minh Khoa</div>
+                            <div class="student-id data_mahocsinh">Mã học sinh: HS0002</div>
                         </div>
                         <div class="student-status">i</div>
                     </a>
@@ -84,8 +84,8 @@
                                 <img src="../img/hs1.jpg" alt="Nguyễn Minh Khoa">
                         </div>
                         <div class="student-info">
-                            <div class="student-name">Nguyễn Minh Khoa</div>
-                            <div class="student-id">Mã học sinh: HS0002</div>
+                            <div class="student-name data_hovatenhocsinh">Nguyễn Minh Khoa</div>
+                            <div class="student-id data_mahocsinh">Mã học sinh: HS0002</div>
                         </div>
                         <div class="student-status">i</div>
                     </a>

@@ -47,8 +47,8 @@
                 <div class="profile">
                     <img src="../img/hs.jpg" alt="Profile Image">
                     <div class="info">
-                        <p><b>Nguyễn Thị Ánh Xuân</b></p>
-                        <p>Mã nhân viên: GV20014567</p>
+                        <p class="data_hovatengiaovien"><b>Nguyễn Thị Ánh Xuân</b></p>
+                        <p class="data_magiaovien">Mã nhân viên: GV20014567</p>
                     </div>
                 </div>
                 <div class="actions">
@@ -65,8 +65,8 @@
                 <div class="profile">
                     <img src="../img/hs.jpg" alt="Profile Image">
                     <div class="info">
-                        <p><b>Trần Nguyên Khôi</b></p>
-                        <p>Mã nhân viên: GV20014568</p>
+                        <p class="data_hovatengiaovien"><b>Trần Nguyên Khôi</b></p>
+                        <p class="data_magiaovien">Mã nhân viên: GV20014568</p>
                     </div>
                 </div>
                 <div class="actions">

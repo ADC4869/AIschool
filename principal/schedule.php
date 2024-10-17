@@ -53,36 +53,36 @@
             <div class="card">
                 <div class="card-header">Thứ 5 - 15/08/2024</div>
                 <div class="card-body">
-                    <p><strong>Họp phụ huynh lớp 1A</strong></p>
-                    <p><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
-                    <p><strong>Người chủ trì:</strong> Loan cục súc</p>
-                    <p><strong>Thời gian:</strong> 10:30</p>
-                    <p><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
-                    <p><strong>Ghi chú:</strong> ....</p>
+                    <p class="data_tieudelichhop"><strong>Họp phụ huynh lớp 1A</strong></p>
+                    <p class="data_noidunglichhop"><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
+                    <p class="data_nguoichutri"><strong>Người chủ trì:</strong> Loan cục súc</p>
+                    <p class="data_thoigian"><strong>Thời gian:</strong> 10:30</p>
+                    <p class="data_diadiem"><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
+                    <p class="data_ghichu"><strong>Ghi chú:</strong> ....</p>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-header">Thứ 5 - 15/08/2024</div>
                 <div class="card-body">
-                    <p><strong>Họp phụ huynh lớp 1A</strong></p>
-                    <p><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
-                    <p><strong>Người chủ trì:</strong> Loan cục súc</p>
-                    <p><strong>Thời gian:</strong> 10:30</p>
-                    <p><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
-                    <p><strong>Ghi chú:</strong> ....</p>
+                    <p class="data_tieudelichhop"><strong>Họp phụ huynh lớp 1A</strong></p>
+                    <p class="data_noidunglichhop"><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
+                    <p class="data_nguoichutri"><strong>Người chủ trì:</strong> Loan cục súc</p>
+                    <p class="data_thoigian"><strong>Thời gian:</strong> 10:30</p>
+                    <p class="data_diadiem"><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
+                    <p class="data_ghichu"><strong>Ghi chú:</strong> ....</p>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-header">Thứ 5 - 15/08/2024</div>
                 <div class="card-body">
-                    <p><strong>Họp phụ huynh lớp 1A</strong></p>
-                    <p><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
-                    <p><strong>Người chủ trì:</strong> Loan cục súc</p>
-                    <p><strong>Thời gian:</strong> 10:30</p>
-                    <p><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
-                    <p><strong>Ghi chú:</strong> ....</p>
+                    <p class="data_tieudelichhop"><strong>Họp phụ huynh lớp 1A</strong></p>
+                    <p class="data_noidunglichhop"><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
+                    <p class="data_nguoichutri"><strong>Người chủ trì:</strong> Loan cục súc</p>
+                    <p class="data_thoigian"><strong>Thời gian:</strong> 10:30</p>
+                    <p class="data_diadiem"><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
+                    <p class="data_ghichu"><strong>Ghi chú:</strong> ....</p>
                 </div>
             </div>
         </div>

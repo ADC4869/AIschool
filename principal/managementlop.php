@@ -34,7 +34,7 @@
 
     <main>
         <div class="class-info">
-            <h3>Lớp 9A1</h3>
+            <h3 class="data_lophoc">Lớp 9A1</h3>
             <ul>
                 <li>Số bộ bàn ghế học sinh: 40 <span class="edit-icon" onclick="showDropdown(this)"></span></li>
                 <li>Số bảng học: 1 <span class="edit-icon" onclick="showDropdown(this)"></span></li>

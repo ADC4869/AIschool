@@ -207,12 +207,12 @@
                             class="profile-image"></a>
                     <div class="card-content">
                         <div class="card-header">
-                            <h2>Tên: Nguyễn Thị Ánh Xuân</h2>
+                            <h2 class="data_hovatengiaovien">Tên: Nguyễn Thị Ánh Xuân</h2>
                             <span class="edit-icon" onclick="openNoteModal()"><i data-feather="edit-3"
                                     style="color: #5B6998"></i></span>
                         </div>
-                        <p>Mã nhân viên: GV20014567</p>
-                        <p>Phụ trách: Môn Văn</p>
+                        <p class="data_magiaovien">Mã nhân viên: GV20014567</p>
+                        <p class="data_monhoc">Phụ trách: Môn Văn</p>
                         <p>Thời gian vào lớp: 07:55</p>
                         <p>Thời gian ra lớp: 11:40</p>
                         <p>Số tiết trong ngày: 4</p>
@@ -224,12 +224,12 @@
                             class="profile-image"></a>
                     <div class="card-content">
                         <div class="card-header">
-                            <h2>Tên: Lý Lan Anh</h2>
+                            <h2 class="data_hovatengiaovien">Tên: Lý Lan Anh</h2>
                             <span class="edit-icon" onclick="openNoteModal()"><i data-feather="edit-3"
                                     style="color: #5B6998"></i></span>
                         </div>
-                        <p>Mã nhân viên: GV20014567</p>
-                        <p>Phụ trách: Môn Toán</p>
+                        <p class="data_magiaovien">Mã nhân viên: GV20014567</p>
+                        <p class="data_monhoc">Phụ trách: Môn Toán</p>
                         <p>Thời gian vào lớp: 07:55</p>
                         <p>Thời gian ra lớp: 11:40</p>
                         <p>Số tiết trong ngày: 4</p>
@@ -241,12 +241,12 @@
                             class="profile-image"></a>
                     <div class="card-content">
                         <div class="card-header">
-                            <h2>Tên: Trần Nguyên Khôi</h2>
+                            <h2 class="data_hovatengiaovien">Tên: Trần Nguyên Khôi</h2>
                             <span class="edit-icon" onclick="openNoteModal()"><i data-feather="edit-3"
                                     style="color: #5B6998"></i></span>
                         </div>
-                        <p>Mã nhân viên: GV20014567</p>
-                        <p>Phụ trách: Môn Lý</p>
+                        <p class="data_magiaovien">Mã nhân viên: GV20014567</p>
+                        <p class="data_monhoc">Phụ trách: Môn Lý</p>
                         <p>Thời gian vào lớp: 07:55</p>
                         <p>Thời gian ra lớp: 11:40</p>
                         <p>Số tiết trong ngày: 4</p>
@@ -285,9 +285,9 @@
                 <div class="teacher-card">
                     <img src="../img/gv.jpg" alt="Nguyễn Thị Ánh Xuân">
                     <div class="teacher-info">
-                        <h3>Nguyễn Thị Ánh Xuân</h3>
-                        <p>Mã nhân viên: GV20014567</p>
-                        <p>Chủ nhiệm: Lớp 9A1</p>
+                        <h3 class="data_hovatengiaovien">Nguyễn Thị Ánh Xuân</h3>
+                        <p class="data_magiaovien">Mã nhân viên: GV20014567</p>
+                        <p class="data_lophoc">Chủ nhiệm: Lớp 9A1</p>
                     </div>
                     <a href="achievementsGV.php">
                         <div class="icon">
@@ -299,8 +299,8 @@
                 <div class="teacher-card">
                     <img src="../img/gv.jpg" alt="Hoàng Hồng">
                     <div class="teacher-info">
-                        <h3>Hoàng Hồng</h3>
-                        <p>Mã nhân viên: GV20014677</p>
+                        <h3 class="data_hovatengiaovien">Hoàng Hồng</h3>
+                        <p class="data_magiaovien">Mã nhân viên: GV20014677</p>
                     </div>
                     <a href="achievementsGV.php">
                         <div class="icon">
@@ -320,7 +320,7 @@
                 <div class="notemodal_header">
                     <span>Ghi chú</span>
                 </div>
-                <div class="notemodal_body">
+                <div class="notemodal_body input_ghichu">
                     <textarea name="" id="">Nhập nội dung ghi chú</textarea>
                 </div>
                 <div class="notemodal_footer">

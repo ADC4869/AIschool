@@ -36,17 +36,17 @@
         <form method="post" enctype="multipart/form-data" id="feedbackForm">
             <div class="form-group">
                 <label for="title">Tiêu đề <span class="required">*</span></label>
-                <input type="text" id="title" name="title" required>
+                <input clang="input_tieudethongbao" type="text" id="title" name="title" required>
             </div>
 
             <div class="form-group">
                 <label for="content">Nội dung <span class="required">*</span></label>
-                <textarea id="content" name="content" rows="4" required></textarea>
+                <textarea class="input_noidungthongbao" id="content" name="content" rows="4" required></textarea>
             </div>
 
             <div class="form-group">
                 <label for="file">Đính kèm tệp</label>
-                <input type="file" id="file" name="file" accept="image/*">
+                <input class="input_file" type="file" id="file" name="file" accept="image/*">
             </div>
 
             <div class="form-group">

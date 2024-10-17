@@ -76,9 +76,9 @@
             <div id="class6" class="class-details" style="display:none;">
                 <div class="class-card">
                     <div class="class-info">
-                        <h4>Lớp 6A1</h4>
-                        <p>GVCN: Nguyễn Văn A</p>
-                        <p>Sĩ số: 40</p>
+                        <h4 class="data_lophoc">Lớp 6A1</h4>
+                        <p class="data_hovatengiaovien">GVCN: Nguyễn Văn A</p>
+                        <p class="data_siso">Sĩ số: 40</p>
                     </div>
                     <button class="details-btn">Chi tiết</button>
                 </div>
@@ -88,9 +88,9 @@
             <div id="class7" class="class-details" style="display:none;">
                 <div class="class-card">
                     <div class="class-info">
-                        <h4>Lớp 7A1</h4>
-                        <p>GVCN: Nguyễn Văn B</p>
-                        <p>Sĩ số: 40</p>
+                        <h4 class="data_lophoc">Lớp 7A1</h4>
+                        <p class="data_hovatengiaovien">GVCN: Nguyễn Văn B</p>
+                        <p class="data_siso">Sĩ số: 40</p>
                     </div>
                     <button class="details-btn">Chi tiết</button>
                 </div>
@@ -100,9 +100,9 @@
             <div id="class8" class="class-details" style="display:none;">
                 <div class="class-card">
                     <div class="class-info">
-                        <h4>Lớp 8A1</h4>
-                        <p>GVCN: Nguyễn Văn C</p>
-                        <p>Sĩ số: 40</p>
+                        <h4 class="data_lophoc">Lớp 8A1</h4>
+                        <p class="data_hovatengiaovien">GVCN: Nguyễn Văn C</p>
+                        <p class="data_siso">Sĩ số: 40</p>
                     </div>
                     <button class="details-btn">Chi tiết</button>
                 </div>
@@ -112,33 +112,33 @@
             <div id="class9" class="class-details" style="display:none;">
                 <div class="class-card">
                     <div class="class-info">
-                        <h4>Lớp 9A1</h4>
-                        <p>GVCN: Nguyễn Thị Ánh Xuân</p>
-                        <p>Sĩ số: 40</p>
+                        <h4 class="data_lophoc">Lớp 9A1</h4>
+                        <p class="data_hovatengiaovien">GVCN: Nguyễn Thị Ánh Xuân</p>
+                        <p class="data_siso">Sĩ số: 40</p>
                     </div>
                     <a href="managementlop.php"><button class="details-btn">Chi tiết</button></a>
                 </div>
                 <div class="class-card">
                     <div class="class-info">
-                        <h4>Lớp 9A2</h4>
-                        <p>GVCN: Trần Nguyên Khôi</p>
-                        <p>Sĩ số: 40</p>
+                        <h4 class="data_lophoc">Lớp 9A2</h4>
+                        <p class="data_hovatengiaovien">GVCN: Trần Nguyên Khôi</p>
+                        <p class="data_siso">Sĩ số: 40</p>
                     </div>
                     <button class="details-btn">Chi tiết</button>
                 </div>
                 <div class="class-card">
                     <div class="class-info">
-                        <h4>Lớp 9A3</h4>
-                        <p>GVCN: Huỳnh Vũ Nhi</p>
-                        <p>Sĩ số: 40</p>
+                        <h4 class="data_lophoc">Lớp 9A3</h4>
+                        <p class="data_hovatengiaovien">GVCN: Huỳnh Vũ Nhi</p>
+                        <p class="data_siso">Sĩ số: 40</p>
                     </div>
                     <button class="details-btn">Chi tiết</button>
                 </div>
                 <div class="class-card">
                     <div class="class-info">
-                        <h4>Lớp 9A4</h4>
-                        <p>GVCN: Trương Tam</p>
-                        <p>Sĩ số: 40</p>
+                        <h4 class="data_lophoc">Lớp 9A4</h4>
+                        <p class="data_hovatengiaovien">GVCN: Trương Tam</p>
+                        <p class="data_siso">Sĩ số: 40</p>
                     </div>
                     <button class="details-btn">Chi tiết</button>
                 </div>

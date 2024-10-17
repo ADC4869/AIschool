@@ -39,8 +39,8 @@
                         <img src="../img/avtteacher.png" alt="Icon">
                     </div>
                     <div class="card-text">
-                        <h3>Góp ý về vấn đề Họp phụ huynh</h3>
-                        <p>Kính gửi ban giám hiệu nhà trường, tôi tên ABCD...</p>
+                        <h3 class="data_tieudegopy">Góp ý về vấn đề Họp phụ huynh</h3>
+                        <p class="data_noidunggopy">Kính gửi ban giám hiệu nhà trường, tôi tên ABCD...</p>
                     </div>
                     <div class="card-notification">
                         <span class="notification-badge">1</span>
@@ -60,30 +60,8 @@
                         <img src="../img/avtteacher.png" alt="Icon">
                     </div>
                     <div class="card-text">
-                        <h3>Góp ý về vấn đề Họp phụ huynh</h3>
-                        <p>Kính gửi ban giám hiệu nhà trường, tôi tên ABCD ...</p>
-                    </div>
-                    <div class="card-notification">
-                        <span class="notification-badge">1</span>
-                        <div class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="./thongbaochitiet.php">
-                <div class="card-content">
-                    <div class="card-image">
-                        <img src="../img/avtteacher.png" alt="Icon">
-                    </div>
-                    <div class="card-text">
-                        <h3>Góp ý về vấn đề Họp phụ huynh</h3>
-                        <p>Kính gửi ban giám hiệu nhà trường, tôi tên ABCD...</p>
+                        <h3 class="data_tieudegopy">Góp ý về vấn đề Họp phụ huynh</h3>
+                        <p class="data_noidunggopy">Kính gửi ban giám hiệu nhà trường, tôi tên ABCD ...</p>
                     </div>
                     <div class="card-notification">
                         <span class="notification-badge">1</span>
@@ -104,8 +82,30 @@
                         <img src="../img/avtteacher.png" alt="Icon">
                     </div>
                     <div class="card-text">
-                        <h3>Góp ý về vấn đề Họp phụ huynh</h3>
-                        <p>Kính gửi ban giám hiệu nhà trường, tôi tên ABCD...</p>
+                        <h3 class="data_tieudegopy">Góp ý về vấn đề Họp phụ huynh</h3>
+                        <p class="data_noidunggopy">Kính gửi ban giám hiệu nhà trường, tôi tên ABCD...</p>
+                    </div>
+                    <div class="card-notification">
+                        <span class="notification-badge">1</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="./thongbaochitiet.php">
+                <div class="card-content">
+                    <div class="card-image">
+                        <img src="../img/avtteacher.png" alt="Icon">
+                    </div>
+                    <div class="card-text">
+                        <h3 class="data_tieudegopy">Góp ý về vấn đề Họp phụ huynh</h3>
+                        <p class="data_noidunggopy">Kính gửi ban giám hiệu nhà trường, tôi tên ABCD...</p>
                     </div>
                     <div class="card-notification">
                         <span class="notification-badge">1</span>

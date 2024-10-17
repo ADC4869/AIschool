@@ -34,11 +34,11 @@
 
     <main>
         <div class="main_content">
-            <div class="event_title">
+            <div class="event_title data_tieudesukien">
                 <span>LỄ KHAI GIẢNG NĂM HỌC MỚI <br> 2024 – 2025</span>
             </div>
 
-            <div class="event_content">
+            <div class="event_content data_noidungsukien">
                 <span>Sáng ngày 5/9/2024, Thầy và trò phấn khởi tổ chức Lễ khai giảng năm học mới 2024- 2025. Đây là Lế
                     khai giảng đầy ý nghĩa, đánh dấu 20 năm sự thành lập và phát triển của nhà trường.</span>
 

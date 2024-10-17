@@ -41,8 +41,8 @@
             <div class="student-item paid">
                 <img src="../img/gv.jpg" alt="Đào Ngọc Hoa">
                 <div class="info">
-                    <p class="name">Đào Ngọc Hoa</p>
-                    <p class="status">Đã đóng học phí</p>
+                    <p class="name data_hovatenhocsinh">Đào Ngọc Hoa</p>
+                    <p class="status data_trangthai">Đã đóng học phí</p>
                 </div>
                 <div class="icons">
                     <a href="../call/index.php">
@@ -57,8 +57,8 @@
             <div class="student-item paid">
                 <img src="../img/gv.jpg" alt="Hoa Thanh Sơn">
                 <div class="info">
-                    <p class="name">Hoa Thanh Sơn</p>
-                    <p class="status">Đã đóng học phí</p>
+                    <p class="name data_hovatenhocsinh">Hoa Thanh Sơn</p>
+                    <p class="status data_trangthai">Đã đóng học phí</p>
                 </div>
                 <div class="icons">
                     <button class="call"><i data-feather="phone" style="color: #5B6998"></i></button>
@@ -70,9 +70,9 @@
             <div class="student-item unpaid">
                 <img src="../img/gv.jpg" alt="Nguyễn Ngọc Ánh">
                 <div class="info">
-                    <p class="name">Nguyễn Ngọc Ánh</p>
-                    <p class="status">Chưa đóng học phí</p>
-                    <p class="note">Ghi chú: Khó khăn</p>
+                    <p class="name data_hovatenhocsinh">Nguyễn Ngọc Ánh</p>
+                    <p class="status data_trangthai">Chưa đóng học phí</p>
+                    <p class="note data_ghichu">Ghi chú: Khó khăn</p>
                 </div>
                 <div class="icons">
                     <a href="../call/index.php">
@@ -87,8 +87,8 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <div class="modal-header">
-                    <p>Nguyễn Ngọc Ánh</p>
-                    <p>HS20015847</p>
+                    <p class="data_hovatenhocsinh">Nguyễn Ngọc Ánh</p>
+                    <p class="data_mahocsinh">HS20015847</p>
                 </div>
                 <div class="contact-info">
                     <!-- Teacher Section -->
@@ -97,8 +97,8 @@
                         <div class="contact-details">
                             <img src="../img/gvn1.jpg" alt="Teacher">
                             <div class="info">
-                                <p>Nguyễn Thị Ánh Xuân</p>
-                                <small>GV24861875</small>
+                                <p class="data_hovatengiaovien">Nguyễn Thị Ánh Xuân</p>
+                                <small class="data_magiaovien">GV24861875</small>
                             </div>
                         </div>
                         <div class="icons">
@@ -112,8 +112,8 @@
                         <div class="contact-details">
                             <img src="../img/ph2.jpg" alt="Parent">
                             <div class="info">
-                                <p>Nguyễn Ngọc Hoa</p>
-                                <small>PH20015847</small>
+                                <p class="data_hovatenphuhuynh">Nguyễn Ngọc Hoa</p>
+                                <small class="data_maphuhuynh">PH20015847</small>
                             </div>
                         </div>
                         <div class="icons">

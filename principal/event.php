@@ -47,7 +47,7 @@
                 <div class="event-item">
                     <img src="../img/HN.jpg" alt="Sự kiện 1">
                     <div class="event-info">
-                        <h3>Giao lưu văn hóa Hàn Quốc</h3>
+                        <h3 class="data_tieudesukien">Giao lưu văn hóa Hàn Quốc</h3>
                         <p>Thời gian: 06:30 - 10:00</p>
                         <p>Ngày: 03/09/2024</p>
                     </div>
@@ -56,7 +56,7 @@
                 <div class="event-item">
                     <img src="../img/HN1.jpg" alt="Sự kiện 2">
                     <div class="event-info">
-                        <h3>Giao lưu văn hóa Hàn Quốc</h3>
+                        <h3 class="data_tieudesukien">Giao lưu văn hóa Hàn Quốc</h3>
                         <p>Thời gian: 06:30 - 10:00</p>
                         <p>Ngày: 03/09/2024</p>
                     </div>
@@ -65,7 +65,7 @@
                 <div class="event-item">
                     <img src="../img/HN.jpg" alt="Sự kiện 3">
                     <div class="event-info">
-                        <h3>Giao lưu văn hóa Hàn Quốc</h3>
+                        <h3 class="data_tieudesukien">Giao lưu văn hóa Hàn Quốc</h3>
                         <p>Thời gian: 06:30 - 10:00</p>
                         <p>Ngày: 03/09/2024</p>
                     </div>
@@ -88,7 +88,7 @@
                 <div class="event-item">
                     <img src="../img/HN.jpg" alt="Sự kiện 1">
                     <div class="event-info">
-                        <h3>Giao lưu văn hóa Hàn Quốc</h3>
+                        <h3 class="data_tieudesukien">Giao lưu văn hóa Hàn Quốc</h3>
                         <p>Thời gian: 06:30 - 10:00</p>
                         <p>Ngày: 03/09/2024</p>
                     </div>
@@ -97,7 +97,7 @@
                 <div class="event-item">
                     <img src="../img/HN1.jpg" alt="Sự kiện 2">
                     <div class="event-info">
-                        <h3>Giao lưu văn hóa Hàn Quốc</h3>
+                        <h3 class="data_tieudesukien">Giao lưu văn hóa Hàn Quốc</h3>
                         <p>Thời gian: 06:30 - 10:00</p>
                         <p>Ngày: 03/09/2024</p>
                     </div>
@@ -106,7 +106,7 @@
                 <div class="event-item">
                     <img src="../img/HN.jpg" alt="Sự kiện 3">
                     <div class="event-info">
-                        <h3>Giao lưu văn hóa Hàn Quốc</h3>
+                        <h3 class="data_tieudesukien">Giao lưu văn hóa Hàn Quốc</h3>
                         <p>Thời gian: 06:30 - 10:00</p>
                         <p>Ngày: 03/09/2024</p>
                     </div>
@@ -129,7 +129,7 @@
                 <div class="event-item">
                     <img src="../img/HN.jpg" alt="Sự kiện 1">
                     <div class="event-info">
-                        <h3>Giao lưu văn hóa Hàn Quốc</h3>
+                        <h3 class="data_tieudesukien">Giao lưu văn hóa Hàn Quốc</h3>
                         <p>Thời gian: 06:30 - 10:00</p>
                         <p>Ngày: 03/09/2024</p>
                     </div>
@@ -138,7 +138,7 @@
                 <div class="event-item">
                     <img src="../img/HN1.jpg" alt="Sự kiện 2">
                     <div class="event-info">
-                        <h3>Giao lưu văn hóa Hàn Quốc</h3>
+                        <h3 class="data_tieudesukien">Giao lưu văn hóa Hàn Quốc</h3>
                         <p>Thời gian: 06:30 - 10:00</p>
                         <p>Ngày: 03/09/2024</p>
                     </div>
@@ -147,7 +147,7 @@
                 <div class="event-item">
                     <img src="../img/HN.jpg" alt="Sự kiện 3">
                     <div class="event-info">
-                        <h3>Giao lưu văn hóa Hàn Quốc</h3>
+                        <h3 class="data_tieudesukien">Giao lưu văn hóa Hàn Quốc</h3>
                         <p>Thời gian: 06:30 - 10:00</p>
                         <p>Ngày: 03/09/2024</p>
                     </div>

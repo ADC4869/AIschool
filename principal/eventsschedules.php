@@ -64,12 +64,12 @@
                         </div>
 
                         <div class="event_info">
-                            <span class="event_title">Lễ Khai Giảng Năm Học 2024 - 2025</span>
-                            <span class="event_time"><i data-feather="clock"
+                            <span class="event_title data_tieudesukien">Lễ Khai Giảng Năm Học 2024 - 2025</span>
+                            <span class="event_time data_thoigian"><i data-feather="clock"
                                     style="color: gray; width: 16px; height: 16px"></i> <span>05/09/2024
                                     09:11:00</span>
                             </span>
-                            <span class="event_status present">Đang diễn ra</span>
+                            <span class="event_status present data_trangthai">Đang diễn ra</span>
                         </div>
                     </a>
                 </div>
@@ -81,13 +81,13 @@
                         </div>
 
                         <div class="event_info">
-                            <span class="event_title">Tổ chức hoạt động trải nghiệm Steam "Chế tạo xà phòng từ dầu ăn
+                            <span class="event_title data_tieudesukien">Tổ chức hoạt động trải nghiệm Steam "Chế tạo xà phòng từ dầu ăn
                                 thừa"</span>
-                            <span class="event_time"><i data-feather="clock"
+                            <span class="event_time data_thoigian"><i data-feather="clock"
                                     style="color: gray; width: 16px; height: 16px"></i> <span>05/09/2024
                                     09:11:00</span>
                             </span>
-                            <span class="event_status present">Đang diễn ra</span>
+                            <span class="event_status present data_trangthai">Đang diễn ra</span>
                         </div>
                     </a>
                 </div>
@@ -99,11 +99,11 @@
                         </div>
 
                         <div class="event_info">
-                            <span class="event_title">Lễ Khai Mạc Hội Khỏe Phù Đổng Vòng Trường NH 2023 - 2024</span>
-                            <span class="event_time"><i data-feather="clock"
+                            <span class="event_title data_tieudesukien">Lễ Khai Mạc Hội Khỏe Phù Đổng Vòng Trường NH 2023 - 2024</span>
+                            <span class="event_time data_thoigian"><i data-feather="clock"
                                     style="color: gray; width: 16px; height: 16px"></i> <span>12/09/2024 08:30:00</span>
                             </span>
-                            <span class="event_status present">Đang diễn ra</span>
+                            <span class="event_status present data_trangthai">Đang diễn ra</span>
                         </div>
                     </a>
                 </div>
@@ -115,12 +115,12 @@
                         </div>
 
                         <div class="event_info">
-                            <span class="event_title">Lễ Khai Mạc Tuần Lễ Hưởng Ứng Học Tập Suốt Đời Năm 2024-
+                            <span class="event_title data_tieudesukien">Lễ Khai Mạc Tuần Lễ Hưởng Ứng Học Tập Suốt Đời Năm 2024-
                                 2025</span>
-                            <span class="event_time"><i data-feather="clock"
+                            <span class="event_time data_thoigian"><i data-feather="clock"
                                     style="color: gray; width: 16px; height: 16px"></i> <span>28/08/2024 07:30:00</span>
                             </span>
-                            <span class="event_status finished">Đã kết thúc</span>
+                            <span class="event_status finished data_trangthai">Đã kết thúc</span>
                         </div>
                     </a>
                 </div>
@@ -140,11 +140,11 @@
                         </div>
 
                         <div class="event_info">
-                            <span class="event_title">Mừng ngày nhà giáo Việt Nam 20/11</span>
-                            <span class="event_time"><i data-feather="clock"
+                            <span class="event_title data_tieudesukien">Mừng ngày nhà giáo Việt Nam 20/11</span>
+                            <span class="event_time data_thoigian"><i data-feather="clock"
                                     style="color: gray; width: 16px; height: 16px"></i> <span>20/11/2024 09:11:00</span>
                             </span>
-                            <span class="event_status prepare">Sắp diễn ra</span>
+                            <span class="event_status prepare data_trangthai">Sắp diễn ra</span>
                         </div>
                     </a>
                 </div>
@@ -156,13 +156,13 @@
                         </div>
 
                         <div class="event_info">
-                            <span class="event_title">Hoạt động mừng ngày phụ nữ Việt Nam
+                            <span class="event_title data_tieudesukien">Hoạt động mừng ngày phụ nữ Việt Nam
                                 20/10</span>
-                            <span class="event_time"><i data-feather="clock"
+                            <span class="event_time data_thoigian"><i data-feather="clock"
                                     style="color: gray; width: 16px; height: 16px"></i> <span>10/09/2024 09:00:00
                                 </span>
                             </span>
-                            <span class="event_status prepare">Sắp diễn ra</span>
+                            <span class="event_status prepare data_trangthai">Sắp diễn ra</span>
                         </div>
                     </a>
                 </div>
@@ -174,11 +174,11 @@
                         </div>
 
                         <div class="event_info">
-                            <span class="event_title">Tổ chức đêm hội trăng rằm cho học sinh</span>
-                            <span class="event_time"><i data-feather="clock"
+                            <span class="event_title data_tieudesukien">Tổ chức đêm hội trăng rằm cho học sinh</span>
+                            <span class="event_time data_thoigian"><i data-feather="clock"
                                     style="color: gray; width: 16px; height: 16px"></i> <span>12/09/2024 08:30:00</span>
                             </span>
-                            <span class="event_status prepare">Sắp diễn ra</span>
+                            <span class="event_status prepare data_trangthai">Sắp diễn ra</span>
                         </div>
                     </a>
                 </div>
@@ -190,12 +190,12 @@
                         </div>
 
                         <div class="event_info">
-                            <span class="event_title">Lễ tổng kết Tuần Lễ Hưởng Ứng Học Tập Suốt Đời Năm 2024 -
+                            <span class="event_title data_tieudesukien">Lễ tổng kết Tuần Lễ Hưởng Ứng Học Tập Suốt Đời Năm 2024 -
                                 2025</span>
-                            <span class="event_time"><i data-feather="clock"
+                            <span class="event_time data_thoigian"><i data-feather="clock"
                                     style="color: gray; width: 16px; height: 16px"></i> <span>28/08/2024 07:30:00</span>
                             </span>
-                            <span class="event_status prepare">Sắp diễn ra</span>
+                            <span class="event_status prepare data_trangthai">Sắp diễn ra</span>
                         </div>
                     </a>
                 </div>
@@ -214,23 +214,23 @@
                             <span>Tên sự kiện</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_tieudesukien" type="text">
                         </div>
                         <div class="body_title">
                             <span>Nội dung sự kiện</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_noidungsukien" type="text">
                         </div>
                         <div class="body_title">
                             <span>Thời gian</span>
                         </div>
                         <div class="body_inputtime">
-                            <input type="text" class="time" placeholder="11:00">
-                            <input type="date" class=date>
+                            <input type="text" class="time input_thoigian" placeholder="11:00">
+                            <input type="date" class="date input_thoigian">
                             <span>đến</span>
-                            <input type="text" class="time" placeholder="11:00">
-                            <input type="date" class="date">
+                            <input type="text" class="time input_thoigian" placeholder="11:00">
+                            <input type="date" class="date input_thoigian">
                         </div>
                         <div class="body_title">
                             <span>Địa điểm</span>
@@ -248,7 +248,7 @@
                             <span>Đối tượng tham gia</span>
                         </div>
                         <div class="body_input">
-                            <select name="" id="">
+                            <select name="" id="" class="select_doituongthamgia">
                                 <option value="">Tất cả (Bao gồm: Học sinh, Giáo viên, Phụ huynh)</option>
                                 <option value="">Toàn trường (Bao gồm cả học sinh và giáo viên)</option>
                                 <option value="">Tất cả học sinh</option>
@@ -288,12 +288,12 @@
                     </div>
 
                     <div class="schedule_body">
-                        <span>Họp với Phòng Đào tạo về kế hoạch học kỳ mới</span>
-                        <span>Nội dung: Họp triển khai nội dung đầu năm</span>
-                        <span>Người chủ trì : Hiệu trưởng nhà trường</span>
-                        <span>Thời gian : 10:30</span>
-                        <span>Địa điểm : Phòng họp 01</span>
-                        <span>Ghi chú : Quan trọng</span>
+                        <span class="data_tieudelichhop">Họp với Phòng Đào tạo về kế hoạch học kỳ mới</span>
+                        <span class="data_noidunglichhop">Nội dung: Họp triển khai nội dung đầu năm</span>
+                        <span class="data_nguoichutri">Người chủ trì : Hiệu trưởng nhà trường</span>
+                        <span class="data_thoigian">Thời gian : 10:30</span>
+                        <span class="data_diadiem">Địa điểm : Phòng họp 01</span>
+                        <span class="data_ghichu">Ghi chú : Quan trọng</span>
                     </div>
                 </div>
 
@@ -303,12 +303,12 @@
                     </div>
 
                     <div class="schedule_body">
-                        <span>Họp với Phòng Tài chính về ngân sách năm học</span>
-                        <span>Nội dung: Phân bổ ngân sách và lên kế hoạch...</span>
-                        <span>Người chủ trì : Trần Nguyên Khởi</span>
-                        <span>Thời gian : 14:00 - 015:00:</span>
-                        <span>Địa điểm : Phòng họp 02</span>
-                        <span>Ghi chú : ....</span>
+                        <span class="data_tieudelichhop">Họp với Phòng Tài chính về ngân sách năm học</span>
+                        <span class="data_noidunglichhop">Nội dung: Phân bổ ngân sách và lên kế hoạch...</span>
+                        <span class="data_nguoichutri">Người chủ trì : Trần Nguyên Khởi</span>
+                        <span class="data_thoigian">Thời gian : 14:00 - 015:00:</span>
+                        <span class="data_diadiem">Địa điểm : Phòng họp 02</span>
+                        <span class="data_ghichu">Ghi chú : ....</span>
                     </div>
                 </div>
 
@@ -318,12 +318,12 @@
                     </div>
 
                     <div class="schedule_body">
-                        <span>Họp ban Giám Hiệu</span>
-                        <span>Nội dung: Họp ban Giám Hiệu</span>
-                        <span>Người chủ trì : Trần Nguyên Khởi</span>
-                        <span>Thời gian : :0800 - 09:00:</span>
-                        <span>Địa điểm : Phòng họp 04</span>
-                        <span>Ghi chú : ....</span>
+                        <span class="data_tieudelichhop">Họp ban Giám Hiệu</span>
+                        <span class="data_noidunglichhop">Nội dung: Họp ban Giám Hiệu</span>
+                        <span class="data_nguoichutri">Người chủ trì : Trần Nguyên Khởi</span>
+                        <span class="data_thoigian">Thời gian : :0800 - 09:00:</span>
+                        <span class="data_diadiem">Địa điểm : Phòng họp 04</span>
+                        <span class="data_ghichu">Ghi chú : ....</span>
                     </div>
                 </div>
             </div>
@@ -343,12 +343,12 @@
                     </div>
 
                     <div class="schedule_body">
-                        <span>Họp với Phòng Truyền thông</span>
-                        <span>Nội dung: Lên kế hoạch quảng bá trường</span>
-                        <span>Người chủ trì : Nguyễn Thị Ánh Xuân </span>
-                        <span>Thời gian : 08:00 - 09:30</span>
-                        <span>Địa điểm : Phòng họp 01</span>
-                        <span>Ghi chú : ....</span>
+                        <span class="data_tieudelichhop">Họp với Phòng Truyền thông</span>
+                        <span class="data_noidunglichhop">Nội dung: Lên kế hoạch quảng bá trường</span>
+                        <span class="data_nguoichutri">Người chủ trì : Nguyễn Thị Ánh Xuân </span>
+                        <span class="data_thoigian">Thời gian : 08:00 - 09:30</span>
+                        <span class="data_diadiem">Địa điểm : Phòng họp 01</span>
+                        <span class="data_ghichu">Ghi chú : ....</span>
                     </div>
                 </div>
 
@@ -357,13 +357,13 @@
                         <p class="schedule_title">Thứ 5 - 08/08/2024</p>
                     </div>
 
-                    <div class="schedule_body">
-                        <span>Họp với Ban Giám hiệu về tổng kết tuần</span>
-                        <span>Nội dung: Tổng kết cuối tuần</span>
-                        <span>Người chủ trì : Trần Nguyên Khởi</span>
-                        <span>Thời gian : 08:00 - 09:30</span>
-                        <span>Địa điểm : Phòng học lớp 9B</span>
-                        <span>Ghi chú : .....</span>
+                    <div class="schedule_body data_lichhop">
+                        <span class="data_tieudelichhop">Họp với Ban Giám hiệu về tổng kết tuần</span>
+                        <span class="data_noidunglichhop">Nội dung: Tổng kết cuối tuần</span>
+                        <span class="data_nguoichutri">Người chủ trì : Trần Nguyên Khởi</span>
+                        <span class="data_thoigian">Thời gian : 08:00 - 09:30</span>
+                        <span class="data_diadiem">Địa điểm : Phòng học lớp 9B</span>
+                        <span class="data_ghichu">Ghi chú : .....</span>
                     </div>
                 </div>
 
@@ -372,13 +372,13 @@
                         <p class="schedule_title">Thứ 7 - 03/08/2024</p>
                     </div>
 
-                    <div class="schedule_body">
-                        <span>Họp với Phòng Hành chính</span>
-                        <span>Nội dung: Công tác chuẩn bị cho tuần</span>
-                        <span>Người chủ trì : Hiệu trưởng nhà trường</span>
-                        <span>Thời gian : 10:00 - 11:30</span>
-                        <span>Địa điểm : Phòng học lớp 9A</span>
-                        <span>Ghi chú : ....</span>
+                    <div class="schedule_body data_lichhop">
+                        <span class="data_tieudelichhop">Họp với Phòng Hành chính</span>
+                        <span class="data_noidunglichhop">Nội dung: Công tác chuẩn bị cho tuần</span>
+                        <span class="data_nguoichutri">Người chủ trì : Hiệu trưởng nhà trường</span>
+                        <span class="data_thoigian">Thời gian : 10:00 - 11:30</span>
+                        <span class="data_diadiem">Địa điểm : Phòng học lớp 9A</span>
+                        <span class="data_ghichu">Ghi chú : ....</span>
                     </div>
                 </div>
             </div>
@@ -394,37 +394,37 @@
                             <span>Tên cuộc họp</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_tieudelichhop" type="text">
                         </div>
                         <div class="body_title">
                             <span>Nội dung họp</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_noidunglichhop" type="text">
                         </div>
                         <div class="body_title">
                             <span>Thời gian</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_thoigian" type="text">
                         </div>
                         <div class="body_title">
                             <span>Địa điểm</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_diadiem" type="text">
                         </div>
                         <div class="body_title">
                             <span>Ghi chú</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_ghichu" type="text">
                         </div>
                         <div class="body_title">
                             <span>Đối tượng tham gia</span>
                         </div>
                         <div class="body_input">
-                            <select name="" id="">
+                            <select class="select_doituongthamgia" name="" id="">
                                 <option value="">Phòng đào tạo</option>
                                 <option value="">Ban giám hiệu</option>
                                 <option value="">Phòng kế toán</option>
@@ -464,12 +464,12 @@
                     </div>
 
                     <div class="schedule_body">
-                        <span>Hội nghị triển khai công tác giáo vụ đầu năm </span>
-                        <span>Nội dung: Họp triển khai nội dung đầu năm</span>
-                        <span>Người chủ trì : Hiệu trưởng nhà trường</span>
-                        <span>Thời gian : 10:30</span>
-                        <span>Địa điểm : Phòng họp 01</span>
-                        <span>Ghi chú : Quan trọng</span>
+                        <span class="data_tieudelichcongtac">Hội nghị triển khai công tác giáo vụ đầu năm </span>
+                        <span class="data_noidunglichcongtac">Nội dung: Họp triển khai nội dung đầu năm</span>
+                        <span class="data_nguoichutri">Người chủ trì : Hiệu trưởng nhà trường</span>
+                        <span class="data_thoigian">Thời gian : 10:30</span>
+                        <span class="data_diadiem">Địa điểm : Phòng họp 01</span>
+                        <span class="data_ghichu">Ghi chú : Quan trọng</span>
                     </div>
                 </div>
 
@@ -479,12 +479,12 @@
                     </div>
 
                     <div class="schedule_body">
-                        <span>Họp với Phòng Tài chính về ngân sách năm học</span>
-                        <span>Nội dung: Phân bổ ngân sách và lên kế hoạch...</span>
-                        <span>Người chủ trì : Trần Nguyên Khởi</span>
-                        <span>Thời gian : 14:00 - 015:00:</span>
-                        <span>Địa điểm : Phòng họp 02</span>
-                        <span>Ghi chú : ....</span>
+                        <span class="data_tieudelichcongtac">Họp với Phòng Tài chính về ngân sách năm học</span>
+                        <span class="data_noidunglichcongtac">Nội dung: Phân bổ ngân sách và lên kế hoạch...</span>
+                        <span class="data_nguoichutri">Người chủ trì : Trần Nguyên Khởi</span>
+                        <span class="data_thoigian">Thời gian : 14:00 - 015:00:</span>
+                        <span class="data_diadiem">Địa điểm : Phòng họp 02</span>
+                        <span class="data_ghichu">Ghi chú : ....</span>
                     </div>
                 </div>
 
@@ -494,12 +494,12 @@
                     </div>
 
                     <div class="schedule_body">
-                        <span>Họp ban Giám Hiệu</span>
-                        <span>Nội dung: Họp ban Giám Hiệu</span>
-                        <span>Người chủ trì : Trần Nguyên Khởi</span>
-                        <span>Thời gian : :0800 - 09:00:</span>
-                        <span>Địa điểm : Phòng họp 04</span>
-                        <span>Ghi chú : ....</span>
+                        <span class="data_tieudelichcongtac">Họp ban Giám Hiệu</span>
+                        <span class="data_noidunglichcongtac">Nội dung: Họp ban Giám Hiệu</span>
+                        <span class="data_nguoichutri">Người chủ trì : Trần Nguyên Khởi</span>
+                        <span class="data_thoigian">Thời gian : :0800 - 09:00:</span>
+                        <span class="data_diadiem">Địa điểm : Phòng họp 04</span>
+                        <span class="data_ghichu">Ghi chú : ....</span>
                     </div>
                 </div>
             </div>
@@ -520,12 +520,12 @@
                     </div>
 
                     <div class="schedule_body">
-                        <span>Họp với Phòng Truyền thông</span>
-                        <span>Nội dung: Lên kế hoạch quảng bá trường</span>
-                        <span>Người chủ trì : Nguyễn Thị Ánh Xuân </span>
-                        <span>Thời gian : 08:00 - 09:30</span>
-                        <span>Địa điểm : Phòng họp 01</span>
-                        <span>Ghi chú : ....</span>
+                        <span class="data_tieudelichcongtac">Họp với Phòng Truyền thông</span>
+                        <span class="data_noidunglichcongtac">Nội dung: Lên kế hoạch quảng bá trường</span>
+                        <span class="data_nguoichutri">Người chủ trì : Nguyễn Thị Ánh Xuân </span>
+                        <span class="data_thoigian">Thời gian : 08:00 - 09:30</span>
+                        <span class="data_diadiem">Địa điểm : Phòng họp 01</span>
+                        <span class="data_ghichu">Ghi chú : ....</span>
                     </div>
                 </div>
 
@@ -535,12 +535,12 @@
                     </div>
 
                     <div class="schedule_body">
-                        <span>Họp với Ban Giám hiệu về tổng kết tuần</span>
-                        <span>Nội dung: Tổng kết cuối tuần</span>
-                        <span>Người chủ trì : Trần Nguyên Khởi</span>
-                        <span>Thời gian : 08:00 - 09:30</span>
-                        <span>Địa điểm : Phòng học lớp 9B</span>
-                        <span>Ghi chú : .....</span>
+                        <span class="data_tieudelichcongtac">Họp với Ban Giám hiệu về tổng kết tuần</span>
+                        <span class="data_noidunglichcongtac">Nội dung: Tổng kết cuối tuần</span>
+                        <span class="data_nguoichutri">Người chủ trì : Trần Nguyên Khởi</span>
+                        <span class="data_thoigian">Thời gian : 08:00 - 09:30</span>
+                        <span class="data_diadiem">Địa điểm : Phòng học lớp 9B</span>
+                        <span class="data_ghichu">Ghi chú : .....</span>
                     </div>
                 </div>
 
@@ -550,12 +550,12 @@
                     </div>
 
                     <div class="schedule_body">
-                        <span>Họp với Phòng Hành chính</span>
-                        <span>Nội dung: Công tác chuẩn bị cho tuần</span>
-                        <span>Người chủ trì : Hiệu trưởng nhà trường</span>
-                        <span>Thời gian : 10:00 - 11:30</span>
-                        <span>Địa điểm : Phòng học lớp 9A</span>
-                        <span>Ghi chú : ....</span>
+                        <span class="data_tieudelichcongtac">Họp với Phòng Hành chính</span>
+                        <span class="data_noidunglichcongtac">Nội dung: Công tác chuẩn bị cho tuần</span>
+                        <span class="data_nguoichutri">Người chủ trì : Hiệu trưởng nhà trường</span>
+                        <span class="data-thoigian">Thời gian : 10:00 - 11:30</spancl>
+                        <span class="data_diadiem">Địa điểm : Phòng học lspanc/span>
+                        <span class="data_ghichu">Ghi chú : ....</span>
                     </div>
                 </div>
             </div>
@@ -571,37 +571,37 @@
                             <span>Tên lịch công tác</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_tieudelichcongtac" type="text">
                         </div>
                         <div class="body_title">
                             <span>Nội dung công tác</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_noidunglichcongtac" type="text">
                         </div>
                         <div class="body_title">
                             <span>Thời gian</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_thoigian" type="text">
                         </div>
                         <div class="body_title">
                             <span>Địa điểm</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_diadiem" type="text">
                         </div>
                         <div class="body_title">
                             <span>Ghi chú</span>
                         </div>
                         <div class="body_input">
-                            <input type="text">
+                            <input class="input_ghichu" type="text">
                         </div>
                         <div class="body_title">
                             <span>Người tham gia</span>
                         </div>
                         <div class="body_input">
-                            <select name="" id="">
+                            <select class="select_doituongthamgia" name="" id="">
                                 <option value="">Phòng đào tạo</option>
                                 <option value="">Ban giám hiệu</option>
                                 <option value="">Phòng kế toán</option>

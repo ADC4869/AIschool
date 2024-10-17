@@ -64,8 +64,8 @@
                         </div>
 
                         <div class="content_student">
-                            <span class="name_teacher">Nguyễn Thị Ánh Xuân</span>
-                            <span class="id_teacher">Mã giáo viên: GVV12345678</span>
+                            <span class="name_teacher data_hovatengiaovien">Nguyễn Thị Ánh Xuân</span>
+                            <span class="id_teacher data_magiaovien">Mã giáo viên: GVV12345678</span>
                         </div>
                     </a>
                 </div>
@@ -79,8 +79,8 @@
                         </div>
 
                         <div class="content_student">
-                            <span class="name_teacher">Lý Bí</span>
-                            <span class="id_teacher">Mã giáo viên: GVS12345678</span>
+                            <span class="name_teacher data_hovatengiaovien">Lý Bí</span>
+                            <span class="id_teacher data_magiaovien">Mã giáo viên: GVS12345678</span>
                         </div>
                     </a>
                 </div>
@@ -94,8 +94,8 @@
                         </div>
 
                         <div class="content_student">
-                            <span class="name_teacher">Huỳnh Thị Giàu</span>
-                            <span class="id_teacher">Mã giáo viên: GVL12345678</span>
+                            <span class="name_teacher data_hovatengiaovien">Huỳnh Thị Giàu</span>
+                            <span class="id_teacher data_magiaovien">Mã giáo viên: GVL12345678</span>
                         </div>
                     </a>
                 </div>
@@ -109,8 +109,8 @@
                         </div>
 
                         <div class="content_student">
-                            <span class="name_teacher">Hoa Mộng</span>
-                            <span class="id_teacher">Mã giáo viên: GVD12345678</span>
+                            <span class="name_teacher data_hovatengiaovien">Hoa Mộng</span>
+                            <span class="id_teacher data_magiaovien">Mã giáo viên: GVD12345678</span>
                         </div>
                     </a>
                 </div>
@@ -124,8 +124,8 @@
                         </div>
 
                         <div class="content_student">
-                            <span class="name_teacher">Hoàng Minh Kha</span>
-                            <span class="id_teacher">Mã giáo viên: GVH12345678</span>
+                            <span class="name_teacher data_hovatengiaovien">Hoàng Minh Kha</span>
+                            <span class="id_teacher data_magiaovien">Mã giáo viên: GVH12345678</span>
                         </div>
                     </a>
                 </div>
@@ -139,8 +139,8 @@
                         </div>
 
                         <div class="content_student">
-                            <span class="name_teacher">Đào Mộng</span>
-                            <span class="id_teacher">Mã giáo viên: GVH12345678</span>
+                            <span class="name_teacher data_hovatengiaovien">Đào Mộng</span>
+                            <span class="id_teacher data_magiaovien">Mã giáo viên: GVH12345678</span>
                         </div>
                     </a>
                 </div>
@@ -161,9 +161,9 @@
             <div class="info_class" id="listclass6" style="display: none">
                 <div class="class_card">
                     <a href="./timetableclass.php">
-                        <span class="name_class">Lớp 6A1</span>
-                        <span>GVCN: Nguyễn Thị Ánh Xuân</span>
-                        <span>Sỉ số: 40</span>
+                        <span class="name_class data_lophoc">Lớp 6A1</span>
+                        <span class="data_hovatengiaovien">GVCN: Nguyễn Thị Ánh Xuân</span>
+                        <span class="data_siso">Sỉ số: 40</span>
                     </a>
                 </div>
             </div>
@@ -171,9 +171,9 @@
             <div class="info_class" id="listclass7" style="display: none">
                 <div class="class_card">
                     <a href="./timetableclass.php">
-                        <span class="name_class">Lớp 7A1</span>
-                        <span>GVCN: Nguyễn Thị Ánh Xuân</span>
-                        <span>Sỉ số: 40</span>
+                        <span class="name_class data_lophoc">Lớp 7A1</span>
+                        <span class="data_hovatengiaovien">GVCN: Nguyễn Thị Ánh Xuân</span>
+                        <span class="data_siso">Sỉ số: 40</span>
                     </a>
                 </div>
             </div>
@@ -181,9 +181,9 @@
             <div class="info_class" id="listclass8" style="display: none">
                 <div class="class_card">
                     <a href="./timetableclass.php">
-                        <span class="name_class">Lớp 8A1</span>
-                        <span>GVCN: Nguyễn Thị Ánh Xuân</span>
-                        <span>Sỉ số: 40</span>
+                        <span class="name_class data_lophoc">Lớp 8A1</span>
+                        <span class="data_hovatengiaovien">GVCN: Nguyễn Thị Ánh Xuân</span>
+                        <span class="data_siso">Sỉ số: 40</span>
                     </a>
                 </div>
             </div>
@@ -191,33 +191,33 @@
             <div class="info_class" id="listclass9" style="display: none">
                 <div class="class_card">
                     <a href="./timetableclass.php">
-                        <span class="name_class">Lớp 9A1</span>
-                        <span>GVCN: Nguyễn Thị Ánh Xuân</span>
-                        <span>Sỉ số: 40</span>
+                        <span class="name_class data_lophoc">Lớp 9A1</span>
+                        <span class="data_hovatengiaovien">GVCN: Nguyễn Thị Ánh Xuân</span>
+                        <span class="data_siso">Sỉ số: 40</span>
                     </a>
                 </div>
 
                 <div class="class_card">
                     <a href="./timetableclass.php">
-                        <span class="name_class">Lớp 9A2</span>
-                        <span>GVCN: Trần Nguyễn Khởi</span>
-                        <span>Sỉ số: 40</span>
+                        <span class="name_class data_lophoc">Lớp 9A2</span>
+                        <span class="data_hovatengiaovien">GVCN: Trần Nguyễn Khởi</span>
+                        <span class="data_siso">Sỉ số: 40</span>
                     </a>
                 </div>
 
                 <div class="class_card">
                     <a href="./timetableclass.php">
-                        <span class="name_class">Lớp 9A3</span>
-                        <span>GVCN: Huỳnh Vũ Nhi</span>
-                        <span>Sỉ số: 40</span>
+                        <span class="name_class data_lophoc">Lớp 9A3</span>
+                        <span class="data_hovatengiaovien">GVCN: Huỳnh Vũ Nhi</span>
+                        <span class="data_siso">Sỉ số: 40</span>
                     </a>
                 </div>
 
                 <div class="class_card">
                     <a href="./timetableclass.php">
-                        <span class="name_class">Lớp 9A4</span>
-                        <span>GVCN: Trương Tam</span>
-                        <span>Sỉ số: 40</span>
+                        <span class="name_class data_lophoc">Lớp 9A4</span>
+                        <span class="data_hovatengiaovien">GVCN: Trương Tam</span>
+                        <span class="data_siso">Sỉ số: 40</span>
                     </a>
                 </div>
             </div>
