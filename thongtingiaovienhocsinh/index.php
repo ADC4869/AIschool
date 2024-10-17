@@ -18,9 +18,6 @@
 </head>
 <body>
     <?php
-        session_start();
-        include '../database/db_config.php'; // Kết nối đến cơ sở dữ liệu
-
         $role = isset($_GET['role']) ? $_GET['role'] : '';
         $teacher_id = isset($_GET['teacher_id']) ? $_GET['teacher_id'] : null;
 
