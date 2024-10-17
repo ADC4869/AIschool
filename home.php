@@ -1,5 +1,5 @@
 <?php
-include './database/theme_loader.php';
+// include './database/theme_loader.php';
 if (isset($_GET['role'])) {
     $user_role = $_GET['role'];
 } else {
