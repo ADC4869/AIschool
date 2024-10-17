@@ -20,7 +20,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
         // Role-based navigation
         if ($role == 'hieutruong') {
             echo '
-            <a href="./principal/comment.php" class="' . ($current_page == 'comment.php' ? 'home-active' : '') . '">
+            <a href="../principal/comment.php" class="' . ($current_page == 'comment.php' ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Góp ý</span>
