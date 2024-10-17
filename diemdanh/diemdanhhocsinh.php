@@ -57,9 +57,9 @@
                         <img src="../img/gvn1.jpg" alt="Ảnh đại diện">
                     </div>
                     <div class="infostudent">
-                        <p>Họ và tên: <span>Nguyễn Ngọc Anh</span></p>
-                        <p>Lớp: <span>9B</span></p>
-                        <P>Mã học sinh: <span>20016741</span></P>
+                        <p class="data_hovatenhocsinh">Họ và tên: <span>Nguyễn Ngọc Anh</span></p>
+                        <p class="data_lophoc">Lớp: <span>9B</span></p>
+                        <P class="data_mahocsinh">Mã học sinh: <span>20016741</span></P>
                     </div>
                 </div>
 

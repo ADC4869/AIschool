@@ -25,7 +25,7 @@
                 <div class="main__input">
                     <form action="./changepassword.php" method="POST">
 
-                        <input type="text" placeholder="Nhập số điện thoại">
+                        <input class="input_sodienthoai" type="text" placeholder="Nhập số điện thoại">
 
                         <a href="./changepassword.php">
                             <button type="button" class="btn__signin">Tiếp theo</button>

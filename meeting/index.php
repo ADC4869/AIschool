@@ -70,36 +70,36 @@
                 <div class="card important">
                     <div class="card-header">Thứ 5 - 15/08/2024</div>
                     <div class="card-body">
-                        <p><strong>Họp phụ huynh lớp 1A</strong></p>
-                        <p><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
-                        <p><strong>Người chủ trì:</strong> Loan cục súc</p>
-                        <p><strong>Thời gian:</strong> 10:30</p>
-                        <p><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
-                        <p><strong>Ghi chú:</strong> Quan trọng</p>
+                        <p class="data_tieudelichhop"><strong>Họp phụ huynh lớp 9A1</strong></p>
+                        <p class="data_noidunglichhop"><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
+                        <p class="data_nguoichutri"><strong>Người chủ trì:</strong> Trần Tiến Phát</p>
+                        <p class="data_thoigian"><strong>Thời gian:</strong> 10:30</p>
+                        <p class="data_diadiem"><strong>Địa điểm:</strong> Phòng học lớp 9A1</p>
+                        <p class="data_ghichu"><strong>Ghi chú:</strong> Quan trọng</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-header">Thứ 5 - 15/08/2024</div>
                     <div class="card-body">
-                        <p><strong>Họp phụ huynh lớp 1A</strong></p>
-                        <p><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
-                        <p><strong>Người chủ trì:</strong> Loan cục súc</p>
-                        <p><strong>Thời gian:</strong> 10:30</p>
-                        <p><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
-                        <p><strong>Ghi chú:</strong> ....</p>
+                        <p class="data_tieudelichhop"><strong>Họp phụ huynh lớp 9A1</strong></p>
+                        <p class="data_noidunglichhop"><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
+                        <p class="data_nguoichutri"><strong>Người chủ trì:</strong>Lê Long Dũng</p>
+                        <p class="data_thoigian"><strong>Thời gian:</strong> 10:30</p>
+                        <p class="data_diadiem"><strong>Địa điểm:</strong> Phòng học lớp 9A1</p>
+                        <p class="data_ghichu"><strong>Ghi chú:</strong> ....</p>
                     </div>
                 </div>
 
                 <div class="card past">
                     <div class="card-header">Thứ 5 - 15/08/2024</div>
                     <div class="card-body">
-                        <p><strong>Họp phụ huynh lớp 1A</strong></p>
-                        <p><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
-                        <p><strong>Người chủ trì:</strong> Loan cục súc</p>
-                        <p><strong>Thời gian:</strong> 10:30</p>
-                        <p><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
-                        <p><strong>Ghi chú:</strong> ....</p>
+                        <p class="data_tieudelichhop"><strong>Họp phụ huynh lớp 9A1</strong></p>
+                        <p class="data_noidunglichhop"><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
+                        <p class="data_nguoichutri"><strong>Người chủ trì:</strong>Phạm Lan Anh</p>
+                        <p class="data_thoigian"><strong>Thời gian:</strong> 10:30</p>
+                        <p class="data_diadiem"><strong>Địa điểm:</strong> Phòng học lớp 9A1</p>
+                        <p class="data_ghichu"><strong>Ghi chú:</strong> ....</p>
                     </div>
                 </div>
             </div>
@@ -118,22 +118,22 @@
                     <h3>Thông tin lịch họp</h3>
                     <form>
                         <label for="meetingName">Tên cuộc họp</label>
-                        <input type="text" id="meetingName" name="meetingName" placeholder="Nhập tên cuộc họp">
+                        <input class="input_tieudelichhop" type="text" id="meetingName" name="meetingName" placeholder="Nhập tên cuộc họp">
 
                         <label for="meetingContent">Nội dung họp</label>
-                        <input type="text" id="meetingContent" name="meetingContent" placeholder="Nhập nội dung họp">
+                        <input class="data_noidunglichhop" type="text" id="meetingContent" name="meetingContent" placeholder="Nhập nội dung họp">
 
                         <label for="meetingTime">Thời gian</label>
-                        <input type="text" id="meetingTime" name="meetingTime" placeholder="Nhập thời gian">
+                        <input class="input_thoigian" type="text" id="meetingTime" name="meetingTime" placeholder="Nhập thời gian">
 
                         <label for="meetingLocation">Địa điểm</label>
-                        <input type="text" id="meetingLocation" name="meetingLocation" placeholder="Nhập địa điểm">
+                        <input class="input_diadiem" type="text" id="meetingLocation" name="meetingLocation" placeholder="Nhập địa điểm">
 
                         <label for="meetingNotes">Ghi chú</label>
-                        <input type="text" id="meetingNotes" name="meetingNotes" placeholder="Nhập ghi chú">
+                        <input class="input_ghichu" type="text" id="meetingNotes" name="meetingNotes" placeholder="Nhập ghi chú">
 
                         <label for="meetingparticipants">Người tham gia</label>
-                        <select name="options" id="meetingparticipants">
+                        <select class="select_doituongthamgia" name="options" id="meetingparticipants">
                             <option value="">Tập thể lớp 9A</option>
                             <option value="">Tập thể giáo viên lớp 9A</option>
                             <option value="">Tập thể phụ huynh lớp 9A</option>
@@ -152,36 +152,36 @@
                 <div class="card">
                     <div class="card-header">Thứ 4 - 15/09/2024</div>
                     <div class="card-body">
-                        <p><strong>Họp phụ huynh lớp 1A</strong></p>
-                        <p><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
-                        <p><strong>Người chủ trì:</strong> Loan cục súc</p>
-                        <p><strong>Thời gian:</strong> 10:30</p>
-                        <p><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
-                        <p><strong>Ghi chú:</strong> ....</p>
+                        <p class="data_tieudelichhop"><strong>Họp phụ huynh lớp 9A1</strong></p>
+                        <p class="data_noidunglichhop"><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
+                        <p class="data_nguoichutri"><strong>Người chủ trì:</strong> Phạm Yến Linh</p>
+                        <p class="data_thoigian"><strong>Thời gian:</strong> 10:30</p>
+                        <p class="data_diadiem"><strong>Địa điểm:</strong> Phòng học lớp 9A1</p>
+                        <p class="data_ghichu"><strong>Ghi chú:</strong> ....</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-header">Thứ 2 - 13/09/2024</div>
                     <div class="card-body">
-                        <p><strong>Họp phụ huynh lớp 1A</strong></p>
-                        <p><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
-                        <p><strong>Người chủ trì:</strong> Loan cục súc</p>
-                        <p><strong>Thời gian:</strong> 10:30</p>
-                        <p><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
-                        <p><strong>Ghi chú:</strong> ....</p>
+                        <p class="data_tieudelichhop"><strong>Họp phụ huynh lớp 9A1</strong></p>
+                        <p class="data_noidunglichhop"><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
+                        <p class="data_nguoichutri"><strong>Người chủ trì:</strong> Nguyễn Văn Nam</p>
+                        <p class="data_thoigian"><strong>Thời gian:</strong> 10:30</p>
+                        <p class="data_diadiem"><strong>Địa điểm:</strong> Phòng học lớp 9A1</p>
+                        <p class="data_ghichu"><strong>Ghi chú:</strong> ....</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-header">Thứ 6 - 17/09/2024</div>
                     <div class="card-body">
-                        <p><strong>Họp phụ huynh lớp 1A</strong></p>
-                        <p><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
-                        <p><strong>Người chủ trì:</strong> Loan cục súc</p>
-                        <p><strong>Thời gian:</strong> 10:30</p>
-                        <p><strong>Địa điểm:</strong> Phòng học lớp 1A</p>
-                        <p><strong>Ghi chú:</strong> ....</p>
+                        <p class="data_tieudelichhop"><strong>Họp phụ huynh lớp 9A1</strong></p>
+                        <p class="data_noidunglichhop"><strong>Nội dung:</strong> Họp phụ huynh đầu năm</p>
+                        <p class="data_nguoichutri"><strong>Người chủ trì:</strong> Lê Trần Nhựt Huy</p>
+                        <p class="data_thoigian"><strong>Thời gian:</strong> 10:30</p>
+                        <p class="data_diadiem"><strong>Địa điểm:</strong> Phòng học lớp 9A1</p>
+                        <p class="data_ghichu"><strong>Ghi chú:</strong> ....</p>
                     </div>
                 </div>
             </div>

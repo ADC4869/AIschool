@@ -46,11 +46,11 @@
             <div class="card">
                 <img src="../img/gvn.jpg" alt="Image">
                 <div class="card-content">
-                    <h3>Họ Tên : Trần Thành Đạt</h3>
-                    <p>Môn: Văn</p>
-                    <p>Số điện thoại : 0369194202</p>
-                    <p>Địa chỉ: 299/12 Lê Quang Sung P6 Q6 HCM</p>
-                    <p>Ghi chú : GVCN</p>
+                    <h3 class="data_hovatengiaovien">Họ Tên : Trần Thành Đạt</h3>
+                    <p class="data_monhoc">Môn: Văn</p>
+                    <p class="data_sodienthoai">Số điện thoại : 0369194202</p>
+                    <p class="data_diachi">Địa chỉ: 299/12 Lê Quang Sung P6 Q6 HCM</p>
+                    <p class="data_ghichu">Ghi chú : GVCN</p>
                 </div>
                 <div class="icon">
                     <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i
@@ -63,10 +63,10 @@
             <div class="card">
                 <img src="../img/tg.jpg" alt="Image">
                 <div class="card-content">
-                    <h3>Họ Tên : Trần Nguyên Khởi</h3>
-                    <p>Môn: Lý</p>
-                    <p>Số điện thoại : 123456789</p>
-                    <p>Địa chỉ: 192/23 Nguyễn Trãi, Quận 5, HCM</p>
+                    <h3 class="data_hovatengiaovien">Họ Tên : Trần Nguyên Khởi</h3>
+                    <p class="data_monhoc">Môn: Lý</p>
+                    <p class="data_sodienthoai">Số điện thoại : 123456789</p>
+                    <p class="data_diachi">Địa chỉ: 192/23 Nguyễn Trãi, Quận 5, HCM</p>
                 </div>
                 <div class="icon">
                     <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i
@@ -79,10 +79,10 @@
             <div class="card">
                 <img src="../img/gvn1.jpg" alt="Image">
                 <div class="card-content">
-                    <h3>Họ Tên : Lâm Thị Mỹ Ngọc</h3>
-                    <p>Môn: Toán</p>
-                    <p>Số điện thoại : 123456789</p>
-                    <p>Địa chỉ: 192 Tạ Quan Bửu, Quận 8, HCM</p>
+                    <h3 class="data_hovatengiaovien">Họ Tên : Lâm Thị Mỹ Ngọc</h3>
+                    <p class="data_monhoc">Môn: Toán</p>
+                    <p class="data_sodienthoai">Số điện thoại : 123456789</p>
+                    <p class="data_diachi">Địa chỉ: 192 Tạ Quan Bửu, Quận 8, HCM</p>
                 </div>
                 <div class="icon">
                     <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i
@@ -98,10 +98,10 @@
             <div class="card">
                 <img src="../img/ph.jpg" alt="Image">
                 <div class="card-content">
-                    <h3>Họ Tên : Lê Hồng Anh</h3>
+                    <h3 class="data_hovatenphuhuynh">Họ Tên : Lê Hồng Anh</h3>
                     <p>Số học sinh: 2</p>
-                    <p>Số điện thoại : 0934567896</p>
-                    <p>Địa chỉ: 123/25 Võ Thị Sáu, Quận 3, HCM</p>
+                    <p class="data_sodienthoai">Số điện thoại : 0934567896</p>
+                    <p class="data_diachi">Địa chỉ: 123/25 Võ Thị Sáu, Quận 3, HCM</p>
                 </div>
                 <div class="button-group">
                     <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i
@@ -116,10 +116,10 @@
             <div class="card">
                 <img src="../img/ph1.jpg" alt="Image">
                 <div class="card-content">
-                    <h3>Họ Tên : Nguyễn Đăng Khoa</h3>
+                    <h3 class="data_hovatenphuhuynh">Họ Tên : Nguyễn Đăng Khoa</h3>
                     <p>Số học sinh: 1</p>
-                    <p>Số điện thoại : 0345678985</p>
-                    <p>Địa chỉ: 208/30 Tên Lửa, Quận Bình Tân, HCM</p>
+                    <p class="data_sodienthoai">Số điện thoại : 0345678985</p>
+                    <p class="data_diachi">Địa chỉ: 208/30 Tên Lửa, Quận Bình Tân, HCM</p>
                 </div>
                 <div class="button-group">
                     <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i
@@ -132,10 +132,10 @@
             <div class="card">
                 <img src="../img/ph2.jpg" alt="Image">
                 <div class="card-content">
-                    <h3>Họ Tên : Nguyễn Yến Vy</h3>
+                    <h3 class="data_hovatenphuhuynh">Họ Tên : Nguyễn Yến Vy</h3>
                     <p>Số học sinh: 2</p>
-                    <p>Số điện thoại : 0923456789</p>
-                    <p>Địa chỉ: 33, Nguyễn Hữu Thọ, Quận Gò Vấp, HCM</p>
+                    <p class="data_sodienthoai">Số điện thoại : 0923456789</p>
+                    <p class="data_diachi">Địa chỉ: 33, Nguyễn Hữu Thọ, Quận Gò Vấp, HCM</p>
                 </div>
                 <div class="button-group">
                     <a href="../call/index.php" style="font-size: 25px; color: var(--primary-color)"><i

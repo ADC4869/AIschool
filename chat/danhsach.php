@@ -35,7 +35,7 @@
                 <li class="chat-item" data-chat-id="A">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh A</div>
+                        <div class="chat-name data_hovatenphuhuynh">Huỳnh Hoàng Hữu</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -44,7 +44,7 @@
                 <li class="chat-item" data-chat-id="B">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh B</div>
+                        <div class="chat-name data_hovatenphuhuynh">Nguyễn Kim Châu</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -53,7 +53,7 @@
                 <li class="chat-item" data-chat-id="C">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh C</div>
+                        <div class="chat-name data_hovatenphuhuynh">Trần Kim Anh</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -61,7 +61,7 @@
                 <li class="chat-item" data-chat-id="D">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh D</div>
+                        <div class="chat-name data_hovatenphuhuynh">Nguyễn Hùng Gia Huy</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -69,7 +69,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh E</div>
+                        <div class="chat-name data_hovatenphuhuynh">Phan Lê Ái Mỹ</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -77,7 +77,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh F</div>
+                        <div class="chat-name data_hovatenphuhuynh">Phạm Nhật Tân</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -85,7 +85,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh C</div>
+                        <div class="chat-name data_hovatenphuhuynh">Lệ Kim Thu</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -93,7 +93,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh C</div>
+                        <div class="chat-name data_hovatenphuhuynh">Trần Anh Tuấn</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>

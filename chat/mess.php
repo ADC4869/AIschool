@@ -34,29 +34,29 @@
                 <ul class="contacts">
                     <li class="contact">
                         <img src="../img/images.jpg" alt="Avatar">
-                        <span>Phụ huynh 1</span>
+                        <span class="data_hovatenphuhuynh">Trần Ánh Kim</span>
                     </li>
 
                     <li class="contact">
                         <img src="../img/a.jpg" alt="Avatar">
-                        <span>Phụ huynh 2</span>
+                        <span class="data_hovatenphuhuynh">Châu Kim Cúc</span>
                     </li>
 
                     <li class="contact">
                         <img src="../img/all1.png" alt="Avatar">
-                        <span>Phụ huynh 3</span>
+                        <span class="data_hovatenphuhuynh">Lê Kim Ngọc Mai</span>
                     </li>
 
                     <li class="contact">
                         <img src="../img/all1.png" alt="Avatar">
-                        <span>Phụ huynh 4</span>
+                        <span class="data_hovatenphuhuynh">Nguyễn Phát Đạt</span>
                     </li>
                     <!-- Add more contacts as needed -->
                 </ul>
             </div>
             <div class="right">
                 <div class="chat-header">
-                    <h2>Loan cực sức</h2>
+                    <h2 class="data_hovatenphuhuynh">Trần Huy Hoàng</h2>
                 </div>
                 <!-- Right content (e.g., messages, chat, etc.) -->
                 <div class="chat-messages">

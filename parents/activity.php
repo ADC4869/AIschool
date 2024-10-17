@@ -52,14 +52,14 @@
                     </div>
 
                     <div class="activity_info">
-                        <span class="title">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</span>
-                        <span class="content">Chương trình được triển khai nhằm góp phần thực hiện thành công Đề án
+                        <span class="title data_tieudehoatdong">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</span>
+                        <span class="content data_noidunghoatdong">Chương trình được triển khai nhằm góp phần thực hiện thành công Đề án
                             trồng 1 tỷ cây xanh
                             của Chính phủ...</span>
                     </div>
 
                     <div class="activity_time">
-                        <span><i class="fa-regular fa-clock"></i> <span>10:39 16/09/2024</span></span>
+                        <span class="data_thoigian"><i class="fa-regular fa-clock"></i> <span>10:39 16/09/2024</span></span>
                     </div>
                 </a>
             </div>
@@ -71,14 +71,14 @@
                     </div>
 
                     <div class="activity_info">
-                        <span class="title">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</span>
-                        <span class="content">Chương trình được triển khai nhằm góp phần thực hiện thành công Đề án
+                        <span class="title data_tieudehoatdong">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</span>
+                        <span class="content data_noidunghoatdong">Chương trình được triển khai nhằm góp phần thực hiện thành công Đề án
                             trồng 1 tỷ cây xanh
                             của Chính phủ...</span>
                     </div>
 
                     <div class="activity_time">
-                        <span><i class="fa-regular fa-clock"></i> <span>10:39 16/09/2024</span></span>
+                        <span class="data_thoigian"><i class="fa-regular fa-clock"></i> <span>10:39 16/09/2024</span></span>
                     </div>
                 </a>
             </div>
@@ -92,14 +92,14 @@
                     </div>
 
                     <div class="activity_info">
-                        <span class="title">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</span>
-                        <span class="content">Chương trình được triển khai nhằm góp phần thực hiện thành công Đề án
+                        <span class="title data_tieudehoatdong">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</span>
+                        <span class="content data_noidunghoatdong">Chương trình được triển khai nhằm góp phần thực hiện thành công Đề án
                             trồng 1 tỷ cây xanh
                             của Chính phủ...</span>
                     </div>
 
                     <div class="activity_time">
-                        <span><i class="fa-regular fa-clock"></i> <span>10:39 16/09/2024</span></span>
+                        <span class="data_thoigian"><i class="fa-regular fa-clock"></i> <span>10:39 16/09/2024</span></span>
                     </div>
                 </a>
             </div>
@@ -111,14 +111,14 @@
                     </div>
 
                     <div class="activity_info">
-                        <span class="title">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</span>
-                        <span class="content">Chương trình được triển khai nhằm góp phần thực hiện thành công Đề án
+                        <span class="title data_tieudehoatdong">Phát động chương trình 'Triệu cây xanh - Vì một Việt Nam xanh'</span>
+                        <span class="content data_noidunghoatdong">Chương trình được triển khai nhằm góp phần thực hiện thành công Đề án
                             trồng 1 tỷ cây xanh
                             của Chính phủ...</span>
                     </div>
 
                     <div class="activity_time">
-                        <span><i class="fa-regular fa-clock"></i> <span>10:39 16/09/2024</span></span>
+                        <span class="data_thoigian"><i class="fa-regular fa-clock"></i> <span>10:39 16/09/2024</span></span>
                     </div>
                 </a>
             </div>

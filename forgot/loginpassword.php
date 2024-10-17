@@ -23,8 +23,8 @@
                 <!-- Thêm form để xử lý mật khẩu -->
                 <form method="POST" action="../login/login.php">
                     <div class="main__input">
-                        <input type="password" name="password" placeholder="Nhập mật khẩu" required>
-                        <input type="password" name="confirm_password" placeholder="Nhập lại mật khẩu" required>
+                        <input class="input_matkhau" type="password" name="password" placeholder="Nhập mật khẩu" required>
+                        <input class="input_matkhau" type="password" name="confirm_password" placeholder="Nhập lại mật khẩu" required>
                     </div>
                     <div class="main__button">
                         <button type="submit" class="btn__signin">Đăng ký</button>

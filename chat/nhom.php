@@ -29,7 +29,7 @@
                 </svg>
             </span>
             <img src="../img/a.jpg" alt="Avatar" class="avatar">
-            <div class="username">Lớp 1A</div>
+            <div class="username">Lớp 9A1</div>
             <div class="menu-icon">
                 <a href="../call/index.php">
                 <i class="fa-solid fa-phone" style="color: white; font-size: 20px"></i>

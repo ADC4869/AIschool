@@ -324,13 +324,13 @@
                     <div class="modal-body">
                         <div class="info-row">
                             <div class="info">
-                                <p>Trường: IUH</p>
-                                <p>Lớp: 1B</p>
-                                <p>Tên: Nguyễn Thị Yến Loan</p>
+                                <p>Trường: Lê Hồng Phong</p>
+                                <p class="data_lophoc">Lớp: 9A1</p>
+                                <p class="data_hovatenhocsinh">Tên: Nguyễn Thị Yến Loan</p>
                             </div>
                             <div class="info">
                                 <p>Ngày: 14/08/2024</p>
-                                <p>Môn: Toán</p>
+                                <p class="data_monhoc">Môn: Toán</p>
                                 <p>Thời gian: 15’</p>
                             </div>
                         </div>
@@ -535,13 +535,13 @@
                     <div class="modal-body">
                         <div class="info-row">
                             <div class="info">
-                                <p>Trường: IUH</p>
-                                <p>Lớp: 1B</p>
-                                <p>Tên: Nguyễn Thị Yến Loan</p>
+                                <p>Trường: Lê Hồng Phong</p>
+                                <p>Lớp: 9a1</p>
+                                <p class="data_hovatenhocsinh">Tên: Nguyễn Thị Yến Loan</p>
                             </div>
                             <div class="info">
                                 <p>Ngày: 14/08/2024</p>
-                                <p>Môn: Toán</p>
+                                <p class="data_monhoc">Môn: Toán</p>
                                 <p>Thời gian: 15’</p>
                             </div>
                         </div>

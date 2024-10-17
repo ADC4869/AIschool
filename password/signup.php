@@ -25,8 +25,8 @@
         </div>
 
         <div class="main__input">
-            <input type="text" placeholder="Nhập mật khẩu">
-            <input type="text" placeholder="Nhập lại mật khẩu">
+            <input class="input_matkhau" type="text" placeholder="Nhập mật khẩu">
+            <input class="input_matkhau" type="text" placeholder="Nhập lại mật khẩu">
         </div>
         <div class="main__button">
             <a href="../login/login.php">

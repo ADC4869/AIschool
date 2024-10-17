@@ -68,97 +68,97 @@
                 <h2>Danh sách lớp khối 9</h2>
                 <a href="list.php">
                     <div class="class-item red-bg">
-                        <h3>Lớp 9A1</h3>
-                        <p>GVCN: Nguyễn Thị Ánh Xuân</p>
-                        <p>Sĩ số: 40</p>
+                        <h3 class="data_lophoc">Lớp 9A1</h3>
+                        <p class="data_hovatengiaovien">GVCN: Nguyễn Thị Ánh Xuân</p>
+                        <p class="data_siso">Sĩ số: 40</p>
                     </div>
                 </a>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 9A2</h3>
-                    <p>GVCN: Trần Nguyên Khôi</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 9A2</h3>
+                    <p class="data_hovatengiaovien">GVCN: Trần Nguyên Khôi</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 9A3</h3>
-                    <p>GVCN: Huỳnh Vũ Nhi</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 9A3</h3>
+                    <p class="data_hovatengiaovien">GVCN: Huỳnh Vũ Nhi</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 9A4</h3>
-                    <p>GVCN: Trương Tam</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 9A4</h3>
+                    <p class="data_hovatengiaovien">GVCN: Trương Tam</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
             </div>
 
             <div id="khoi8" class="class-list" style="display: none;">
                 <h2>Danh sách lớp khối 8</h2>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 8A1</h3>
-                    <p>GVCN: Nguyễn Thị Ánh Xuân</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 8A1</h3>
+                    <p class="data_hovatengiaovien">GVCN: Nguyễn Thị Ánh Xuân</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 8A2</h3>
-                    <p>GVCN: Trần Nguyên Khôi</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 8A2</h3>
+                    <p class="data_hovatengiaovien">GVCN: Trần Nguyên Khôi</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 8A3</h3>
-                    <p>GVCN: Huỳnh Vũ Nhi</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 8A3</h3>
+                    <p class="data_hovatengiaovien">GVCN: Huỳnh Vũ Nhi</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 8A4</h3>
-                    <p>GVCN: Trương Tam</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 8A4</h3>
+                    <p class="data_hovatengiaovien">GVCN: Trương Tam</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
             </div>
 
             <div id="khoi7" class="class-list" style="display: none;">
                 <h2>Danh sách lớp khối 7</h2>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 7A1</h3>
-                    <p>GVCN: Nguyễn Thị Ánh Xuân</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 7A1</h3>
+                    <p class="data_hovatengiaovien">GVCN: Nguyễn Thị Ánh Xuân</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 7A2</h3>
-                    <p>GVCN: Trần Nguyên Khôi</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 7A2</h3>
+                    <p class="data_hovatengiaovien">GVCN: Trần Nguyên Khôi</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 7A3</h3>
-                    <p>GVCN: Huỳnh Vũ Nhi</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 7A3</h3>
+                    <p class="data_hovatengiaovien">GVCN: Huỳnh Vũ Nhi</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 7A4</h3>
-                    <p>GVCN: Trương Tam</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 7A4</h3>
+                    <p class="data_hovatengiaovien">GVCN: Trương Tam</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
             </div>
 
             <div id="khoi6" class="class-list" style="display: none;">
                 <h2>Danh sách lớp khối 6</h2>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 6A1</h3>
-                    <p>GVCN: Nguyễn Thị Ánh Xuân</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 6A1</h3>
+                    <p class="data_hovatengiaovien">GVCN: Nguyễn Thị Ánh Xuân</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 6A2</h3>
-                    <p>GVCN: Trần Nguyên Khôi</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 6A2</h3>
+                    <p class="data_hovatengiaovien">GVCN: Trần Nguyên Khôi</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 6A3</h3>
-                    <p>GVCN: Huỳnh Vũ Nhi</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 6A3</h3>
+                    <p class="data_hovatengiaovien">GVCN: Huỳnh Vũ Nhi</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
                 <div class="class-item blue-bg">
-                    <h3>Lớp 6A4</h3>
-                    <p>GVCN: Trương Tam</p>
-                    <p>Sĩ số: 40</p>
+                    <h3 class="data_lophoc">Lớp 6A4</h3>
+                    <p class="data_hovatengiaovien">GVCN: Trương Tam</p>
+                    <p class="data_siso">Sĩ số: 40</p>
                 </div>
             </div>
         </div>

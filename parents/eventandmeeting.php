@@ -50,8 +50,8 @@
                 </div>
 
                 <div class="student_info">
-                    <span class="name_student">Nguyễn Thị Yến Loan</span>
-                    <span>Mã học sinh: HS2001587 <span> Lớp: 9A1</span></span>
+                    <span class="name_student data_hovatenhocsinh">Nguyễn Thị Yến Loan</span>
+                    <span class="data_mahocsinh">Mã học sinh: HS2001587 <span class="data_lophoc"> Lớp: 9A1</span></span>
                 </div>
 
                 <div class="student_icon">
@@ -67,8 +67,8 @@
                 </div>
 
                 <div class="student_info">
-                    <span class="name_student">Nguyễn Châu Giang</span>
-                    <span>Mã học sinh: HS2001588 <span> Lớp: 9A2</span></span>
+                    <span class="name_student data_hovatenhocsinh">Nguyễn Châu Giang</span>
+                    <span class="data_mahocsinh">Mã học sinh: HS2001588 <span class="data_lophoc"> Lớp: 9A2</span></span>
                 </div>
 
                 <div class="student_icon">
@@ -86,8 +86,8 @@
                 </div>
 
                 <div class="student_info">
-                    <span class="name_student">Nguyễn Thị Yến Loan</span>
-                    <span>Mã học sinh: HS2001587 <span> Lớp: 9A1</span></span>
+                    <span class="name_student data_hovatenhocsinh">Nguyễn Thị Yến Loan</span>
+                    <span class="data_mahocsinh">Mã học sinh: HS2001587 <span class="data_lophoc"> Lớp: 9A1</span></span>
                 </div>
 
                 <div class="student_icon">
@@ -103,8 +103,8 @@
                 </div>
 
                 <div class="student_info">
-                    <span class="name_student">Nguyễn Châu Giang</span>
-                    <span>Mã học sinh: HS2001588 <span> Lớp: 9A2</span></span>
+                    <span class="name_student data_hovatenhocsinh">Nguyễn Châu Giang</span>
+                    <span class="data_mahocsinh">Mã học sinh: HS2001588 <span class="data_lophoc"> Lớp: 9A2</span></span>
                 </div>
 
                 <div class="student_icon">

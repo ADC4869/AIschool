@@ -35,8 +35,8 @@
             <div class="event-item">
                 <img src="../img/TA.jpg" alt="Event Image">
                 <div class="event-content">
-                    <h3>Giao lưu văn hóa Hàn Quốc</h3>
-                    <p>Nhằm mục tiêu đẩy mạnh hợp tác quốc tế trong lĩnh vực nghiên cứu và tạo cơ hội trao đổi giao lưu
+                    <h3 class="data_tieudesukien">Giao lưu văn hóa Hàn Quốc</h3>
+                    <p class="data_noidungsukien">Nhằm mục tiêu đẩy mạnh hợp tác quốc tế trong lĩnh vực nghiên cứu và tạo cơ hội trao đổi giao lưu
                         cho sinh viên, từ ngày 16/01/2024 đến 18/01/2024</p>
                 </div>
             </div>
@@ -62,8 +62,8 @@
             <div class="event-item">
                 <img src="../img/TA.jpg" alt="Event Image">
                 <div class="event-content">
-                    <h3>Giao lưu văn hóa Hàn Quốc</h3>
-                    <p>Nhằm mục tiêu đẩy mạnh hợp tác quốc tế trong lĩnh vực nghiên cứu và tạo cơ hội trao đổi giao lưu
+                    <h3 class="data_tieudesukien">Giao lưu văn hóa Hàn Quốc</h3>
+                    <p class="data_noidungsukien">Nhằm mục tiêu đẩy mạnh hợp tác quốc tế trong lĩnh vực nghiên cứu và tạo cơ hội trao đổi giao lưu
                         cho sinh viên, từ ngày 16/01/2024 đến 18/01/2024</p>
                 </div>
             </div>

@@ -35,7 +35,7 @@
                     </div>
                     <div class="teacher__name">
                         <div class="teacher__name1">
-                            <p>GVCN: <span>Nguyễn Thị Mai</span></p>
+                            <p class="data_hovatengiaovien">GVCN: <span>Nguyễn Thị Mai</span></p>
                         </div>
                         <div class="teacher__name2">
                             <p>Ngày: <span>15/08/2024</span></p>
@@ -67,7 +67,7 @@
                         <div class="between__detail">
                             <a href="../diemdanh/thongtinhocsinhfix.php">
 
-                                <p class="name__student"><span>Từ Văn Tú</span></p>
+                                <p class="name__student data_hovatenhocsinh"><span>Từ Văn Tú</span></p>
                                 <p class="time__student">Thời gian đến trường: <span>06:05</span></p>
                             </a>
                         </div>
@@ -88,7 +88,7 @@
                         <div class="between__detail">
                             <a href="../diemdanh/thongtinhocsinhfix.php">
 
-                                <p class="name__student"><span>Từ Văn Tú</span></p>
+                                <p class="name__student data_hovatenhocsinh"><span>Từ Văn Tú</span></p>
                                 <p class="time__student">Thời gian đến trường: <span>06:05</span></p>
                             </a>
                         </div>
@@ -112,7 +112,7 @@
                         <div class="between__detail">
                             <a href="../diemdanh/thongtinhocsinhfix.php">
 
-                                <p class="name__student"><span>Từ Văn Tú</span></p>
+                                <p class="name__student data_hovatenhocsinh"><span>Từ Văn Tú</span></p>
                                 <p class="time__student">Thời gian đến trường: <span>06:05</span></p>
                             </a>
                         </div>
@@ -133,7 +133,7 @@
                         <div class="between__detail">
                             <a href="../diemdanh/thongtinhocsinhfix.php">
 
-                                <p class="name__student"><span>Từ Văn Tú</span></p>
+                                <p class="name__student data_hovatenhocsinh"><span>Từ Văn Tú</span></p>
                                 <p class="time__student">Thời gian đến trường: <span>06:05</span></p>
                             </a>
                         </div>
@@ -158,7 +158,7 @@
                         <div class="between__detail">
                             <a href="../diemdanh/thongtinhocsinhfix.php">
 
-                                <p class="name__student"><span>Từ Văn Tú</span></p>
+                                <p class="name__student data_hovatenhocsinh"><span>Từ Văn Tú</span></p>
                                 <p class="time__student">Thời gian đến trường: <span>06:05</span></p>
                             </a>
                         </div>
@@ -179,7 +179,7 @@
                         <div class="between__detail">
                             <a href="../diemdanh/thongtinhocsinhfix.php">
 
-                                <p class="name__student"><span>Từ Văn Tú</span></p>
+                                <p class="name__student data_hovatenhocsinh"><span>Từ Văn Tú</span></p>
                                 <p class="time__student">Thời gian đến trường: <span>06:05</span></p>
                             </a>
                         </div>
@@ -203,7 +203,7 @@
                         <div class="between__detail">
                             <a href="../diemdanh/thongtinhocsinhfix.php">
 
-                                <p class="name__student"><span>Từ Văn Tú</span></p>
+                                <p class="name__student data_hovatenhocsinh"><span>Từ Văn Tú</span></p>
                                 <p class="time__student">Thời gian đến trường: <span>06:05</span></p>
                             </a>
                         </div>

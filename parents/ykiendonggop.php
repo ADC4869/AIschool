@@ -50,8 +50,8 @@
                         </div>
 
                         <div class="opinion_info">
-                            <span class="title">Góp ý về vấn đề Họp phụ huynh</span>
-                            <span class="content">Kính gửi ban giám hiệu nhà trường, tôi tên ABCD ...</span>
+                            <span class="title data_tieudegopy">Góp ý về vấn đề Họp phụ huynh</span>
+                            <span class="content data_noidunggopy">Kính gửi ban giám hiệu nhà trường, tôi tên ABCD ...</span>
                         </div>
 
                         <div class="opinion_icon">
@@ -67,8 +67,8 @@
                         </div>
 
                         <div class="opinion_info">
-                            <span class="title">Góp ý về vấn đề phiếu liên lạc mỗi tháng</span>
-                            <span class="content">Kính gửi ban giám hiệu nhà trường, tôi tên ABCD ...</span>
+                            <span class="title data_tieudegopy">Góp ý về vấn đề phiếu liên lạc mỗi tháng</span>
+                            <span class="content data_noidunggopy">Kính gửi ban giám hiệu nhà trường, tôi tên ABCD ...</span>
                         </div>
 
                         <div class="opinion_icon">
@@ -87,9 +87,9 @@
                 </div>
 
                 <div class="modal_body">
-                    <input type="text" placeholder="Tiêu đề">
+                    <input class="input_tieudegopy" type="text" placeholder="Tiêu đề">
                     <span>Nhập nội dung vào ô bên dưới</span>
-                    <textarea name="" id="" ></textarea>
+                    <textarea class="input_noidunggopy" name="" id="" ></textarea>
                 </div>
 
                 <div class="modal_footer">

@@ -2,25 +2,25 @@
 <div class="class-list">
     <div class="class-item active">
         <div class="class-info">
-            <span class="class-name">Lớp 1A</span>
-            <span>GVCN: Trần Thành Đạt</span>
-            <span>Ghi chú: Dạy Văn</span>
+            <span class="class-name data_lophoc">Lớp 9A1</span>
+            <span class="data_hovatengiaovien">GVCN: Trần Thành Đạt</span>
+            <span class="data_monhoc">Ghi chú: Dạy Văn</span>
         </div>
         <a href="GV.php"><button class="btn-detail">Chi tiết</button></a>
     </div>
     <div class="class-item">
         <div class="class-info">
-            <span class="class-name">Lớp 2A</span>
-            <span>GVCN: Trần Đăng Khoa</span>
-            <span>Ghi chú: Dạy Văn</span>
+            <span class="class-name data_lophoc">Lớp 9A2</span>
+            <span class="data_hovatengiaovien">GVCN: Trần Đăng Khoa</span>
+            <span class="data_monhoc">Ghi chú: Dạy Văn</span>
         </div>
         <a href="GV.php"><button class="btn-detail">Chi tiết</button></a>
     </div>
     <div class="class-item">
         <div class="class-info">
-            <span class="class-name">Lớp 3A</span>
-            <span>GVCN: Lý Lan Anh</span>
-            <span>Ghi chú: Dạy Văn</span>
+            <span class="class-name data_lophoc">Lớp 9A3</span>
+            <span class="data_hovatengiaovien">GVCN: Lý Lan Anh</span>
+            <span class="data_monhoc">Ghi chú: Dạy Văn</span>
         </div>
         <a href="GV.php"><button class="btn-detail">Chi tiết</button></a>
     </div>

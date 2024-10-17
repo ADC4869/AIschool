@@ -29,7 +29,7 @@
                 </svg>
             </span>
             <img src="../img/a.jpg" alt="Avatar" class="avatar">
-            <div class="username">Từ Văn Tú</div>
+            <div class="username data_hovatenhocsinh">Từ Văn Tú</div>
             <div class="menu-icon">
                 <i class="fa-solid fa-phone" style="color: white; font-size: 20px"></i>
             </div>

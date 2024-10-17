@@ -40,9 +40,9 @@
         <div class="main__text">
             <div class="notification">
                 <div class="text__title">
-                    <p>Góp ý về vấn đề Họp phụ huynh</p>
+                    <p class="data_tieudegopy">Góp ý về vấn đề Họp phụ huynh</p>
                 </div>
-                <div class="text__content">
+                <div class="text__content data_noidunggopy">
                     <p>Kính gửi Ban Giám Hiệu Trường [Tên Trường],
                         Tôi là [Tên của bạn], phụ huynh của em [Tên học sinh], học sinh lớp [Lớp của học sinh]. Tôi viết
                         email này để gửi đến Ban Giám Hiệu một số góp ý về thời gian tổ chức họp phụ huynh.
@@ -74,7 +74,7 @@
                     <span>Thông báo</span>
                 </div>
                 <div class="modal_body">
-                    <textarea name="" id=""></textarea>
+                    <textarea name="" id="" class="input_noidungphanhoi"></textarea>
                     <div class="signature">
                         <div class="signature_content">
                             <span>Hiệu trưởng</span>

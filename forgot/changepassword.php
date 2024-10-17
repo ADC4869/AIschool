@@ -20,8 +20,8 @@
                 <img src="../img/intro4.jpg" alt="anh dang nhap">
                 <p class="title">Chào mừng đến AISchool</p>
                 <div class="main__input">
-                    <input type="text" placeholder="Nhập mật khẩu mới">
-                    <input type="text" placeholder="Nhập lại mật khẩu mới">
+                    <input class="input_matkhaumoi" type="text" placeholder="Nhập mật khẩu mới">
+                    <input class="input_matkhaumoi" type="text" placeholder="Nhập lại mật khẩu mới">
                 </div>
                 <a href="../login/login.php">
                     <button type="button" class="btn__signin">Đổi mật khẩu</button>

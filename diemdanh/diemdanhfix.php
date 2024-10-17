@@ -109,7 +109,7 @@
                                             <img src="../img/avtteacher.png" class="img-class" alt="Arnh lớp">
                                         </div>
                                         <div class="class-content">
-                                            <p class="teacher-name">GVCN: <span>Nguyễn Thị Mai</span></p>
+                                            <p class="teacher-name data_hovatengiaovien">GVCN: <span>Nguyễn Thị Mai</span></p>
                                             <div class="class-siso">
                                                 <p>SS: <span>40</span></p>
                                                 <p>HD: <span>36</span></p>

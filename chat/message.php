@@ -43,7 +43,7 @@
                 <li class="chat-item" data-chat-id="A">
                     <img src="../img/a.jpg" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh A</div>
+                        <div class="chat-name data_hovatenphuhuynh">Nguyễn Như Ý</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
 
@@ -56,7 +56,7 @@
                 <li class="chat-item" data-chat-id="B">
                     <img src="../img/images.jpg" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh B</div>
+                        <div class="chat-name data_hovatenphuhuynh">Trần Anh Đạt</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
 
@@ -69,7 +69,7 @@
                 <li class="chat-item" data-chat-id="C">
                     <img src="../img/a.jpg" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh C</div>
+                        <div class="chat-name data_hovatenphuhuynh">Nguyễn Hùng Cường</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -77,7 +77,7 @@
                 <li class="chat-item" data-chat-id="D">
                     <img src="../img/images.jpg" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh D</div>
+                        <div class="chat-name data_hovatenphuhuynh">Trần Anh Kiệt</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -85,7 +85,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh E</div>
+                        <div class="chat-name data_hovatenphuhuynh">Lâm Thị Ánh Tuyết</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -93,7 +93,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh F</div>
+                        <div class="chat-name data_hovatenphuhuynh">Phạm Thiên Kim</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -101,7 +101,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh C</div>
+                        <div class="chat-name data_hovatenphuhuynh">Lương Gia Huy</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -109,7 +109,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Phụ huynh C</div>
+                        <div class="chat-name data_hovatenphuhuynh">Trần Ánh Dương/div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -123,7 +123,7 @@
                 <li class="chat-item" data-chat-id="E">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Lớp 1A</div>
+                        <div class="chat-name data_lophoc">Lớp 9A1</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
 
@@ -135,7 +135,7 @@
                 <li class="chat-item" data-chat-id="F">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Lớp 2B</div>
+                        <div class="chat-name data_lophoc">Lớp 9A2</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -143,7 +143,7 @@
                 <li class="chat-item" data-chat-id="G">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Lớp 3A</div>
+                        <div class="chat-name data_lophoc">Lớp 9A3</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -151,7 +151,7 @@
                 <li class="chat-item" data-chat-id="H">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Lớp 4A</div>
+                        <div class="chat-name data_lophoc">Lớp 9A4</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -159,7 +159,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Lớp 1B</div>
+                        <div class="chat-name data_lophoc">Lớp 8A2</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -167,7 +167,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Lớp 2B</div>
+                        <div class="chat-name data_lophoc">Lớp 8A4</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -175,7 +175,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Lớp 3B</div>
+                        <div class="chat-name data_lophoc">Lớp 7A3</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -183,7 +183,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Lớp 4B</div>
+                        <div class="chat-name data_lophoc">Lớp 6A2</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -191,7 +191,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Lớp 5B</div>
+                        <div class="chat-name data_lophoc">Lớp 6A1</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
@@ -199,7 +199,7 @@
                 <li class="chat-item">
                     <img src="./img/skin.png" alt="">
                     <div class="chat-info">
-                        <div class="chat-name">Lớp 5C</div>
+                        <div class="chat-name data_lophoc">Lớp 7A1</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>

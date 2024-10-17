@@ -34,7 +34,7 @@
     <main>
         <div class="profile-container">
             <img src="../img/call.png" alt="Profile Picture" class="profile-pic">
-            <h2 class="profile-name">Trần Văn Giàu</h2>
+            <h2 class="profile-name ">Trần Văn Giàu</h2>
             <p class="profile-status">Đang đổ chuông</p>
         </div>
     </main>

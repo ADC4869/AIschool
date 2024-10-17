@@ -27,7 +27,7 @@
             <div class="header">
                 <img src="https://via.placeholder.com/50" alt="Teacher Avatar">
                 <div class="info">
-                    <h2>Giáo viên : Lưu trên database</h2>
+                    <h2 class="data_hovatengiaovien">Giáo viên : Nguyễn Thị Ánh Xuân</h2>
                     <p>Ngày: 15/08/2024</p>
                     <p>Thời gian: 10:30</p>
                 </div>
@@ -44,7 +44,7 @@
                 <div class="attendance">
                     <img src="https://via.placeholder.com/40" alt="Student Avatar">
                     <div class="attendance-info">
-                        <h3>Nguyễn Thị Yến Loan</h3>
+                        <h3 class="data_hovatenhocsinh">Nguyễn Thị Yến Loan</h3>
                         <p>Thời gian đến lớp: 10:25</p>
                     </div>
                     <div class="actions">

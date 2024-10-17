@@ -36,8 +36,8 @@
     <main>
         <div class="main_infoteacher">
             <div class="info_detail">
-                <span>Nguyễn Thị Ánh Xuân</span>
-                <span>GVV12345678</span>
+                <span class="data_hovatengiaovien">Nguyễn Thị Ánh Xuân</span>
+                <span class="data_magiaovien">GVV12345678</span>
             </div>
         </div>
         <div class="timetable_title">
@@ -98,7 +98,7 @@
                     <tbody>
                         <tr>
                             <td class="title">Sáng</td>
-                            <td class="teaching_schedule">
+                            <td class="teaching_schedule data_thoikhoabieu">
                                 <div class="theory">
                                     <span>Môn: Ngữ Văn</span>
                                     <span>Lớp: 9A1</span>
@@ -114,8 +114,8 @@
                                     <span>Password: 123123</span>
                                 </div>
                             </td>
-                            <td class="teaching_schedule"></td>
-                            <td class="teaching_schedule">
+                            <td class="teaching_schedule data_thoikhoabieu"></td>
+                            <td class="teaching_schedule data_thoikhoabieu">
                                 <div class="exam">
                                     <span>Môn: Ngữ Văn </span>
                                     <span>Lớp: 9A1</span>
@@ -123,8 +123,8 @@
                                     <span>Phòng 9A1</span>
                                 </div>
                             </td>
-                            <td class="teaching_schedule"></td>
-                            <td class="teaching_schedule">
+                            <td class="teaching_schedule data_thoikhoabieu"></td>
+                            <td class="teaching_schedule data_thoikhoabieu">
                                 <div class="theory">
                                     <span>Môn: Ngữ Văn</span>
                                     <span>Lớp: 9A1</span>
@@ -138,7 +138,7 @@
                                     <span>Phòng: 9A2</span>
                                 </div>
                             </td>
-                            <td class="teaching_schedule">
+                            <td class="teaching_schedule data_thoikhoabieu">
                                 <div class="theory">
                                     <span>Môn: Ngữ Văn</span>
                                     <span>Lớp: 9A1</span>
@@ -152,11 +152,11 @@
                                     <span>Phòng: 9A2</span>
                                 </div>
                             </td>
-                            <td class="teaching_schedule"></td>
+                            <td class="teaching_schedule data_thoikhoabieu"></td>
                         </tr>
                         <tr>
                             <td class="title">Chiều</td>
-                            <td class="teaching_schedule">
+                            <td class="teaching_schedule data_thoikhoabieu">
                                 <div class="theory">
                                     <span>Môn: Ngữ Văn</span>
                                     <span>Lớp: 9A1</span>
@@ -164,7 +164,7 @@
                                     <span>Phòng: 9A1</span>
                                 </div>
                             </td>
-                            <td class="teaching_schedule">
+                            <td class="teaching_schedule data_thoikhoabieu">
                                 <div class="lab">
                                     <span>Môn: Ngữ Văn</span>
                                     <span>Lớp: 9A1</span>
@@ -178,8 +178,8 @@
                                     <span>Phòng: 9A2</span>
                                 </div>
                             </td>
-                            <td class="teaching_schedule"></td>
-                            <td class="teaching_schedule">
+                            <td class="teaching_schedule data_thoikhoabieu"></td>
+                            <td class="teaching_schedule data_thoikhoabieu">
                                 <div class="theory">
                                     <span>Môn: Ngữ Văn</span>
                                     <span>Lớp: 9A1</span>
@@ -193,7 +193,7 @@
                                     <span>Phòng: 9A2</span>
                                 </div>
                             </td>
-                            <td class="teaching_schedule">
+                            <td class="teaching_schedule data_thoikhoabieu">
                                 <div class="theory">
                                     <span>Môn: Ngữ Văn</span>
                                     <span>Lớp: 9A1</span>
@@ -207,7 +207,7 @@
                                     <span>Phòng: 9A2</span>
                                 </div>
                             </td>
-                            <td class="teaching_schedule">
+                            <td class="teaching_schedule data_thoikhoabieu">
                                 <div class="theory">
                                     <span>Môn: Ngữ Văn</span>
                                     <span>Lớp: 9A1</span>
@@ -221,17 +221,17 @@
                                     <span>Phòng: 9A2</span>
                                 </div>
                             </td>
-                            <td class="teaching_schedule"></td>
+                            <td class="teaching_schedule data_thoikhoabieu"></td>
                         </tr>
                         <tr>
                             <td class="title">Tối</td>
-                            <td class="teaching_schedule"></td>
-                            <td class="teaching_schedule"></td>
-                            <td class="teaching_schedule"></td>
-                            <td class="teaching_schedule"></td>
-                            <td class="teaching_schedule"></td>
-                            <td class="teaching_schedule"></td>
-                            <td class="teaching_schedule"></td>
+                            <td class="teaching_scheduledata_thoikhoabieu"></td>
+                            <td class="teaching_schedule data_thoikhoabieu"></td>
+                            <td class="teaching_schedule data_thoikhoabieu"></td>
+                            <td class="teaching_schedule data_thoikhoabieu"></td>
+                            <td class="teaching_schedule data_thoikhoabieu"></td>
+                            <td class="teaching_schedule data_thoikhoabieu"></td>
+                            <td class="teaching_schedule data_thoikhoabieu"></td>
                         </tr>
                     </tbody>
                 </table>

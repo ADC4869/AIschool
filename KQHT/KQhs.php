@@ -37,10 +37,10 @@
             <h2>Danh sách học sinh lớp 9A1</h2>
             <div class="student-card">
                 <div class="info">
-                    <p><strong>Họ tên: Từ Văn Tú</strong></p>
-                    <p>Lớp: 9A1</p>
-                    <p>Mã học sinh: 2002</p>
-                    <p>Phụ huynh: Từ Văn Hiền</p>
+                    <p class="data_hovatenhocsinh"><strong>Họ tên: Từ Văn Tú</strong></p>
+                    <p class="=data_lophoc">Lớp: 9A1</p>
+                    <p class="data_mahocsinh">Mã học sinh: 2002</p>
+                    <p class="data_hovatenphuhuynh">Phụ huynh: Từ Văn Hiền</p>
                     <a href="ketqua.php"><button>Chi tiết</button></a>
                 </div>
                 <img src="../img/ht.jpg" alt="Student 1">
@@ -48,10 +48,10 @@
 
             <div class="student-card">
                 <div class="info">
-                    <p><strong>Họ tên: Nguyễn Nam</strong></p>
-                    <p>Lớp: 9A1</p>
-                    <p>Mã học sinh: 2003</p>
-                    <p>Phụ huynh: Nguyễn Dương</p>
+                    <p class="data_hovatenhocsinh"><strong>Họ tên: Nguyễn Nam</strong></p>
+                    <p class="data_lophoc">Lớp: 9A1</p>
+                    <p class="data_mahocsinh">Mã học sinh: 2003</p>
+                    <p class="data_hovatenphuhuynh">Phụ huynh: Nguyễn Dương</p>
                     <a href="ketqua.php"><button>Chi tiết</button></a>
                 </div>
                 <img src="../img/ht.jpg" alt="Student 2">
@@ -59,10 +59,10 @@
 
             <div class="student-card">
                 <div class="info">
-                    <p><strong>Họ tên: Nguyễn Huệ</strong></p>
-                    <p>Lớp: 9A1</p>
-                    <p>Mã học sinh: 2004</p>
-                    <p>Phụ huynh: Nguyễn Hưng</p>
+                    <p class="data_hovatenhocsinh"><strong>Họ tên: Nguyễn Huệ</strong></p>
+                    <p class="data_lophoc">Lớp: 9A1</p>
+                    <p class="data_mahocsinh">Mã học sinh: 2004</p>
+                    <p class="data_hovatenphuhuynh">Phụ huynh: Nguyễn Hưng</p>
                     <a href="ketqua.php"><button>Chi tiết</button></a>
                 </div>
                 <img src="../img/ht.jpg" alt="Student 3">
