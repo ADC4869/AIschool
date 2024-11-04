@@ -17,10 +17,10 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
         </a>
 
         <?php
-        // Role-based navigation
+        // Role-based navigation with updated condition
         if ($role == 'hieutruong') {
             echo '
-            <a href="./principal/comment.php" class="' . ($current_page == 'comment.php' ? 'home-active' : '') . '">
+            <a href="../principal/comment.php" class="' . (strpos($current_page, 'comment') !== false ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Góp ý</span>
@@ -28,7 +28,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             </a>';
         } elseif ($role == 'giaovien') {
             echo '
-            <a href="./KQHT/index.php' . ($role == 'giaovien' ? '?role=giaovien' : '') . '" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
+            <a href="../KQHT/index.php' . ($role == 'giaovien' ? '?role=giaovien' : '') . '" class="' . (strpos($current_page, 'index') !== false ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Học tập</span>
@@ -36,7 +36,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             </a>';
         } elseif ($role == 'hocsinh') {
             echo '
-            <a href="./thongbao/notificationHS.php' . ($role == 'hocsinh' ? '?role=hocsinh' : '') . '" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
+            <a href="../thongbao/notificationHS.php' . ($role == 'hocsinh' ? '?role=hocsinh' : '') . '" class="' . (strpos($current_page, 'notificationHS') !== false ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Góp ý</span>
@@ -44,7 +44,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             </a>';
         } elseif ($role == 'phuhuynh') {
             echo '
-            <a href="./parents/ykiendonggop.php' . ($role == 'phuhuynh' ? '?role=phuhuynh' : '') . '" class="' . ($current_page == 'index.php' ? 'home-active' : '') . '">
+            <a href="../parents/ykiendonggop.php' . ($role == 'phuhuynh' ? '?role=phuhuynh' : '') . '" class="' . (strpos($current_page, 'ykiendonggop') !== false ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Góp ý</span>
