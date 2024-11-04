@@ -135,21 +135,21 @@
                         <td rowspan="5" class="day">2</td>
                         <td class="session">1</td>
                         <td>Chào cờ</td>
-                        <td>Thanh</td>
+                        <td class="teacher-cell" data-name="Thanh">Thanh</td>
                         <td>Toán</td>
-                        <td>Thanh</td>
+                        <td class="teacher-cell" data-name="Thanh">Thanh</td>
                         <td>Chào cờ</td>
-                        <td>Hùng</td>
+                        <td class="teacher-cell" data-name="Hùng">Hùng</td>
                         <td>Ngữ Văn</td>
-                        <td>Hùng</td>
+                        <td class="teacher-cell" data-name="Hùng">Hùng</td>
                         <td>Chào cờ</td>
-                        <td>Diễm</td>
+                        <td class="teacher-cell" data-name="Diễm">Diễm</td>
                         <td>Lịch sử</td>
-                        <td>Diễm</td>
+                        <td class="teacher-cell" data-name="Diễm">Diễm</td>
                         <td>Chào cờ</td>
-                        <td>Mai</td>
+                        <td class="teacher-cell" data-name="Mai">Mai</td>
                         <td>Địa lí</td>
-                        <td>Mai</td>
+                        <td class="teacher-cell" data-name="Mai">Mai</td>
                     </tr>
                     <tr>
                         <td class="session">2</td>
@@ -719,6 +719,18 @@
                 </tbody>
             </table>
         </div>
+        <!-- Hộp thoại thông tin giáo viên -->
+        <div id="teacherModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <img id="teacherImage" src="" alt="Ảnh giáo viên">
+                <h3 id="teacherName"></h3>
+                <p id="teacherAge"></p>
+                <p id="teacherAddress"></p>
+                <p id="teacherSubject"></p>
+                <p id="teacherAchievement"></p>
+            </div>
+        </div>
     </main>
 </div>
 
@@ -743,5 +755,66 @@
         if (event.target == modal) {
             modal.style.display = "none";
         }
+    }
+</script>
+
+<script>
+    const teacherData = {
+        "Thanh": {
+            image: "../img/ph1.jpg",
+            name: "Thanh",
+            age: "35",
+            address: "123 Nguyễn Huệ, Hà Nội",
+            subject: "Toán",
+            achievement: "Đạt giải giáo viên xuất sắc 2023"
+        },
+        "Hùng": {
+            image: "../img/ph1.jpg",
+            name: "Hùng",
+            age: "40",
+            address: "456 Trần Hưng Đạo, TP HCM",
+            subject: "Ngữ Văn",
+            achievement: "Đạt giải giáo viên giỏi cấp quốc gia"
+        },
+        "Diễm": {
+            image: "../img/ph2.jpg",
+            name: "Diễm",
+            age: "30",
+            address: "789 Lê Lợi, Đà Nẵng",
+            subject: "Lịch sử",
+            achievement: "Thành viên hội đồng giáo dục lịch sử"
+        },
+        "Mai": {
+            image: "../img/ph2.jpg",
+            name: "Mai",
+            age: "29",
+            address: "321 Hai Bà Trưng, Cần Thơ",
+            subject: "Địa lí",
+            achievement: "Giải nhất cuộc thi Địa lí năm 2022"
+        }
+    };
+
+    document.querySelectorAll('.teacher-cell').forEach(cell => {
+        cell.addEventListener('click', () => {
+            const teacherName = cell.getAttribute('data-name');
+            showTeacherInfo(teacherName);
+        });
+    });
+
+    function showTeacherInfo(teacherName) {
+        const teacher = teacherData[teacherName];
+        if (teacher) {
+            document.getElementById("teacherImage").src = teacher.image;
+            document.getElementById("teacherName").innerText = "Tên: " + teacher.name;
+            document.getElementById("teacherAge").innerText = "Tuổi: " + teacher.age;
+            document.getElementById("teacherAddress").innerText = "Địa chỉ: " + teacher.address;
+            document.getElementById("teacherSubject").innerText = "Môn dạy: " + teacher.subject;
+            document.getElementById("teacherAchievement").innerText = "Thành tích: " + teacher.achievement;
+            document.getElementById("teacherModal").style.display = "block";
+        }
+    }
+
+    function closeModal() {
+        document.getElementById("teacherModal").style.display = "none";
     }
 </script>

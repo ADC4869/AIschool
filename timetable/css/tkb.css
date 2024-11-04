@@ -345,16 +345,19 @@ button:hover {
 .modal-content {
     background-color: #fefefe;
     margin: 10% auto;
-    padding: 5px;
     border-radius: 8px;
     width: 80%;
     max-width: 400px;
-    margin-top: 200px;
     z-index: 1000;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.modal-content h3 {
+    margin-top: 10px;
+}
+.modal-content p {
+    font-size: 20px;
 }
 .modal-body {
     margin-top: 20px;
@@ -383,3 +386,29 @@ button:hover {
     color: #000;
 }
 
+/* CSS cho hộp thoại */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
