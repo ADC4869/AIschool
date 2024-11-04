@@ -28,7 +28,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             </a>';
         } elseif ($role == 'giaovien') {
             echo '
-            <a href="../KQHT/index.php' . ($role == 'giaovien' ? '?role=giaovien' : '') . '" class="' . (strpos($current_page, 'index') !== false ? 'home-active' : '') . '">
+            <a href="./KQHT/index.php' . ($role == 'giaovien' ? '?role=giaovien' : '') . '" class="' . (strpos($current_page, 'index') !== false ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Học tập</span>

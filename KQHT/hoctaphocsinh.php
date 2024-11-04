@@ -599,53 +599,34 @@
         <div id="myCustomModal" class="custom-modal">
             <div class="custom-modal-content">
                 <div class="custom-modal-header">
-                    <div class="tab">
-                        <button class="tablinks" onclick="openTab(event, 'PhucKhao')">Phúc Khảo</button>
-                        <button class="tablinks" onclick="openTab(event, 'LichSu')">Lịch Sử Phúc Khảo</button>
-                    </div>
+                    <span>Phúc khảo</span>
                 </div>
                 <div class="custom-modal-body">
-                    <div id="PhucKhao" class="tabcontent">
-                        <div class="custom-body-content">
-                            <label for="">Môn:</label>
-                            <select name="" id="">
-                                <option value="">Toán</option>
-                                <option value="">Văn</option>
-                                <option value="">Tiếng Anh</option>
-                                <option value="">Lịch sử</option>
-                                <option value="">Địa lí</option>
-                                <option value="">Hóa học</option>
-                                <option value="">Vật lí</option>
-                                <option value="">Công nghệ</option>
-                                <option value="">Tin học</option>
-                            </select>
-                            <label for="">Loại:</label>
-                            <select name="" id="">
-                                <option value="">Bài tập 15 phút</option>
-                                <option value="">Bài tập 45 phút</option>
-                                <option value="">Điểm giữa kì</option>
-                                <option value="">Điểm cuối kì</option>
-                                <option value="">Tổng kết</option>
-                            </select>
-                            <label for="">Điểm bài kiểm tra / thi</label>
-                            <input type="text" placeholder="vd: 5">
-                            <label for="">Ghi chú</label>
-                            <input type="text" placeholder="Mong cô kiểm tra lại">
-                        </div>
-                    </div>
-                    <div id="LichSu" class="tabcontent tabcontent-history" style="display:none;">
-                        <div class="phuckhao-item">
-                            <div class="infor_primary">
-                                <span>Môn: Toán</span>
-                                <span>Điểm: 6</span>
-                                <span>Kiểm tra: 15 phút</span>
-                            </div>
-                            <div class="infor_icon">
-                                <i data-feather="trash" style="color: #5B6998"></i>
-                                <i data-feather="edit-3" style="color: #5B6998"></i>
-                            </div>
-                        </div>
-
+                    <div class="custom-body-content">
+                        <label for="">Môn:</label>
+                        <select name="" id="">
+                            <option value="">Toán</option>
+                            <option value="">Văn</option>
+                            <option value="">Tiếng Anh</option>
+                            <option value="">Lịch sử</option>
+                            <option value="">Địa lí</option>
+                            <option value="">Hóa học</option>
+                            <option value="">Vật lí</option>
+                            <option value="">Công nghệ</option>
+                            <option value="">Tin học</option>
+                        </select>
+                        <label for="">Loại:</label>
+                        <select name="" id="">
+                            <option value="">Bài tập 15 phút</option>
+                            <option value="">Bài tập 45 phút</option>
+                            <option value="">Điểm giữa kì</option>
+                            <option value="">Điểm cuối kì</option>
+                            <option value="">Tổng kết</option>
+                        </select>
+                        <label for="">Điểm bài kiểm tra / thi</label>
+                        <input type="text" placeholder="vd: 5">
+                        <label for="">Ghi chú</label>
+                        <input type="text" placeholder="Mong cô kiểm tra lại">
                     </div>
                 </div>
                 <div class="custom-modal-footer">
@@ -656,6 +637,7 @@
                 </div>
             </div>
         </div>
+
 
     </main>
 </body>
@@ -681,20 +663,6 @@
         // Xử lý gửi form ở đây
         alert('Đã gửi thông tin!');
         closeModal();
-    }
-
-    function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
     }
 
 </script>

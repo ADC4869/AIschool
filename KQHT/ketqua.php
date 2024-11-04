@@ -781,7 +781,7 @@
                                 <img id="image" src="../img/header1.jpg" alt="Image to Download" width="300px"
                                     style="width: 120px; height: 85px;">
                                 <br><br>
-                                <button id="downloadBtn">Tải ảnh</button>
+                                <button id="downloadBtn">Tải ảnh xuống</button>
                             </div>
                             <div class="review">
                                 <p>Nhận xét của giáo viên</p>
@@ -792,7 +792,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="button-container">
             <button class="btn upload-btn" id="uploadBtn">Tải ảnh</button>
             <button class="btn comment-btn" id="commentBtn">Nhận xét</button>
