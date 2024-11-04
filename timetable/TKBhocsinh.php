@@ -719,8 +719,6 @@
                 </tbody>
             </table>
         </div>
-
-
     </main>
 </div>
 
@@ -746,5 +744,4 @@
             modal.style.display = "none";
         }
     }
-
 </script>

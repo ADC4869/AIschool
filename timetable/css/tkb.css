@@ -98,7 +98,12 @@ main .main__title p {
     border-collapse: collapse;
     min-width: 800px; /* Đặt chiều rộng tối thiểu */
 }
-
+.schedule thead {
+    border: 2px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 /* Thiết lập cho ô */
 .schedule th,
 .schedule td {
@@ -106,7 +111,6 @@ main .main__title p {
     padding: 10px;
     text-align: center;
 }
-
 /* Thiết lập cố định header */
 .schedule th.class {
     background-color: rgb(168, 245, 168);
@@ -121,13 +125,25 @@ main .main__title p {
     z-index: 1; /* Tăng z-index để ở trên các ô khác */
 }
 
-/* Thiết lập cố định cột "Thứ" và "Tiết" */
-.schedule .day,
+.schedule td {
+    min-height: 60px; /* Đặt chiều cao tối thiểu cho các ô */
+}
+
+/* Thiết lập cho ô "Thứ" */
+.schedule .day {
+    background-color: #ddd;
+    position: sticky;
+    top: 0; /* Giữ cố định khi cuộn dọc */
+    left: 0; /* Giữ cố định khi cuộn ngang */
+    z-index: 9; /* Đảm bảo nó thấp hơn th nhưng cao hơn các ô khác */
+}
+
+/* Thiết lập cho ô "Tiết" */
 .schedule .session {
     background-color: #ddd;
     position: sticky;
-    left: 0; /* Giữ cố định khi cuộn ngang */
-    z-index: 2; /* Tăng z-index để ở trên các ô khác */
+    top: 0; /* Giữ cố định khi cuộn dọc */
+    z-index: 9; /* Đảm bảo nó thấp hơn th nhưng cao hơn các ô khác */
 }
 .schedule .session {
     left: 50px; /* Điều chỉnh để cột "Tiết" không bị đè lên "Thứ" */
