@@ -239,6 +239,9 @@
 </script>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    showContent('all');
+});
 function showContent(type) {
     // Lấy tất cả các khối hiển thị
     const items = document.querySelectorAll('.detail__diligence');
