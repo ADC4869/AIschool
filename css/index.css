@@ -159,6 +159,8 @@ main .main__content {
     color: var(--primary-color);
     font-weight: bold;
     padding-left: 20px;
+    background-color: aquamarine;
+    width: 100%;
 }
 
 .main__content .content__title i {

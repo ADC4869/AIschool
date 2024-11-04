@@ -20,7 +20,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
         // Role-based navigation with updated condition
         if ($role == 'hieutruong') {
             echo '
-            <a href="../principal/comment.php" class="' . (strpos($current_page, 'comment') !== false ? 'home-active' : '') . '">
+            <a href="./principal/comment.php?role=hieutruong" class="' . (strpos($current_page, 'comment') !== false ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Góp ý</span>
@@ -36,7 +36,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             </a>';
         } elseif ($role == 'hocsinh') {
             echo '
-            <a href="../thongbao/notificationHS.php' . ($role == 'hocsinh' ? '?role=hocsinh' : '') . '" class="' . (strpos($current_page, 'notificationHS') !== false ? 'home-active' : '') . '">
+            <a href="./thongbao/notificationHS.php' . ($role == 'hocsinh' ? '?role=hocsinh' : '') . '" class="' . (strpos($current_page, 'notificationHS') !== false ? 'home-active' : '') . '">
                 <div class="nav-item">
                     <i class="fa-solid fa-star"></i>
                     <span>Góp ý</span>
