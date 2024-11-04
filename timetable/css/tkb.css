@@ -1,0 +1,363 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    margin-top: 120px;
+}
+
+main .main__title {
+    width: 100%;
+}
+
+main .main__title p {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+/* MAIN RADIO */
+.main__radio {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.2rem;
+}
+
+.main__radio label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+.main__radio input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.main__radio input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+/* Thiết lập cho container */
+.main__schedule {
+    width: 100%;
+    height: 700px; /* Đặt chiều cao cụ thể cho phần tử chứa */
+    overflow-x: auto; /* Cuộn ngang */
+    overflow-y: auto; /* Cuộn dọc */
+    margin-top: 10px;
+}
+
+.schedule {
+    width: 100%; /* Đặt chiều rộng tối đa */
+    border-collapse: collapse;
+    min-width: 800px; /* Đặt chiều rộng tối thiểu */
+}
+
+/* Thiết lập cho ô */
+.schedule th,
+.schedule td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Thiết lập cố định header */
+.schedule th.class {
+    background-color: rgb(168, 245, 168);
+    position: sticky;
+    top: 0; /* Giữ cố định ở đầu */
+    z-index: 1; /* Tăng z-index để ở trên các ô khác */
+}
+.schedule th.title {
+    background-color: rgb(168, 245, 168);
+    position: sticky;
+    top: 37px; /* Giữ cố định ở đầu */
+    z-index: 1; /* Tăng z-index để ở trên các ô khác */
+}
+
+/* Thiết lập cố định cột "Thứ" và "Tiết" */
+.schedule .day,
+.schedule .session {
+    background-color: #ddd;
+    position: sticky;
+    left: 0; /* Giữ cố định khi cuộn ngang */
+    z-index: 2; /* Tăng z-index để ở trên các ô khác */
+}
+.schedule .session {
+    left: 50px; /* Điều chỉnh để cột "Tiết" không bị đè lên "Thứ" */
+}
+
+
+
+@media (max-width: 390px) {
+    .main__radio {
+        gap: 1rem;
+    }
+    .main__calendar {
+        gap: 0.2rem;
+    }
+    .main__calendar .calendar {
+        width: 35%;
+        height: 30px;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__present {
+        width: 25%;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__undo {
+        width: 18%;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__next {
+        width: 18%;
+        font-size: 13px;
+    }
+    main .main__color {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main__color .color__detail {
+        width: 45%;
+        margin-right: 10px;
+        gap: 5px;
+    }
+    
+    .main__color .color__detail .color {
+        width: 30%;
+        height: 20px;
+        border-radius: 5px;
+    }
+    .main__color .color__detail .title {
+        width: 50%;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    .main__radio {
+        gap: 3px;
+    }
+    .main__calendar {
+        gap: 0.2rem;
+    }
+    .main__calendar .calendar {
+        width: 35%;
+        height: 30px;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__present {
+        width: 25%;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__undo {
+        width: 18%;
+        font-size: 13px;
+    }
+    
+    .main__calendar .btn__next {
+        width: 18%;
+        font-size: 13px;
+    }
+    main .main__color {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main__color .color__detail {
+        width: 40%;
+        gap: 5px;
+    }
+    
+    .main__color .color__detail .color {
+        width: 40%;
+        height: 20px;
+        border-radius: 5px;
+    }
+    .main__color .color__detail .title {
+        width: 50%;
+    }
+    
+}
+
+
+/* fliter */
+
+.filter_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.filter_group label {
+    font-size: 0.95em;
+    color: #555;
+    width: 30%;
+    text-align: right;
+}
+
+.filter_group input {
+    width: 60%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.95em;
+}
+
+.filter_group input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style cho button lọc */
+.btn {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    color: black;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Đặt button lọc ở góc phải màn hình */
+/* Nút lọc */
+#filterButton {
+    position: absolute;
+    top: 186px;
+    right: 2px;
+    padding: 10px;
+    font-size: 18px;
+    z-index: 999;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 5px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    margin-top: 200px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.modal-body {
+    margin-top: 20px;
+}
+.button-close {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.modal-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+

@@ -20,231 +20,731 @@
             </label>
         </div>
 
-        <div class="main__calendar">
-            <input type="date" class="calendar">
-            <button type="button" class="btn__present">
-                <i class="fa-regular fa-calendar" style="color: #ffffff;"></i>
-                <p>Hiện tại</p>
-            </button>
-            <button type="button" class="btn__undo">
-                <i class="ti-angle-left"></i>
-                <p>Trở về</p>
-            </button>
-            <button type="button" class="btn__next">
-                <p>Tiếp</p>
-                <i class="ti-angle-right"></i>
-            </button>
-        </div>
         <div class="main__schedule">
+            <button id="filterButton" class="btn"><i class="fa-solid fa-sort-down"></i></button>
+            <div id="filterModal" class="modal">
+                <div class="modal-content">
+                    <div class="button-close">
+                        <span class="close">&times;</span>
+                    </div>
+
+                    <p>Lọc thời khóa biểu</p>
+                    <div class="modal-body">
+                        <div class="filter_group">
+                            <label for="">Thứ:</label>
+                            <input list="days" id="day" name="day">
+                            <datalist id="days">
+                                <option value="Thứ 2">
+                                <option value="Thứ 3">
+                                <option value="Thứ 4">
+                                <option value="Thứ 5">
+                                <option value="Thứ 6">
+                                <option value="Thứ 7">
+                            </datalist>
+                        </div>
+                        <div class="filter_group">
+                            <label for="">Lớp học:</label>
+                            <input list="classes" id="class" name="class">
+                            <datalist id="classes">
+                                <option value="6A1">
+                                <option value="6A2">
+                                <option value="6A3">
+                                <option value="7A1">
+                                <option value="7A2">
+                                <option value="7A3">
+                            </datalist>
+                        </div>
+                        <div class="filter_group">
+                            <label for="">Tiết học:</label>
+                            <input list="lessons" id="lesson" name="lesson">
+                            <datalist id="lessons">
+                                <option value="1">
+                                <option value="2">
+                                <option value="3">
+                                <option value="4">
+                                <option value="5">
+                            </datalist>
+                        </div>
+                        <div class="filter_group">
+                            <label for="">Ca học:</label>
+                            <input list="sessions" id="session" name="session">
+                            <datalist id="sessions">
+                                <option value="Sáng">
+                                <option value="Chiều">
+                            </datalist>
+                        </div>
+
+                        <div class="filter_group">
+                            <label for="">Giáo viên:</label>
+                            <input list="teachers" id="teacher" name="teacher">
+                            <datalist id="teachers">
+                                <option value="Minh">
+                                <option value="Lam">
+                                <option value="Hòa">
+                                <option value="Nam">
+                                <option value="Đức">
+                                <option value="Hùng">
+                                <option value="Hạnh">
+                                <option value="Thảo">
+                            </datalist>
+                        </div>
+
+                        <div class="filter_group">
+                            <label for="">Môn học:</label>
+                            <input list="subjects" id="subject" name="subject">
+                            <datalist id="subjects">
+                                <option value="Văn">
+                                <option value="Toán">
+                                <option value="Lí">
+                                <option value="Hóa">
+                                <option value="Sử">
+                                <option value="Địa">
+                                <option value="GDCD">
+                                <option value="Tiếng Anh">
+                            </datalist>
+                        </div>
+                    </div>
+                    <div class="modal-button">
+                        <button onclick="applyFilter()">Lọc</button>
+                    </div>
+                </div>
+            </div>
             <table class="schedule">
-                <thead class="schedule__time">
+                <thead>
                     <tr>
-                        <th class="cahoc">Ca học</th>
-                        <th>
-                            <p>Thứ Hai</p>
-                            <p>09/09/2024</p>
-                        </th>
-                        <th>
-                            <p>Thứ Ba</p>
-                            <p>10/09/2024</p>
-                        </th>
-                        <th>
-                            <p>Thứ Tư</p>
-                            <p>11/09/2024</p>
-                        </th>
-                        <th>
-                            <p>Thứ Năm</p>
-                            <p>12/09/2024</p>
-                        <th>
-                            <p>Thứ Sáu</p>
-                            <p>13/09/2024</p>
-                        </th>
-                        <th>
-                            <p>Thứ Bảy</p>
-                            <p>14/09/2024</p>
-                        </th>
-                        <th>
-                            <p>Chủ Nhật</p>
-                            <p>15/09/2024</p>
-                        </th>
+                        <th rowspan="2" class="day" style="background-color: rgb(168, 245, 168);">Thứ</th>
+                        <th rowspan="2" class="session" style="background-color: rgb(168, 245, 168);">Tiết</th>
+                        <th colspan="4" class="class">Lớp 6A1</th>
+                        <th colspan="4" class="class">Lớp 6A2</th>
+                        <th colspan="4" class="class">Lớp 6A3</th>
+                        <th colspan="4" class="class">Lớp 6A4</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="title">Sáng</th>
+                        <th colspan="2" class="title">Chiều</th>
+                        <th colspan="2" class="title">Sáng</th>
+                        <th colspan="2" class="title">Chiều</th>
+                        <th colspan="2" class="title">Sáng</th>
+                        <th colspan="2" class="title">Chiều</th>
+                        <th colspan="2" class="title">Sáng</th>
+                        <th colspan="2" class="title">Chiều</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="colum__timetable">
-                        <td class="body__time">Sáng</td>
-                        <td class="body__subject data_thoikhoabieu">
-                            <div class="timetable__detail color__lythuyet schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-                            <div class="timetable__detail color__online schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-                        </td>
-                        <td class="body__subject data_thoikhoabieu"></td>
-                        <td class="body__subject data_thoikhoabieu">
-                            <div class="timetable__detail color__lichthi schedule_exam">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-                            <div class="timetable__detail1">
-
-                            </div>
-                        </td>
-                        <td class="body__subject data_thoikhoabieu"></td>
-                        <td class="body__subject data_thoikhoabieu">
-                            <div class="timetable__detail color__lythuyet schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-
-                            <div class="timetable__detail color__thuchanh schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-                        </td>
-                        <td class="body__subject data_thoikhoabieu">
-                            <div class="timetable__detail color__thuchanh schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-
-                            <div class="timetable__detail color__online schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-                        </td>
-                        <td class="body__subject data_thoikhoabieu"></td>
+                    <tr>
+                        <td rowspan="5" class="day">2</td>
+                        <td class="session">1</td>
+                        <td>Chào cờ</td>
+                        <td>Thanh</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Chào cờ</td>
+                        <td>Hùng</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Chào cờ</td>
+                        <td>Diễm</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Chào cờ</td>
+                        <td>Mai</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
                     </tr>
                     <tr>
-                        <td class="body__time">Chiều</td>
-                        <td class="data_thoikhoabieu"></td>
-                        <td class="data_thoikhoabieu">
-                            <div class="timetable__detail color__thuchanh schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-
-                            <div class="timetable__detail color__tamngung schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-                        </td>
-                        <td class="data_thoikhoabieu">
-                            <div class="timetable__detail color__lythuyet schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-                            <div class="timetable__detail1">
-
-                            </div>
-                        </td>
-                        <td class="data_thoikhoabieu">
-                            <div class="timetable__detail color__lythuyet schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-
-                            <div class="timetable__detail color__lythuyet schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-                        </td>
-                        <td class="data_thoikhoabieu">
-                            <div class="timetable__detail color__lythuyet schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-
-                            <div class="timetable__detail color__lythuyet schedule_study">
-                                <p>Môn: Văn</p>
-                                <p>Lớp: 9A1</p>
-                                <p>Tiết: 1-2</p>
-                                <p>Phòng: 9A1</p>
-                            </div>
-                        </td>
-                        <td class="data_thoikhoabieu">
-
-                        </td>
-                        <td class="data_thoikhoabieu"></td>
+                        <td class="session">2</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
                     </tr>
                     <tr>
-                        <td class="body__time">Tối</td>
-                        <td class="data_thoikhoabieu"></td>
-                        <td class="data_thoikhoabieu"></td>
-                        <td class="data_thoikhoabieu"></td>
-                        <td class="data_thoikhoabieu"></td>
-                        <td class="data_thoikhoabieu"></td>
-                        <td class="data_thoikhoabieu"></td>
-                        <td class="data_thoikhoabieu"></td>
+                        <td class="session">3</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">4</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td></td>
+                        <td></td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">5</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td></td>
+                        <td></td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <!-- thứ 3 -->
+                    <tr>
+                        <td rowspan="5" class="day">3</td>
+                        <td class="session">1</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">2</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">3</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">4</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td></td>
+                        <td></td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">5</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td></td>
+                        <td></td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!-- Thứ 4 -->
+                    <tr>
+                        <td rowspan="5" class="day">4</td>
+                        <td class="session">1</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">2</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">3</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">4</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td></td>
+                        <td></td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">5</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td></td>
+                        <td></td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <!-- thứ 5 -->
+                    <tr>
+                        <td rowspan="5" class="day">5</td>
+                        <td class="session">1</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">2</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">3</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">4</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td></td>
+                        <td></td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">5</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td></td>
+                        <td></td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <!-- thứ 6 -->
+                    <tr>
+                        <td rowspan="5" class="day">6</td>
+                        <td class="session">1</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">2</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">3</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">4</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td></td>
+                        <td></td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">5</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td></td>
+                        <td></td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <!-- thứ 7 -->
+                    <tr>
+                        <td rowspan="5" class="day">7</td>
+                        <td class="session">1</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">2</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">3</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">4</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td>Toán</td>
+                        <td>Thanh</td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td>Ngữ Văn</td>
+                        <td>Hùng</td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td>Lịch sử</td>
+                        <td>Diễm</td>
+                        <td></td>
+                        <td></td>
+                        <td>Địa lí</td>
+                        <td>Mai</td>
+                    </tr>
+                    <tr>
+                        <td class="session">5</td>
+                        <td>Lịch sử</td>
+                        <td>Nhật</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tiếng Anh</td>
+                        <td>Nhung</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tin học</td>
+                        <td>Nam</td>
+                        <td></td>
+                        <td></td>
+                        <td>Vật lí</td>
+                        <td>Yến</td>
+                        <td></td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="main__color">
-            <div class="color__detail">
-                <div class="color color__lythuyet">
-                </div>
-                <div class="title">
-                    <p>Lịch học lý thuyết</p>
-                </div>
-            </div>
-            <div class="color__detail">
-                <div class="color color__thuchanh">
-                </div>
-                <div class="title">
-                    <p>Lịch học thực hành</p>
-                </div>
-            </div>
-            <div class="color__detail">
-                <div class="color color__online">
-                </div>
-                <div class="title">
-                    <p>Lịch học trực tuyến</p>
-                </div>
-            </div>
-            <div class="color__detail">
-                <div class="color color__lichthi">
-                </div>
-                <div class="title">
-                    <p>Lịch thi</p>
-                </div>
-            </div>
-            <div class="color__detail">
-                <div class="color color__tamngung">
-                </div>
-                <div class="title">
-                    <p>Lịch tạm ngưng</p>
-                </div>
-            </div>
-        </div>
+
     </main>
 </div>
+
+<script>
+    // Lấy các phần tử modal và button
+    const modal = document.getElementById("filterModal");
+    const btn = document.getElementById("filterButton");
+    const closeBtn = document.querySelector(".close");
+
+    // Hiển thị modal khi nhấn nút lọc
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // Đóng modal khi nhấn vào nút close (x)
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Đóng modal khi nhấn ngoài modal
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+</script>

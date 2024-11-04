@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thời khóa biểu</title>
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tkb.css">
     <link rel="stylesheet" href="../fonts/themify-icons/themify-icons.css">
     <!-- Fontawesome css -->
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/css/all.min.css">
