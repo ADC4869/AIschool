@@ -242,9 +242,9 @@
 function showContent(type) {
     // Lấy tất cả các khối hiển thị
     const items = document.querySelectorAll('.detail__diligence');
-    
+
+    // Cập nhật hiển thị cho các khối nội dung
     items.forEach(item => {
-        // Kiểm tra loại khối nội dung
         if (type === 'all') {
             item.style.display = 'flex';  // Hiển thị tất cả
         } else if (item.classList.contains(type)) {
@@ -253,6 +253,22 @@ function showContent(type) {
             item.style.display = 'none';  // Ẩn các loại khác
         }
     });
+
+    // Xóa lớp 'active' khỏi tất cả các vòng tròn
+    document.querySelectorAll('.circle__tatca, .circle__hiendien, .circle__vang, .circle__tre').forEach(circle => {
+        circle.classList.remove('active');
+    });
+
+    // Thêm lớp 'active' cho phần tử được nhấp vào
+    if (type === 'all') {
+        document.querySelector('.circle__tatca').classList.add('active');
+    } else if (type === 'hiendien') {
+        document.querySelector('.circle__hiendien').classList.add('active');
+    } else if (type === 'vang') {
+        document.querySelector('.circle__vang').classList.add('active');
+    } else if (type === 'tre') {
+        document.querySelector('.circle__tre').classList.add('active');
+    }
 }
 </script>
 

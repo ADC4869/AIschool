@@ -192,7 +192,13 @@ main .main__overview .overview {
     font-weight: bold;
 }
 
-
+.right__overview .circle__tatca.active,
+.right__overview .circle__hiendien.active,
+.right__overview .circle__tre.active,
+.right__overview .circle__vang.active {
+    border-color: #45a8d6; /* Đặt màu khung */
+    border-width: 3px; /* Đặt độ dày của khung */
+}
 
 .bottom .circle__vang .title {
     color: var(--bright-color);
