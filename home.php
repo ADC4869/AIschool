@@ -28,7 +28,7 @@ if (isset($_GET['role'])) {
     <link rel="stylesheet" href="./css/giaodien.css">
 </head>
 
-<body style="height: 145vh;">
+<body>
     <header>
         <div class="header">
             <h1><span>Xin chào,</span><br>Từ Văn Tú</h1>
