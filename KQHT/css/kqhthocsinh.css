@@ -632,6 +632,7 @@ main .main_button {
     border: 1px solid var(--primary-color);
     font-size: 16px;
 }
+
 main .main_link {
     width: 100%;
     display: flex;
@@ -651,22 +652,22 @@ main .main_link {
 }
 
 .custom-modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.4); 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .custom-modal-content {
     background-color: #fefefe;
-    margin: auto; 
+    margin: auto;
     border: 1px solid #888;
-    width: 80%; 
+    width: 80%;
     max-width: 500px;
     height: 415px;
     position: absolute;
@@ -678,10 +679,10 @@ main .main_link {
 .custom-modal-header {
     width: 100%;
     height: 10%;
-    background-color: var(--primary-color); 
-    color: white; 
+    background-color: var(--primary-color);
+    color: white;
     font-size: 16px;
-    text-align: center; 
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -692,8 +693,8 @@ main .main_link {
     width: 100%;
     height: 70%;
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     margin-top: 10px;
 }
 
@@ -708,6 +709,7 @@ main .main_link {
     margin: 10px 0px;
     border: 1px solid var(--primary-color);
 }
+
 .custom-body-content input {
     width: 96%;
     height: 25px;
@@ -723,9 +725,10 @@ main .main_link {
     width: 100%;
     height: 10%;
     display: flex;
-    justify-content: center; 
-    margin-top: 20px; 
+    justify-content: center;
+    margin-top: 20px;
 }
+
 .footer-button {
     width: 90%;
     display: flex;
@@ -743,6 +746,81 @@ main .main_link {
     color: white;
     font-size: 20px;
 }
+
 .close {
     cursor: pointer;
+}
+
+/* tab */
+.tab {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab .tablinks {
+    width: 50%;
+    height: 100%;
+}
+
+.tab button {
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tabcontent {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabcontent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabcontent-history {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Căn giữa nội dung của tabcontent-history */
+}
+
+.tabcontent-history .phuckhao-item {
+    width: 90%; /* Giới hạn chiều rộng của phuckhao-item để không chiếm hết chiều ngang */
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Khoảng cách đều giữa nội dung và icon */
+    padding: 0 10px;
+    margin-bottom: 10px; /* Khoảng cách giữa các mục */
+}
+
+.infor_primary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa nội dung bên trong */
+    text-align: center; /* Căn giữa text theo chiều ngang */
+}
+
+.infor_icon {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các icon */
+    align-items: center;
+    justify-content: center;
 }

@@ -34,8 +34,10 @@
 
     <main>
         <div class="main__info">
-            <p class="info data_thoigian">04/09/2024 - 18:35</p>
-            <p class="info data_hovatenhieutruong"> <strong>Người gửi: </strong> Hiệu trưởng</p>
+            <div class="info_content">
+                <p class="info data_thoigian">04/09/2024 - 18:35</p>
+                <p class="info data_hovatenhieutruong"> <strong>Người gửi: </strong> Hiệu trưởng</p>
+            </div>
         </div>
         <div class="main__text">
             <div class="notification">
