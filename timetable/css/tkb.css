@@ -91,6 +91,12 @@ main .main__title p {
     overflow-x: auto; /* Cuộn ngang */
     overflow-y: auto; /* Cuộn dọc */
     margin-top: 10px;
+    scrollbar-width: none; /* Ẩn thanh cuộn ngang trong Firefox */
+}
+
+.main__schedule::-webkit-scrollbar {
+    width: 0; /* Chiều rộng thanh cuộn ngang = 0 để không hiển thị */
+    height: 0;
 }
 
 .schedule {
@@ -107,7 +113,7 @@ main .main__title p {
 /* Thiết lập cho ô */
 .schedule th,
 .schedule td {
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 10px;
     text-align: center;
 }
