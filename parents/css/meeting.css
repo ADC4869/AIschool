@@ -1,0 +1,387 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 120px;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .icon-back,
+.header .icon-calendar {
+    font-size: 20px;
+    color: #333;
+    position: relative;
+    top: 30px;
+    left: 15px;
+}
+
+header .header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+header .calendar-button {
+    cursor: pointer;
+}
+
+header .calendar-dialog {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 250px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    position: fixed;
+}
+
+header .calendar-dialog.open {
+    display: block;
+}
+
+header .calendar-dialog .close {
+    cursor: pointer;
+    float: right;
+    font-size: 25px;
+    margin-top: -5px;
+    margin-right: -5px;
+}
+
+header .calendar-header {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header .calendar-header span {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+header .calendar-header .month-year {
+    font-weight: bold;
+}
+
+header .calendar {
+    text-align: center;
+}
+
+header .calendar th, .calendar td {
+    padding: 5px;
+    text-align: center;
+}
+
+header .calendar td {
+    cursor: pointer;
+}
+
+header .calendar .today {
+    background-color: #ffdddd;
+    border-radius: 50%;
+}
+
+main {
+    margin-top: 120px;
+}
+
+/* Button styles for the tab */
+main .tab-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+main .tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    color: black;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main .tab-btn.active {
+    background-color: var(--primary-color); /* Active state color */
+    color: var(--white-color);
+}
+
+main .tab-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+main .tab-btn:focus {
+    outline: none;
+}
+
+/* Tab content styles */
+main .tab-content {
+    text-align: center;
+}
+
+main .tab-content.active {
+    display: block;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    main .tab-container {
+        gap: 5px;
+    }
+
+    main .tab-btn {
+        width: 48%;
+        padding: 15px 0;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    main .tab-btn {
+        width: 48%;
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+
+@media (min-width: 1025px) {
+    main .tab-btn {
+        width: 48%;
+        font-size: 20px;
+        padding: 14px 28px;
+    }
+}
+
+main .container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+main .past {
+    position: relative;
+}
+main .past::before {
+    content: ''; /* Tạo lớp nền phủ */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 229, 229, 0.5); /* Màu xám với độ trong suốt */
+    z-index: 1;
+}
+
+
+main .card-header {
+    background-color: var(--blue-color);
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+main .important .card-header {
+    background-color: var(--peachy-color);
+}
+
+main .card-body {
+    padding: 15px;
+    margin-top: -15px;
+    text-align: left;
+}
+
+main .card-body p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+main .card-body p strong {
+    font-weight: bold;
+}
+
+/* Container for the text and the icon */
+main .container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 88%;
+    margin: 10px;
+  }
+
+/* Style for the text */
+main .text {
+    font-size: 16px; /* Adjust this size based on your preference */
+    color: var(--text-color);
+}
+  
+/* Style for the button */
+main .icon-button {
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    color: #a9a9a9;
+    cursor: pointer;
+    outline: none;
+}
+  
+main .icon-button:hover {
+    color: #808080; 
+}
+  
+main .icon-button:active {
+    transform: scale(0.95); 
+}
+  
+@media only screen and (min-width: 768px) {
+    main .container1 {
+        padding: 15px;
+    }
+
+    main .text {
+      font-size: 18px;
+    }
+
+    main .icon {
+      font-size: 26px;
+    }
+}
+  
+@media only screen and (min-width: 1024px) {
+    main .container {
+        padding: 20px;
+    }
+
+    main .text {
+      font-size: 20px;
+    }
+
+    main .icon {
+      font-size: 28px;
+    }
+}
+
+main .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+main .modal-content {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+}
+
+main h3 {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    margin: -20px -20px 20px -20px;
+}
+
+main form label {
+    display: block;
+    margin-bottom: 5px;
+    float: left;
+}
+
+main form input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+main form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+main .actions {
+    display: flex;
+    gap: 25px;
+    float: right;
+
+}
+
+main .create-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+main .cancel-btn {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    main .modal-content {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .modal-content {
+        width: 50%;
+    }
+}

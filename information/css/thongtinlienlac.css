@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+header .subheader {
+    background-color: #e5e5e5;
+    height: 40px;
+}
+
+header .subheader span {
+    position: relative;
+    top: 10px;
+    margin: 10px;
+}
+main {
+    margin-top: 120px;
+}
+
+/* Giáo Viên */
+main .class-list {
+    width: 100%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+main .class-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+}
+
+main .class-item.active {
+    background-color: #e0e7ff;
+}
+
+main .class-info {
+    display: flex;
+    flex-direction: column;
+}
+
+main .class-info span {
+    margin-bottom: 3px;
+}
+
+main .class-name {
+    font-weight: bold;
+}
+
+main .btn-detail {
+    padding: 8px 15px;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    main .class-list {
+        width: 90%;
+    }
+
+    main .btn-detail {
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    main .btn-detail {
+        font-size: 14px;
+    }
+}
+
+/* Hiệu trưởng */
+main .container {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+    justify-content: center;
+}
+
+main .container::-webkit-scrollbar {
+    display: none; 
+}
+
+main .block {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 100px;
+    flex: 0 0 auto; 
+}
+
+
+main .details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 15px;
+    display: none;
+    flex-direction: column;
+}
+
+main .details-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+main .details-text {
+    flex-grow: 1;
+}
+
+main .details button {
+    background-color: var(--light-color);
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media (max-width: 390px) {
+    main .container {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    main .block {
+        min-width: 70px;
+        padding: 10px 15px;
+    }
+
+    main .details {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    main .block {
+        min-width: 50px;
+        padding: 10px;
+    }
+
+    main .details {
+        width: 84%;
+    }
+}

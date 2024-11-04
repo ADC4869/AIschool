@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main .container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+main .section {
+    padding: 15px;
+}
+
+main .section-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+main .device-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main .device-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+main .device-item:last-child {
+    border-bottom: none;
+}
+
+main .device-info {
+    display: flex;
+    align-items: center;
+}
+
+main .device-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+main .device-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+main .device-status {
+    font-size: 14px;
+    color: #888;
+    margin-top: 3px;
+}
+
+main .menu-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    main .container {
+        max-width: 800px;
+    }
+
+    main .device-item {
+        padding: 15px 0;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    main .container {
+        max-width: 1000px;
+    }
+}
+
+main .dialog-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    display: none; /* Mặc định ẩn hộp thoại */
+}
+main .dialog-box h2 {
+    color: var(--primary-color);
+}
+
+
+main .dialog-box.active {
+    display: block; /* Hiển thị hộp thoại khi nhấn nút */
+}
+
+/* Biểu tượng điện thoại */
+main .phone-icon {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+/* Phần tiêu đề và thông tin */
+main h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+main ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+main li {
+    margin-bottom: 10px;
+}
+
+/* Media queries để làm cho giao diện tương thích với màn hình lớn hơn */
+@media (min-width: 768px) {
+    main .dialog-box {
+        max-width: 700px;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .dialog-box {
+        max-width: 900px;
+        padding: 40px;
+    }
+}

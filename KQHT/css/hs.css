@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+
+main .student-list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: -30px;
+}
+  
+main h2 {
+    text-align: center;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid rgb(199, 196, 196);
+}
+  
+main .student-card {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    font-size: 15px;
+}
+  .student-card .info .name {
+    font-size: 20px;
+  }
+main .student-card img {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+  
+main .student-card .info {
+    flex-grow: 1;
+}
+  
+main .student-card p {
+    margin: 5px 0;
+}
+  
+main button {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+  
+main .student-card:hover {
+    transform: translateY(-5px);
+}
+  
+/* Media query for tablets */
+@media (min-width: 768px) {
+    main .student-card {
+      padding: 20px;
+    }
+}
+  
+/* Media query for phones */
+@media (max-width: 767px) {
+    main .student-card {
+      text-align: left;
+    }
+  
+    main .student-card img {
+      margin: 0 auto 10px;
+    }
+  
+    main button {
+      margin-top: 10px;
+    }
+}

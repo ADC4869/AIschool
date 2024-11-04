@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 43px;
+    margin-left: -20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 26px;
+    left: -3px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 25px;
+}
+
+main {
+    margin-top: 110px;
+}
+main .menu {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+main .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+main .menu-item a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+main .menu-item:last-child {
+    border-bottom: none;
+}
+
+main .menu-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+main .menu-item span {
+    flex: 1;
+    font-size: 17px;
+}
+
+/* Icons (replace with actual icons or font-awesome) */
+main .icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main .menu {
+        max-width: 100%;
+    }
+
+    main .menu-item span {
+        font-size: 16px;
+    }
+
+    main .menu-item i {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+}

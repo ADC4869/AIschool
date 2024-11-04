@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 20px;
+}
+  
+header .back-btn, .action-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+  
+header .back-btn i, .action-btn i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+  
+header .title {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Container that holds the profile image and text */
+main .profile-container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* Profile image styling */
+main .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-color);
+}
+
+/* Name and status text styling */
+main .profile-name {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+main .profile-status {
+    font-size: 1.2em;
+    color: #7381fc;
+    margin-top: -10px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    main .profile-pic {
+        width: 180px;
+        height: 180px;
+    }
+
+    main .profile-name {
+        font-size: 2em;
+    }
+
+    main .profile-status {
+        font-size: 1.4em;
+    }
+}
+
+footer .button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+}
+  
+/* Wrap to hold button and text together */
+footer .button-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+/* Button styles */
+footer .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    width: 70px;
+    height: 70px;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 5px; /* Space between button and text */
+}
+  
+footer .button.end {
+    background-color: #E96363;
+}
+  
+/* Text under button */
+footer .button-wrap span {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+  
+/* Adjust for iPads and larger screens */
+@media (min-width: 768px) {
+    footer .button {
+      width: 90px;
+      height: 90px;
+    }
+  
+    footer .button i {
+      font-size: 40px;
+    }
+  
+    footer .button-wrap span {
+      font-size: 20px;
+    }
+}
+  
+/* Adjust for smaller phone screens */
+@media (max-width: 480px) {
+    footer .button i {
+      font-size: 25px;
+    }
+}
+
+#videoElement {
+    display: none; /* Ẩn video ban đầu */
+    width: 320px;
+    height: 240px;
+    border: 1px solid #ccc;
+}

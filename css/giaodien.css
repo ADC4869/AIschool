@@ -1,0 +1,16 @@
+/* Giao diện sáng */
+.light-theme {
+    background-color: white;
+    color: black; /* Chữ đen */
+}
+
+/* Giao diện tối */
+.dark-theme {
+    background-color: black;
+    color: white; /* Chữ trắng */
+}
+
+/* Giao diện khác nếu cần */
+.system-theme {
+    /* Để mặc định theo hệ thống */
+}

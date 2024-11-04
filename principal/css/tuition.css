@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .icon-back {
+    font-size: 20px;
+    color: var(--white-color);
+    position: relative;
+    top: 30px;
+    left: 15px;
+}
+
+header .header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+
+main .container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main canvas {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+main .fee-summary {
+    text-align: left;
+    margin: 10px;
+}
+
+main .print-icon {
+    float: right;
+    font-size: 24px;
+    margin-top: -50px;
+    cursor: pointer;
+}
+
+main .container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main h2 {
+    margin-bottom: 20px;
+}
+
+main .status-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+main .status-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+main .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #b0c4de;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+main .status-button {
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+main .status-button.đủ {
+    color: green;
+}
+
+main .status-button.thiếu {
+    color: red;
+}
+
+/* Highlighted state */
+main .circle.active {
+    background-color: #528CB9; /* Green background when active */
+}
+
+/* Class List */
+main .class-list {
+    margin-top: 20px;
+    display: none;
+}
+
+main .class-item {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    height: 80px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.class-item-content {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.statistical {
+    display: flex;
+    gap: 30px;
+}
+.data_lophoc {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+main .class-list a {
+    width: 100%;
+    text-decoration: none; 
+}
+.icon_detail {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main h3 {
+    margin-top: -4px;
+}
+
+main .red-bg {
+    background-color: #f8d7da;
+}
+
+main .blue-bg {
+    background-color: #d1ecf1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main .status-list {
+        align-items: center;
+    }
+
+    main .status-item {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    main .status-list {
+        justify-content: space-evenly;
+    }
+
+    main .circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    main .status-button {
+        font-size: 14px;
+    }
+}

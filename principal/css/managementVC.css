@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .icon-back {
+    font-size: 20px;
+    color: var(--white-color);
+    position: relative;
+    top: 30px;
+    left: 15px;
+}
+
+header .header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+
+main .chart-container {
+    height: 300px; /* Fixed height */
+    margin: 20px;
+    position: relative;
+}
+
+main h2 {
+    font-size: 0.9em;
+    position: relative;
+    top: 15px;
+}
+
+main canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+main .container {
+    padding: 0 20px;
+}
+
+main .class-blocks {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+main .class-btn {
+    background-color: #4F5D95;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main .class-btn:hover {
+    background-color: #3A4C73;
+}
+
+main .class-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+main .class-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+main .class-info {
+    margin-right: 20px;
+}
+
+main .class-info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+main .class-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+main .details-btn {
+    background-color: #e0f7fa;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main .details-btn:hover {
+    background-color: #b2ebf2;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    main .class-info {
+        margin-right: 0;
+    }
+
+    main .details-btn {
+        margin-top: 10px;
+    }
+}

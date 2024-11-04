@@ -1,0 +1,102 @@
+body{
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #FAE1DC;
+}
+
+header .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header .back-button {
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+header .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+}
+
+main .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+main .tab-button {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #F29B9B;
+    background-color: white;
+    color: #F29B9B;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+main .tab-button.active {
+    background-color: #F29B9B;
+    color: white;
+}
+
+main .tab-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .tab-content.active {
+    display: flex;
+}
+
+main .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .empty-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+main .empty-state p {
+    font-size: 14px;
+    color: #666;
+}

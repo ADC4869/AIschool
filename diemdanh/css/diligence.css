@@ -1,0 +1,478 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+    margin-left: -20px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+/* THÔNG TIN LỚP */
+.main__infoclass {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.top__infoclass {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.img__teacher {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.teacher__name {
+    flex-grow: 1;
+    line-height: 25px;
+}
+
+.teacher__name1 {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.teacher__name2 p {
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.bottom__infoclass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    font-size: 14px
+}
+
+.bottom__infoclass a {
+    text-decoration: none;
+}
+
+.bottom__infoclass .btn {
+    width: 50px;
+    height: 30px;
+    border: none;
+    background-color: white;
+}
+
+.btn__tongso {
+    color: black;
+}
+
+.btn__hiendien {
+    color: var(--green-color);
+}
+
+.btn__tre {
+    color: var(--orange-color);
+}
+
+.btn__vang {
+    color: var(--bright-color);
+}
+
+/* THÔNG TIN HIỆN DIỆN - TRỄ - VẮNG */
+
+
+.detail__radio input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border-radius: 50%; 
+    border: 1px solid var(--primary-color); 
+    outline: none;
+    margin-left: 10px; 
+    transition: background-color 0.1s, border-color 0.1s;
+}
+
+.detail__radio input[type="checkbox"]:checked {
+    background-color: var(--primary-color); 
+}
+
+.main__infodetail {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.infodetail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+
+.infodetail .detail__siso {
+    background-color: var(--light-periwinkle-color);
+}
+
+.infodetail .detail__hiendien {
+    background-color: rgb(216, 241, 216);
+}
+
+.infodetail .detail__tre {
+    background-color: var(--vivid-orange-color);
+}
+
+.infodetail .detail__vang {
+    background-color: #fccec0;
+}
+
+.detail {
+    width: 90%;
+    height: 80px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    /* Căn về bên trái */
+    align-items: center;
+}
+
+.img__student {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.left__detail {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.between__detail {
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+
+}
+
+.between__detail a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.name__student {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.time__student {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+
+.right__detail {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.btn__tinhtrang,
+.btn__chitiet {
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+}
+
+.btn__tinhtrang {
+    width: 70px;
+    background-color: var(--primary-color);
+    font-size: 12px;
+    color: white;
+}
+
+.btn__chitiet {
+    width: 30px;
+    font-size: 20px;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.btn__siso {
+    background-color: var(--light-periwinkle-color);
+}
+
+.btn__hiendien {
+    background-color: rgb(216, 241, 216);
+}
+
+.btn__tre {
+    background-color: var(--vivid-orange-color);
+}
+
+.btn__vang {
+    background-color: #fccec0;
+}
+
+/* MODAL THÔNG TIN LỚP */
+.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-dialog {
+    width: 90%;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 0.1px solid gray;
+
+}
+
+.modal-body {
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.modal-header {
+    background-color: var(--cream-color);
+    color: black;
+    height: 72px;
+}
+
+.modal-header .title {
+    position: relative;
+    margin-top: 10px;
+    font-size: 1.25rem;
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.check-denlop {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.form-select {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.check-suckhoe {
+    margin-top: 10px;
+    line-height: 25px;
+    align-items: center;
+}
+
+.form-suckhoe-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.form-control {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.form-control::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.form-photo {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(238, 238, 238);
+}
+
+.btn-send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(227, 247, 188);
+    color: #333;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+.btn-send:hover {
+    background-color: rgb(217, 242, 165);
+    transform: scale(1.05);
+}
+
+.btn-camera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(176, 176, 248);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+.btn-camera:hover {
+    background-color: rgb(150, 150, 250);
+    transform: scale(1.1);
+}
+
+.btn-exit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(165, 165, 167);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-exit:hover {
+    background-color: rgb(140, 140, 142);
+    transform: scale(1.05);
+}
+
+.modal-footer {
+    gap: 10px;
+    justify-content: flex-end;
+
+}
+
+/* MODAL GHI CHÚ */
+.modal__ghichu {
+    max-width: 500px;
+    margin: auto;
+}
+
+.modal__header,
+.modal__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    /* Thêm màu nền nếu cần */
+}
+
+.modal__header .header__title {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    /* Đảm bảo căn giữa */
+}
+
+.modal__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.note__input {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal__footer .btn__save {
+    padding: 10px 20px;
+    background-color: var(--medium-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

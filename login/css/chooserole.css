@@ -1,0 +1,327 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 120px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    /* Căn giữa icon theo chiều dọc */
+    height: 100%;
+    /* Để icon chiếm toàn bộ chiều cao của phần tử cha nếu cần */
+    padding-left: 30px;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.main__photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__photo .img__login {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main__title {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__title .main__title1 {
+    font-size: 22px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+
+.main .main__role {
+    width: 100%;
+}
+
+.main .main__role .role {
+    font-size: 22px;
+    padding-left: 55px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.main .main__button {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.main .main__button a {
+    text-decoration: none;
+}
+
+.main .main__button .btn__teacher,
+.main .main__button .btn__parents,
+.main .main__button .btn__student {
+    width: 255px;
+    height: 55px;
+    border-radius: 30px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: #FAFAFA;
+    margin-top: 20px;
+    font-size: 19px;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 0 20px;
+}
+.main__button i {
+    font-size: 25px;
+}
+
+@media (max-width: 360px) {
+    .header {
+        height: 100px;
+    }
+
+    .main__photo .img__login {
+        width: 120px;
+        height: 120px;
+    }
+
+    .main__title {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__title .main__title1 {
+        font-size: 20px;
+        font-weight: bold;
+        opacity: 0.7;
+    }
+
+    .main .main__role .role {
+        font-size: 18px;
+        padding-left: 35px;
+    }
+
+    .main .main__button .btn__teacher,
+    .main .main__button .btn__parents,
+    .main .main__button .btn__student {
+        width: 200px;
+        height: 50px;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .main .main__role .role {
+        font-size: 18px;
+        padding-left: 15px;
+    }
+}
+@media (min-width: 480px) {
+    .main .main__role .role {
+        font-size: 18px;
+        padding-left: 80px;
+    }
+}
+
+@media (min-width: 600px) {
+    .header {
+        height: 150px;
+    }
+
+    .main__photo .img__login {
+        width: 150px;
+        height: 150px;
+    }
+
+    .main__title {
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__title .main__title1 {
+        font-size: 30px;
+        font-weight: bold;
+        opacity: 0.7;
+    }
+
+    .main .main__role .role {
+        font-size: 25px;
+        padding-left: 85px;
+    }
+
+    .main .main__button .btn__teacher,
+    .main .main__button .btn__parents,
+    .main .main__button .btn__student {
+        width: 350px;
+        height: 65px;
+        margin-top: 30px;
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 712px) {
+    .header {
+        height: 150px;
+    }
+
+    .main__photo .img__login {
+        width: 200px;
+        height: 200px;
+    }
+
+    .main__title {
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__title .main__title1 {
+        font-size: 35px;
+        font-weight: bold;
+        opacity: 0.7;
+    }
+
+    .main .main__role .role {
+        font-size: 30px;
+        padding-left: 105px;
+    }
+
+    .main .main__button .btn__teacher,
+    .main .main__button .btn__parents,
+    .main .main__button .btn__student {
+        width: 400px;
+        height: 75px;
+        margin-top: 30px;
+        font-size: 25px;
+        border-radius: 40px;
+    }
+}
+@media (min-width: 800px) {
+    .header {
+        height: 150px;
+    }
+
+    .main__photo .img__login {
+        width: 250px;
+        height: 250px;
+    }
+
+    .main__title {
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__title .main__title1 {
+        font-size: 40px;
+        font-weight: bold;
+        opacity: 0.7;
+        margin-top: 25px;
+    }
+
+    .main .main__role .role {
+        font-size: 35px;
+        padding-left: 110px;
+        margin-top: 25px;
+    }
+
+    .main .main__button .btn__teacher,
+    .main .main__button .btn__parents,
+    .main .main__button .btn__student {
+        width: 450px;
+        height: 85px;
+        margin-top: 35px;
+        font-size: 30px;
+        border-radius: 40px;
+    }
+}
+@media (min-width: 768px) {
+    .icon {
+        font-size: 20px;
+    }
+    .main .main__role .role {
+        padding-left: 130px;
+    }
+}
+@media (min-width: 1024px) {
+    .main .main__role .role {
+        padding-left: 220px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .header {
+        height: 120px;
+    }
+
+    .main__photo .img__login {
+        width: 150px;
+        height: 150px;
+    }
+
+    .main__title {
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__title .main__title1 {
+        font-size: 30px;
+        font-weight: bold;
+        opacity: 0.7;
+    }
+
+    .main .main__role .role {
+        font-size: 25px;
+        padding-left: 425px;
+    }
+
+    .main .main__button .btn__teacher,
+    .main .main__button .btn__parents,
+    .main .main__button .btn__student {
+        width: 350px;
+        height: 65px;
+        margin-top: 30px;
+        font-size: 25px;
+    }
+}

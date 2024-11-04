@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+main {
+    margin-top: 90px;
+}
+
+main .container {
+    padding: 16px;
+}
+
+main .container a {
+    text-decoration: none
+}
+
+main .icon-btn {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main .icon-btn i {
+    margin-right: 8px;
+}
+
+main .feedback {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feedback a {
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+main .feedback-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 16px;
+}
+
+main .feedback-details {
+    flex: 1;
+}
+
+main .feedback-details h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+main .feedback-details p {
+    font-size: 14px;
+    color: #666;
+}
+
+main .feedback-right {
+    display: flex;
+    align-items: center;
+}
+
+main .notification-badge {
+    background-color: #E57373;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+main .feedback-right i {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    main .feedback-right {
+        margin-top: 8px;
+        justify-content: flex-end;
+        width: 29%;
+    }
+
+    main .feedback-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    main .feedback-details h3 {
+        font-size: 14px;
+    }
+
+    main .feedback-details p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    main .feedback-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    main .feedback-details h3 {
+        font-size: 12px;
+    }
+
+    main .feedback-details p {
+        font-size: 10px;
+    }
+}
+
+
+/* danh mục và search */
+.main_action {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.notification_category {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notification_category input {
+    width: 60%;
+    height: 25px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+.notification_category label {
+    width: 40%;
+}
+.notification_search {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.notification_search input {
+    width: 85%;
+    height: 18px;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}

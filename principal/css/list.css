@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .icon-back {
+    font-size: 20px;
+    color: var(--white-color);
+    position: relative;
+    top: 30px;
+    left: 15px;
+}
+
+header .header .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+
+main .class-info {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+main .student-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+}
+
+main .student-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+main .student-item.paid {
+    background-color: #cfe3ff;
+}
+
+main .student-item.unpaid {
+    background-color: #ffe3e3;
+}
+
+main .student-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+main .info {
+    flex-grow: 1;
+}
+
+main .name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+main .status, .note {
+    font-size: 0.9em;
+}
+
+main .icons {
+    display: flex;
+    gap: 15px;
+}
+
+main .icons button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    main .student-item img {
+        width: 60px;
+        height: 60px;
+    }
+    main .student-item {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    main .student-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    main .student-item {
+        flex: 1 1 48%;
+    }
+}
+
+/* General Modal Style */
+main .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+main h5 {
+    margin-top: 5px;
+}
+
+main .modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 0; /* Remove padding to match the style */
+    border-radius: 10px;
+    width: 90%;
+    position: relative;
+    top: 20%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header for student info */
+main .modal-header {
+    background-color: var(--primary-color); /* Blue header */
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+
+main .modal-header p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Section for teacher and parent info */
+main .contact-info {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Teacher and Parent Section Styling */
+main .contact-info .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -10px;
+}
+
+main .contact-info .section .contact-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main .contact-info .section .contact-details img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ccc; /* Subtle border */
+}
+
+main .contact-info .section .contact-details .info {
+    display: flex;
+    flex-direction: column;
+}
+
+main .contact-info .section .contact-details .info p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+main .contact-info .section .contact-details .info small {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Icons for Call and Message */
+main .contact-info .section .icons {
+    display: flex;
+    gap: 15px;
+}
+
+main .contact-info .section .icons button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #5267B5;
+}
+
+/* Close Button */
+main .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+main .close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    main .contact-info {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    main .contact-info .section {
+        width: 45%;
+    }
+}
+
+.status_fee {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* tabs */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.tabs .tab_total,
+.tabs .tab_paid,
+.tabs .tab_unpaid {
+    width: 33%;
+    height: 35px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tab_total.active,
+.tab_paid.active,
+.tab_unpaid.active {
+    background-color: #f4f4f4;
+    color: black;
+    border-bottom: 2px solid black;
+}

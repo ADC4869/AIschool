@@ -1,0 +1,427 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eceded;
+}
+
+
+
+header .header {
+    background-color: var(--white-color);
+    color: var(--text-color);
+    padding: 20px;
+    height: 455px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+}
+
+.back-arrow {
+    color: var(--text-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 50px;
+    left: 30px;
+}
+
+.header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+}
+
+.title i {
+    margin-left: 10px;
+}
+
+header .btn {
+    background-color: var(--gray-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+}
+
+header .btn i {
+    margin-left: 10px;
+}
+
+header #myChartContainer {
+    max-width: 100%;
+    width: 400px;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    header #myChartContainer {
+        width: 100%;
+        height: 236px;
+    }
+}
+
+header .center-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.3em;
+    text-align: center;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+    header .header {
+        padding: 15px;
+        height: 320px;
+    }
+
+    header .title {
+        font-size: 18px;
+    }
+
+    header .center-text {
+        font-size: 2em;
+        position: absolute;
+        top: 53%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .header {
+        height: 320px;
+    }
+
+    header .title {
+        font-size: 16px;
+    }
+
+    header .center-text {
+        font-size: 1.8em;
+        position: absolute;
+        top: 53%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .title {
+        font-size: 14px;
+    }
+
+    header .center-text {
+        font-size: 1.5em;
+        position: absolute;
+        top: 53%;
+    }
+}
+
+@media (max-width: 375px) {
+    header .center-text {
+        font-size: 1.5em;
+        position: absolute;
+        top: 68%;
+    }
+
+    .header .dropdown {
+        top: 12%;
+    }
+}
+
+main h4 {
+    margin: 10px;
+}
+
+main .container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+main .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5B5F93;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    width: 115px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+main .item img {
+    width: 60px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+main .item p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media(max-width: 390px) {
+    main .container {
+        gap: 5px;
+    }
+
+    .header .dropdown {
+        top: 14%;
+        width: 201px;
+    }
+}
+
+
+
+@media (min-width: 480px) {
+    main .item {
+        width: 120px;
+    }
+}
+
+@media (min-width: 768px) {
+    main .item {
+        width: 140px;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .item {
+        width: 160px;
+    }
+
+    .header .dropdown {
+        top: 6%;
+    }
+
+    .header .dropdown {
+        top: 8%;
+    }
+}
+
+main .class-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+main .class-card {
+    width: 100%;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.class-card a {
+    text-decoration: none;
+    color: black;
+}
+
+main .class-card:hover {
+    transform: translateY(-5px);
+}
+
+main .class-info {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 20px;
+}
+
+main .class-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+main .green {
+    background-color: var(--medium-color);
+}
+
+main .pink {
+    background-color: var(--pink-orange-color);
+}
+
+main .purple {
+    background-color: var(--lavender-color);
+}
+
+main .class-details {
+    flex-grow: 1;
+}
+
+main .class-icon {
+    font-size: 24px;
+    color: #777;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    main .class-card {
+        max-width: 100%;
+    }
+
+    main .class-info {
+        gap: 10px;
+    }
+
+    main .class-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    main .class-icon {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    main .class-info {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+header .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content */
+header .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* List style */
+header .modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+header .modal-content li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Cancel button */
+header .cancelBtn {
+    color: var(--red-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media only screen and (min-width: 768px) {
+    header .modal-content {
+        width: 50%;
+    }
+}
+
+.header_title {
+    height: 75px;
+    background-color: white;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 1px solid #bcbcbd;
+    z-index: 1;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* icon nam, nữ */
+.male_female {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.male_female .female {
+    color: pink;
+    font-size: 18px;
+}
+
+.female span i {
+    margin-right: 5px;
+}
+
+.male_female .male {
+    color: #9C9CBF;
+    font-size: 18px;
+}
+
+.male span i {
+    margin-right: 5px;
+}

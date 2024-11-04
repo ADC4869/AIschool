@@ -1,0 +1,495 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+header {
+    padding: 1rem;
+    height: 8%;
+}
+
+.header__icon {
+    font-size: 15px;
+    transform: translateY(20px);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.main__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    gap: 20px;
+    text-align: center;
+}
+
+.main__content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 25px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.main__input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main__input input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--primary-color);
+    background-color: #FAFAFA;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    height: 60px;
+}
+main a {
+    width: 100%;
+}
+.btn__signin {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    height: 60px;
+}
+
+@media (min-width: 320px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .title {
+        font-size: 15px;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 50px;
+        padding: 0.5rem;
+        font-size: 13px;
+        margin-top: -5px;
+    }
+}
+@media (min-width: 360px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: -0.1rem;
+        margin-bottom: -0.1rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 45px;
+        padding: 0.5rem;
+        font-size: 13px;
+    }
+}
+@media (min-width: 384px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 45px;
+        padding: 0.5rem;
+        font-size: 13px;
+    }
+}
+@media (min-width: 390px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 60px;
+        padding: 0.5rem;
+        font-size: 15px;
+        border-radius: 40px;
+    }
+}
+@media (min-width: 393px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 60px;
+        padding: 0.5rem;
+        font-size: 15px;
+        border-radius: 40px;
+    }
+}
+@media (min-width: 412px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 55px;
+        padding: 0.5rem;
+        font-size: 13px;
+    }
+}
+@media (min-width: 430px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .title {
+        font-size: 25px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        width: 350px;
+        height: 60px;
+        padding: 1.5rem;
+        font-size: 15px;
+    }
+}
+@media (min-width: 480px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .title {
+        font-size: 25px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 60px;
+        padding: 1.5rem;
+        font-size: 15px;
+    }
+}
+@media (min-width: 540px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .title {
+        font-size: 25px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: px;
+        padding: 1.5rem;
+        font-size: 15px;
+    }
+}
+@media (min-width: 600px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .title {
+        font-size: 25px;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 75px;
+        padding: 1.5rem;
+        font-size: 20px;
+        margin-top: px;
+
+    }
+}
+@media (min-width: 712px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .title {
+        font-size: 30px;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 75px;
+        padding: 1.5rem;
+        font-size: 20px;
+        margin-top: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .title {
+        font-size: 30px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 65px;
+        padding: 1.5rem;
+        font-size: 20px;
+    }
+}
+@media (min-width: 800px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .title {
+        font-size: 40px;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 75px;
+        padding: 1.5rem;
+        font-size: 25px;
+        margin-top: 15px;
+    }
+}
+@media (min-width: 820px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .title {
+        font-size: 40px;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 75px;
+        padding: 1.5rem;
+        font-size: 25px;
+        margin-top: 15px;
+    }
+}
+@media (min-width: 1024px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .title {
+        font-size: 40px;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 80px;
+        padding: 1.5rem;
+        font-size: 25px;
+        margin-top: 15px;
+    }
+}
+@media (min-width: 1228px) {
+    .main__content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .main__content img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .title {
+        font-size: 30px;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .main__input input,
+    .btn__signin {
+        height: 60px;
+        padding: 1.5rem;
+        font-size: 25px;
+        margin-top: 3px;
+    }
+}
+

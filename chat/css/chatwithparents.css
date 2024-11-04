@@ -1,0 +1,364 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header .back-arrow {
+    font-size: 22px;
+    margin-right: 10px;
+    position: relative;
+    top: 35px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--primary-color);
+    height: 80px;
+}
+
+header .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    top: 35px;
+}
+
+header .username {
+    flex-grow: 1;
+    font-size: 20px;
+    color: #000;
+    position: relative;
+    top: 35px;
+}
+
+header .menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 35px;
+}
+
+main .chat-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 145px;
+}
+
+main .chat-bubble {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+main .chat-bubble img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+main .chat-bubble .message {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    width: 70%;
+}
+.time {
+    font-size: 12px;
+    color: #ddd;
+    margin-top: 5px;
+    align-self: flex-end; 
+}
+main .chat-bubble.user .message {
+    background-color: var(--light-gray-color);
+    border: 1px solid #e6e6e6;
+}
+
+main .chat-bubble.bot .message {
+    background-color: var(--light-color);
+    align-self: flex-end;
+}
+
+main .chat-bubble .message img {
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+}
+
+footer .footer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*position: fixed;
+    bottom: 0; */
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+footer .icon-container {
+    display: flex;
+    align-items: center;
+}
+
+footer .icon-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+footer .icon-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+footer .message-input {
+    flex-grow: 1;
+    padding: 8px 12px;
+    background-color: var(--light-gray-color);
+    border-radius: 25px;
+    border: none;
+    color: black;
+    margin: 0 10px;
+}
+
+footer .message-input::placeholder {
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    footer .message-input {
+        padding: 8px 6px;
+        font-size: 14px;
+    }
+
+    footer .icon-btn {
+        font-size: 20px;
+        margin: 0 3px;
+    }
+
+    footer .icon-btn img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+footer .dialog-overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: flex-end;
+    /* Align to the right */
+    align-items: flex-end;
+    /* Align to the bottom */
+    z-index: 1000;
+}
+
+footer .dialog-box {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    width: 100px;
+    bottom: 20px;
+    /* Place it above the button */
+    left: 140px;
+    /* Align the box to the left of the screen */
+    transform: translateX(-100%);
+    /* Adjust it left of the button */
+}
+
+footer .dialog-content {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .dialog-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid #555;
+}
+
+footer .dialog-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+footer .dialog-item:last-child {
+    border-bottom: none;
+}
+
+footer .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Show the dialog box when triggered */
+footer .dialog-overlay.show {
+    display: flex;
+}
+
+footer .dialog-item span {
+    position: relative;
+    left: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    footer .dialog-box {
+        bottom: 20px;
+        /* Slight adjustment for smaller screens */
+    }
+}
+
+/* Màn hình lớn hơn (iPad Pro 12.9 inch) */
+@media (max-width: 1366px) {
+    main .chat-container {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    main .chat-bubble .message {
+        max-width: 70%;
+    }
+}
+
+/* Màn hình iPad (9.7 inch, 10.5 inch) */
+@media (max-width: 1024px) {
+    header .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    main .chat-container {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+
+    main .chat-bubble img {
+        width: 30px;
+        height: 30px;
+    }
+
+    main .chat-bubble .message {
+        max-width: 70%;
+        padding: 8px;
+    }
+
+    footer .icon-btn {
+        font-size: 22px;
+    }
+}
+
+/* Màn hình điện thoại lớn (iPhone 12 Pro Max, Samsung Galaxy Note) */
+@media (max-width: 768px) {
+    header .username {
+        font-size: 18px;
+    }
+
+    main .chat-bubble img {
+        width: 25px;
+        height: 25px;
+    }
+
+    main .chat-bubble .message {
+        max-width: 65%;
+        padding: 8px;
+    }
+
+    footer .icon-btn {
+        font-size: 20px;
+    }
+
+    footer .icon-btn img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Màn hình điện thoại nhỏ (iPhone SE, Galaxy S7) */
+@media (max-width: 600px) {
+    header .username {
+        font-size: 16px;
+    }
+
+    main .chat-container {
+        padding: 10px;
+    }
+
+    main .chat-bubble img {
+        width: 20px;
+        height: 20px;
+    }
+
+    main .chat-bubble .message {
+        max-width: 60%;
+        padding: 6px;
+    }
+
+    footer .icon-btn {
+        font-size: 18px;
+    }
+
+    footer .icon-btn img {
+        width: 18px;
+        height: 18px;
+    }
+
+    footer .dialog-box {
+        bottom: 10px;
+        /* Slight adjustment for smaller screens */
+    }
+}
+
+/* Màn hình điện thoại rất nhỏ (điện thoại cũ, độ phân giải thấp) */
+@media (max-width: 480px) {
+    main .chat-bubble img {
+        width: 18px;
+        height: 18px;
+    }
+
+    main .chat-bubble .message {
+        max-width: 55%;
+        padding: 4px;
+    }
+
+    footer .icon-btn {
+        font-size: 16px;
+    }
+
+    footer .icon-btn img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    header .container {
+        width: 85.4%;
+    }
+}

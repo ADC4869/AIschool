@@ -1,0 +1,76 @@
+footer .slider-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 30px; /* Moves the button near the bottom of the screen */
+    overflow: hidden;
+    margin: 20px;
+}
+
+footer .circle {
+    background-color: #65c1a2;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    left: 5px;
+    transition: left 0.3s ease-in-out;
+}
+
+footer .circle i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+footer .slider-text {
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+@media only screen and (min-width: 768px) {
+    footer .slider-container {
+        max-width: 800px;
+        padding: 15px;
+    }
+
+    footer .circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    footer .circle i {
+        font-size: 2rem;
+    }
+
+    footer .slider-text {
+        font-size: 1.5rem;
+    }
+}
+
+.call-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.call-container.show {
+    display: block;
+    opacity: 1;
+}
+
+.slide-out {
+    transition: transform 0.5s ease;
+    transform: translateX(100%);
+    opacity: 0;
+}

@@ -1,0 +1,756 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.icon-header {
+    position: relative;
+    top: 30px;
+    font-size: 15px;
+    margin-right: 10px;
+    color: var(--white-color);
+}
+
+.title-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+.main__body {
+    margin-top: 120px;
+}
+
+/* LỊCH */
+.content-calendar {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.calendar {
+    width: 100%;
+    height: 25px;
+    background-color: var(--light-color);
+    border: none;
+    border-radius: 3px;
+    padding: 15px;
+    margin: 10px;
+}
+
+/* PHẦN TỔNG QUAN */
+.content-tongquan {
+    width: 100%;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-tongquan {
+    background-color: var(--light-color);
+    width: 95%;
+    height: 200px;
+    border-radius: 3px;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.top-tongquan {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.bottom-tongquan {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.content-circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.content-circle p {
+    margin: 0;
+}
+
+.tongso,
+.so-tongso {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.hiendien,
+.so-hiendien {
+    color: var(--green-color);
+    font-weight: bold;
+}
+
+.tre,
+.so-tre {
+    color: var(--orange-color);
+    font-weight: bold;
+}
+
+.vang,
+.so-vang {
+    color: var(--bright-color);
+    font-weight: bold;
+}
+
+/* KHỐI */
+.content-khoi {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 15px;
+    text-align: center;
+}
+
+.btn-khoi {
+    background-color: var(--slate-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    width: 76px;
+    height: 30px;
+    border-radius: 8px;
+    margin: 0 5px;
+    flex-shrink: 0;
+}
+
+.btn-khoi:hover {
+    background-color: var(--soft-color);
+}
+
+.btn-khoi:active {
+    background-color: #6ca2f3;
+}
+
+
+
+/* LỚP */
+.content-class {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.two-class {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.class {
+    width: 200px;
+    height: 130px;
+    background-color: var(--cream-color);
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2),
+        6px 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-class {
+    width: 100%;
+    height: 30px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.title-class h6 {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.body-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.class-photo {
+    width: 50px;
+    height: 55px;
+}
+
+.img-class {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.content-class {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.teacher-name {
+    margin-bottom: 10px;
+}
+
+.class-siso {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    font-size: 10px;
+    gap: 7px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-class {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 7px;
+}
+
+.btn-diemdanh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 30px;
+    background-color: var(--pale-color);
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-diemdanh:hover {
+    background-color: rgb(124, 227, 124);
+    transform: scale(1.05);
+}
+
+.btn-thongtinlop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 30px;
+    background-color: rgb(132, 168, 223);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-thongtinlop:hover {
+    background-color: rgb(112, 148, 200);
+    transform: scale(1.05);
+}
+
+
+/* MODAL */
+.modal-header {
+    width: 100%;
+    height: 50px;
+    background-color: var(--electric-color);
+    opacity: 0.2;
+}
+
+.modal-header h5 {
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.info-class-modal {
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+
+.teacher-photo-modal {
+    flex: 0 0 auto;
+    margin-right: 15px;
+}
+
+.img-teacher-modal {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info-class-teacher {
+    margin: 1px 0;
+}
+
+.teacher-name-modal {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bottom-info-class {
+    display: flex;
+    gap: 10px;
+}
+
+.bottom-info-class p {
+    margin: 1px 0;
+    font-size: 14px;
+}
+
+.dunggio {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(182, 243, 182);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.student-photo-modal {
+    margin-right: 15px;
+}
+
+.img-student {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.time-dunggio-modal {
+    flex: 1;
+    font-size: 10px;
+}
+
+.time-dunggio-modal p {
+    margin-bottom: 2px;
+}
+
+.button-dunggio-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-size: 10px;
+}
+
+.btn-suckhoe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #c1ade2;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-suckhoe:hover {
+    background-color: var(--lavender-color);
+    transform: scale(1.05);
+}
+
+.btn-chat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #e9f0ee;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 2px;
+}
+
+.btn-chat:hover {
+    background-color: #d0e0d6;
+    transform: scale(1.05);
+}
+
+.tregio {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--yellow-green-color);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.vanghoc {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-peach-color);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* MODAL SỨC KHỎE */
+.check-suckhoe {
+    margin-top: 5px;
+}
+
+.form-suckhoe-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.form-control {
+    margin-top: 8px;
+}
+
+.form-photo {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(238, 238, 238);
+}
+
+.btn-send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(227, 247, 188);
+    color: #333;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+.btn-send:hover {
+    background-color: rgb(217, 242, 165);
+    transform: scale(1.05);
+}
+
+.btn-camera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(176, 176, 248);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+.btn-camera:hover {
+    background-color: rgb(150, 150, 250);
+    transform: scale(1.1);
+}
+
+
+.btn-exit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(165, 165, 167);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-exit:hover {
+    background-color: var(--neutral-gray-color);
+    transform: scale(1.05);
+}
+
+/* MODAL THÔNG TIN LỚP */
+.img-teacher-modal {
+    object-fit: cover;
+}
+
+.ss-number {
+    color: var(--navy-color);
+}
+
+.hd-number {
+    color: var(--green-color);
+}
+
+.tre-number {
+    color: var(--orange-color);
+}
+
+.vang-number {
+    color: var(--bright-color);
+}
+
+.table {
+    margin-top: 30px;
+}
+
+.table-header {
+    text-align: center;
+    font-size: 15px;
+}
+
+.table-body {
+    text-align: left;
+    font-size: 15px;
+}
+
+/* Small phones (up to 320px) */
+@media (max-width: 320px) {
+    .class {
+        width: 120px;
+        height: 90px;
+    }
+
+    .title-class h6 {
+        font-size: 12px;
+    }
+
+    .img-class {
+        width: 35px;
+        height: 35px;
+    }
+
+    .teacher-name,
+    .class-siso {
+        font-size: 8px;
+    }
+
+    .btn-diemdanh,
+    .btn-thongtinlop {
+        width: 60px;
+        height: 20px;
+        font-size: 10px;
+    }
+}
+
+/* Phones in portrait (up to 480px) */
+@media (max-width: 480px) {
+    .two-class {
+        display: flex;
+        justify-content: center;
+    }
+
+    .class {
+        width: 195px;
+        height: 130px;
+    }
+
+    .title-class h6 {
+        font-size: 14px;
+    }
+
+    .img-class {
+        width: 40px;
+        height: 40px;
+    }
+
+    .teacher-name,
+    .class-siso {
+        font-size: 12px;
+    }
+
+    .btn-diemdanh,
+    .btn-thongtinlop {
+        width: 70px;
+        height: 22px;
+        font-size: 11px;
+    }
+}
+
+/* Phones in landscape and small tablets (481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .two-class {
+        display: flex;
+        justify-content: center;
+    }
+
+    .class {
+        width: 250px;
+        height: 130px;
+        margin: 15px;
+    }
+
+    .title-class h6 {
+        font-size: 16px;
+    }
+
+    .img-class {
+        width: 45px;
+        height: 45px;
+    }
+
+    .teacher-name,
+    .class-siso {
+        font-size: 14px;
+    }
+
+    .btn-diemdanh,
+    .btn-thongtinlop {
+        width: 80px;
+        height: 25px;
+        font-size: 12px;
+    }
+}
+
+/* Tablets and larger phones (768px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .two-class {
+        margin: 10px;
+    }
+
+    .class {
+        width: 242px;
+        height: 130px;
+    }
+
+    .title-class h6 {
+        font-size: 18px;
+    }
+
+    .img-class {
+        width: 50px;
+        height: 50px;
+    }
+
+    .teacher-name,
+    .class-siso {
+        font-size: 13px;
+    }
+
+    .btn-diemdanh,
+    .btn-thongtinlop {
+        width: 85px;
+        height: 30px;
+        font-size: 13px;
+    }
+}
+
+/* Large tablets and small desktops (1025px to 1199px) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .class {
+        width: 220px;
+        height: 140px;
+    }
+
+    .title-class h6 {
+        font-size: 20px;
+    }
+
+    .img-class {
+        width: 55px;
+        height: 55px;
+    }
+
+    .teacher-name,
+    .class-siso {
+        font-size: 12px;
+    }
+
+    .btn-diemdanh,
+    .btn-thongtinlop {
+        width: 90px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
+/* Desktops and larger screens (1200px and up) */
+@media (min-width: 1200px) {
+    .class {
+        width: 240px;
+        height: 150px;
+    }
+
+    .title-class h6 {
+        font-size: 22px;
+    }
+
+    .img-class {
+        width: 60px;
+        height: 60px;
+    }
+
+    .teacher-name,
+    .class-siso {
+        font-size: 13px;
+    }
+
+    .btn-diemdanh,
+    .btn-thongtinlop {
+        width: 95px;
+        height: 35px;
+        font-size: 15px;
+    }
+}

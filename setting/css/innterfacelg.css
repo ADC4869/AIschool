@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main .container {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+main .title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+main .theme-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+main .theme-option {
+    text-align: center;
+    flex: 1 1 30%;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+main .theme-option img {
+    width: 100%;
+    max-width: 120px;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+main .theme-option input[type="radio"] {
+    display: none;
+}
+
+main .theme-option input[type="radio"]:checked + label img {
+    border-color: #0080ff;
+}
+
+main .theme-option label {
+    cursor: pointer;
+    display: block;
+}
+
+main .setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+}
+
+main .setting-item1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+main .setting-item div:first-child {
+    font-size: 1.2em;
+}
+
+main .setting-item1 div:first-child {
+    font-size: 1.2em;
+}
+
+main .arrow {
+    display: flex;
+    align-items: center;
+}
+
+main .setting-item1 .arrow {
+    display: flex;
+    align-items: center;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    main .theme-option {
+        flex: 1 1 45%; /* Mỗi phần tử chiếm khoảng 45% chiều rộng */
+    }
+
+    main .theme-option img {
+        max-width: 90px; /* Kích thước hình ảnh nhỏ hơn trên màn hình nhỏ */
+    }
+
+    main .title {
+        font-size: 1.3em;
+    }
+
+    main .setting-item {
+        padding: 15px;
+    }
+
+    main .setting-item div:first-child {
+        font-size: 1em;
+    }
+
+    main .arrow svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    main .setting-item1 {
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    main .setting-item1 div:first-child {
+        font-size: 1em;
+    }
+
+    main .setting-item1 .arrow svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    main .theme-option {
+        flex: 1 1 100%; /* Mỗi phần tử chiếm 100% chiều rộng trên màn hình nhỏ nhất */
+        margin-bottom: 15px;
+    }
+
+    main .theme-option img {
+        max-width: 70px; /* Kích thước hình ảnh nhỏ hơn trên màn hình rất nhỏ */
+    }
+
+    main .title {
+        font-size: 1.2em;
+    }
+
+    main .setting-item {
+        padding: 10px;
+    }
+
+    main .setting-item1 {
+        padding: 10px;
+    }
+
+    main .setting-item div:first-child {
+        font-size: 0.9em;
+    }
+
+    main .arrow svg {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+article .container {
+    padding: 20px;
+}
+
+article .header {
+    color: var(--text-color);
+    font-size: 18px;
+}
+article .header_language {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+article .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+    margin-top: 10px;
+}
+
+article .container a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+article .item-text {
+    font-size: 16px;
+}
+
+article .item .icon {
+    display: flex;
+    align-items: center;
+}
+
+article .icon .content{
+    margin-right: 10px;
+}
+
+article .item .icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+article .item .arrow {
+    font-size: 20px;
+    color: #aaa;
+}

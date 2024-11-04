@@ -1,0 +1,382 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    width: 100%;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* LỊCH */
+main .main__calendar {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: -1px;
+}
+
+.main__calendar .calendar__from,
+.calendar__to {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    gap: 10px;
+    background-color: var(--light-color);
+    padding: 5px 0px;
+    border-radius: 5px;
+}
+
+.main__calendar .calendar__to {
+    margin-top: -3px;
+}
+
+.calendar__from p,
+.calendar__to p {
+    width: 10%;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.calendar__from input,
+.calendar__to input {
+    width: 85%;
+    height: 25px;
+    background-color: var(--light-color);
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TỔNG QUAN */
+main .main__overview {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+main .main__overview .overview {
+    width: 90%;
+    background-color: var(--light-color);
+    border-radius: 5px;
+    display: flex;
+}
+
+.overview .left__overview {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px;
+    flex-direction: column;
+}
+
+.overview .left__overview .photostudent {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.overview .left__overview img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.overview .left__overview .infostudent {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.overview .left__overview .infostudent p {
+    margin: 5px -5px;
+}
+
+.overview .right__overview {
+    width: 50%;
+    height: 100%;
+}
+
+.right__overview .top {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    display: flex;
+    gap: 5px;
+}
+
+.right__overview .bottom {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    display: flex;
+    gap: 5px;
+}
+.top .circle__tatca,
+.top .circle__hiendien {
+    margin-top: 20px;
+}
+
+.right__overview .circle__tatca,
+.right__overview .circle__hiendien,
+.right__overview .circle__tre,
+.right__overview .circle__vang {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: border-color 0.1s, border-width 0.1s;
+}
+.right__overview .circle__tatca .title,
+.right__overview .circle__hiendien .title,
+.right__overview .circle__tre .title,
+.right__overview .circle__vang .title {
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: bold;
+}
+
+
+
+.bottom .circle__vang .title {
+    color: var(--bright-color);
+}
+
+.bottom .circle__tre .title {
+    color: var(--orange-color);
+}
+
+main .main__title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+main .main__title p {
+    width: 90%;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+main .main__diligence {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .main__diligence .detail__diligence {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+.main__diligence .hiendien {
+    background-color: rgb(199, 241, 199);
+}
+
+.main__diligence .vang {
+    background-color: #FFC2C6;
+}
+
+.main__diligence .tre {
+    background-color: #FEEFD4;
+}
+
+.detail__diligence .photo__diligence {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo__diligence .circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    font-size: 13px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    object-fit: cover;
+}
+
+.photo__diligence .hiendien p {
+    color: #0091F9;
+    font-weight: bold;
+}
+
+.photo__diligence .vang p {
+    color: #EC5011;
+    font-weight: bold;
+}
+
+.photo__diligence .tre p {
+    color: #F8800F;
+    font-weight: bold;
+}
+
+.detail__diligence .info__diligence {
+    width: 55%;
+}
+
+.detail__diligence .note__diligence {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note__diligence i {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* .detail__diligence .info__diligence {
+    line-height: 8px;
+} */
+
+.info__diligence .day {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.info__diligence .time {
+    font-size: 11px;
+}
+
+.modal__ghichu {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* modal */
+.modal {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Đảm bảo modal nằm trên các phần tử khác */
+}
+
+.modal-dialog {
+    background: white; /* Màu nền cho modal */
+    border-radius: 8px; /* Đường viền mềm mại */
+    max-width: 400px; /* Độ rộng tối đa của modal */
+    width: 100%; /* Độ rộng 100% cho các màn hình nhỏ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng cho modal */
+}
+
+.modal__header,
+.modal__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    /* Thêm màu nền nếu cần */
+}
+
+.modal__header .header__title {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    /* Đảm bảo căn giữa */
+}
+
+.modal__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.note__input {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal__footer .btn__save {
+    padding: 10px 20px;
+    background-color: var(--medium-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

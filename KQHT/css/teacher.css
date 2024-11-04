@@ -1,0 +1,271 @@
+main {
+    margin-top: 120px;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+}
+
+main .year-semester {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+main .year, .semester {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+main .grade-buttons {
+    display: flex;
+    gap: 10px;
+    align-self: center;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    padding: 10px 0;
+    white-space: nowrap; /* Giữ các button trên cùng một dòng */
+    width: 95%;
+    justify-content: flex-start;
+    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+}
+
+main .grade-buttons::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trên Chrome, Safari và Edge */
+}
+
+main .grade-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Giữ nguyên kích thước của các button */
+    border: solid 1px;
+}
+
+main .grade-button:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main .year, .semester, .grade-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+main .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content */
+main .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* List style */
+main .modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+main .modal-content li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Cancel button */
+main .cancelBtn {
+    color: var(--red-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Dialog box container */
+main .dialog {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+  
+/* Dialog content */
+main .dialog-content {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* Responsive width */
+    max-width: 400px;
+    text-align: center;
+}
+  
+/* List of years */
+main .dialog-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+main .dialog-content li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+  
+/* Cancel button styling */
+main .cancel-btn {
+    background-color: transparent;
+    color: var(--red-color);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+}
+  
+/* For tablet/iPad screens */
+@media (min-width: 768px) {
+    main .dialog-content {
+      width: 70%;
+    }
+}
+
+/* Class list and items */
+main .class-list {
+    padding: 20px;
+}
+
+main .class-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .class-info {
+    display: flex;
+    flex-direction: column; /* Đảm bảo các thẻ <p> xếp theo cột */
+}
+
+main .class-item p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    margin-bottom: 5px; /* Thêm khoảng cách giữa các thẻ p */
+}
+
+main .details-button {
+    background-color: var(--light-color);
+    border: none;
+    padding: 8px 13px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+main .details-button:hover {
+    background-color: #87ceeb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main .class-item {
+        align-items: flex-start;
+    }
+
+    main .details-button {
+        margin-top: 10px;
+    }
+}
+
+/* Hidden popup by default */
+main .popup {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+  
+/* Popup content */
+main .popup-content {
+    padding: 15px;
+    text-align: center;
+}
+  
+main .popup-content p {
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+  
+main .popup-content p:last-child {
+    border-bottom: none;
+}
+  
+/* Responsive popup for smaller screens */
+@media screen and (max-width: 768px) {
+    main .popup {
+      width: 90%;
+    }
+}
+
+main .popup-content a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+@media (min-width: 430px) {
+    main .grade-buttons {
+        justify-content: center;
+    }
+}

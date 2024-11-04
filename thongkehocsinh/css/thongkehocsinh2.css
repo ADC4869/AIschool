@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+header .header .ti-angle-left {
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    position: relative;
+    top: 30px;
+}
+
+header .header .header__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    width: 100%;
+    margin-top: 120px;
+}
+
+main .main__title {
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid gray;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__title .title {
+    margin-left: 25px;
+    line-height: 50px;
+}
+
+.main__siso {
+    width: 100%;
+}
+
+.main_search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.main_search input {
+    width: 80%;
+    height: 35px;
+    border-radius: 30px;
+    border: 1px solid #bcbcbd;
+    padding: 10px 40px 10px 15px;
+    color: gray;
+}
+
+.siso__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.main__student {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.detail__student {
+    width: 90%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.boy {
+    background-color: #D0DEFF;
+}
+
+.girl {
+    background-color: pink;
+}
+
+.detail__student a {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.img__student {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.left__student {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.between__student {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.name__student {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.mshs {
+    font-size: 13px;
+}
+
+.right__class {
+    display: flex;
+    align-items: center;
+}
+
+.btn__detail {
+    width: 30px;
+    height: 30px;
+    border: none;
+    font-size: 20px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.girl .btn__detail {
+    background-color: pink;
+}
+
+.boy .btn__detail {
+    background-color: #D0DEFF;
+}
+
+/* tabs */
+.tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.tabs .tab_total,
+.tabs .tab_male,
+.tabs .tab_female {
+    width: 33%;
+    height: 35px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tab_total.active,
+.tab_male.active,
+.tab_female.active {
+    background-color: #f4f4f4;
+    color: black;
+    border-bottom: 2px solid black;
+}

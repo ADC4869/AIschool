@@ -1,0 +1,341 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    height: 120px;
+    background-color: #f8bd86;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.content-header {
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: -30px;
+}
+
+.icon-header {
+    margin-right: 10px;
+    margin-bottom: -5px;
+}
+
+.title-header h6 {
+    margin-bottom: -2px;
+}
+
+/* TAB GIÁO VIÊN - HỌC SINH - PHỤ HUYNH */
+main {
+    margin-top: 130px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-tab:hover {
+    border: 0.2px solid gray;
+}
+
+/* MÔN HỌC */
+.subject {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.content-subject {
+    width: 90%;
+    height: 100%;
+}
+
+.content-subject-subjectname {
+    width: 100%;
+    margin-top: 5px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-subject {
+    width: 80px;
+    height: 30px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+.btn-subject:hover {
+    background-color: rgb(248, 174, 187);
+    color: white;
+}
+
+.btn-subject:active {
+    transform: scale(0.95);
+}
+
+/* THÔNG TIN GIÁO VIÊN */
+.info-teacher {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.info-teacher-detail {
+    width: 350px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    margin-top: 10px;
+    box-shadow: 0 1px 2px black;
+    background-color: rgb(245, 238, 229);
+}
+
+.info-teacher-title {
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    line-height: 5px;
+    font-size: 12px;
+}
+
+.info-teacher-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.button-info-teacher {
+    margin-bottom: 3px;
+}
+
+.button-info-teacher .btn-chat,
+.btn-detail {
+    width: 60px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px gray;
+    background-color: rgb(210, 247, 210);
+}
+
+/* KHỐI CỦA HỌC SINH */
+.khoi {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.content-khoi {
+    width: 90%;
+}
+
+.content-khoi-title {
+    background: linear-gradient(to right, rgba(231, 227, 227, 1), rgba(231, 227, 227, 0));
+    padding: 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-khoi-title h6 {
+    font-size: 13px;
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+.content-khoi-khoiname {
+    width: 100%;
+    margin-top: 5px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-khoi {
+    width: 60px;
+    height: 30px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+.btn-khoi:hover {
+    background-color: rgb(248, 174, 187);
+    color: white;
+}
+
+.btn-khoi:active {
+    transform: scale(0.95);
+}
+
+
+
+/* LỚP HỌC */
+.class {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.content-class {
+    width: 90%;
+}
+
+.content-class-title {
+    background: linear-gradient(to right, rgba(231, 227, 227, 1), rgba(231, 227, 227, 0));
+    padding: 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-class-title h6 {
+    font-size: 13px;
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+.content-class-classname {
+    width: 100%;
+    margin-top: 5px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-class {
+    width: 60px;
+    height: 30px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+.btn-class:hover {
+    background-color: rgb(248, 174, 187);
+    color: white;
+}
+
+.btn-class:active {
+    transform: scale(0.95);
+}
+
+/* THÔNG TIN CỦA HỌC SINH */
+.info-student {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.info-student-detail {
+    width: 350px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    margin-top: 10px;
+    box-shadow: 0 1px 2px black;
+    background-color: rgb(245, 238, 229);
+}
+
+.info-student-title {
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    line-height: 5px;
+    font-size: 12px;
+}
+
+.info-student-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.button-info-student {
+    margin-bottom: 3px;
+}
+
+.button-info-student .btn-chat,
+.btn-detail {
+    width: 60px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px gray;
+    background-color: rgb(210, 247, 210);
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 412px) and (orientation: portrait) {
+    .infoclass-bottom {
+        gap: 10px;
+    }
+
+    .btn-infoclass {
+        width: 75px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .infostudy-content h6,
+    p {
+        font-size: 12px;
+    }
+
+    .btn-chat {
+        width: 50px;
+        height: 20px;
+    }
+
+    .btn-suckhoe {
+        width: 50px;
+        height: 20px;
+    }
+}

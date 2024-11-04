@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+
+header .header .icon-back,
+.header i {
+    font-size: 20px;
+    color: var(--white-color);
+    position: relative;
+    top: 30px;
+    left: 15px;
+}
+
+header .header .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 25px;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 110px;
+}
+main .main_tab {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(204, 203, 203);
+    background-color: white;
+    position: fixed;
+    top: 110px;
+}
+
+.main_tab .tab_content {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 5px;
+}
+
+.tab_content .tab_timetable {
+    width: 45%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    padding: 0 30px;
+}
+
+.tab_content .wall {
+    font-size: 30px;
+    color: #bcbcbd;
+}
+
+.tab_content .tab_timetable.active {
+    background-color: white;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+main .main_teacher {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px;
+    margin-top: 75px;
+}
+
+.main_teacher .number_student {
+    width: 90%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+}
+.number_student p {
+    width: 85px;
+}
+
+.main_teacher .info_student {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 8px 0;
+    flex-direction: column;
+}
+
+.info_student .info_detail {
+    width: 100%;
+    display: flex;
+    background-color: #C2E3EC;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+.info_detail a {
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    color: black;
+}
+
+.info_detail .photo_student {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo_student img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info_detail .content_student {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content_student .name_teacher {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* KHỐI LỚP */
+main .main_grades {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 75px;
+}
+
+.main_grades .grade_content {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.grade_content button {
+    width: 92px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.main_grades .info_class {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info_class .class_card {
+    width: 100%;
+    background-color: #FAFAFA;
+    border: 1px solid #bcbcbd;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.class_card a {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    color: black;
+}
+
+.class_card .name_class {
+    font-size: 18px;
+    font-weight: bold;
+}

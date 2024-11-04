@@ -1,0 +1,377 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+main {
+    margin-top: 120px;
+}
+
+main .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+main .tab-button {
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+main .tab-button.active {
+    background: linear-gradient(135deg, #4a70ba, #324b8e);
+    transform: translateY(-2px);
+}
+
+main .tab-button:hover {
+    background: linear-gradient(135deg, #5a83c0, #3d5ca6);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+main .tab-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab content styling */
+main .tab-content {
+    display: none;
+    background-color: var(--white-color);
+    padding: 20px;
+    margin-top: -20px;
+}
+
+/* main .tab-content.active {
+    display: block;
+} */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    main .tab-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    main .tab-button {
+        margin-bottom: 10px;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+main .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-top: -25px;
+}
+
+/* Chart container */
+main .chart-container {
+    position: relative;
+    width: 50%; /* Set chart width to 50% */
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Legend container */
+main .legend-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%; /* Set legend width to 40% */
+    padding: 10px;
+}
+
+/* Legend item styles */
+main .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Circle for legend color */
+main .legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+main .student-list {
+    margin: 20px auto;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: -10px;
+}
+
+main .student-card {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f7f7f7;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-items: center;
+    position: relative;
+}
+
+.student-card .icon {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+}
+
+main .student-card:last-child {
+    border-bottom: none;
+}
+
+main .student-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+}
+
+main .student-left img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+main .student-info {
+    flex: 1;
+}
+
+main .student-info h4 {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+main .student-info p {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+main .icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+main .icons1 {
+    position: relative;
+    top: 100px;
+}
+
+main .icons i {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    main .student-card {
+        align-items: flex-start;
+    }
+
+    main .student-left {
+        margin-bottom: 10px;
+    }
+
+    main .student-left img {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+}
+
+main .container1 {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main canvas {
+    display: block;
+    max-width: 100%;
+    height: 300px;
+}
+
+main .chart-title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+main .date-picker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+main .date-picker input {
+    padding: 5px;
+    font-size: 14px;
+}
+
+ /* Styles for content cards */
+main .hidden-content {
+    display: none;
+}
+
+
+/* modal */
+
+.modal {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Đảm bảo modal nằm trên các phần tử khác */
+}
+
+.modal-dialog {
+    background: white; /* Màu nền cho modal */
+    border-radius: 8px; /* Đường viền mềm mại */
+    max-width: 400px; /* Độ rộng tối đa của modal */
+    width: 100%; /* Độ rộng 100% cho các màn hình nhỏ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng cho modal */
+}
+
+.modal__header,
+.modal__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    /* Thêm màu nền nếu cần */
+}
+
+.modal__header .header__title {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    /* Đảm bảo căn giữa */
+}
+
+.modal__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.note__input {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal__footer .btn__save {
+    padding: 10px 20px;
+    background-color: var(--medium-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+main .chart-container1 {
+    max-width: 100%;
+}
+main .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+main .chart-header h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+main .chart-header input[type="date"] {
+    padding: 5px;
+    font-size: 0.9rem;
+}
+main canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+    main .chart-header h2 {
+        font-size: 0.9rem;
+    }
+    main .chart-header input[type="date"] {
+        font-size: 0.8rem;
+    }
+}

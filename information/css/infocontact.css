@@ -1,0 +1,367 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+}
+
+header .back-arrow {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+header .tab-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+header .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+}
+
+header .tab.active {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+}
+
+main .card {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    max-width: 100%;
+    overflow: hidden;
+}
+main {
+    margin-top: 150px;
+}
+main .card img {
+    border-radius: 8px;
+    width: 115px;
+    height: 110px;
+    max-width: 150px;
+    object-fit: cover;
+    position: relative;
+    float: right;
+}
+
+main .card-content {
+    text-align: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+main .card-content h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+main .card-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+main .chat-button {
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 5px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+main .chat-button:hover {
+    background-color: var(--navy-color);
+}
+
+main .tab-container {
+    display: flex;
+}
+
+main .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+
+main .tab.active {
+    background-color: #ddd;
+}
+
+main .tab-content {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+main .tab-content.active {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    main .card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    main .card img {
+        margin-right: 15px;
+    }
+}
+
+main .button-group {
+    display: flex;
+    gap: 30px;
+    /* Space between the buttons */
+    margin-top: 10px;
+}
+
+
+.button-group .chat-button {
+    background-color: white;
+    color: var(--navy-color);
+    padding: 5px 4px;
+    border: 2px solid var(--navy-color);
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    width: 100px;
+    /* Set a fixed width */
+    transition: background-color 0.3s ease;
+}
+main .button-group .detail-button {
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 13px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+
+
+main .button-group .detail-button:hover,
+.button-group .chat-button:hover {
+    background-color: var(--navy-color);
+    color: var(--white-color);
+}
+
+main .button-group .detail-button {
+    font-weight: normal;
+}
+
+main .button-group .chat-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    main .button-group .detail-button,
+    .button-group .chat-button {
+        margin-bottom: 8px;
+    }
+
+    main .button-group {
+        align-items: flex-end;
+    }
+}
+
+/* Modal container */
+main .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+main .modal-content {
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    /* Max width on larger screens */
+    border-radius: 8px;
+    background-color: #E1F0F9;
+}
+
+
+
+/* Close button */
+main .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+main .close-button:hover,
+.close-button:focus {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Student info */
+main .student-info {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #c4c0c0;
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+}
+main .modal-content .title {
+    font-size: 14px;
+}
+.student-info .student-image {
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.modal-content .student-info .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+main .student-info img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+main .student-details p {
+    margin: 5px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    main .modal-content {
+        margin: 30% auto;
+        padding: 15px;
+        width: 90%;
+    }
+
+    main .student-info {
+        align-items: flex-start;
+    }
+
+    main .student-info img {
+        margin: 10px;
+    }
+}
+
+footer .pagination-container {
+    position: fixed;
+    bottom: 10px;
+    /* Distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer button {
+    background-color: #4a588e;
+    /* Use the color you prefer */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+footer button:active {
+    background-color: #3c4a79;
+}
+
+footer input {
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    footer .pagination-container {
+        bottom: 5px;
+        /* Adjust for smaller devices */
+    }
+
+    footer button {
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    footer input {
+        width: 30%;
+        font-size: 18px;
+    }
+}

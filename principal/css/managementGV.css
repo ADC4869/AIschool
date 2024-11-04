@@ -1,0 +1,687 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 40px;
+    margin-left: -20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .back-arrow {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+    top: 22px;
+}
+
+header .header .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+main {
+    margin-top: 120px;
+}
+
+main .tabs {
+    display: flex;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+main .tablinks {
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+}
+
+main .tablinks:hover {
+    background-color: #ddd;
+}
+
+main .tablinks.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* Style cho thanh dọc */
+main .vertical-line {
+    width: 1px;
+    background-color: var(--text-color);
+    margin: 0;
+    height: auto;
+    position: relative;
+}
+
+/* Định dạng nội dung tab */
+main .tabcontent {
+    display: none;
+    padding: 20px;
+    /*border: 1px solid #ccc; */
+    border-top: none;
+}
+
+@media (max-width: 768px) {
+    main .tablinks {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    main .tabcontent {
+        padding: 15px;
+    }
+}
+
+main .chart-container {
+    position: relative;
+    width: 350px; /* Cố định chiều rộng của biểu đồ */
+    height: 350px; /* Cố định chiều cao của biểu đồ */
+    text-align: center;
+    margin: 0 auto;
+}
+
+main .btn {
+    background-color: var(--gray-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+}
+
+main .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content */
+main .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* List style */
+main .modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+main .modal-content li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Cancel button */
+main .cancelBtn,
+main .cancelBtn2 {
+    color: var(--red-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media only screen and (min-width: 768px) {
+    main .modal-content {
+        width: 50%;
+    }
+}
+
+main canvas {
+    width: 70% !important;
+    height: 70% !important; /* Đảm bảo biểu đồ giữ nguyên chiều cao */
+    margin-left: 45px;
+}
+
+main .chart-labels {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+main .label-nu, .label-nam {
+    font-size: 14px;
+    color: #666;
+}
+
+main .center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    main .chart-container {
+        width: 280px;  /* Thay đổi kích thước cho màn hình nhỏ hơn */
+        height: 280px;
+    }
+
+    main .center-text {
+        font-size: 20px;
+    }
+
+    main .label-nu, .label-nam {
+        font-size: 12px;
+    }
+}
+
+main .container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+main .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5B5F93;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    width: 115px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+main .item img {
+    width: 60px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+main .item p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+main .class-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+main .class-card {
+    width: 100%;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+main .class-info {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 20px;
+}
+
+main .class-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+main .class-details {
+    font-size: 15px;
+}
+
+main .green {
+    background-color: var(--medium-color);
+}
+
+main .class-details {
+    flex-grow: 1;
+}
+
+main .class-icon {
+    font-size: 24px;
+    color: #777;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    main .class-card {
+        max-width: 100%;
+    }
+
+    main .class-info {
+        gap: 10px;
+    }
+
+    main .class-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+main .attendance-container {
+    margin: 5px auto;
+}
+
+/* Flex container for date section */
+main .date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #e5f4ff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+main .date {
+    font-size: 1.2em;
+    color: #333;
+}
+
+main .calendar-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+main .calendar-btn i {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Calendar styling */
+main .calendar {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+/* Flex container for attendance summary */
+main .attendance-summary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+}
+
+main .attendance-summary span {
+    padding: 5px;
+}
+
+/* Colors for different status */
+main .present {
+    color: #007bff;
+}
+
+main .absent {
+    color: #f76c22;
+}
+
+main .late {
+    color: #fca311;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+    main .attendance-summary {
+        align-items: flex-start;
+        font-size: 1em;
+    }
+
+    main .attendance-summary span {
+        margin-bottom: 5px;
+    }
+}
+
+main .container1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .card {
+    display: flex;
+    background-color: #e6f7ff;
+    border-radius: 8px;
+    padding: 15px;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+main .card:hover {
+    transform: scale(1.02);
+}
+
+main .profile-image {
+    width: 100px; /* Fixed width for the image */
+    height: auto;
+    border-radius: 50%;
+    margin-right: 15px; /* Space between image and content */
+}
+
+main .card-content {
+    flex-grow: 1; /* Allow content to take up remaining space */
+}
+
+main .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .edit-icon {
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    top: 65px;
+}
+
+main h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+main p {
+    margin: 5px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    main .container1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .card {
+        width: 90%;
+    }
+
+    main .profile-image {
+        width: 80px; /* Adjust image size on smaller screens */
+    }
+}
+
+@media (min-width: 769px) {
+    main .container1 {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+main .summary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+main .teacher-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .teacher-card {
+    display: flex;
+    align-items: center;
+    background-color: #e8f4ff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+main .teacher-card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+main .teacher-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+main .teacher-card a {
+    margin-left: auto;
+}
+
+main .teacher-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+main .teacher-list .teacher-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+main .icon {
+    font-size: 24px;
+    color: #007BFF;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    main .teacher-card img {
+        margin-bottom: 10px;
+    }
+
+    main .summary {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main .teacher-info h3 {
+        font-size: 14px;
+    }
+
+    main .teacher-info p {
+        font-size: 12px;
+    }
+
+    main .summary {
+        font-size: 14px;
+    }
+
+    main .teacher-card img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+/* icon nam, nữ */
+.male_female {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.male_female .female {
+    color: pink;
+    font-size: 18px;
+}
+
+.female span i{
+    margin-right: 5px;
+}
+
+.male_female .male {
+    color: #9C9CBF;
+    font-size: 18px;
+}
+
+.male span i{
+    margin-right: 5px;
+}
+
+/* MODAL GHI CHÚ */
+/* Modal nền */
+.notemodal {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền mờ */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Nội dung modal */
+.notemodal-content {
+    background-color: white;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.notemodal-content .notemodal_header {
+    background-color: var(--primary-color);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+.notemodal-content .notemodal_body {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notemodal_body textarea {
+    width: 90%;
+    height: 100px;
+    border: none;
+    border-bottom: 1px solid rgb(238, 235, 235);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+}
+
+.notemodal-content .notemodal_footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Icon ghi chú */
+.note-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+.notemodal_footer button {
+    width: 50px;
+    height: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notemodal_footer .btn_notesave {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 15px;
+}
+.notemodal_footer .btn_noteclose {
+    background-color: white;
+    font-size: 15px;
+    color: var(--primary-color);
+}
+
+.notemodal_footer .button_note {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
