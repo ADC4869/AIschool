@@ -48,7 +48,7 @@
     </div>
 </body>
 <script src="../js/back.js"></script>
-<script src="./js/calendar.js"></script>
+
 <script>
     // Lấy tất cả radio buttons và các phần lịch dạy, lịch thi
     const radios = document.querySelectorAll('input[name="options"]');
