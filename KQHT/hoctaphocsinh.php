@@ -599,34 +599,106 @@
         <div id="myCustomModal" class="custom-modal">
             <div class="custom-modal-content">
                 <div class="custom-modal-header">
-                    <span>Phúc khảo</span>
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'phuc-khao')">Phúc khảo</button>
+                        <button class="tab-button" onclick="openTab(event, 'lich-su')">Lịch sử</button>
+                    </div>
                 </div>
                 <div class="custom-modal-body">
-                    <div class="custom-body-content">
-                        <label for="">Môn:</label>
-                        <select name="" id="">
-                            <option value="">Toán</option>
-                            <option value="">Văn</option>
-                            <option value="">Tiếng Anh</option>
-                            <option value="">Lịch sử</option>
-                            <option value="">Địa lí</option>
-                            <option value="">Hóa học</option>
-                            <option value="">Vật lí</option>
-                            <option value="">Công nghệ</option>
-                            <option value="">Tin học</option>
-                        </select>
-                        <label for="">Loại:</label>
-                        <select name="" id="">
-                            <option value="">Bài tập 15 phút</option>
-                            <option value="">Bài tập 45 phút</option>
-                            <option value="">Điểm giữa kì</option>
-                            <option value="">Điểm cuối kì</option>
-                            <option value="">Tổng kết</option>
-                        </select>
-                        <label for="">Điểm bài kiểm tra / thi</label>
-                        <input type="text" placeholder="vd: 5">
-                        <label for="">Ghi chú</label>
-                        <input type="text" placeholder="Mong cô kiểm tra lại">
+                    <div id="phuc-khao" class="tab-content active">
+                        <div class="form_phuckhao">
+                            <label class="name_subject" for="">Môn:</label>
+                            <select name="" id="">
+                                <option value="">Toán</option>
+                                <option value="">Văn</option>
+                                <option value="">Tiếng Anh</option>
+                                <option value="">Lịch sử</option>
+                                <option value="">Địa lí</option>
+                                <option value="">Hóa học</option>
+                                <option value="">Vật lí</option>
+                                <option value="">Công nghệ</option>
+                                <option value="">Tin học</option>
+                            </select>
+                            <label for="">Loại:</label>
+                            <select name="" id="">
+                                <option value="">Bài tập 15 phút</option>
+                                <option value="">Bài tập 45 phút</option>
+                                <option value="">Điểm giữa kì</option>
+                                <option value="">Điểm cuối kì</option>
+                                <option value="">Tổng kết</option>
+                            </select>
+                            <label for="">Điểm bài kiểm tra / thi</label>
+                            <input type="text" placeholder="vd: 5">
+                            <label for="">Ghi chú</label>
+                            <input type="text" placeholder="Mong cô kiểm tra lại">
+                        </div>
+                    </div>
+                    <div id="lich-su" class="tab-content" style="display: none;">
+                        <div class="list">
+                            <div class="item">
+                                <div class="item_content">
+                                    <span><strong>Môn: </strong> Toán</span>
+                                    <span><strong>Điểm:</strong> 5</span>
+                                    <span><strong>Kiểm tra:</strong> 15 phút</span>
+                                </div>
+                                <div class="item_action">
+                                    <i data-feather="alert-circle" style="color: #5B6998"></i>
+                                    <i data-feather="trash" style="color: #5B6998"></i>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item_content">
+                                    <span><strong>Môn: </strong> Ngữ Văn</span>
+                                    <span><strong>Điểm:</strong> 3</span>
+                                    <span><strong>Kiểm tra:</strong> 15 phút</span>
+                                </div>
+                                <div class="item_action">
+                                    <i data-feather="alert-circle" style="color: #5B6998"></i>
+                                    <i data-feather="trash" style="color: #5B6998"></i>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item_content">
+                                    <span><strong>Môn: </strong> Tiếng Anh</span>
+                                    <span><strong>Điểm:</strong> 6</span>
+                                    <span><strong>Kiểm tra:</strong> 1 tiết</span>
+                                </div>
+                                <div class="item_action">
+                                    <i data-feather="alert-circle" style="color: #5B6998"
+                                        onclick="showDetail(this)"></i>
+                                    <i data-feather="trash" style="color: #5B6998"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="detail_item" style="display: none; z-index: 1000">
+                            <label class="name_subject" for="">Môn:</label>
+                            <select name="" id="">
+                                <option value="">Toán</option>
+                                <option value="">Văn</option>
+                                <option value="">Tiếng Anh</option>
+                                <option value="">Lịch sử</option>
+                                <option value="">Địa lí</option>
+                                <option value="">Hóa học</option>
+                                <option value="">Vật lí</option>
+                                <option value="">Công nghệ</option>
+                                <option value="">Tin học</option>
+                            </select>
+                            <label for="">Loại:</label>
+                            <select name="" id="">
+                                <option value="">Bài tập 15 phút</option>
+                                <option value="">Bài tập 45 phút</option>
+                                <option value="">Điểm giữa kì</option>
+                                <option value="">Điểm cuối kì</option>
+                                <option value="">Tổng kết</option>
+                            </select>
+                            <label for="">Điểm bài kiểm tra / thi</label>
+                            <input type="text" placeholder="vd: 5">
+                            <label for="">Ghi chú</label>
+                            <input type="text" placeholder="Mong cô kiểm tra lại">
+                        </div>
+
+
                     </div>
                 </div>
                 <div class="custom-modal-footer">
@@ -637,7 +709,6 @@
                 </div>
             </div>
         </div>
-
 
     </main>
 </body>
@@ -663,6 +734,38 @@
         // Xử lý gửi form ở đây
         alert('Đã gửi thông tin!');
         closeModal();
+    }
+    function openTab(event, tabId) {
+        // Xóa lớp 'active' và ẩn nội dung của tất cả các tab
+        const tabs = document.getElementsByClassName('tab-content');
+        const tabButtons = document.getElementsByClassName('tab-button');
+
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = 'none';
+            tabButtons[i].classList.remove('active');
+        }
+
+        // Hiển thị tab được chọn và thêm lớp 'active' vào nút của tab đó
+        document.getElementById(tabId).style.display = 'block';
+        event.currentTarget.classList.add('active');
+    }
+
+    document.getElementById('phuc-khao').style.display = 'block';
+
+    function showDetail(element) {
+        // Kiểm tra xem tab 'Lịch sử' có đang hiển thị không
+        const historyTab = document.getElementById('lich-su');
+        if (historyTab && historyTab.style.display === 'block') {
+            // Tìm phần tử detail_item trong tab 'Lịch sử'
+            var detailItem = historyTab.querySelector(".detail_item");
+
+            // Hiển thị hoặc ẩn detail_item dựa trên trạng thái hiện tại
+            if (detailItem.style.display === "none" || detailItem.style.display === "") {
+                detailItem.style.display = "block";
+            } else {
+                detailItem.style.display = "none";
+            }
+        }
     }
 
 </script>
