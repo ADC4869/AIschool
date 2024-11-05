@@ -334,6 +334,7 @@ main .grade-review {
 
 main .grade,
 .review {
+    width: 50%;
     flex: 1;
     /* Make both the .grade and .review take up equal space */
     box-sizing: border-box;
@@ -647,4 +648,47 @@ main .comment-btn {
 main .comment-btn:hover {
     background-color: #007bb5;
     transform: scale(1.05);
+}
+
+/* MODAL */
+.review textarea {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}
+.review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grade-score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grade-score input {
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid var(--primary-color);
+    text-align: center;
+}
+
+.modal-score-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.modal-score-button button {
+    width: 20%;
+    height: 35px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    color: white;
+    background-color: var(--primary-color);
 }

@@ -642,7 +642,7 @@
                                     <span><strong>Kiểm tra:</strong> 15 phút</span>
                                 </div>
                                 <div class="item_action">
-                                    <i data-feather="alert-circle" style="color: #5B6998"
+                                    <i data-feather="edit-2" style="color: #5B6998"
                                         onclick="showDetail(this)"></i>
                                     <i data-feather="trash" style="color: #5B6998"></i>
                                 </div>
@@ -654,7 +654,7 @@
                                     <span><strong>Kiểm tra:</strong> 15 phút</span>
                                 </div>
                                 <div class="item_action">
-                                    <i data-feather="alert-circle" style="color: #5B6998"
+                                    <i data-feather="edit-2" style="color: #5B6998"
                                         onclick="showDetail(this)"></i>
                                     <i data-feather="trash" style="color: #5B6998"></i>
                                 </div>
@@ -666,40 +666,13 @@
                                     <span><strong>Kiểm tra:</strong> 1 tiết</span>
                                 </div>
                                 <div class="item_action">
-                                    <i data-feather="alert-circle" style="color: #5B6998"
+                                    <i data-feather="edit-2" style="color: #5B6998"
                                         onclick="showDetail(this)"></i>
                                     <i data-feather="trash" style="color: #5B6998"></i>
                                 </div>
 
                             </div>
                         </div>
-                        <div class="detail_item" style="display: none; z-index: 1000">
-                            <label class="name_subject" for="">Môn:</label>
-                            <select name="" id="">
-                                <option value="">Toán</option>
-                                <option value="">Văn</option>
-                                <option value="">Tiếng Anh</option>
-                                <option value="">Lịch sử</option>
-                                <option value="">Địa lí</option>
-                                <option value="">Hóa học</option>
-                                <option value="">Vật lí</option>
-                                <option value="">Công nghệ</option>
-                                <option value="">Tin học</option>
-                            </select>
-                            <label for="">Loại:</label>
-                            <select name="" id="">
-                                <option value="">Bài tập 15 phút</option>
-                                <option value="">Bài tập 45 phút</option>
-                                <option value="">Điểm giữa kì</option>
-                                <option value="">Điểm cuối kì</option>
-                                <option value="">Tổng kết</option>
-                            </select>
-                            <label for="">Điểm bài kiểm tra / thi</label>
-                            <input type="text" placeholder="vd: 5">
-                            <label for="">Ghi chú</label>
-                            <input type="text" placeholder="Mong cô kiểm tra lại">
-                        </div>
-
 
                     </div>
                 </div>
@@ -755,14 +728,10 @@
     document.getElementById('phuc-khao').style.display = 'block';
 
     function showDetail(element) {
-        // Lấy phần tử cha chứa danh sách và chi tiết
-        const list = element.closest('.list');
-        const detailItem = list.nextElementSibling; // `.detail_item` liền kề
-
-        // Ẩn danh sách và hiển thị chi tiết
-        list.style.display = 'none';
-        detailItem.style.display = 'flex';
+        // Chuyển đến tab "Phúc khảo" khi nhấn vào icon chi tiết
+        openTab({ currentTarget: document.querySelector('.tab-button[onclick*="phuc-khao"]') }, 'phuc-khao');
     }
+
 
 
 </script>

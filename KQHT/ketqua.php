@@ -117,23 +117,17 @@
                         <tr>
                             <td class="pointtitle">Tổng kết</td>
                             <td>
-                                <div class="grades">10</div>
+                                <div class="grades" data-grade="10" data-subject="Toán">10</div>
                             </td>
-
-                            <!-- Tổng kết môn Toán -->
                             <td>
-                                <button class="enter-grade-button"><i data-feather="plus"
+                                <button class="enter-grade-button" data-subject="Toán"><i data-feather="plus"
                                         style="color: #bcbcbd"></i></button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-                                <div class="grades-wrapper"></div>
                             </td>
 
                             <!-- Tổng kết môn Tiếng Anh -->
                             <td>
-                                <button class="enter-grade-button"><i data-feather="plus"
+                                <button class="enter-grade-button" id="plusButton"><i data-feather="plus"
                                         style="color: #bcbcbd"></i></button>
-                                <input type="number" class="grade-input" min="0" max="10" style="display:none;" />
-
                                 <div class="grades-wrapper"></div>
                             </td>
 
@@ -547,7 +541,9 @@
             </div>
 
             <!-- Modal Structure -->
-            <div id="gradeModal" class="modal">
+
+            <!-- Modal dùng chung cho các điểm -->
+            <div id="gradeModal1" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Chi tiết bài kiểm tra</h2>
@@ -560,22 +556,63 @@
                             </div>
                             <div class="info">
                                 <p>Ngày: 14/08/2024</p>
-                                <p class="data_monhoc">Môn: Toán</p>
+                                <p class="data_monhoc">Môn: <span id="subject1"></span></p>
                                 <p>Thời gian: 15’</p>
                             </div>
                         </div>
                         <div class="grade-review">
                             <div class="grade">
-                                <div class="grades">10</div><br>
-                                <img id="image" src="../img/header1.jpg" alt="Image to Download" width="300px"
+                                <div id="gradeValue1" class="grades">10</div><br>
+                                <img id="image1" src="../img/header1.jpg" alt="Image to Download" width="300px"
                                     style="width: 120px; height: 85px;">
                                 <br><br>
-                                <button id="downloadBtn">Tải ảnh</button>
+                                <button id="downloadBtn1">Tải ảnh</button>
                             </div>
                             <div class="review">
-                                <p>Nhận xét của giáo viên</p>
-                                <p>Very good</p>
+                                <span>Rất tốt</span>
                             </div>
+                        </div>
+                        <div class="modal-score-button">
+                                <button type="button">Gửi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal dùng chung cho các dấu cộng -->
+            <div id="gradeModal2" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Chi tiết bài kiểm tra</h2>
+                    <div class="modal-body">
+                        <div class="info-row">
+                            <div class="info">
+                                <p>Trường: Lê Hồng Phong</p>
+                                <p class="data_lophoc">Lớp: 9A1</p>
+                                <p class="data_hovatenhocsinh">Tên: Nguyễn Thị Yến Loan</p>
+                            </div>
+                            <div class="info">
+                                <p>Ngày: 14/08/2024</p>
+                                <p class="data_monhoc">Môn: <span id="subject2"></span></p>
+                                <p>Thời gian: 15’</p>
+                            </div>
+                        </div>
+                        <div class="grade-review">
+                            <div class="grade">
+                                <div class="grade-score">
+                                    <input type="text" placeholder="Nhập điểm">
+                                </div><br>
+                                <img id="image2" src="../img/header1.jpg" alt="Image to Download" width="300px"
+                                    style="width: 120px; height: 85px;">
+                                <br><br>
+                                <button id="downloadBtn2">Tải ảnh</button>
+                            </div>
+                            <div class="review">
+                                <textarea placeholder="Nhập nhận xét"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-score-button">
+                                <button type="button">Gửi</button>
                         </div>
                     </div>
                 </div>
@@ -757,47 +794,10 @@
                 </table>
             </div>
 
-            <!-- Modal Structure -->
-            <div id="gradeModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Chi tiết bài kiểm tra</h2>
-                    <div class="modal-body">
-                        <div class="info-row">
-                            <div class="info">
-                                <p>Trường: Lê Hồng Phong</p>
-                                <p class="data_lophoc">Lớp: 9A1</p>
-                                <p class="data_hovatenhocsinh">Tên: Nguyễn Thị Yến Loan</p>
-                            </div>
-                            <div class="info">
-                                <p>Ngày: 14/08/2024</p>
-                                <p class="data_monhoc">Môn: Toán</p>
-                                <p>Thời gian: 15’</p>
-                            </div>
-                        </div>
-                        <div class="grade-review">
-                            <div class="grade">
-                                <div class="grades">10</div><br>
-                                <img id="image" src="../img/header1.jpg" alt="Image to Download" width="300px"
-                                    style="width: 120px; height: 85px;">
-                                <br><br>
-                                <button id="downloadBtn">Tải ảnh xuống</button>
-                            </div>
-                            <div class="review">
-                                <p>Nhận xét của giáo viên</p>
-                                <p id="teacherComment">Very good</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
-        
-        <div class="button-container">
-            <button class="btn upload-btn" id="uploadBtn">Tải ảnh</button>
-            <button class="btn comment-btn" id="commentBtn">Nhận xét</button>
-        </div>
-        <input type="file" id="fileInput" style="display: none;">
+
+
     </main>
 </body>
 <script src="./js/kq.js"></script>
@@ -807,18 +807,19 @@
 <script src="./js/hocki.js"></script>
 <script src="./js/namhoc.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         // Lắng nghe sự kiện click vào nút Nhận xét
-        document.getElementById("commentBtn").addEventListener("click", function() {
+        document.getElementById("commentBtn").addEventListener("click", function () {
             // Hiển thị hộp thoại yêu cầu người dùng nhập nhận xét
             let comment = prompt("Nhập nhận xét của giáo viên:");
-            
+
             // Nếu người dùng nhập nhận xét, cập nhật nội dung vào phần tử <p id="teacherComment">
             if (comment) {
                 document.getElementById("teacherComment").innerText = comment;
             }
         });
     });
+
 </script>
 
 <script>

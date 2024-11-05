@@ -34,18 +34,20 @@
 
     <main>
         <div class="container">
-            <h2>Tổng quan học phí</h2>
-            <div class="fee-summary">
-                <p>Tổng học phí: 1.000.000.000</p>
-                <p>Tổng học phí đã thu: 800.000.000</p>
-                <p>Tổng học phí chưa thu: 200.000.000</p>
-                <i class="fas fa-print print-icon" onclick="window.print()"></i>
+            <div class="infor_total">
+                <span class="title-fee">Tổng quan học phí</span>
+                <div class="fee-summary">
+                    <span><strong>Tổng</strong> 1.000.000.000</span>
+                    <span><strong>Đã thu:</strong> 800.000.000</span>
+                    <span><strong>Chưa thu:</strong> 200.000.000</span>
+                </div>
+
             </div>
             <canvas id="tuitionChart"></canvas>
         </div>
 
         <div class="container1">
-            <h2>Danh sách tình trạng các khối</h2>
+            <span class="title-fee-detail">Danh sách tình trạng các khối</span>
             <div class="status-list">
                 <div class="status-item" id="khoi6-btn">
                     <div class="circle" onclick="toggleClassList('khoi6', this)">Khối 6</div>
@@ -61,7 +63,7 @@
                 </div>
                 <div class="status-item" id="khoi9-btn">
                     <div class="circle" onclick="toggleClassList('khoi9', this)">Khối 9</div>
-                    <button class="status-button thiếu">Thiếu</button>
+                    <button class="status-button thieu">Thiếu</button>
                 </div>
             </div>
 
@@ -381,32 +383,33 @@
 
 <script>
     function toggleClassList(id, element) {
-    // Lấy danh sách lớp đã chọn
-    var selectedList = document.getElementById(id);
+        // Lấy danh sách lớp đã chọn
+        var selectedList = document.getElementById(id);
 
-    // Kiểm tra nếu danh sách lớp được chọn đã hiển thị, không làm gì thêm
-    if (selectedList.style.display === 'block') {
-        return;
-    } else {
-        // Ẩn tất cả danh sách lớp khác trước
-        var classLists = document.querySelectorAll('.class-list');
-        classLists.forEach(function (list) {
-            list.style.display = 'none';
-        });
+        // Kiểm tra nếu danh sách lớp được chọn đã hiển thị, không làm gì thêm
+        if (selectedList.style.display === 'block') {
+            return;
+        } else {
+            // Ẩn tất cả danh sách lớp khác trước
+            var classLists = document.querySelectorAll('.class-list');
+            classLists.forEach(function (list) {
+                list.style.display = 'none';
+            });
 
-        // Loại bỏ lớp 'active' khỏi tất cả các hình tròn
-        var circles = document.querySelectorAll('.circle');
-        circles.forEach(function (circle) {
-            circle.classList.remove('active');
-        });
+            // Loại bỏ lớp 'active' khỏi tất cả các hình tròn
+            var circles = document.querySelectorAll('.circle');
+            circles.forEach(function (circle) {
+                circle.classList.remove('active');
+            });
 
-        // Hiển thị danh sách lớp đã chọn
-        selectedList.style.display = 'block';
+            // Hiển thị danh sách lớp đã chọn
+            selectedList.style.display = 'block';
 
-        // Thêm lớp 'active' vào hình tròn của phần tử được nhấn
-        var clickedCircle = element.querySelector('.circle');
-        clickedCircle.classList.add('active');
+            // Thêm lớp 'active' vào hình tròn của phần tử được nhấn
+            var clickedCircle = element.querySelector('.circle');
+            clickedCircle.classList.add('active');
+        }
     }
-}
 </script>
+
 </html>

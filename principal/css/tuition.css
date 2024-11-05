@@ -50,16 +50,37 @@ main {
 main .container {
     max-width: 600px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
+.container .infor_total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: 50%;
+    font-size: 15px;
+    padding: 15px;
+}
+.title-fee {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
 main canvas {
-    max-width: 100%;
-    max-height: 300px;
+    max-width: 50%;
+    max-height: 130px;
+    text-align: right;
 }
 
 main .fee-summary {
     text-align: left;
     margin: 10px;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 main .print-icon {
@@ -75,14 +96,17 @@ main .container1 {
     padding: 20px;
 }
 
-main h2 {
-    margin-bottom: 20px;
+main .title-fee-detail {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
 }
 
 main .status-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -121,7 +145,7 @@ main .status-button.đủ {
     color: green;
 }
 
-main .status-button.thiếu {
+main .status-button.thieu {
     color: red;
 }
 
