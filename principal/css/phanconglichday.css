@@ -92,11 +92,8 @@ main .main_tab {
 }
 
 .tab_content .tab_timetable.active {
-    background-color: white;
-    background-color: var(--primary-color);
-    border: none;
-    color: white;
-    border-radius: 10px;
+    border-bottom: 2px solid black;
+    color: black;
 }
 
 main .main_teacher {

@@ -36,7 +36,7 @@ header .header .title {
 }
 
 main {
-    margin-top: 120px;
+    margin-top: 112px;
 }
 
 main .tabs {
@@ -59,13 +59,9 @@ main .tablinks {
     position: relative;
 }
 
-main .tablinks:hover {
-    background-color: #ddd;
-}
 
 main .tablinks.active {
-    background-color: var(--primary-color);
-    color: var(--white-color);
+    border-bottom: 2px solid black;
 }
 
 /* Style cho thanh dọc */

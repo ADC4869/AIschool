@@ -226,7 +226,7 @@ if (isset($_GET['role'])) {
             <div class="content__title">
                 <p>Tin tức</p>
                 <a href="./news.php">
-                    <i class="fa-solid fa-ellipsis" style="color: #5C6898;"></i>
+                    <i class="fa-solid fa-ellipsis" style="color: #5C6898; background-color: aquamarine;"></i>
                 </a>
             </div>
 
@@ -278,7 +278,7 @@ if (isset($_GET['role'])) {
             <div class="content__title">
                 <p>Diễn đàn</p>
                 <a href="./forum.php">
-                    <i class="fa-solid fa-ellipsis" style="color: #5C6898;"></i>
+                    <i class="fa-solid fa-ellipsis" style="color: #5C6898; background-color: aquamarine;"></i>
                 </a>
             </div>
 
@@ -333,7 +333,7 @@ if (isset($_GET['role'])) {
             <div class="content__title">
                 <p>Hoạt động ngoại khóa</p>
                 <a href="./activity.php">
-                    <i class="fa-solid fa-ellipsis" style="color: #5C6898;"></i>
+                    <i class="fa-solid fa-ellipsis" style="color: #5C6898; background-color: aquamarine;"></i>
                 </a>
             </div>
 

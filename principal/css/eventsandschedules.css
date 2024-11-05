@@ -364,15 +364,13 @@ main .main_schedule {
 }
 
 .schedule_tab .tab_schoolschedule.active {
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 10px;
+    color: black;
+    border-bottom: 2px solid black;
 }
 
 .schedule_tab .tab_myschedule.active {
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 10px;
+    color: black;
+    border-bottom: 2px solid black;
 }
 
 .schedule_tab .separate {

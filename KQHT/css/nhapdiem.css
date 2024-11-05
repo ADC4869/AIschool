@@ -38,9 +38,38 @@ header .title {
 
 main {
     margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Đảm bảo phần tử căn giữa và có độ rộng thích ứng */
+
+.filter {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.filter_item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter label {
+    width: 20%;
+}
+.filter input {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    padding: 2px;
+}
 main .button-container {
     display: flex;
     align-items: center;
@@ -59,20 +88,18 @@ main .upload-button {
 
 /* Danh sách tệp */
 main #file-list {
-    margin-top: 20px;
     text-align: center;
 }
 
 /* Khu vực hiển thị nội dung tệp */
 main #file-viewer {
-    margin-top: 20px;
     text-align: center;
 }
 
 /* Các nút hành động */
 main .action-buttons {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 main .save-button, .delete-button {

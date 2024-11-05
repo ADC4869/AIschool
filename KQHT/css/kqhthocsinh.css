@@ -750,7 +750,7 @@ main .main_link {
 }
 
 .list {
-    width: 100%;
+    width: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -758,11 +758,11 @@ main .main_link {
 }
 
 .detail_item {
-    width: 100%;
-    display: flex;
+    display: none; /* Ẩn chi tiết mặc định */
+    width: 295px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
 .list .item {
@@ -806,7 +806,7 @@ main .main_link {
 }
 
 .form_phuckhao {
-    width: 100%;
+    width: 295px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -828,4 +828,8 @@ main .main_link {
     height: 35px;
     border-radius: 5px;
     border: 1px solid var(--primary-color);
+}
+
+.tab-content .list.active {
+    display: none;
 }

@@ -642,7 +642,8 @@
                                     <span><strong>Kiểm tra:</strong> 15 phút</span>
                                 </div>
                                 <div class="item_action">
-                                    <i data-feather="alert-circle" style="color: #5B6998"></i>
+                                    <i data-feather="alert-circle" style="color: #5B6998"
+                                        onclick="showDetail(this)"></i>
                                     <i data-feather="trash" style="color: #5B6998"></i>
                                 </div>
                             </div>
@@ -653,7 +654,8 @@
                                     <span><strong>Kiểm tra:</strong> 15 phút</span>
                                 </div>
                                 <div class="item_action">
-                                    <i data-feather="alert-circle" style="color: #5B6998"></i>
+                                    <i data-feather="alert-circle" style="color: #5B6998"
+                                        onclick="showDetail(this)"></i>
                                     <i data-feather="trash" style="color: #5B6998"></i>
                                 </div>
                             </div>
@@ -753,20 +755,15 @@
     document.getElementById('phuc-khao').style.display = 'block';
 
     function showDetail(element) {
-        // Kiểm tra xem tab 'Lịch sử' có đang hiển thị không
-        const historyTab = document.getElementById('lich-su');
-        if (historyTab && historyTab.style.display === 'block') {
-            // Tìm phần tử detail_item trong tab 'Lịch sử'
-            var detailItem = historyTab.querySelector(".detail_item");
+        // Lấy phần tử cha chứa danh sách và chi tiết
+        const list = element.closest('.list');
+        const detailItem = list.nextElementSibling; // `.detail_item` liền kề
 
-            // Hiển thị hoặc ẩn detail_item dựa trên trạng thái hiện tại
-            if (detailItem.style.display === "none" || detailItem.style.display === "") {
-                detailItem.style.display = "block";
-            } else {
-                detailItem.style.display = "none";
-            }
-        }
+        // Ẩn danh sách và hiển thị chi tiết
+        list.style.display = 'none';
+        detailItem.style.display = 'flex';
     }
+
 
 </script>
 

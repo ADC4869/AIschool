@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="css/nhapdiem.css">
     <link rel="stylesheet" href="../css/footer.css">
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -33,10 +35,31 @@
     </header>
 
     <main>
+        <div class="filter">
+            <div class="filter_item">
+                <label for="title">Học kì<span class="required"></span></label>
+                <input class="" list="semester" id="" name="" required>
+                <datalist id="semester">
+                    <option value="Học kì 1">
+                    <option value="Học kì 2">
+                </datalist>
+            </div>
+            <div class="filter_item">
+                <label for="title">Năm học: <span class="required"></span></label>
+                <input class="" list="years" id="" name="" required>
+                <datalist id="years">
+                    <option value="2023 - 2024">
+                    <option value="2024 - 2025">
+                    <option value="2025 - 2026">
+                </datalist>
+            </div>
+
+        </div>
         <div class="button-container">
             <!-- Nút tải tệp lên -->
             <label for="file-upload" class="upload-button">Tải dữ liệu lên</label>
-            <input type="file" id="file-upload" multiple style="display: none;" accept=".doc,.docx,.xls,.xlsx,.pdf,.jpg,.jpeg,.png,.txt"/>
+            <input type="file" id="file-upload" multiple style="display: none;"
+                accept=".doc,.docx,.xls,.xlsx,.pdf,.jpg,.jpeg,.png,.txt" />
         </div>
 
         <div id="file-list"></div> <!-- Hiển thị danh sách tệp đã chọn -->
@@ -52,4 +75,5 @@
 </body>
 <script src="../js/back.js"></script>
 <script src="./js/nhapdiem.js"></script>
+
 </html>
