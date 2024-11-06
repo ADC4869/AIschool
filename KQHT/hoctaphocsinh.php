@@ -337,7 +337,7 @@
                         <div class="grade-review">
                             <div class="grade">
                                 <div class="grades">10</div><br>
-                                <img id="image" src="../img/header1.jpg" alt="Image to Download" width="300px"
+                                <img id="image" src="../img/header1.jpg" alt="Image to Download"
                                     style="width: 120px; height: 85px;">
                                 <br><br>
                                 <button id="downloadBtn">Tải ảnh</button>
@@ -353,6 +353,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
         <!-- BẢNG ĐIỂM CẢ NĂM -->
@@ -642,8 +643,7 @@
                                     <span><strong>Kiểm tra:</strong> 15 phút</span>
                                 </div>
                                 <div class="item_action">
-                                    <i data-feather="edit-2" style="color: #5B6998"
-                                        onclick="showDetail(this)"></i>
+                                    <i data-feather="edit-2" style="color: #5B6998" onclick="showDetail(this)"></i>
                                     <i data-feather="trash" style="color: #5B6998"></i>
                                 </div>
                             </div>
@@ -654,8 +654,7 @@
                                     <span><strong>Kiểm tra:</strong> 15 phút</span>
                                 </div>
                                 <div class="item_action">
-                                    <i data-feather="edit-2" style="color: #5B6998"
-                                        onclick="showDetail(this)"></i>
+                                    <i data-feather="edit-2" style="color: #5B6998" onclick="showDetail(this)"></i>
                                     <i data-feather="trash" style="color: #5B6998"></i>
                                 </div>
                             </div>
@@ -666,8 +665,7 @@
                                     <span><strong>Kiểm tra:</strong> 1 tiết</span>
                                 </div>
                                 <div class="item_action">
-                                    <i data-feather="edit-2" style="color: #5B6998"
-                                        onclick="showDetail(this)"></i>
+                                    <i data-feather="edit-2" style="color: #5B6998" onclick="showDetail(this)"></i>
                                     <i data-feather="trash" style="color: #5B6998"></i>
                                 </div>
 
@@ -687,7 +685,7 @@
 
     </main>
 </body>
-<script src="./js/kq.js"></script>
+<script src="./js/openmodal_score.js"></script>
 <script src="../js/back.js"></script>
 <script src="./js/diemso.js"></script>
 

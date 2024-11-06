@@ -46,38 +46,26 @@ window.onclick = function (event) {
     }
 };
 
-// Tải ảnh cho Modal 1
+// Tải ảnh cho Modal 1 (tải về máy)
 const downloadBtn1 = document.getElementById('downloadBtn1');
 const image1 = document.getElementById('image1');
-const fileInput1 = document.createElement('input');
-fileInput1.type = 'file';
-fileInput1.style.display = 'none';
-document.body.appendChild(fileInput1);
 
 downloadBtn1.addEventListener('click', () => {
-    fileInput1.click();
+    const link = document.createElement('a');
+    link.href = image1.src; // Đường dẫn ảnh
+    link.download = 'downloaded_image.jpg'; // Tên file sẽ được tải về
+    link.click();
 });
 
-fileInput1.addEventListener('change', (event) => {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            image1.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-    }
-});
-
-// Tải ảnh cho Modal 2
-const downloadBtn2 = document.getElementById('downloadBtn2');
+// Tải ảnh cho Modal 2 (tải lên máy)
+const uploadBtn2 = document.getElementById('uploadBtn2');
 const image2 = document.getElementById('image2');
 const fileInput2 = document.createElement('input');
 fileInput2.type = 'file';
 fileInput2.style.display = 'none';
 document.body.appendChild(fileInput2);
 
-downloadBtn2.addEventListener('click', () => {
+uploadBtn2.addEventListener('click', () => {
     fileInput2.click();
 });
 
@@ -86,11 +74,8 @@ fileInput2.addEventListener('change', (event) => {
     if (file) {
         const reader = new FileReader();
         reader.onload = (e) => {
-            image2.src = e.target.result;
+            image2.src = e.target.result; // Cập nhật ảnh đã chọn vào modal 2
         };
         reader.readAsDataURL(file);
     }
 });
-
-
-

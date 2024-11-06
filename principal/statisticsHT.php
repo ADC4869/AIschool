@@ -88,65 +88,65 @@
             <!-- Khối 1 -->
             <div class="class-info-container" id="content-1">
                 <div class="class-card">
-                <a href="./thongkeketquahoctap.php">
-                    <div class="class-info">
-                        <div class="class-circle green">
-                            <span style="text-align: center;" class="data_lophoc">Lớp 6A1</span>
+                    <a href="./thongkeketquahoctap.php">
+                        <div class="class-info">
+                            <div class="class-circle green">
+                                <span style="text-align: center;" class="data_lophoc">Lớp 6A1</span>
+                            </div>
+                            <div class="class-details">
+                                <p class="data_hovatengiaovien">GVCN: Nguyễn Kim Anh</p>
+                                <p>
+                                    <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
+                                    <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
+                                    <span class="content2">Khá: 20</span>&nbsp;&nbsp;
+                                    <span class="content3">TB: 10</span>&nbsp;&nbsp;
+                                    <span class="content4">Yếu: 0</span>
+                                </p>
+                            </div>
+                                <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
                         </div>
-                        <div class="class-details">
-                            <p class="data_hovatengiaovien">GVCN: Nguyễn Kim Anh</p>
-                            <p>
-                                <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
-                                <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
-                                <span class="content2">Khá: 20</span>&nbsp;&nbsp;
-                                <span class="content3">TB: 10</span>&nbsp;&nbsp;
-                                <span class="content4">Yếu: 0</span>
-                            </p>
-                        </div>
-                        <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
-                    </div>
                     </a>
                 </div>
 
                 <div class="class-card">
-                <a href="./thongkeketquahoctap.php">
-                    <div class="class-info">
-                        <div class="class-circle pink">
-                            <span style="text-align: center;" class="data_lophoc">Lớp 6A2</span>
+                    <a href="./thongkeketquahoctap.php">
+                        <div class="class-info">
+                            <div class="class-circle pink">
+                                <span style="text-align: center;" class="data_lophoc">Lớp 6A2</span>
+                            </div>
+                            <div class="class-details">
+                                <p class="data_hovatengiaovien">GVCN: Trần Thái Tín</p>
+                                <p>
+                                    <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
+                                    <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
+                                    <span class="content2">Khá: 20</span>&nbsp;&nbsp;
+                                    <span class="content3">TB: 10</span>&nbsp;&nbsp;
+                                    <span class="content4">Yếu: 0</span>
+                                </p>
+                            </div>
+                            <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
                         </div>
-                        <div class="class-details">
-                            <p class="data_hovatengiaovien">GVCN: Trần Thái Tín</p>
-                            <p>
-                                <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
-                                <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
-                                <span class="content2">Khá: 20</span>&nbsp;&nbsp;
-                                <span class="content3">TB: 10</span>&nbsp;&nbsp;
-                                <span class="content4">Yếu: 0</span>
-                            </p>
-                        </div>
-                        <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
-                    </div>
                     </a>
                 </div>
 
                 <div class="class-card">
-                <a href="./thongkeketquahoctap.php">
-                    <div class="class-info">
-                        <div class="class-circle purple">
-                            <span style="text-align: center;" class="data_lophoc">Lớp 6A3</span>
+                    <a href="./thongkeketquahoctap.php">
+                        <div class="class-info">
+                            <div class="class-circle purple">
+                                <span style="text-align: center;" class="data_lophoc">Lớp 6A3</span>
+                            </div>
+                            <div class="class-details">
+                                <p class="data_hovatengiaovien">GVCN: Phạm Anh Thư</p>
+                                <p>
+                                    <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
+                                    <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
+                                    <span class="content2">Khá: 20</span>&nbsp;&nbsp;
+                                    <span class="content3">TB: 10</span>&nbsp;&nbsp;
+                                    <span class="content4">Yếu: 0</span>
+                                </p>
+                            </div>
+                            <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
                         </div>
-                        <div class="class-details">
-                            <p class="data_hovatengiaovien">GVCN: Phạm Anh Thư</p>
-                            <p>
-                                <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
-                                <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
-                                <span class="content2">Khá: 20</span>&nbsp;&nbsp;
-                                <span class="content3">TB: 10</span>&nbsp;&nbsp;
-                                <span class="content4">Yếu: 0</span>
-                            </p>
-                        </div>
-                        <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
-                    </div>
                     </a>
                 </div>
             </div>
@@ -154,65 +154,65 @@
             <!-- Khối 2 -->
             <div class="class-info-container" id="content-2">
                 <div class="class-card">
-                <a href="./thongkeketquahoctap.php">
-                    <div class="class-info">
-                        <div class="class-circle green">
-                            <span style="text-align: center;" class="data_lophoc">Lớp 7A1</span>
+                    <a href="./thongkeketquahoctap.php">
+                        <div class="class-info">
+                            <div class="class-circle green">
+                                <span style="text-align: center;" class="data_lophoc">Lớp 7A1</span>
+                            </div>
+                            <div class="class-details">
+                                <p class="data_hovatengiaovien">GVCN: Phạm Kiều Nga</p>
+                                <p>
+                                    <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
+                                    <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
+                                    <span class="content2">Khá: 20</span>&nbsp;&nbsp;
+                                    <span class="content3">TB: 10</span>&nbsp;&nbsp;
+                                    <span class="content4">Yếu: 0</span>
+                                </p>
+                            </div>
+                            <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
                         </div>
-                        <div class="class-details">
-                            <p class="data_hovatengiaovien">GVCN: Phạm Kiều Nga</p>
-                            <p>
-                                <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
-                                <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
-                                <span class="content2">Khá: 20</span>&nbsp;&nbsp;
-                                <span class="content3">TB: 10</span>&nbsp;&nbsp;
-                                <span class="content4">Yếu: 0</span>
-                            </p>
-                        </div>
-                        <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
-                    </div>
                     </a>
                 </div>
 
                 <div class="class-card">
-                <a href="./thongkeketquahoctap.php">
-                    <div class="class-info">
-                        <div class="class-circle pink">
-                            <span style="text-align: center;" class="data_lophoc">Lớp 7A2</span>
+                    <a href="./thongkeketquahoctap.php">
+                        <div class="class-info">
+                            <div class="class-circle pink">
+                                <span style="text-align: center;" class="data_lophoc">Lớp 7A2</span>
+                            </div>
+                            <div class="class-details">
+                                <p class="data_hovatengiaovien">GVCN: Lê Anh Quốc</p>
+                                <p>
+                                    <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
+                                    <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
+                                    <span class="content2">Khá: 20</span>&nbsp;&nbsp;
+                                    <span class="content3">TB: 10</span>&nbsp;&nbsp;
+                                    <span class="content4">Yếu: 0</span>
+                                </p>
+                            </div>
+                            <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
                         </div>
-                        <div class="class-details">
-                            <p class="data_hovatengiaovien">GVCN: Lê Anh Quốc</p>
-                            <p>
-                                <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
-                                <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
-                                <span class="content2">Khá: 20</span>&nbsp;&nbsp;
-                                <span class="content3">TB: 10</span>&nbsp;&nbsp;
-                                <span class="content4">Yếu: 0</span>
-                            </p>
-                        </div>
-                        <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
-                    </div>
                     </a>
                 </div>
 
                 <div class="class-card">
-                <a href="./thongkeketquahoctap.php">
-                    <div class="class-info">
-                        <div class="class-circle purple">
-                            <span style="text-align: center;" class="data_lophoc">Lớp 7A3</span>
+                    <a href="./thongkeketquahoctap.php">
+                        <div class="class-info">
+                            <div class="class-circle purple">
+                                <span style="text-align: center;" class="data_lophoc">Lớp 7A3</span>
+                            </div>
+                            <div class="class-details">
+                                <p class="data_hovatengiaovien">GVCN: Trần Hồng Ngọc</p>
+                                <p>
+                                    <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
+                                    <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
+                                    <span class="content2">Khá: 20</span>&nbsp;&nbsp;
+                                    <span class="content3">TB: 10</span>&nbsp;&nbsp;
+                                    <span class="content4">Yếu: 0</span>
+                                </p>
+                            </div>
+                            <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
                         </div>
-                        <div class="class-details">
-                            <p class="data_hovatengiaovien">GVCN: Trần Hồng Ngọc</p>
-                            <p>
-                                <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
-                                <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
-                                <span class="content2">Khá: 20</span>&nbsp;&nbsp;
-                                <span class="content3">TB: 10</span>&nbsp;&nbsp;
-                                <span class="content4">Yếu: 0</span>
-                            </p>
-                        </div>
-                        <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
-                    </div>
                     </a>
                 </div>
             </div>
@@ -220,23 +220,23 @@
             <!-- Khối 3 -->
             <div class="class-info-container" id="content-3">
                 <div class="class-card">
-                <a href="./thongkeketquahoctap.php">
-                    <div class="class-info">
-                        <div class="class-circle green">
-                            <span style="text-align: center;" class="data_lophoc">Lớp 8A1</span>
+                    <a href="./thongkeketquahoctap.php">
+                        <div class="class-info">
+                            <div class="class-circle green">
+                                <span style="text-align: center;" class="data_lophoc">Lớp 8A1</span>
+                            </div>
+                            <div class="class-details">
+                                <p class="data_hovatengiaovien">GVCN: Lâm Xuân Trường</p>
+                                <p>
+                                    <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
+                                    <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
+                                    <span class="content2">Khá: 20</span>&nbsp;&nbsp;
+                                    <span class="content3">TB: 10</span>&nbsp;&nbsp;
+                                    <span class="content4">Yếu: 0</span>
+                                </p>
+                            </div>
+                            <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
                         </div>
-                        <div class="class-details">
-                            <p class="data_hovatengiaovien">GVCN: Lâm Xuân Trường</p>
-                            <p>
-                                <span class="content5">Số lớp: 40</span>&nbsp;&nbsp;
-                                <span class="content1">Giỏi: 10</span>&nbsp;&nbsp;
-                                <span class="content2">Khá: 20</span>&nbsp;&nbsp;
-                                <span class="content3">TB: 10</span>&nbsp;&nbsp;
-                                <span class="content4">Yếu: 0</span>
-                            </p>
-                        </div>
-                        <div class="class-icon"><i class="fa-solid fa-ellipsis"></i></div>
-                    </div>
                     </a>
                 </div>
 

@@ -573,7 +573,7 @@
                             </div>
                         </div>
                         <div class="modal-score-button">
-                                <button type="button">Gửi</button>
+                            <button type="button">Gửi</button>
                         </div>
                     </div>
                 </div>
@@ -605,14 +605,14 @@
                                 <img id="image2" src="../img/header1.jpg" alt="Image to Download" width="300px"
                                     style="width: 120px; height: 85px;">
                                 <br><br>
-                                <button id="downloadBtn2">Tải ảnh</button>
+                                <button id="uploadBtn2">Tải ảnh</button>
                             </div>
                             <div class="review">
                                 <textarea placeholder="Nhập nhận xét"></textarea>
                             </div>
                         </div>
                         <div class="modal-score-button">
-                                <button type="button">Gửi</button>
+                            <button type="button">Gửi</button>
                         </div>
                     </div>
                 </div>
