@@ -18,6 +18,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="./css/managementGV.css">
+    <link rel="stylesheet" href="../css/fix.css">
     <style>
         .card {
             transition: background-color 0.3s;

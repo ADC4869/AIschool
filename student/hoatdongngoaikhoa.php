@@ -16,6 +16,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="hoatdongngoaikhoa.css">
+    <link rel="stylesheet" href="../css/fix.css">
 </head>
 
 <body>

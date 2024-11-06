@@ -19,6 +19,7 @@ include '../database/theme_loader.php'
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/innterfacelg.css">
     <link rel="stylesheet" href="../css/giaodien.css">
+    
 </head>
 <body>
     <header>

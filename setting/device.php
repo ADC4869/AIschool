@@ -16,6 +16,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/device.css">
+    
 </head>
 
 <body>

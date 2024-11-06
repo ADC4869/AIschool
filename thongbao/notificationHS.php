@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="./css/notifiHS.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/fix.css">
 </head>
 
 <>

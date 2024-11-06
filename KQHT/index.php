@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/teacher.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/fix.css">
+    
     <style>
         .popup {
     position: fixed;

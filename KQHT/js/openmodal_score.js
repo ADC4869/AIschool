@@ -1,24 +1,19 @@
-// Lấy modal và các phần tử cần thiết
-var modal = document.getElementById("gradeModal");
-var gradeElements = document.querySelectorAll(".grades");
-var span = document.getElementsByClassName("close")[0];
-
-// Khi người dùng nhấp vào bất kỳ lớp nào, hãy mở modal
+// mở modal
 gradeElements.forEach(function (grade) {
     grade.onclick = function () {
         modal.style.display = "flex";
     };
 });
 
-// Khi người dùng nhấp vào <span> (x), đóng modal
+// đóng modal
 span.onclick = function () {
     modal.style.display = "none";
 };
 
-// Vô hiệu hóa đóng khi nhấp vào bên ngoài modal
+// nhấp vào bên ngoài modal
 window.onclick = function (event) {
     if (event.target == modal) {
-        event.stopPropagation(); // Ngăn chặn hành động mặc định
+        event.stopPropagation(); 
     }
 };
 

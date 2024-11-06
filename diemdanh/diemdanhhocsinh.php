@@ -17,6 +17,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/diemdanhhocsinh.css">
+    <link rel="stylesheet" href="../css/fix.css">
 </head>
 <style>
     .hidden {

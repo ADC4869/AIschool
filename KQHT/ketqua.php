@@ -7,6 +7,7 @@
     <title>Kết quả học tập</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="./css/ketquahoctap.css">
+    
 </head>
 
 <body>

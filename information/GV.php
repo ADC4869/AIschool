@@ -18,6 +18,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="css/infocontact.css">
+    
 </head>
 
 <body>

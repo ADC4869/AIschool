@@ -12,7 +12,7 @@ header .header {
     margin-left: -20px;
     position: fixed;
     left: 0;
-    top: 0;
+    top: -50px;
     right: 0;
     z-index: 100;
 }
@@ -61,7 +61,7 @@ main .main_tab {
     border-bottom: 1px solid rgb(204, 203, 203);
     background-color: white;
     position: fixed;
-    top: 110px;
+    top: 60px;
 }
 
 .main_tab .tab_content {
@@ -103,7 +103,7 @@ main .main_teacher {
     align-items: center;
     flex-direction: column;
     padding: 0 10px;
-    margin-top: 75px;
+    margin-top: 30px;
 }
 
 .main_teacher .number_student {
@@ -175,7 +175,7 @@ main .main_grades {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 75px;
+    margin-top: 30px;
 }
 
 .main_grades .grade_content {

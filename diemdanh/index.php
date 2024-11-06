@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/diligence.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../css/fix.css">
     <style>
         .hidden {
             display: none;

@@ -21,6 +21,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : 'hocsinh';
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="css/caidat.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="./css/fix.css">
     <style>
         /* Giao diện sáng */
         .light-theme {

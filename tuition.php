@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="css/fee.css">
     <link rel="stylesheet" href="css/tinhtranghocphi.css">
+    <link rel="stylesheet" href="./css/fix.css">
 </head>
 
 <body>
