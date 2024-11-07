@@ -62,7 +62,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
         </a>
 
         <a href="../thongbao/notification.php<?php echo ($role == 'giaovien' || $role == 'hieutruong' || $role == 'phuhuynh') ? '?role=' . $role : ''; ?>"
-            class="<?php echo ($current_page == '../thongbao/notification.php') ? 'home-active' : ''; ?>">
+            class="<?php echo ($current_page == 'notification.php') ? 'home-active' : ''; ?>">
             <div class="nav-item">
                 <i class="fa-solid fa-bell"></i>
                 <span>Thông báo</span>
