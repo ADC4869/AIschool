@@ -38,18 +38,18 @@
             <div class="title">Thông tin điểm danh lớp 6A1 - Học Kì I</div>
             <div class="tabs">
                 <div class="siso tab_siso active" id="siso">
-                    <p>Sỉ số: 40</p>
+                    <p style="color: blue">Sỉ số: 40</p>
                 </div>
 
                 <div class="hiendien tab_hiendien" id="hiendien">
-                    <p>Hiện diện: 38</p>
+                    <p style="color: green">Hiện diện: 38</p>
                 </div>
 
                 <div class="tre tab_tre" id="tre">
-                    <p>Trễ: 2</p>
+                    <p style="color: orange">Trễ: 2</p>
                 </div>
                 <div class="vang tab_vang" id="vang">
-                    <p>Vắng: 2</p>
+                    <p style="color: red">Vắng: 2</p>
                 </div>
             </div>
 

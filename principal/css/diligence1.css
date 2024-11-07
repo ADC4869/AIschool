@@ -187,7 +187,6 @@ main .student-status {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    gap: 1%;
 }
 
 .tabs .tab_siso,
@@ -196,17 +195,15 @@ main .student-status {
 .tabs .tab_vang {
     width: 35%;
     height: 35px;
-    background-color: white;
-    border: 1px solid var(--primary-color);
+    background-color: #f1f1f1;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
 }
 .tab_siso.active,
 .tab_hiendien.active,
 .tab_tre.active,
 .tab_vang.active {
-    background-color: var(--primary-color);
-    color: white;
+    color: black;
+    border-bottom: 2px solid black;
 }

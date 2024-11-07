@@ -375,6 +375,9 @@ main .attendance-summary {
 main .attendance-summary span {
     padding: 5px;
 }
+.attendance-summary span.active {
+    border-bottom: 2px solid black;
+}
 
 /* Colors for different status */
 main .present {
@@ -681,3 +684,4 @@ main .icon {
     align-items: center;
     gap: 10px;
 }
+

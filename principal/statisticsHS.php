@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="header header_title" style="background-color: var(--primary-color)">
+    <div class="header header_title" style="background-color: var(--primary-color);">
         <span class="back-arrow" onclick="goBack()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-chevron-left" viewBox="0 0 16 16">
@@ -59,7 +59,7 @@
 
             <center>
                 <div id="myChartContainer">
-                    <canvas id="myChart" style="margin-top: 10px;"></canvas>
+                    <canvas id="myChart" style="margin-top: 10px"></canvas>
                     <div class="center-text">1800</div>
                 </div>
             </center>

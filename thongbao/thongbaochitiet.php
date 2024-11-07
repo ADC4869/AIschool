@@ -17,6 +17,69 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="./css/notidetail.css">
     <link rel="stylesheet" href="../css/fix.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* Style for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 300px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .close,
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .close-btn {
+            top: 20px;
+            right: 20px;
+            font-size: 16px;
+            color: black;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--primary-color);
+        }
+    </style>
 </head>
 
 <body>
@@ -59,8 +122,10 @@
                         các em sinh viên liên hệ Khoa hoặc phòng Đào tạo để đăng ký lại học phần đã mất sau đó quay lại
                         Phòng Tài chính Kế toán ngay trong ngày để xử lý công nợ)
                     </p>
+
+                    <!-- Bấm vào ảnh để mở modal -->
                     <div class="notification_image">
-                        <img src="../img/dt.jpg" alt="">
+                        <img src="../img/dt.jpg" alt="Notification Image" onclick="openModal()">
                     </div>
                     <div class="file-list">
                         <ul>
@@ -70,13 +135,55 @@
                         </ul>
                     </div>
 
+                    <!-- Modal để hiển thị ảnh -->
+                    <div id="imageModal" class="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <!-- Các ảnh hiển thị trong modal -->
+                                <div class="swiper-slide">
+                                    <img src="../img/dt.jpg" alt="Image 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../img/HN.jpg" alt="Image 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../img/VN.jpg" alt="Image 3">
+                                </div>
+                            </div>
+                            <!-- Thêm nút điều hướng -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
 
+                        <!-- Nút Tắt để đóng modal -->
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- Scripts -->
+    <script src="../js/back.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Mở modal khi bấm vào ảnh
+        function openModal() {
+            document.getElementById('imageModal').style.display = 'flex';
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+
+        // Đóng modal
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
 </body>
-<script src="../js/back.js"></script>
 
 </html>
