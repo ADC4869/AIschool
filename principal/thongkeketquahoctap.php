@@ -16,6 +16,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../thongtingiaovienhocsinh/css/infoteacherstudent.css">
+    <link rel="stylesheet" href="../css/fix.css">
     <style>
     .student-list .gioi {
         background-color: #B0DEFF;

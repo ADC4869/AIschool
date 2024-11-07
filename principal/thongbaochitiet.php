@@ -17,6 +17,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="./css/gopychitiet.css">
+    <link rel="stylesheet" href="../css/fix.css">
 </head>
 
 <body>

@@ -18,11 +18,11 @@ header .header {
 }
 
 .back-arrow {
-    color: var(--text-color);
+    color: var(--white-color);
     font-size: 25px;
     margin-right: 10px;
     position: relative;
-    top: 50px;
+    top: 35px;
     left: 30px;
     z-index: 100;
 }
@@ -30,11 +30,11 @@ header .header {
 .header .title {
     font-size: 20px;
     font-weight: bold;
-    color: var(--text-color);
+    color: white;
     flex-grow: 1;
     text-align: center;
     position: relative;
-    top: 25px;
+    top: 10px;
     cursor: pointer;
     display: inline-block;
     display: flex;

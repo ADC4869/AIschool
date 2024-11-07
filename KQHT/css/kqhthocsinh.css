@@ -18,6 +18,7 @@ header .header {
     background-color: var(--primary-color);
     padding: 40px;
     margin-left: -20px;
+    margin-top: -50px;
 }
 
 header .back-arrow {
@@ -103,7 +104,7 @@ header .subheader span {
 }
 
 main {
-    margin-top: 120px;
+    margin-top: 69px;
 }
 
 main .table-container {

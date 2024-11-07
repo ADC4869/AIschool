@@ -725,10 +725,21 @@
             <div class="modal-content">
                 <img id="teacherImage" src="" alt="Ảnh giáo viên">
                 <h3 id="teacherName"></h3>
-                <p id="teacherAge"></p>
-                <p id="teacherAddress"></p>
-                <p id="teacherSubject"></p>
-                <p id="teacherAchievement"></p>
+                <div class="modal-content-infor">
+                    <p id="teacherAge"></p>
+                    <p id="teacherAddress"></p>
+                    <p id="teacherSubject"></p>
+                    <p id="teacherAchievement"></p>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <a href="../call/index.php">
+                    <i data-feather="phone" style="color: #5B6998; width: 40px; height: 40px"></i>
+                </a>
+                <a href="../chat/chatgiaovien.php">
+                    <i data-feather="message-square" style="color: #5B6998; width: 40px; height: 40px"></i>
+                </a>
             </div>
         </div>
     </main>
