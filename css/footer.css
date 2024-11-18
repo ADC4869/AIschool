@@ -73,6 +73,6 @@ footer .nav-item .badge {
 /* Responsive styling for the badge */
 @media (max-width: 768px) {
     footer .nav-item .badge {
-        right: -3px;
+        right: 3px;
     }
 }
