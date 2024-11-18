@@ -88,6 +88,7 @@ main {
 main .chat-list {
     list-style: none;
     padding: 0;
+    margin-bottom: 85px;
 }
 
 main .days {

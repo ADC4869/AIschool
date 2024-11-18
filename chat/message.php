@@ -57,6 +57,45 @@
                     </div>
                 </li>
 
+                <li class="chat-item" data-chat-id="A">
+                    <img src="../img/hs.jpg" alt="">
+                    <div class="chat-info">
+                        <div class="chat-name data_hovatenphuhuynh">Nguyễn Như Ý</div>
+                        <div class="chat-message">Nội dung chat...</div>
+                    </div>
+
+                    <div class="days">
+                        <div class="chat-time">1 giờ</div>
+                        <div class="time">5+</div>
+                    </div>
+                </li>
+
+                <li class="chat-item" data-chat-id="A">
+                    <img src="../img/hs.jpg" alt="">
+                    <div class="chat-info">
+                        <div class="chat-name data_hovatenphuhuynh">Nguyễn Như Ý</div>
+                        <div class="chat-message">Nội dung chat...</div>
+                    </div>
+
+                    <div class="days">
+                        <div class="chat-time">1 giờ</div>
+                        <div class="time">5+</div>
+                    </div>
+                </li>
+
+                <li class="chat-item" data-chat-id="A">
+                    <img src="../img/hs.jpg" alt="">
+                    <div class="chat-info">
+                        <div class="chat-name data_hovatenphuhuynh">Nguyễn Như Ý</div>
+                        <div class="chat-message">Nội dung chat...</div>
+                    </div>
+
+                    <div class="days">
+                        <div class="chat-time">1 giờ</div>
+                        <div class="time">5+</div>
+                    </div>
+                </li>
+
                 <li class="chat-item" data-chat-id="B">
                     <img src="../img/hs1.jpg" alt="">
                     <div class="chat-info">
@@ -125,17 +164,7 @@
         <div id="groupContent" class="content" style="display: none;">
             <ul class="chat-list">
                 <li class="chat-item" data-chat-id="E">
-                    <div class="big-circle">
-                        <div class="top-row">
-                            <img src="../img/hs1.jpg" alt="" class="avt">
-                            <img src="../img/hs.jpg" alt="">
-                        </div>
-                        <div class="bottom-row">
-                            <img src="../img/hs1.jpg" alt="">
-                            <img src="../img/hs.jpg" alt="">
-                        </div>
-                    </div>
-
+                    <img src="../img/hs1.jpg" alt="" class="avt">
                     <div class="chat-info">
                         <div class="chat-name data_lophoc">Lớp 9A1</div>
                         <div class="chat-message">Nội dung chat...</div>
@@ -158,6 +187,22 @@
                     <img src="../img/hs.jpg" alt="">
                     <div class="chat-info">
                         <div class="chat-name data_lophoc">Lớp 9A3</div>
+                        <div class="chat-message">Nội dung chat...</div>
+                    </div>
+                    <div class="chat-time">1 giờ</div>
+                </li>
+                <li class="chat-item" data-chat-id="H">
+                    <img src="../img/hs.jpg" alt="">
+                    <div class="chat-info">
+                        <div class="chat-name data_lophoc">Lớp 9A4</div>
+                        <div class="chat-message">Nội dung chat...</div>
+                    </div>
+                    <div class="chat-time">1 giờ</div>
+                </li>
+                <li class="chat-item" data-chat-id="H">
+                    <img src="../img/hs.jpg" alt="">
+                    <div class="chat-info">
+                        <div class="chat-name data_lophoc">Lớp 9A4</div>
                         <div class="chat-message">Nội dung chat...</div>
                     </div>
                     <div class="chat-time">1 giờ</div>
