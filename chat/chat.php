@@ -81,11 +81,28 @@
                 <p class="time">18:20</p>
                 </div>
             </div>
-            <div class="chat-bubble user" style="justify-content: right;">
+            <div class="chat-bubble user">
                 <div class="message">Nội dung chat...
                 <p class="time">18:26</p>
                 </div>
             </div>
+
+            <div class="chat-bubble user">
+                <div class="message">
+                    <img src="../img/shinichi.jfif" style="margin: 5px; width: 100px; height: 100px; object-fit: cover;">
+                    <img src="../img/shinichi.jfif" style="margin: 5px; width: 100px; height: 100px; object-fit: cover;">
+                    <img src="../img/shinichi.jfif" style="margin: 5px; width: 100px; height: 100px; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="chat-bubble user">
+                <div class="message">
+                    <img src="../img/shinichi.jfif" style="margin: 5px; width: 250px; height: 300px; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- Thẻ input file ẩn để người dùng chọn file -->
+            <input type="file" id="file-upload" multiple style="display: none;">
         </div>
     </main>
 
