@@ -119,7 +119,7 @@
                 <button class="icon-btn" id="camera-btn"><i class="fa-solid fa-camera"></i></button>
 
                 <!-- Tải hình ảnh -->
-                <input type="file" id="image-upload" accept="image/*" style="display:none;">
+                <input type="file" id="image-upload" accept="image/*" style="display:none;"  multiple>
                 <button class="icon-btn" id="gallery-btn"><i class="fa-regular fa-image"></i></button>
 
                 <button class="icon-btn" id="microphone-btn"><i class="fa-solid fa-microphone"></i></button>
@@ -137,5 +137,4 @@
 <script src="./js/camera.js"></script>
 <script src="./js/mic.js"></script>
 <script src="./js/send.js"></script>
-
 </html>

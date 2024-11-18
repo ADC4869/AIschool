@@ -4,29 +4,38 @@ document.getElementById('gallery-btn').addEventListener('click', function () {
 });
 
 document.getElementById('image-upload').addEventListener('change', function (event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            // Create a new chat bubble for the uploaded image
-            const chatContainer = document.querySelector('.chat-container');
+    const files = event.target.files; // Lấy danh sách các file được chọn
+    if (files && files.length > 0) {
+        const chatContainer = document.querySelector('.chat-container');
 
-            const chatBubble = document.createElement('div');
-            chatBubble.classList.add('chat-bubble', 'user');
+        // Tạo một chat bubble mới cho nhóm ảnh
+        const chatBubble = document.createElement('div');
+        chatBubble.classList.add('chat-bubble', 'user');
 
-            const img = document.createElement('img');
-            img.src = e.target.result;
-            img.alt = "Uploaded Image";
+        const message = document.createElement('div');
+        message.classList.add('message');
 
-            const message = document.createElement('div');
-            message.classList.add('message');
-            message.appendChild(img);
+        Array.from(files).forEach(file => {
+            if (file.type.startsWith('image/')) { // Kiểm tra xem file có phải là ảnh không
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    // Tạo một thẻ img cho từng ảnh
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = "Uploaded Image";
+                    img.style.margin = "5px"; // Thêm khoảng cách giữa các ảnh
+                    img.style.width = "100px"; // Đặt kích thước ảnh
+                    img.style.height = "100px";
+                    img.style.objectFit = "cover";
 
-            chatBubble.appendChild(message);
+                    message.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
 
-            chatContainer.appendChild(chatBubble);
-        };
-        reader.readAsDataURL(file);
+        chatBubble.appendChild(message);
+        chatContainer.appendChild(chatBubble);
     }
 });
 

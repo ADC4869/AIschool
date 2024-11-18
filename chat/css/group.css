@@ -68,15 +68,26 @@ main .chat-container {
     margin-top: 80px;
 }
 
+
+main .chat-bubble.user .message img:hover {
+    transform: scale(1.1);
+}
+
 main .chat-bubble.user .message img {
     width: 250px;
     height: 300px;
     border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
 }
 
 main .chat-bubble {
     display: flex;
     margin-bottom: 25px;
+}
+
+main .chat-bubble.user {
+    justify-content: right;
 }
 
 main .chat-bubble img {
