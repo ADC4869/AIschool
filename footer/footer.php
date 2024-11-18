@@ -12,6 +12,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             class="<?php echo ($current_page == 'message.php') ? 'home-active' : ''; ?>">
             <div class="nav-item">
                 <i class="fa-solid fa-message"></i>
+                <span class="badge">5</span>
                 <span>Tin nhắn</span>
             </div>
         </a>
@@ -65,6 +66,7 @@ $role = isset($_GET['role']) ? $_GET['role'] : 'hocsinh';
             class="<?php echo ($current_page == 'notification.php') ? 'home-active' : ''; ?>">
             <div class="nav-item">
                 <i class="fa-solid fa-bell"></i>
+                <span class="badge">12</span>
                 <span>Thông báo</span>
             </div>
         </a>
