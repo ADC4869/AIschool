@@ -75,7 +75,7 @@ main .feedback {
     display: flex;
     align-items: center;
     background-color: #f4f4f4;
-    padding: 12px;
+    padding: 7px;
     border-radius: 10px;
     margin-top: 16px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -99,12 +99,14 @@ main .feedback-icon {
 
 main .feedback-details {
     flex: 1;
+    margin-bottom: -10px;
 }
 
 main .feedback-details h3 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     margin-bottom: 4px;
+    margin-top: 5px;
 }
 
 main .feedback-details p {
@@ -144,10 +146,6 @@ main .feedback-right i {
         height: 40px;
     }
 
-    main .feedback-details h3 {
-        font-size: 14px;
-    }
-
     main .feedback-details p {
         font-size: 12px;
     }
@@ -157,14 +155,6 @@ main .feedback-right i {
     main .feedback-icon {
         width: 35px;
         height: 35px;
-    }
-
-    main .feedback-details h3 {
-        font-size: 12px;
-    }
-
-    main .feedback-details p {
-        font-size: 10px;
     }
 }
 

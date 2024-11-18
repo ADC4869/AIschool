@@ -68,8 +68,7 @@ main .card {
 main .card-content {
     display: flex;
     align-items: center;
-    padding: 15px;
-    gap: 10px;
+    padding: 10px;
     border-bottom: 1px solid #ddd;
 }
 
