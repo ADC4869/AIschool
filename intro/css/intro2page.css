@@ -262,7 +262,7 @@ main .line .text {
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: -20px;
+        margin-top: -30px;
     }
 
     .title1 {
@@ -291,7 +291,7 @@ main .line .text {
     }
     
     .line .text {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.6; 
     } 
 }
