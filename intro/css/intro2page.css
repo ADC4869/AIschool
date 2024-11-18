@@ -60,6 +60,10 @@ main .main__content .content__title {
     margin-top: 20px;
 }
 
+main .line .text {
+    color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
 
     main {
@@ -286,13 +290,9 @@ main .main__content .content__title {
     }
     
     .line .text {
-        font-size: 16px;
+        font-size: 19px;
         line-height: 1.6; 
-    }
-    
-    
-
-   
+    } 
 }
 @media (min-width: 600px) {
     .main__content .content__photo .photo2 {
