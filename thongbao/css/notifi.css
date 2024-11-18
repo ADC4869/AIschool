@@ -60,7 +60,9 @@ main .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 73px;
+    position: relative;
+    bottom: 66px;
 }
 
 main .card-content {

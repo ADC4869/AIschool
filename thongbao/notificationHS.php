@@ -19,20 +19,18 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/fix.css">
 </head>
+<header>
+    <div class="header">
+        <span class="back-arrow" onclick="goBack()">
 
-<>
-    <header>
-        <div class="header">
-            <span class="back-arrow" onclick="goBack()">
-              
-            </span>
-            <div class="title">Góp ý</div>
-        </div>
-    </header>
+        </span>
+        <div class="title">Góp ý</div>
+    </div>
+</header>
 
-    <main>
-        <div class="container">
-
+<main>
+    <div class="container">
+        <div class="category">
             <div class="main_action">
                 <div class="notification_category">
                     <label for="title">Danh mục <span class="required"></span></label>
@@ -56,6 +54,107 @@
                     <i class="fa fa-plus"></i> Góp ý mới
                 </button>
             </a>
+        </div>
+
+        <div class="content">
+            <div class="feedback">
+                <a href="./gopychitiet.php">
+                    <img src="../img/avt.jfif" alt="Feedback Icon" class="feedback-icon data_anhdaidien">
+                    <div class="feedback-details">
+                        <h3 class="data_tieudegopy">Góp ý về quá trình học tập</h3>
+                        <p class="data_noidunggopy">V/v tiến độ học tập trong năm nay, nhà trường...</p>
+                    </div>
+                    <div class="feedback-right">
+                        <span class="notification-badge">1</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="feedback">
+                <a href="./gopychitiet.php">
+                    <img src="../img/avt.jfif" alt="Feedback Icon" class="feedback-icon data_anhdaidien">
+                    <div class="feedback-details">
+                        <h3 class="data_tieudegopy">Góp ý về quá trình học tập</h3>
+                        <p class="data_noidunggopy">V/v tiến độ học tập trong năm nay, nhà trường...</p>
+                    </div>
+                    <div class="feedback-right">
+                        <span class="notification-badge">1</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="feedback">
+                <a href="./gopychitiet.php">
+                    <img src="../img/avt.jfif" alt="Feedback Icon" class="feedback-icon data_anhdaidien">
+                    <div class="feedback-details">
+                        <h3 class="data_tieudegopy">Góp ý về quá trình học tập</h3>
+                        <p class="data_noidunggopy">V/v tiến độ học tập trong năm nay, nhà trường...</p>
+                    </div>
+                    <div class="feedback-right">
+                        <span class="notification-badge">1</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="feedback">
+                <a href="./gopychitiet.php">
+                    <img src="../img/avt.jfif" alt="Feedback Icon" class="feedback-icon data_anhdaidien">
+                    <div class="feedback-details">
+                        <h3 class="data_tieudegopy">Góp ý về quá trình học tập</h3>
+                        <p class="data_noidunggopy">V/v tiến độ học tập trong năm nay, nhà trường...</p>
+                    </div>
+                    <div class="feedback-right">
+                        <span class="notification-badge">1</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="feedback">
+                <a href="./gopychitiet.php">
+                    <img src="../img/avt.jfif" alt="Feedback Icon" class="feedback-icon data_anhdaidien">
+                    <div class="feedback-details">
+                        <h3 class="data_tieudegopy">Góp ý về quá trình học tập</h3>
+                        <p class="data_noidunggopy">V/v tiến độ học tập trong năm nay, nhà trường...</p>
+                    </div>
+                    <div class="feedback-right">
+                        <span class="notification-badge">1</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="feedback">
+                <a href="./gopychitiet.php">
+                    <img src="../img/avt.jfif" alt="Feedback Icon" class="feedback-icon data_anhdaidien">
+                    <div class="feedback-details">
+                        <h3 class="data_tieudegopy">Góp ý về quá trình học tập</h3>
+                        <p class="data_noidunggopy">V/v tiến độ học tập trong năm nay, nhà trường...</p>
+                    </div>
+                    <div class="feedback-right">
+                        <span class="notification-badge">1</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="feedback">
+                <a href="./gopychitiet.php">
+                    <img src="../img/avt.jfif" alt="Feedback Icon" class="feedback-icon data_anhdaidien">
+                    <div class="feedback-details">
+                        <h3 class="data_tieudegopy">Góp ý về quá trình học tập</h3>
+                        <p class="data_noidunggopy">V/v tiến độ học tập trong năm nay, nhà trường...</p>
+                    </div>
+                    <div class="feedback-right">
+                        <span class="notification-badge">1</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+
             <div class="feedback">
                 <a href="./gopychitiet.php">
                     <img src="../img/avt.jfif" alt="Feedback Icon" class="feedback-icon data_anhdaidien">
@@ -70,11 +169,12 @@
                 </a>
             </div>
         </div>
+    </div>
 
-    </main>
+</main>
 
-    <?php include '../footer/footer.php' ?>
-    </body>
-    <script src="../js/back.js"></script>
+<?php include '../footer/footer.php' ?>
+</body>
+<script src="../js/back.js"></script>
 
 </html>

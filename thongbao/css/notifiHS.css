@@ -46,6 +46,15 @@ main .container a {
     text-decoration: none
 }
 
+main .category {
+    margin-bottom: 85px;
+}
+
+main .content {
+    position: relative;
+    bottom: 72px;
+}
+
 main .icon-btn {
     display: flex;
     align-items: center;
