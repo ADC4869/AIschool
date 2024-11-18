@@ -19,7 +19,7 @@ footer {
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 30px;
+    bottom: 15px;
 }
 
 .btn__button {
@@ -131,13 +131,13 @@ main .line .text {
 .title2 {
     padding: 0;
     font-size: 1.6rem;
-    margin-top: 30px;
+    margin-top: 10px;
     text-align: left;
 }
 
 @media (min-width: 320px) {
     .main__content .content__photo {
-        margin-top: 80px;
+        margin-top: 40px;
     }
     .main__content .content__photo .photo2 {
         width: 300px;
@@ -194,7 +194,7 @@ main .line .text {
 }
 @media (min-width: 412px) {
     .main__content .content__photo {
-        margin-top: 80px;
+        margin-top: 40px;
     }
     .main__content .content__photo .photo2 {
         width: 300px;
@@ -251,8 +251,8 @@ main .line .text {
 }
 @media (min-width: 430px) {
     .main__content .content__photo .photo2 {
-        width: 350px;
-        height: 250px;
+        width: 410px;
+        height: 400px;
         object-fit: cover;
     }
 
@@ -262,6 +262,7 @@ main .line .text {
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin-top: -20px;
     }
 
     .title1 {
@@ -290,7 +291,7 @@ main .line .text {
     }
     
     .line .text {
-        font-size: 19px;
+        font-size: 18px;
         line-height: 1.6; 
     } 
 }
@@ -350,7 +351,7 @@ main .line .text {
 }
 @media (min-width: 712px) {
     .main__content .content__photo {
-        margin-top: 50px;
+        margin-top: 30px;
     }
     .main__content .content__photo .photo2 {
         width: 550px;
@@ -407,8 +408,8 @@ main .line .text {
 }
 @media (min-width: 768px) {
     .main__content .content__photo .photo2 {
-        width: 630px;
-        height: 330px;
+        width: 730px;
+        height: 430px;
         object-fit: cover;
     }
 
@@ -453,8 +454,8 @@ main .line .text {
 }
 @media (min-width: 800px) {
     .main__content .content__photo .photo2 {
-        width: 650px;
-        height: 350px;
+        width: 750px;
+        height: 450px;
         object-fit: cover;
     }
 
@@ -508,8 +509,8 @@ main .line .text {
 }
 @media (min-width: 1024px) {
     .main__content .content__photo .photo2 {
-        width: 850px;
-        height: 400px;
+        width: 900px;
+        height: 450px;
         object-fit: cover;
     }
 

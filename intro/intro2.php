@@ -21,17 +21,28 @@
                 <div class="title2">
                     <div class="line">
                         <div class="circle"></div>
-                        <div class="text">Theo dõi mọi thứ ngay trên thiết bị <br> của bạn</div>
+                        <div class="text">Điểm danh gương mặt trí tuệ nhân tạo <br>AI faceid</div>
                     </div>
                     <div class="line">
                         <div class="circle"></div>
-                        <div class="text">Thông báo kịp thời về các thay đổi <br> ở trường</div>
+                        <div class="text">Quản lý học sinh, giáo viên, thời khoá biểu, <br>điểm, đề cương, sổ liên lạc, sổ nề nếp,...</div>
                     </div>
                     <div class="line">
                         <div class="circle"></div>
-                        <div class="text">Kết nối nhanh chóng tới giáo viên <br> và phụ huynh</div>
+                        <div class="text">Liên lạc nhà trường phụ huynh bằng chat, <br>gọi điện ngay tromg app</div>
                     </div>
-
+                    <div class="line">
+                        <div class="circle"></div>
+                        <div class="text">Giảng dạy trực tuyến bằng video conference <br>và share bảng đen, share file, share màn hình</div>
+                    </div>
+                    <div class="line">
+                        <div class="circle"></div>
+                        <div class="text">Thông báo, hoạt động trường lớp</div>
+                    </div>
+                    <div class="line">
+                        <div class="circle"></div>
+                        <div class="text">Quản lý tài sản</div>
+                    </div>
                 </div>
 
             </div>
