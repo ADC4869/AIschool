@@ -68,6 +68,12 @@ main .chat-container {
     margin-top: 80px;
 }
 
+main .chat-bubble.user .message img {
+    width: 250px;
+    height: 300px;
+    border-radius: 0;
+}
+
 main .chat-bubble {
     display: flex;
     margin-bottom: 25px;
