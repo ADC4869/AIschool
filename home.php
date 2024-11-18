@@ -64,7 +64,7 @@ if (isset($_GET['role'])) {
                     <div class="circle circle__diligence">
                         <i class="fa-regular fa-clipboard" style="color: #ffffff;"></i>
                     </div>
-                    Tình trạng chuyên cần
+                    Nề Nếp
                 </a>
 
                 <a href="./KQHT/hoctaphocsinh.php" class="button">
@@ -224,10 +224,11 @@ if (isset($_GET['role'])) {
             </div>
 
             <div class="content__title">
-                <p>Tin tức</p>
-                <a href="./news.php">
-                    <i class="fa-solid fa-ellipsis"></i>
-                </a>
+                <p>Tin tức
+                    <a href="./news.php">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </a>
+                </p>
             </div>
 
             <div class="content__news">
@@ -276,10 +277,11 @@ if (isset($_GET['role'])) {
             </div>
 
             <div class="content__title">
-                <p>Diễn đàn</p>
-                <a href="./forum.php">
-                    <i class="fa-solid fa-ellipsis" ></i>
-                </a>
+                <p>Diễn đàn
+                    <a href="./forum.php">
+                        <i class="fa-solid fa-ellipsis" ></i>
+                    </a>
+                </p>
             </div>
 
             <div class="content__news">
@@ -331,10 +333,11 @@ if (isset($_GET['role'])) {
             </div>
 
             <div class="content__title">
-                <p>Hoạt động ngoại khóa</p>
-                <a href="./activity.php">
-                    <i class="fa-solid fa-ellipsis" ></i>
-                </a>
+                <p>Hoạt động ngoại khóa
+                    <a href="./activity.php">
+                        <i class="fa-solid fa-ellipsis" ></i>
+                    </a>
+                </p>
             </div>
 
             <div class="content__news">

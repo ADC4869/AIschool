@@ -72,6 +72,12 @@ header .header img {
 main {
     margin-top: 120px;
 }
+
+main .content__title p a {
+    position: relative;
+    float: right;
+}
+
 main .button-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -155,7 +161,7 @@ main .main__content {
 }
 
 .main__content .content__title p {
-    font-size: 15px;
+    font-size: 19px;
     color: var(--white-color);
     font-weight: bold;
     padding-left: 20px;
