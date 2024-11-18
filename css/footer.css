@@ -51,3 +51,28 @@ footer .bottom-nav .home-active .nav-item {
         font-size: 12px;
     }
 }
+
+footer .nav-item {
+    position: relative;
+}
+
+footer .nav-item .badge {
+    position: absolute;
+    top: -5px;
+    right: -15px;
+    background-color: #ff3b30; /* Màu đỏ nổi bật */
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styling for the badge */
+@media (max-width: 768px) {
+    footer .nav-item .badge {
+        right: -3px;
+    }
+}
