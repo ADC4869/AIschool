@@ -26,7 +26,7 @@ header .back-arrow {
 }
 
 header .header .title {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
     color: var(--white-color);
     flex-grow: 1;
