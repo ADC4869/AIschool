@@ -174,7 +174,7 @@ main .main__content {
 .main__content .content__title i {
 padding-right: 20px;
 background-color: var(--primary-color);
-color: white;
+color: var(--white-color);
 }
 .main__content .content__slider {
     width: 92%;
